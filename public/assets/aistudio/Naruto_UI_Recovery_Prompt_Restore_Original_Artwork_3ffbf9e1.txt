@@ -1,0 +1,168 @@
+NARUTO IDLE RPG — RECOVER THE ILLUSTRATED VILLAGE
+Immediate UI recovery prompt for Google AI Studio
+
+This instruction overrides the previous "UI Visual Reset and Complete Art Direction" document for the current Home/Village repair. Keep that document's screen inventory for later reference only. Suspend its exact building coordinates, five-building reconstruction, cream header bands, visible review framework and whole-scene redesign.
+
+The owner rejects the latest result. Recover the earlier detailed Naruto village and improve its interface conservatively. Work on Home/Village only. All gameplay controls remain inert.
+
+REFERENCE ORDER
+
+Reference A: the older screen with detailed Konoha rooftops, recognizable Hokage Rock, a populated street, architectural depth and the dark game HUD. This is the recovery baseline for environmental artwork and overall visual richness. Its crowded controls can be refined after the illustration is restored.
+
+Reference B: the newest rejected screen with simple geometric houses, oval mountain-face placeholders, broad empty ground and "GATE 1 REVIEW / VIEWPORT / Asset Audit" bars. These are defects to remove.
+
+The previous generated three-screen board is not an approved replacement for Reference A. Do not use it to justify discarding the earlier artwork again.
+
+1. FIND AND RECOVER THE EARLIER ART FIRST
+
+Inspect the actual project before editing. Identify:
+- The current Home/Village screen and its scene-rendering component.
+- Any existing illustrated village image/vector resources, including unused assets.
+- The earlier Home implementation in available project/version history.
+- Which current components draw the simplified village.
+- Where the review bars are inserted into the game layout.
+
+Open candidate art files and compare them visually with Reference A. Do not assume a filename proves it is the right asset. Report the actual asset filename/path you recover.
+
+Recover the earlier illustrated background and the rendering/crop settings needed to display it. Restore only the relevant presentation resources and screen changes. Do not reset the entire project, discard unrelated work, change platform or add dependencies unnecessarily.
+
+If the older scene uses several illustrated layers, restore those layers together. If it uses one detailed environment painting, restore that painting. A single finished background with native controls layered above it is acceptable for this UI phase. Separate building sprites are not a prerequisite.
+
+Preserve recovered art as-is during this repair. Do not redraw, simplify, regenerate, recolor or reconstruct it to fit the previous five-building coordinates.
+
+If the original art cannot be located, stop the scenery replacement. Name the missing asset and request the original clean illustration or the project version containing it. Do not replace it with placeholder geometry. Reference A is a screenshot, not a clean background resource: do not bake its old UI, status bar or emulator frame into the new screen.
+
+2. REMOVE THE VISIBLE REGRESSION
+
+Remove the procedural/toy-like scenery seen in Reference B:
+- Oval disks standing in for Hokage faces.
+- Triangle-roof and rectangle-wall substitute houses.
+- The isolated red-and-white mission tower.
+- The broad empty flat-green field.
+- The oversized straight path built to join the five placeholder buildings.
+- Flat cloud ovals and symbol-based substitute shop signs.
+
+These visual shortcuts do not meet the required Naruto environment quality.
+
+Normal UI drawing primitives may still render borders, masks, shadows, meters and simple interface glyphs. They must not be used as a replacement for the missing village illustration. Restored high-quality vector artwork is acceptable; improvised primitive scenery is not.
+
+Remove "GATE 1 REVIEW", screen IDs, "VIEWPORT", "Normal", "Compact", "Large Text", "Asset Audit", debug borders and asset-status labels from the player-facing Home screen.
+
+Keep any developer previews in a separate developer-only entry or the development environment. Home opens directly as the clean game composition. Do not replace the review bars with blank padding.
+
+The external emulator toolbar is not part of the game. Leave it alone.
+
+3. PRESERVE THE EARLIER NARUTO WORLD
+
+The recovered scene must retain:
+- Detailed anime architecture with recognizable roofs, walls, windows and entrances.
+- Hokage Rock drawn as a recognizable landmark.
+- A visually populated Konoha street and connected building groups.
+- Coherent perspective, foliage, atmospheric depth and material detail.
+- The original composition's richness and sense of place.
+
+Do not transform the city into five isolated toy buildings on an empty lawn. Five possible navigation targets do not mean only five buildings may appear in the artwork.
+
+Allow the illustration to occupy most of the screen. It can continue behind the compact header and navigation surfaces. Keep native UI text readable through local backing surfaces. Do not crop the scene into a small picture surrounded by large cream panels.
+
+Match the earlier illustration's crop before adjusting anything else. Preserve its proportions; do not stretch it. Keep Hokage Rock and the important street/building landmarks visible at the normal phone size.
+
+Restore before enhancing. Do not undertake a new art-direction experiment in this repair.
+
+4. REBUILD ONLY THE OVERLAY THAT NEEDS REPAIR
+
+Use the earlier screen's game-HUD character as the starting point: dark indigo/charcoal surfaces, restrained warm metal trim, illustrated icons and readable light text. Do not impose a full parchment application layout over the city. Parchment may appear in small mission notes and appropriate child screens.
+
+Header:
+- One compact account/resource row, approximately 48–56dp tall at normal text size.
+- Existing illustrated avatar at left, account name beside it.
+- Relevant resource icons and fixed sample amounts at right.
+- Use a subtle dark backing or localized upper scrim.
+- Remove the separate oversized cream title band and its surrounding blank strips.
+- A small "Hidden Leaf Village" caption is optional if it fits without consuming another large row.
+- No unexplained Close control on Home.
+
+Destination markers:
+- Anchor each marker to an actual building or location visible in the recovered artwork.
+- Begin with Training Hall, Shop and Archive. Add a Storehouse/idle marker only where it fits clearly.
+- Do not change the architecture to force a marker's position.
+- If the recovered illustration lacks an identifiable destination building, use a compact illustrated shortcut in a consistent edge position. Do not draw a fake house to satisfy the label.
+- Use one coherent marker style: small illustrated emblem or plaque, short readable label and restrained shadow.
+- Avoid huge white labels covering roofs, tiny all-caps labels and mixed emoji/glyph styles.
+- Keep markers off Hokage faces, entrances and important character details.
+- Do not duplicate a destination in both a building marker and a large sidebar on the same screen.
+
+Navigation:
+- Keep the established four root destinations: Home, Squad, Campaign, Recruit.
+- Use four equal segments in one compact dark game-style footer.
+- Reuse good existing icons where possible; keep their size, stroke/paint style and optical weight consistent.
+- Each destination has a readable label.
+- Selected Home gets restrained warm emphasis, not a giant white card.
+- Do not add a fifth root destination or an oversized central Battle orb.
+- Keep intended control areas comfortably sized and above Android gesture space.
+
+Next-action strip:
+- Show one compact contextual mission entry immediately above the footer.
+- Example text: "The Broken Supply Route"; action: "Prepare".
+- Use a slim dark or softly textured strip with a small mission illustration.
+- The button is a restrained orange/amber rectangle with a clearly readable label.
+- Remove the large cream dashboard-like "Continue mission" container from Reference B.
+- The task row must not obscure a large part of the village.
+- Keep its values static and its button inert.
+
+Lighting:
+- Preserve the background's actual colors.
+- Reduce an excessive full-height dark overlay if one remains.
+- Use small top/bottom scrims only where text needs support.
+- The lower street should remain visible.
+- Do not flood the restored art with flat cream, global blur or a new color filter.
+
+5. KEEP THE INTERFACE VISUALLY CONSISTENT
+
+Use the existing suitable font family and refine weight/size rather than introducing another full typography reset. Location labels, resources and controls must be readable at normal phone scale.
+
+Use one icon family. Preserve good illustrated assets. Do not replace them with emoji, unrelated stock symbols or hastily drawn stars. If a particular icon is missing, identify it; do not silently invent a different visual language.
+
+Use restrained borders and shallow shadows. A thin warm metal edge can suit the dark HUD. Avoid glow around every button, thick double borders and heavy bevels.
+
+Maintain deliberate spacing and alignment. A simple native control is acceptable while its final decoration is pending, but the scene itself must retain the restored illustration. Do not present missing art as a finished redesign.
+
+At compact widths, shorten or wrap labels and adjust overlay placement. Never solve a small-screen problem by shrinking the entire application as one image. Respect actual Android safe areas. Reserve intended touch areas for the later functional phase.
+
+6. UI-ONLY BOUNDARY
+
+Stay in the existing native Android presentation project.
+
+Do not implement combat, income, buying, recruitment, training, navigation through gameplay actions, save mutations, accounts, payments, analytics or networking.
+
+All game controls remain inert, including buildings, Prepare and the four game tabs. An existing external preview selector can still select static screens. Ordinary scrolling remains a presentation convenience.
+
+Do not add or redesign the other 94 screens during this recovery. Preserve their specifications and unrelated files. Do not update the canonical game-design master with this repair.
+
+7. REQUIRED EVIDENCE AND STOP CONDITION
+
+Work in this order:
+A. Locate and restore the earlier scene artwork/rendering.
+B. Remove the review UI from the game viewport.
+C. Correct only the header, destination overlays, footer and next-action strip.
+D. Render the actual Home screen and inspect it.
+
+Before claiming completion, check:
+- The detailed earlier village is visible again.
+- No geometric substitute buildings or oval Hokage faces remain.
+- No developer review bars appear inside the game.
+- The scene retains recognizable Konoha architecture and visual depth.
+- Controls remain legible without large blank bands.
+- The lower city remains visible.
+- Four root tabs use one consistent visual treatment.
+- No old screenshot UI has been baked into the background.
+- No gameplay function was added.
+
+Return the recovered asset path, the relevant files changed, an actual rendered Home screenshot and any remaining visible defects. Add one compact-phone rendering if the environment supports it.
+
+A generated mockup is not evidence of the implemented screen. If rendering is unavailable, say that the Android appearance remains unverified and give the precise preview route.
+
+If the source illustration is missing, report that specific blocker. Do not claim success with placeholder scenery.
+
+Finish this Home recovery and stop for visual review. Do not move to another category or functionality.
+

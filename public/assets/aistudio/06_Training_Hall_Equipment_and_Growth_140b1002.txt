@@ -1,0 +1,1676 @@
+SOURCE TEXT EXPORT
+Original file: 06_Training_Hall_Equipment_and_Growth.docx
+Source: https://chatgpt.com/library?file_id=libfile_b3fe31296ed48191bce548f37f8789e5&account_id=personal
+Source file ID: file_0000000050a0820ba6b02e9bc0c5c510
+Source version identifier: not supplied
+Source last modified: 2026-11-08T13:29:37.403067Z
+Exported: 9 November 2026
+Scope: Complete available extracted text, including parsed tables and page markers. Original Word layout, embedded media, and document metadata are not reproduced by this text export. Use the linked original DOCX for those features. No source text has been intentionally summarized or rewritten below.
+
+BEGIN SOURCE TEXT
+
+<PARSED TEXT FOR PAGE: 1 / 27>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+NARUTO IDLE RPG | RESEARCH SCOPE MASTER
+
+
+Training Hall Equipment and Growth
+Independent editable research file | Scope split 1.0 | 08 November 2026
+Source snapshot: original Master Design Bible v0.10.42 (Library version 47). The original source is preserved
+separately and is not overwritten.
+
+Scope ownership: Section 34, Section 35, Section 41, Section 42, Section 52
+
+PRESERVATION NOTE: Source paragraphs, tables, bookmarks and original formatting are retained unchanged
+as document-body XML blocks; scope references to other sections remain historical and are resolved in the
+Scope Index.
+
+CURRENT STATUS: Active mini master for future research edits. This source content includes historical
+hypotheses and unvalidated design proposals.
+
+
+
+
+                   Living design document • Live master v0.10.42 • Updated in place • Page 1
+<PARSED TEXT FOR PAGE: 2 / 27>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+
+
+ORIGINAL RESEARCH CONTENT (preserved below)
+34. Resource sinks, upgrade-cost structure and progression
+pacing (Version 0.10.5)
+Purpose and status. This chapter connects the Section 33 resource-source map to how the game spends
+resources. It establishes a first-pass sink register, describes how costs should behave across early, mid and late
+progression, and defines the accounting required before exact values can be chosen. All Naruto Idle RPG
+mechanics in this chapter are [PROPOSAL] or [RESEARCH SYNTHESIS], not owner-approved final rules.
+Benchmark numbers are examples from named games and must not be copied as our economy. No
+implementation, economy simulator, seeded battle run or player test was performed.
+
+34.1 Research questions and evidence rules
+   A resource source (Section 33) answers “where does it enter the account?” A resource sink answers “what
+    consumes it, and for what player-facing benefit?” A stock is the amount currently held. A recurring
+    income rate must be distinguished from one-time first-clear or milestone rewards.
+   Every resource family needs a primary purpose, allowed secondary uses, a dependable acquisition path, a
+    restriction / expiry rule where relevant, and a guardrail against becoming either worthless or an
+    unavoidable hard gate.
+   “Mandatory” means the resource is required for baseline team functionality or ordinary progression.
+    “Optimization” means it improves efficiency or options but is not required to keep a viable team
+    functioning. The same resource may serve both, but its baseline and advanced uses must be separated
+    clearly.
+   Keep three evidence layers separate: source-derived benchmark observations; project-specific design
+    proposals; and unresolved values that require later owner decisions or validation. No benchmark source
+    establishes the optimal cost curve for our game.
+
+34.2 What the benchmark evidence supports
+AFK Arena — multiple resource tracks and milestone costs. A community-maintained guide published 21
+October 2026 reports that hero leveling consumes Gold and Hero EXP regularly, with Hero’s Essence charged
+at selected breakpoints tied to skill upgrades. Its example cost for one hero from level 1 to 100 is 1,953,229
+Gold, 1,088,586 Hero EXP and 900 Essence; it reports still steeper EXP costs later. The same guide describes
+focusing level investment on five heroes and using the Resonating Crystal to share levels with additional
+heroes. This is useful structural evidence of separate cost tracks, milestone gates and shared-level
+infrastructure, not an economy target for Naruto Idle RPG. The page is community-maintained, not an official
+publisher specification, and current values remain patch-sensitive [IR23].
+AFK Arena — reversible early investment. The same guide describes free hero resets before campaign stage 4-
+36 and a diamond cost after that point. The transferable lesson is not the exact stage or fee; it is that early
+experimentation can be made low-risk, then the game can teach players to make more considered
+investments after they have learned the systems. A refund or respec policy for our game remains an open
+design choice [IR23].
+AFK Journey — revise reward supply when the cost structure changes. In a first-party seasonal designer
+communication, Farlight Games described moving some upgrade materials earlier in a season, replacing
+random equipment drops with Select Equipment Chests, and increasing hero-upgrade material drops after the
+new feature raised development costs. This is direct evidence that a cost-system change should trigger a
+
+                   Living design document • Live master v0.10.42 • Updated in place • Page 2
+<PARSED TEXT FOR PAGE: 3 / 27>
+                          NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+review of material supply and reward certainty. It is one season-specific revision, not proof that the same
+schedule or chest system fits our game [IR21].
+General economy-design references. Unity’s economy guide defines sources as ways resources enter the game
+and sinks as ways they are spent, and emphasizes considering their combined effect on progression. A Game
+Developers Conference session on sink design discusses sink trade-offs and spreadsheet-based analysis. These
+sources support keeping an explicit accounting model; they do not provide the correct values for our title
+[IR24, IR25].
+
+34.3 Proposed design principles for the Naruto idle RPG
+   Design costs and income together. Do not define a resource’s idle or active supply before listing the
+    upgrades that consume it; do not define costs without checking whether dependable income can cover the
+    intended progression path.
+   Protect the functional baseline. The first useful version of a character’s role, core counter or synergy
+    should work without a high-rank skill, rare random material, limited-event item or expensive duplicate.
+    Advanced investments may improve reliability, efficiency, durability or flexibility, but should not sell
+    access to a required tactical function.
+   Make the major costs legible. If a promotion, skill unlock or equipment tier requires a large payment,
+    signal the threshold and the benefit before the player commits. Avoid hidden cost jumps and undisclosed
+    expiration.
+   Avoid redundant taxes. A single basic currency may be shared by several systems, but do not layer a fee
+    onto every upgrade by default. Each added cost must have a clear economic purpose and be included in
+    the time-to-afford calculation.
+   Minimize regret during early learning. Evaluate a low-cost reset, refund or transferable investment for
+    baseline levels and replaceable starter gear. This is a proposal for discussion, not a locked refund rule.
+   Let active modes specialize rewards without monopolizing essentials. A boss, tower, PvP tier, guild or
+    short event may improve access to specialized or advanced materials; if a material becomes required for
+    basic team function, provide a dependable alternate route or a baseline allowance.
+   Keep the idle promise honest. Core idle income should support progress during a campaign wall or
+    ordinary absence. It need not replace every active mode or produce every premium, summoning,
+    competitive and high-end optimization resource.
+
+34.4 First-pass resource-sink register
+The register below assigns a primary proposed sink to each family already present in Section 33. It is a
+working map of intended purpose, not a finalized price list. Where the current design does not yet specify an
+upgrade mechanism, the row explicitly leaves that rule open.
+
+Resource family                           Primary proposed sink                            Required guardrail / open rule
+
+                                                                                           Keep it broadly useful across progression.
+                                          Routine level-up fees and possibly basic skill   Avoid taxing every system with Ryo;
+1. Ryo / basic currency
+                                          / gear operations.                               compare aggregate demand against
+                                                                                           dependable income.
+
+                                                                                           Keep the main purpose narrow and visible.
+                                          Character levels; potentially account-level      Track how costs shift from building the
+2. Shinobi EXP
+                                          training only if that system is later defined.   starter team to building a second or third
+                                                                                           viable team.
+
+                                                                                           Use predictable, communicated gates. A
+                                          Discrete advancement thresholds or level-        core account should not freeze because all
+3. Common promotion / level-cap essence
+                                          cap breaks.                                      reliable essence income comes from a
+                                                                                           single mode or random drop.
+
+
+
+
+                      Living design document • Live master v0.10.42 • Updated in place • Page 3
+<PARSED TEXT FOR PAGE: 4 / 27>
+                         NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+Resource family                              Primary proposed sink                             Required guardrail / open rule
+
+                                                                                               Keep role-defining mechanics available at
+                                             Skill-rank improvements beyond a                  base rank. Higher ranks may improve
+4. Basic skill-up materials
+                                             character’s functional baseline.                  strength or efficiency, not unlock the only
+                                                                                               practical counter to a common strategy.
+
+                                                                                               Avoid failure-based destruction, hidden odds
+                                             Enhancing owned equipment through                 or breakage in the baseline proposal.
+5. Equipment enhancement materials
+                                             defined tiers.                                    Evaluate partial refund, transfer or salvage
+                                                                                               when an item is replaced.
+
+                                                                                               Use milestone rewards or choice chests for
+                                                                                               critical early slots. Do not let a long run of
+                                             Filling equipment slots and progressing into
+6. Equipment pieces / gear                                                                     random drops deny a necessary slot or
+                                             higher tiers or sets.
+                                                                                               make early enhancement spending feel
+                                                                                               wasted.
+
+                                                                                               Duplicates must not be the only route to
+                                                                                               essential role functionality. Decide
+                                             Character acquisition or advancement tiers,
+7. Character-specific shards / duplicates                                                      advancement value, fodder rules and
+                                             if duplicate-based advancement is retained.
+                                                                                               duplicate conversion together; exact
+                                                                                               duplicate costs remain open.
+
+                                                                                               Preserve player agency and roster breadth.
+                                                                                               Align the accumulation threshold with a
+8. Universal fragments / selector currency   Targeted recruitment or a fragment selector.
+                                                                                               paper budget before treating any selector
+                                                                                               size or weekly income as settled.
+
+                                                                                               Keep summon income auditable. Avoid
+                                                                                               unrelated shop sinks unless explicitly
+9. Standard summon currency / tickets        Standard recruitment only, by default.            budgeted, and never mix one-time campaign
+                                                                                               rewards into a recurring monthly-income
+                                                                                               claim.
+
+                                                                                               Publish expiry and guarantee carry-over
+                                             Recruitment on the named limited or
+10. Featured / limited-banner currency                                                         clearly. Do not let a limited banner become
+                                             featured banner.
+                                                                                               the only route to an essential role or counter.
+
+                                                                                               Give the mode a unique reason to play. If an
+                                             Specialized items in the mode’s own
+                                                                                               item becomes a baseline progression
+11. Mode-specific tokens                     exchange shop (boss, tower, gear activity,
+                                                                                               requirement, create an accessible alternate
+                                             etc.).
+                                                                                               source or guaranteed periodic allowance.
+
+                                                                                               Participation should have value at lower
+                                             Competitive cosmetics, prestige, sidegrades
+12. PvP currency / seasonal points                                                             ranks. Avoid making top-percentile rank the
+                                             or supplemental resources.
+                                                                                               sole route to durable combat power.
+
+                                                                                               Do not require a perfect or high-ranking guild
+                                             Cooperative rewards, guild shop and social        for basic growth. Include a meaningful
+13. Guild / alliance currency
+                                             progression.                                      participation floor for new and casual
+                                                                                               members.
+
+                                                                                               State expiry before earning/spending.
+                                             Event-shop rewards, thematic cosmetics,           Essential materials need cumulative
+14. Event-specific currency                  selected progression choices and optional         milestones, reruns or alternate access;
+                                             acceleration.                                     missed events must not permanently delete
+                                                                                               a core build option.
+
+                                                                                               Keep regeneration, storage cap and free
+                                                                                               refills in a separate, transparent system.
+                                             Entry into the named repeatable activity or
+15. Energy / mode-entry tickets                                                                Avoid stacked hidden timers and frequent
+                                             limited attempt.
+                                                                                               check-ins as a substitute for progression
+                                                                                               design.
+
+                                                                                               Use a bounded catch-up route rather than a
+                                             Older progression materials, broad resource       permanent exclusive power tier. Do not
+16. Returner / catch-up tokens
+                                             bundles or catch-up steps.                        reward repeated inactivity loops or make
+                                                                                               new active players feel foolish for playing.
+
+                                                                                               Treat this as a safe optional sink for
+                                             Skins, effects, titles, profile frames and non-   collection and monetization. Cosmetic
+17. Cosmetics / profile identity
+                                             combat customization.                             spending should not alter a normalized PvP
+                                                                                               outcome.
+
+                        Living design document • Live master v0.10.42 • Updated in place • Page 4
+<PARSED TEXT FOR PAGE: 5 / 27>
+                         NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+
+
+34.5 Character-progression cost architecture
+These are proposed cost behaviors, not formulas or values. The categories should be costed independently and
+then evaluated together, because a single hero may simultaneously require currency, EXP, promotion essence,
+skill materials and equipment investment.
+
+Upgrade area                                   Candidate cost structure                             Pacing and fairness rule
+
+                                                                                                    Track total cost by level band and account
+                                                                                                    stage. If an account hits a campaign wall,
+                                               Ryo + Shinobi EXP on ordinary level steps;
+                                                                                                    baseline income should still move at least
+Character levels                               promotion/level-cap essence at explicit
+                                                                                                    one meaningful growth track. Avoid making
+                                               milestones if retained.
+                                                                                                    all resources rise at the same rate by
+                                                                                                    default.
+
+                                                                                                    Functional baseline kit first; incremental
+                                                                                                    improvement later. Show the next rank and
+                                               Skill materials, with Ryo only if the fee has a
+Skill ranks                                                                                         its cost. Review whether high-rank costs
+                                               defined purpose.
+                                                                                                    create specialization choices or simply stop
+                                                                                                    all progress.
+
+                                                                                                    A threshold should correspond to a legible
+                                                                                                    benefit. Do not hide role access inside a
+                                               A distinct threshold payment and any agreed          duplicate tier. Compare milestone reward
+Promotion / level caps
+                                               character advancement requirement.                   timing with the new cost so the player is not
+                                                                                                    asked to pay before a reasonable source
+                                                                                                    exists.
+
+                                               Shared progression infrastructure or                 Roster experimentation matters to counters
+                                               recoverable investment should be                     and modes. Evaluate refunds, transfer,
+Second team / replacement hero
+                                               considered before a completely separate              shared-level systems or cheaper re-entry
+                                               full-cost track.                                     paths as alternatives; none is locked yet.
+
+
+
+34.6 Equipment-cost architecture and replacement regret
+   Separate obtaining an item from improving it. Campaign milestones can provide starter / common items;
+    targeted gear activities and selectors can handle later needs. Random drops may add variety, but should
+    not be the only practical path to a required early slot.
+   Do not assume every enhancement should be invested fully. If early gear is expected to be replaced often,
+    keep early upgrade cost low, make enhancement transfer possible, or return part of the investment
+    through salvage. Pick one clear policy rather than mixing several opaque refund rules.
+   Keep high-end set completion and stat refinement as optional optimization until the rest of the equipment
+    economy is specified. Do not set an equipment-tier count, per-slot price, rarity curve, enhancement
+    success chance, or salvage ratio in this research pass.
+   If a future gear system uses random rolls or randomized crafting, separately assess the cost of a failed
+    attempt, bad-luck protection, and whether the player can see expected effort. Failure that destroys scarce
+    materials can multiply the effective sink; it should not be introduced by default.
+
+34.7 Early, mid and late progression pacing
+                                                                         Proposed cost and supply
+Progression band                  Player-facing goal                                                             Failure signal
+                                                                         behavior
+
+                                                                         A dependable flow of basic
+                                  Level the starter core; learn roles;
+                                                                         currency and EXP, a clear path to       A single rare material, duplicate
+                                  fill basic equipment slots; unlock
+Early game — functional team                                             the first essence / skill thresholds,   requirement or random equipment
+                                  and understand the main upgrade
+                                                                         milestone gear choices, and low-        slot prevents a functional team.
+                                  tracks.
+                                                                         regret learning investments.
+
+
+
+
+                         Living design document • Live master v0.10.42 • Updated in place • Page 5
+<PARSED TEXT FOR PAGE: 6 / 27>
+                      NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+                                                                         Proposed cost and supply
+Progression band                    Player-facing goal                                                         Failure signal
+                                                                         behavior
+
+                                                                         Costs can create choices between
+                                                                                                               Every newly obtained hero
+                                    Improve skill ranks, refine          upgrading the current squad and
+                                                                                                               competes with the entire main
+Midgame — specialization and        equipment, build a second role       broadening the roster. Advanced
+                                                                                                               team for full-cost resources, so
+alternatives                        option or counter, and participate   materials may be specialized, but
+                                                                                                               testing substitutes becomes
+                                    in specialized modes.                core upgrades need a dependable
+                                                                                                               irrational.
+                                                                         path.
+
+                                                                         Use deeper sinks for optional
+                                                                         optimization, while maintaining       Escalating costs consume every
+                                    Long-horizon investment,
+                                                                         visible recurring progress and        source, idle income becomes
+Late game — optimization and        advanced gear choices, marginal
+                                                                         viable counters. Keep high-end        meaningless, or vertical investment
+breadth                             skill improvements, sidegrades and
+                                                                         costs transparent and distinguish a   outpaces the available counter /
+                                    collection goals.
+                                                                         prestige goal from a core             roster design.
+                                                                         requirement.
+
+
+Stage definition. “Early”, “mid” and “late” should eventually be anchored to campaign checkpoints and system
+unlocks, not arbitrary calendar days alone. Account age is useful for cohort analysis later, but it is not a
+reliable substitute for actual player progression.
+
+34.8 Paper affordability model before any numeric balance pass
+For each resource r and planning window W, calculate dependable supply separately from one-off rewards:
+RecurringSupply_r(W) = Idle_r(W) + RepeatableActive_r(W) + RecurringObjectives_r(W) +
+ScheduledEventBaseline_r(W)
+One-time campaign first-clears and unique milestones should be recorded in a separate column, not silently
+included in recurring monthly income. Random drops should be shown as variable income, not the only
+dependable source of a required resource.
+A first-pass affordability estimate for a multi-resource goal G is:
+TimeToAfford(G) = max over required resources r of max(0, Cost_r(G) - Balance_r) / ReliableIncomePerDay_r
+This is an accounting tool, not a simulator result. It assumes a defined target player profile and reliable
+income rates; if a required resource has no dependable path, the estimate is effectively unbounded and that
+dependency must be reviewed. When several upgrades compete for the same resource, the budget must
+include their shared demand rather than treating all income as freely available to every goal.
+   Budget windows to prepare in the next pass: seven days for early upgrade milestones; 28 days for a
+    recurring progression and recruitment budget; and one campaign checkpoint interval to distinguish
+    recurring supply from first-clear rewards. These are proposed accounting windows, not finalized player-
+    session expectations.
+   Prepare at least three theoretical profiles: idle-focused; regular active; and highly engaged. The
+    comparison asks whether each profile can make useful progress, what optional acceleration active play
+    provides, and whether extra engagement creates an unfair competitive gap. No player outcomes should
+    be claimed from paper calculations.
+
+34.9 Hypothetical edge cases and required responses
+Paper scenario                                  Expected behavior under the proposal              Failure condition to watch for
+
+                                                Idle baseline still adds useful core resources    If passive rewards do not support any
+                                                even though stage-based rate increases            meaningful action, the wall becomes a hard
+Campaign wall for several days
+                                                stop. A player can make a modest level /          stall; if they bypass every active mode,
+                                                gear / skill improvement.                         specialized modes lose purpose.
+
+                                                The account can try its baseline role without     A counter exists on paper but remains
+                                                first fully rebuilding every resource track.      unusable for a long time because all EXP /
+New counter character is acquired
+                                                Optional upgrades improve reliability over        currency / skill materials are trapped in the
+                                                time.                                             current lineup.
+
+                      Living design document • Live master v0.10.42 • Updated in place • Page 6
+<PARSED TEXT FOR PAGE: 7 / 27>
+                         NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+Paper scenario                             Expected behavior under the proposal             Failure condition to watch for
+
+                                                                                            Resources are repeatedly burned on near-
+                                           The policy (low early cost, partial salvage or
+Early gear is replaced                                                                      disposable equipment with no visible
+                                           transfer) is clear before investment.
+                                                                                            warning or recovery path.
+
+                                           A guaranteed baseline or secondary path is
+Only one game mode supplies an essential                                                    A locked mode, difficult boss or competitive
+                                           specified before the mode becomes a
+material                                                                                    rank freezes account development.
+                                           required gate.
+
+                                           Review costs and supply together;
+                                                                                            A cost increase is shipped conceptually
+An upgrade system gets more expensive      communicate the revision and evaluate
+                                                                                            without asking whether the corresponding
+after revision                             compensation / grandfathering if prior
+                                                                                            resource income also needs to rise.
+                                           balances lose value.
+
+                                           Permanent core access remains available
+                                                                                            A brief absence permanently destroys a
+Player misses an event or several daily    through milestones, reruns or alternate
+                                                                                            featured guarantee plan or removes the only
+tasks                                      routes; optional event cosmetics may remain
+                                                                                            accessible counter.
+                                           exclusive if clearly disclosed.
+
+
+These are paper scenarios used to expose logical gaps. They are not simulation outputs, live observations or
+measured player results.
+
+34.10 Current proposal register and open decisions
+Decision area                              Current status                                   What remains to be decided
+
+                                                                                            Review against the actual named upgrade
+Resource sink assignments                  Provisional register in 34.4
+                                                                                            systems before final costs.
+
+                                                                                            Define per-resource cost bands and
+Character level-cost curves                Open                                             expected time-to-afford for early / mid / late
+                                                                                            checkpoints.
+
+                                                                                            Separate baseline functionality from
+Skill material costs and rank effects      Open                                             optimization; specify the material families
+                                                                                            and which ranks unlock major effects.
+
+                                                                                            Choose what is required at a threshold and
+Promotion / cap gates                      Open                                             how players access its material outside one
+                                                                                            restrictive mode.
+
+                                                                                            Define slot count, item lifespan, milestone
+Equipment slot / tier progression          Open                                             selectors, enhancement transfer / salvage
+                                                                                            policy and high-end optional sinks.
+
+                                                                                            Compare full refund, partial refund,
+                                                                                            transferable investment and shared-level
+Reset / respec / investment recovery       Open
+                                                                                            infrastructure. AFK Arena is a benchmark
+                                                                                            example only, not our chosen rule.
+
+                                                                                            Quantify idle, repeatable-active, objective
+Recurring income and target windows        Open                                             and event baseline supply only after the cost
+                                                                                            register is reconciled.
+
+                                                                                            Keep the historical 45–50 recurring pulls per
+                                                                                            28 days and 60 pull-equivalents per 28 days
+                                                                                            examples visibly unresolved; reconcile them
+Summon / fragment budget                   Open; prior illustrative targets conflict
+                                                                                            with banner cadence, 70-pull guarantee and
+                                                                                            100-fragment selector proposals in the
+                                                                                            dedicated economy pass.
+
+                                                                                            Mark each item essential, supplemental,
+Event / mode token sinks                   Open                                             optional or cosmetic; define expiry, reruns
+                                                                                            and alternate access.
+
+                                                                                            Specify how historical balances and
+Cost-change compensation policy            Open                                             announced costs would be handled before
+                                                                                            any future live economy change.
+
+
+
+
+                         Living design document • Live master v0.10.42 • Updated in place • Page 7
+<PARSED TEXT FOR PAGE: 8 / 27>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+34.11 Interim conclusion and next research task
+Interim conclusion [RESEARCH SYNTHESIS]: the current direction is a narrow set of recurring core-growth
+sinks, specialized but accessible secondary sinks, clear milestone costs and an explicit separation between
+baseline functionality and optional optimization. Costs, reliable income and progression windows must be co-
+designed and tracked in a paper budget. The AFK Arena example shows why several resources and milestone
+costs can be tightly coupled; AFK Journey’s documented seasonal changes show that increased costs should
+trigger a review of drop rates and reward certainty. These are design lessons, not a prescription to copy either
+game.
+Status: the first paper cost-versus-income framework and roster-progression integration are now recorded in
+Section 35 (Version 0.10.6). No actual game prices or rates are locked. Next research task: reconcile the core-
+progression budget with standard summons, universal fragments, featured-banner cadence and the
+unresolved recurring-pull targets; then extend the same budget to active-mode, event and endgame sinks.
+
+34.12 Sources for resource sinks, upgrade costs and progression pacing (accessed 29
+October 2026)
+   [IR23] AFK Global, “Beginner guide to the first weeks, feature unlocks and early spending.” Community-
+    maintained AFK Arena guide, published 21 October 2026 in the opened page. Used for a current example
+    of campaign-scaled AFK resources, separate Gold / Hero EXP / Hero’s Essence costs, selected essence
+    breakpoints, five-hero leveling / Resonating Crystal, and early reset rules. Not an official publisher
+    specification; exact in-game values are patch-sensitive. https://www.afk.global/afk-arena/guides/beginners-
+    guide
+   [IR21] Farlight Games, “Talk with Designers: New Season Preview.” First-party AFK Journey designer
+    communication describing season-specific changes to upgrade-material timing, Select Equipment Chests
+    and increased hero-upgrade material drops after development costs rose. Supports the principle of
+    revisiting supply when costs change, not a recommendation to copy the exact seasonal system.
+    https://afkjourney.farlightgames.com/news/a0ae0b8ad8c35da97805079b672b7287
+   [IR24] Unity, “Building an in-game economy.” Unity Gaming Services guide describing resources, sources,
+    sinks and the need to consider their combined influence on progression. General design reference, not
+    idle-RPG-specific balance data. Accessed 29 October 2026. https://unity.com/how-to/building-game-
+    economy-guide-part-2
+   [IR25] Game Developers Conference, “Economic Balancing and Improved Monetization Through Clever
+    Sink Design,” Vili Lehdonvirta, Free to Play Design & Business Summit, GDC 2014. Session overview
+    describes currency and item sinks, trade-offs and spreadsheet-based analysis. Older general design
+    reference; used for method only. https://www.gdcvault.com/play/1021008/Economic-Balancing-and-
+    Improved-Monetization
+Source-confidence note. IR23 is a recent specialist/community guide, not official publisher data. IR21 is first-
+party but documents a particular season revision. IR24 is a general Unity economy guide; IR25 is an older GDC
+session description. The sink register and progression framework above are our project-specific proposals and
+inferences. Exact costs, rates, target durations, refund policy and fairness outcomes remain unvalidated.
+
+
+35. Cost-versus-income model and roster-progression
+integration (Version 0.10.6)
+Purpose and status. Section 34 defined the first-pass sinks and cost behaviors; this chapter connects those
+costs to dependable resource income and to a practical roster-progression design. The benchmark figures
+below describe other games, not this project. Proposed implementation patterns and example values are
+
+                  Living design document • Live master v0.10.42 • Updated in place • Page 8
+<PARSED TEXT FOR PAGE: 9 / 27>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+labelled as hypotheses. No final game prices, rates, wait times, or roster-sync rules are approved by this
+chapter; no simulator or live test has been performed.
+
+35.1 New research questions
+   For each major upgrade, how many separate resources must be present at once, and which resource is
+    expected to be the limiting factor?
+   How much of a player’s dependable daily or weekly income should go toward essential team
+    development, and how much should remain available for choice and specialization?
+   Can a free-to-play player use a newly acquired tank, healer, debuffer or counter without paying the full
+    cost of rebuilding a character from level one?
+   How should the economy change from first-session onboarding to midgame roster-building and endgame
+    optimization without making the resource curve feel like arbitrary exponential inflation?
+
+35.2 Benchmark findings and evidence limits
+Finding A [SOURCE FINDING; specialist guide]. AFK Global’s leveling guide, published 21 October 2026,
+describes AFK Arena as charging Gold and Hero EXP on every level, with Hero’s Essence concentrated at
+specific level breakpoints that also unlock skill ranks. Its published totals make the relative cost growth
+visible: one hero from levels 1-100 is listed at about 1.95 million Gold, 1.09 million EXP and 900 Essence; the
+200-240 band is listed at about 21.80 million Gold, 76.46 million EXP and 70,000 Essence. The page is a current
+specialist/community guide rather than a publisher-owned economy specification, so use those values as a
+documented example, not as a universal benchmark [ECO1].
+Design implication [INFERENCE]. The limiting resource can change by progression band: EXP may dominate
+ordinary growth while a threshold material gates a skill unlock. A single “upgrade power” score is therefore
+insufficient; the paper budget must forecast each resource separately and identify the slowest requirement.
+Finding B [SOURCE FINDING; official publisher communication for a specific season]. AFK Journey’s Talk with
+Designers: New Season Preview describes replacing random AFK-stage equipment drops with Select
+Equipment Chests, moving several one-time stage rewards into a seasonal handbook, making some
+progression materials available earlier, and increasing hero-upgrade material drop rates because the updated
+development systems would increase hero-development costs [ECO2]. This records one seasonal change, not
+an evergreen rule for all versions.
+Design implication [INFERENCE]. When a new system increases the cost of development, evaluate its supply
+routes and timing in the same design pass. Choice rewards can reduce bad-luck frustration for important
+equipment slots, while one-time milestones should not be counted as sustainable recurring income.
+Finding C [SOURCE FINDING; general developer guidance]. Unity’s economy guidance defines the task as
+balancing sources and sinks, taking player engagement differences into account, and keeping early
+progression sufficiently smooth. It also identifies starting balances, periodic rewards and progression costs as
+variables to test after a working implementation exists [ECO3, ECO4].
+Project boundary. Unity’s later testing advice is not authorization to run tests now. For this project, use
+accounting, paper examples and hypothetical player journeys only until the owner explicitly changes the
+research/concept phase.
+
+35.3 Cost-versus-income accounting method
+Calculate dependable income separately for each resource. Let D(r) be dependable daily income for resource
+r: ordinary idle accrual + a conservative allocation from repeatable active play + daily rewards + weekly
+rewards divided by seven. Keep first-clear rewards, limited events, one-time compensation, lucky drops and
+
+
+
+                   Living design document • Live master v0.10.42 • Updated in place • Page 9
+<PARSED TEXT FOR PAGE: 10 / 27>
+                         NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+paid purchases in separate columns; they may accelerate progress, but should not be necessary for the
+baseline affordability promise.
+For a proposed purchase, let C(r) be its cost, B(r) the player’s current balance, and S(r) the dependable daily
+surplus available after previously committed mandatory spending. If S(r) is positive, an initial time-to-afford
+estimate is T(r) = max(0, C(r) - B(r)) / S(r). When the upgrade requires multiple resources simultaneously, its
+minimum estimated wait is controlled by the slowest required resource: T(upgrade) = max over all required r
+of T(r). This estimate assumes future income is stable and does not yet model cost increases or spending
+interruptions; those must be added in later paper journeys.
+
+Accounting field                           How to calculate / classify it                 Why it matters
+
+                                           Idle income + conservative repeatable
+                                                                                          Defines the baseline without relying on one-
+Dependable recurring income                activity income + daily rewards + weekly
+                                                                                          time rewards or lucky drops.
+                                           rewards / 7.
+
+                                           Campaign first-clears, random bonus drops,     Tracked separately so a one-time spike is
+Variable / milestone income
+                                           short events, compensation, purchases.         not mistaken for repeatable progress.
+
+                                           Expected costs already allocated to baseline   Prevents the same daily resource from being
+Committed spend
+                                           team/functionality upgrades.                   promised to several simultaneous systems.
+
+                                           Dependable recurring income minus              If zero or negative, the proposed plan cannot
+Daily surplus                              committed baseline spend reserved              fund the purchase without changing priorities
+                                           elsewhere.                                     or adding an accessible source.
+
+                                           The required resource with the longest time-   Shows which cost or source should be
+Bottleneck resource
+                                           to-afford estimate.                            adjusted if the intended pacing is missed.
+
+                                           Resources deliberately left uncommitted for    Avoids an economy that is technically
+Reserve / optionality                      experiments, replacements and future           balanced but leaves players unable to
+                                           choices.                                       respond to a new counter need.
+
+
+
+35.4 Illustrative calculation (not a game balance value)
+Purely hypothetical example. An upgrade costs 300 Ryo and 600 Shinobi EXP. The player already has 100 Ryo
+and 150 EXP. After accounting for other baseline commitments, the model estimates a dependable surplus of
+80 Ryo per day and 300 EXP per day.
+
+                                                                  Amount still            Dependable daily
+Resource                 Cost              Current balance                                                       Estimated time
+                                                                  needed                  surplus
+
+Ryo                      300               100                    200                     80 / day               2.5 days
+
+Shinobi EXP              600               150                    450                     300 / day              1.5 days
+
+
+Because both resources are required, the upgrade is estimated to take 2.5 days, not 2.5 + 1.5 = 4 days. Ryo is
+the bottleneck. If the desired pacing were faster, legitimate options would include lowering that upgrade’s Ryo
+fee, raising a dependable Ryo source, providing a clearly signposted milestone reward, or removing a
+redundant Ryo tax elsewhere. Adding another simultaneous rare-material requirement would normally make
+the wait worse. These figures only demonstrate the calculation; they are not recommended prices or income
+rates for the future game.
+
+35.5 Proposed future-game integration: shared baseline plus individual specialization
+The main game-design question is how to make roster experimentation affordable without removing all
+meaningful character investment. AFK Arena’s Resonating Crystal illustrates a shared-level approach: a small
+set of trained heroes establishes a level that can be shared with additional roster members [ECO1]. This
+project should not copy its exact rules, roster count, unlock stage or cost. The relevant transferable idea is that
+
+
+                        Living design document • Live master v0.10.42 • Updated in place • Page 10
+<PARSED TEXT FOR PAGE: 11 / 27>
+                         NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+the game can separate the cost of maintaining a baseline roster level from the cost of specializing individual
+characters.
+
+Model                             What the player pays for            Main advantage                      Main risk
+
+                                                                                                          High replacement and
+                                                                      Strong individual resource sinks    experimentation cost; a newly
+                                  Ryo and EXP for every
+A. Fully individual leveling                                          and a clear personal investment     acquired counter may be
+                                  character’s levels.
+                                                                      path.                               unusable without extensive
+                                                                                                          repeated leveling.
+
+                                                                                                          May remove too much individual
+                                  One account/team-wide level
+                                                                      Fast roster experimentation and     growth and requires other
+B. Fully shared level             investment applies to most or all
+                                                                      little duplicated leveling spend.   progression layers to carry the
+                                  eligible characters.
+                                                                                                          investment fantasy.
+
+                                  A shared training baseline
+                                                                                                          Needs careful handling of
+                                  covers ordinary levels after a      New or underused characters
+C. Hybrid shared baseline +                                                                               promotion caps, gear gaps, and
+                                  clear unlock; individual skills,    become easier to field while
+personal specialization                                                                                   the power difference between
+                                  promotion milestones and            strategic specialization retains
+[PREFERRED TO STUDY]                                                                                      baseline and optimized
+                                  equipment provide character-        meaningful costs.
+                                                                                                          characters.
+                                  specific investment.
+
+
+Working proposal, not owner-approved final: investigate Model C as the leading concept. A future “Shinobi
+Training Hall” or equivalent account training system could raise a shared baseline through Ryo and Shinobi
+EXP. Eligible recruited shinobi would reach that baseline once the feature unlocks, while personal skill ranks,
+equipment, promotion and advanced mastery remain individual investments. Do not copy AFK Arena’s exact
+pentagram/slot mechanic by default. Before selecting this model, compare it on paper against fully individual
+leveling and the shared-level alternative.
+   Keep basic role functionality at the base kit: a character should not need late skill ranks merely to provide
+    the only practical cleanse, interrupt, protection or other essential counter available to the player.
+   Use character-specific materials to improve performance, reliability, flexibility or synergy, rather than to
+    sell access to the character’s basic job in the team.
+   When a training baseline unlocks, explain exactly which stats it provides and what remains individual. Do
+    not make the same level benefit get charged both in the shared training track and again in each
+    character’s level ledger.
+   If individual levels are retained for the whole game, consider a recoverable early investment or a low-cost
+    baseline-sync option for bench characters. This is an alternative to Model C, not an additional mandatory
+    system.
+
+35.6 Proposed upgrade layers and practical sinks
+Layer                                         Main cost role                                  Integration rule for the future game
+
+                                                                                              Budget as the routine growth sink. Do not
+                                              Ryo + Shinobi EXP; shared baseline is the
+Training / ordinary levels                                                                    make every other feature charge the same
+                                              preferred model to evaluate.
+                                                                                              resources by default.
+
+                                                                                              Use visible milestones with clear benefits.
+                                              Common essence and any explicitly               Check that the required resource is
+Promotion / advancement thresholds
+                                              designed advancement materials.                 accessible before the player reaches the
+                                                                                              gate.
+
+                                              Basic skill materials for upgrades beyond the Keep role-defining functionality at baseline.
+Skill progression                             baseline kit; advanced materials for          Tell the player which skill effect changes
+                                              specialization only after further design.     before spending.
+
+                                              Campaign milestone rewards, targeted            Use selection or predictable milestones for
+Equipment acquisition                         mode rewards, craft/selector routes where       important slots; do not leave essential
+                                              later specified.                                equipment solely to repeated random drops.
+
+
+
+
+                        Living design document • Live master v0.10.42 • Updated in place • Page 11
+<PARSED TEXT FOR PAGE: 12 / 27>
+                        NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+Layer                                       Main cost role                                     Integration rule for the future game
+
+                                                                                               Separate item acquisition from item
+                                            Enhancement materials for stat/quality             enhancement. Evaluate transfer, refund or
+Equipment enhancement
+                                            improvement.                                       salvage so early replacement does not
+                                                                                               destroy most invested value.
+
+                                            High-tier equipment sets, advanced skill           Can be a longer-term sink, but must not be
+Advanced optimization                       investment, sidegrade options and mastery          required for baseline role coverage or core
+                                            systems if approved.                               campaign participation.
+
+
+Equipment policy recommendation [PROPOSAL]. Prefer deterministic enhancement costs rather than failure-
+based destruction in the baseline version. If gear is expected to be replaced, choose one transparent
+protection rule—low early costs, transfer of enhancement, or partial salvage. Do not choose a refund
+percentage, gear-tier count, upgrade success rate or enhancement price until equipment lifespan and supply
+have been mapped.
+
+35.7 Candidate pacing envelopes for later paper review
+The windows below are working hypotheses for affordability modelling, not industry facts, launch promises
+or approved final balance settings. Use them as test questions for the paper budget; revise them if the game
+loop, session design or resource yields point elsewhere.
+
+Player journey / purchase                   Candidate planning envelope                        Pass condition to investigate
+
+                                            Several clearly taught upgrades affordable         The player can learn team roles and attempt
+First-session starter team                  from starting grants within the tutorial / first   a coherent first squad without grinding or
+                                            session.                                           needing a lucky pull.
+
+                                            A meaningful baseline upgrade roughly
+                                                                                               At least one relevant progression track can
+                                            every 1-2 daily cycles for a regular active
+                                                                                               move from dependable sources; the slowest
+Routine core-team growth                    F2P player; an idle-focused player blocked
+                                                                                               resource is identified and no paid source is
+                                            by campaign should still have a meaningful
+                                                                                               required.
+                                            core-growth step within about 2-3 days.
+
+                                            Investigate a roughly 3-7 day regular-play
+                                                                                               Players can prepare a counter or alternate
+Make an owned alternate/counter character   planning band for baseline readiness,
+                                                                                               role without dismantling the primary team or
+fieldable                                   separate from the time needed to obtain that
+                                                                                               waiting for an exclusive short event.
+                                            character.
+
+                                            Multi-day to week-scale or longer goals may        The grind adds mastery or customization,
+Endgame optimization / niche sidegrade      be acceptable where the reward is                  not the only access to an essential role,
+                                            incremental and optional.                          cleanse, protection or counter.
+
+
+Reason for using ranges rather than exact prices: Unity’s guidance supports making player-engagement
+differences explicit and evaluating source/sink curves across the journey [ECO3, ECO4], but neither Unity nor
+the benchmark games establish universal wait-time targets for this project. These bands are design
+hypotheses to compare on paper, and they must not be described as measured player behaviour.
+
+35.8 Resource safeguards and edge-case audit
+   Resource dominance: if one resource controls almost every upgrade, lowering its income can stop the
+    entire game. Keep the dominant bottleneck visible and give it dependable sources; avoid hidden multi-
+    resource tolls at every step.
+   Parallel commitments: do not promise the same EXP or Ryo stream to leveling, gear enhancement, skill
+    ranks and shop purchases simultaneously. Mark core commitments and optional spending separately in
+    the budget.
+   One-time reward illusion: starter grants and first-clears may make early affordability look healthy.
+    Recalculate after those rewards end to confirm the recurring economy can sustain repeat needs.
+
+
+
+                      Living design document • Live master v0.10.42 • Updated in place • Page 12
+<PARSED TEXT FOR PAGE: 13 / 27>
+                       NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+   New roster acquisition: simulate on paper a player pulling a tank or cleanse counter after the main team
+    is already highly invested. The player should be able to equip and field the counter without an unbounded
+    duplicated leveling bill.
+   Equipment replacement: consider a player replacing a starter weapon soon after spending enhancement
+    materials. Apply the declared transfer/salvage policy consistently and avoid surprise loss of most
+    investment.
+   Low engagement / campaign wall: use the guaranteed idle floor and accessible recurring routes, not
+    repeated high-rank PvP, perfect guild activity, daily streak perfection or paid refills, to sustain basic
+    growth.
+   Cost increase after a feature change: any new upgrade tier must trigger a paired review of supply,
+    milestones and affordability. Preserve historical costs in the decision log and decide explicitly whether
+    compensation or transition protection is needed.
+   F2P and payer comparison: optional spending may shorten waits or broaden convenience, but it must not
+    convert an essential role or counter from an attainable target into a pay-only requirement.
+
+35.9 Current proposal register and open decisions
+Question                                       Current status                                    Required next step
+
+                                                                                                 Compare the three models through
+                                               Hybrid shared baseline + individual
+                                                                                                 hypothetical journeys: starter account, new
+Use a shared roster baseline?                  specialization is preferred to study; not a
+                                                                                                 counter acquisition, low-engagement return
+                                               locked project decision.
+                                                                                                 and endgame roster expansion.
+
+                                                                                                 Populate resource-by-resource dependable
+                                                                                                 income using the 17-family source map and
+What is the required income per day?           Open; no income rate selected.
+                                                                                                 distinguish guaranteed, variable and one-
+                                                                                                 time sources.
+
+                                                                                                 Check them through paper accounting after
+                                               Candidate planning windows in Section 35.7
+What is the intended wait time for upgrades?                                                     the shared baseline / individual level model
+                                               are hypotheses only.
+                                                                                                 is selected.
+
+                                                                                                 Define gear lifespan, replaceability, selector
+                                               Transfer, refund or salvage are alternatives;
+How should gear investment be protected?                                                         routes and whether gear carries character
+                                               no percentage or exact rule selected.
+                                                                                                 identity or can move freely.
+
+                                                                                                 Build a separate acquisition ledger and then
+How does this affect summons and               Not yet reconciled; prior conflicting recurring   reconcile the combined weekly/monthly F2P
+fragments?                                     pull targets remain unresolved.                   budget, selector thresholds, banner cadence
+                                                                                                 and guarantee carry-over.
+
+                                                                                                 Only proceed after explicit owner approval;
+When can economy tests run?                    Not authorized in current phase.                  future implementation/testing gates remain
+                                                                                                 separate from this paper model.
+
+
+
+35.10 Interim conclusion and next research task
+Interim conclusion [RESEARCH SYNTHESIS]. The game should budget progression in time-to-afford, not only
+in raw cost numbers. Recurring dependable income, one-time milestones and variable rewards must be kept
+separate. Every multi-resource upgrade must be checked against its slowest required resource. The leading
+roster concept to study is a shared training baseline with character-specific specialization, because it may
+reduce duplicated leveling costs and make counters easier to field; this remains a proposal until compared to
+alternatives. Gear should use visible costs and a clear investment-protection policy. Candidate timing
+windows remain hypotheses, not validated balance.
+Next research task: reconcile this core-progression model with standard summons, universal fragments,
+featured-banner cadence, the proposed 70-pull guarantee, 100-fragment selector, and conflicting illustrative
+F2P pull-income targets. Then connect the combined budget to repeatable mode rewards, events and endgame
+
+                     Living design document • Live master v0.10.42 • Updated in place • Page 13
+<PARSED TEXT FOR PAGE: 14 / 27>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+sinks. Do not finalize prices or rates before the combined budget is internally consistent. Continue research
+and hypothetical paper journeys only; no prototype, simulator, seeded run or player test without explicit
+authorization.
+
+35.11 Sources for cost-versus-income and roster-progression integration (accessed 29
+October 2026)
+[ECO1] AFK Global. “Hero leveling costs, level caps and the Resonating Crystal.” Published 21 October 2026 on
+a specialist/community guide site. Used for the guide’s current displayed example of multi-resource leveling
+costs, breakpoint-based Essence costs and shared-level roster concept; not treated as official publisher
+documentation. https://www.afk.global/afk-arena/guides/leveling
+[ECO2] Farlight Games / AFK Journey. “Talk with Designers: New Season Preview.” First-party designer
+communication for a specific seasonal update. Describes Select Equipment Chests replacing random stage
+equipment drops, moving some milestone/material rewards earlier, and raising hero-upgrade material drop
+rates because development costs were increasing. These details are specific to the described change.
+https://afkjourney.farlightgames.com/news/a0ae0b8ad8c35da97805079b672b7287
+[ECO3] Unity. “Building an in-game economy.” General developer guidance on identifying resource sources
+and sinks and balancing their effects on progression. https://unity.com/how-to/building-game-economy-guide-
+part-2
+[ECO4] Unity. “Designing a balanced in-game economy.” General developer guidance on engagement profiles,
+smooth early progression, player journeys and later validation of cost/reward variables.
+https://unity.com/how-to/design-balanced-in-game-economy-guide-part-3
+Evidence boundary. [ECO1] is a specialist guide and includes game-specific current values; [ECO2] is first-
+party but describes one season’s planned changes; [ECO3-ECO4] are general design guidance. The shared-
+training proposal, affordability equations as applied to this project, candidate target windows and all future-
+game integration recommendations are project inferences/proposals, not benchmark facts.
+
+
+
+
+                  Living design document • Live master v0.10.42 • Updated in place • Page 14
+<PARSED TEXT FOR PAGE: 15 / 27>
+                    NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+
+
+41. Research priorities and baseline counter readiness
+31 October 2026 | Version 0.10.12. First decide what it takes to field a recruited cleanser. Which levels and
+gear does it inherit? Can the original five return with their gear intact? Those answers connect the combat
+rules in Sections 24–27 to the budgets in Sections 35–40.
+
+The table sets our research order. New training, equipment and reward rules are proposals. The numerical
+cases are paper budgets.
+
+41.1 Research order and conditions for moving on
+ Priority and scope              What the next module needs from this one
+
+                                 Specify training, caps, base skills, gear and the cost of switching. Sections 41.3–
+ 1 Field an owned counter
+                                 41.6 deliver the early and mature cases for budgeting.
+
+                                 Price a complete upgrade at each checkpoint. Show dated balances at two, four
+ 2 Fund shared squad growth      and seven visits, including a campaign wall. Record the first unaffordable input
+                                 and the smallest remedy that covers it. Next primary module.
+
+                                 Map starter and selector eligibility to Section 26. Trace 56 days for new, mature,
+ 3 Time access to essential
+                                 late-joining and returning accounts. Date two distinct answers to each threat,
+ roles
+                                 one broadly obtainable before its gate.
+
+                                 Write the campaign teaching sequence, its story beats, one boss and the optional
+ 4 Design campaign and
+                                 modes. For each, specify its tactical question, two answer categories, unlock,
+ optional encounters
+                                 cost and reward ID. Send any new mandatory cost back to priority 2.
+
+                                 Trace a first session and a return visit from claim through squad choice to the
+ 5 Teach the loop on mobile      battle recap. Specify the exact screen where a player learns the threat, a legal
+                                 response, a missing resource and its accessible source.
+
+                                 Separate solo access, co-op participation and ranked rewards. Specify
+ 6 Define social and
+                                 normalization, entry, matchmaking and what a player who skips guild or PvP
+ competitive play
+                                 retains. Check the role-access budget again.
+
+                                 Map event timing, absences, catch-up, long-term goals, paid offers and
+ 7 Plan events and paid
+                                 disclosures to source IDs. Compare free and paying paths through the same
+ progression
+                                 required encounter.
+
+                                 Trace a returning player from saved state through claim, recruitment, battle
+ 8 Audit the whole concept       and recovery. Reconcile duplicate definitions and version changes. Record open
+                                 production, service integrity and future measurement questions.
+
+At every handoff, check the 29.2 inventory for product identity, Naruto-inspired narrative and rights,
+accessibility, solo viability, payment fairness and save integrity. Advance when the next module has an
+explicit rule, dated price or documented shortfall to work with. Questions requiring player evidence belong in
+the Section 28 future validation register.
+
+41.2 Why roster readiness comes first
+Section 40 traced a standard selector to the seventh weekly payout. One weekly gear choice may still leave a
+second slot empty. Before increasing income, decide which investments belong to the squad and which a
+player chooses for one shinobi.
+
+
+                  Living design document • Live master v0.10.42 • Updated in place • Page 15
+<PARSED TEXT FOR PAGE: 16 / 27>
+                     NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+[SOURCE FINDING] Farlight Games describes shared levels and equipment in AFK Journey [READY1]. The
+Mythic Heroes guide asks players who swap in a new hero to check its runes and artifacts [READY2]. These
+peers separate the level a recruit receives from the equipment a player must assemble.
+
+[SOURCE FINDING] Guild Wars 2 offers a narrower comparison from an adjacent genre. Its Legendary
+Armory gives eligible characters access to account-owned equipment, with explicit restrictions on eligibility
+and copies [READY3]. We use this distinction when separating an account permission from a physical item
+that can occupy only one active slot.
+
+ Progression model                 Effect on the squad decision
+
+                                   A new counter needs a second level budget and an equipment route. This
+ Individual levels and gear        preserves personal investment but adds a repeat cost each time the player
+                                   changes composition.
+
+                                   Replacing a teammate is simple. Sharing every advanced build also reduces the
+ Share all levels and equipment
+                                   scope for a player to specialize a particular shinobi.
+
+                                   Use Section 35’s hybrid model. Fund squad training once and issue basic gear at
+ Share the earned baseline         the earned band. Owned equipment and advanced skill ranks give a player
+                                   something specific to build toward. Leading candidate.
+
+
+41.3 The minimum package for an owned shinobi
+[PROPOSAL] A shinobi is fieldable when the player owns one eligible copy, can place it in a legal formation,
+receives the squad’s earned level and promotion cap, has its defining skill available, and can fill both basic
+equipment slots without taking equipment from another member. Its effectiveness against a particular
+encounter is a separate question for the combat and content review.
+
+ Requirement                      Candidate rule and accounting treatment
+
+                                  The introductory squad tutorial activates shared training and standard
+                                  equipment before paying START01 or opening ordinary recruitment. A pre-
+ Unlock and timing
+                                  unlock tutorial unit uses its scripted tutorial loadout. The roster shows the unlock
+                                  condition for any early grant.
+
+                                  All owned deployable shinobi inherit the Hall’s purchased level up to its earned
+ COST-LEVEL and COST-             account cap. The squad pays Ryo and EXP for levels and any common essence
+ PROMO                            required for Hall promotions once. Taking a new copy to that same point costs 0
+                                  Ryo, 0 EXP and 0 essence. The next unearned cap still costs the squad resources.
+
+                                  The first copy gets its defining skill under the usual targeting, cooldown, Chakra
+ COST-KIT                         and status rules. It costs 0 skill materials and 0 duplicates to access that function.
+                                  Optional ranks may improve its numbers.
+
+                                  Two basic slots, tool and protective gear. Each owned unit receives a permanent
+                                  standard-issue loadout in its earned Hall band. Base enhancement is +0. These
+ COST-GEAR
+                                  items are derived equipment, with 0 Ryo and 0 enhancement material due at
+                                  recruitment. The account can field all five at once.
+
+                                  Standard gear has no sale, salvage or conversion value. A personal item replaces
+                                  the standard item in its slot and retains its enhancement when moved. It occupies
+ Transfer and reward credit
+                                  one active slot. A saved preset holds a reference. Removing that item restores
+                                  standard gear. GEAR01 still pays one actual choice per eligible week.
+
+
+                  Living design document • Live master v0.10.42 • Updated in place • Page 16
+<PARSED TEXT FOR PAGE: 17 / 27>
+                     NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+
+ Requirement                     Candidate rule and accounting treatment
+
+                                 SELECT01 costs 100 fragments for an eligible standard-pool hero. START01 is a
+                                 distinct one-time role choice. The weekly core-growth budget stays on the
+ COST-SELECT and COST-CORE
+                                 account ledger. Hall access and issued gear are persistent permissions and create
+                                 no recurring wallet grants.
+
+The Hall band determines the standard gear floor for all eligible roles. A stronger personal item contributes
+only the replacement’s stats in that slot. Standard issue is accounted for once inside the reference loadout. Use
+the Section 27 role multipliers for comparison. Map the combat stats of each earned Hall band separately
+when pricing growth. A higher earned band updates the baseline for the entire roster at the time it is
+purchased.
+
+41.4 Early and mature account budgets
+The following two checkpoints are illustrative inputs. “Level 20” and “level 80” give the bookkeeper a fixed
+reference. Actual campaign bands, stat curves and currency denominations are inputs for priority 2.
+
+ Condition               Early checkpoint E                            Mature checkpoint M
+
+                         Tutorial complete. Hall level and cap 20.     Hall level and cap 80. Band II earned. The
+                         Band I earned. The account holds its          account owns five functional members and
+ Opening state
+                         unused START01 choice and can select K-09     can spend 100 fragments on an eligible
+                         for cleanse.                                  K-09.
+
+                                                                       Level 80, cap 80, the same base cleanse and
+                         Level 20, cap 20, base cleanse, Band I tool
+ Result when K-09                                                      both Band II pieces at +0. A spent GEAR01
+                         and protection at +0. No reserve or weekly
+ joins                                                                 or two empty personal slots do not delay
+                         gear choice is required.
+                                                                       fielding.
+
+                         0 Ryo, EXP, common essence, skill material    The same zero preparation vector. The 100-
+ Incremental             or enhancement material. 0 physical gear      fragment conversion is charged once. The
+ preparation             claims. The starter choice is consumed        existing five keep their levels, gear and
+                         once.                                         presets.
+
+                         Reserve 3 Ryo, 2 EXP, 1 common essence
+ Weekly squad                                                          Reserve 3 Ryo, 3 EXP, 2 common essence
+                         and 1 enhancement in resource-specific
+ commitments                                                           and 1 enhancement in the same units.
+                         24h units.
+
+Each resource unit equals 24 hours of its own full-rate output at that checkpoint. Assume zero reserves, fixed
+ordinary idle rates and payment after the last collection. With gaps of 72 and 96 hours the player collects 3
+units of each resource. After the illustrative commitments, E retains 0 Ryo, 1 EXP, 2 essence and 2
+enhancement units. M retains 0, 0, 1 and 2. The next shared upgrade competes for the Ryo and EXP already
+spent.
+
+A role example makes the distinction concrete. Against K-06 Wound, an owned K-09 can take the flex slot and
+use its base cleanse on an eligible ally at a legal activation. Target selection for the paper case is one allied
+Wound source, removed on K-09’s action before the ally’s next tick. The normal cooldown and turn order still
+matter. A second route is to focus K-06 with a damage dealer such as K-03. The encounter designer must
+specify when each route is available. Equipping the cleanser alone cannot settle which route wins.
+
+41.5 Compare supply remedies against the same bill
+Section 40.10’s comparison bill charges the recruit 2 Ryo units and 2 enhancement units, with one usable
+physical piece already available. Reserve 3 Ryo and 1 enhancement unit for ongoing squad growth. The table
+                    Living design document • Live master v0.10.42 • Updated in place • Page 17
+<PARSED TEXT FOR PAGE: 18 / 27>
+                     NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+gives the extra Ryo still needed at the end of seven days. The new fielding proposal removes the personal
+preparation bill. Its account commitments still apply.
+
+ Seven-day comparison                                            2 visits            4 visits            7 visits
+
+ Idle units under the 24h full + 48h at 25% bank                  3.00                4.75                 7.00
+
+ Old bill under that bank: Ryo shortfall                          2.00                0.25                 0.00
+
+ Old bill plus a funded MAT01 grant of 2 Ryo units: Ryo
+                                                                  0.00                0.00                 0.00
+ shortfall
+
+ Old bill with 48h full + 24h at 25%: Ryo shortfall               0.50                0.00                 0.00
+
+ Old bill with 72h full + 48h at 25%: Ryo shortfall               0.00                0.00                 0.00
+
+ Proposed standard issue under the original bank:
+                                                                  0.00                0.00                 0.00
+ additional Ryo required for fielding
+
+Visit gaps in hours are 72/96 for two visits, 24/48/48/48 for four, and seven gaps of 24 for daily visits. The two
+longer banks yield 4.50 and 6.25 full-rate days respectively at two visits, and 7.00 at both higher frequencies.
+Under the old bill, the Ryo gap is the positive part of 3 + 2 minus collected Ryo and any timely grant. The 2-
+visit player also has exactly 2 enhancement units after the core commitment. Count MAT01 once, only when
+its entitlement has been earned before the bill is due.
+
+[RECOMMENDATION] Carry the shared baseline into the next budget and retain Section 32’s storage rule as
+the comparison case. Standard issue removes the cost triggered by switching characters. A longer bank boosts
+every idle resource, while MAT01 can target one short resource. Decide those two policies from the shared
+growth budget. Under the charged alternative, a missing physical piece can still block fielding even when both
+currency balances are sufficient.
+
+41.6 Recruitment dates and failure cases
+ Paper case                      Outcome under the proposed baseline
+
+                                 The seventh weekly posting brings cumulative fragments to 105 on day 49. Spend
+ Aligned account, both visits    100 on an eligible standard counter. Five remain, and the counter can enter the
+                                 next legal lineup that visit. Day 56 ends at 20 after the single conversion.
+
+                                 Miss week 3 entirely. Six credited weeks yield 90 by day 49. The seventh credited
+ Miss a whole week               week yields 105 by day 56. Fielding can occur at that posting if the player chooses
+                                 the counter.
+
+                                 Section 40.7 gives 95 fragments by day 49 and 110 by day 56. The standard-issue
+ Miss second visits in weeks     proposal permits fielding on day 56. With only one visit in every week, the account
+ 3 and 6                         has 80 fragments at day 56 and still needs another acquisition route or later
+                                 payouts.
+
+                                 Tutorial completes on day 1. Earn 10 on that visit, then return each Monday and
+                                 Thursday from the next week. Five complete weeks bring the total to 85. Monday
+ Join on Wednesday
+                                 day 41 brings it to 95, and Thursday day 44 to 100. Immediate credit follows
+                                 CORE01/02. Day 49 is specific to Section 40’s week-end posting convention.
+
+
+
+
+                   Living design document • Live master v0.10.42 • Updated in place • Page 18
+<PARSED TEXT FOR PAGE: 19 / 27>
+                       NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+
+ Paper case                         Outcome under the proposed baseline
+
+                                    With zero physical spares and GEAR01 spent, both standard slots still populate.
+                                    Removing K-09 restores the original five with every previously equipped item. The
+ Two missing gear pieces
+                                    old one-piece-per-week physical route cannot fill two empty slots in that same
+                                    entitlement.
+
+                                    At a fixed checkpoint, apply only the already-earned Hall band and idle rate. If the
+                                    account lacks a cleanser before a required wall, identify an earlier reachable
+ Blocked campaign
+                                    substitute such as focus on the applier. If neither route is accessible, move the
+                                    access point or redesign the gate.
+
+The mature full-core schedule still produces 68 seals in 56 days against the proposed 70-pull featured
+threshold. The standard-issue policy affects the cost after acquisition. It cannot turn a featured pull into a
+guaranteed result or put an ineligible hero in the selector. The proposed standard list includes K-09 for these
+cases. Priority 3 must map the rest of the pool against the actual campaign order.
+
+41.7 Handoff to shared growth pricing
+Priority 1 is specified for paper budgeting. Track ownership, fieldability at the earned baseline and
+effectiveness in an encounter separately. The first two follow from the roster and equipment rules. The third
+requires evidence about the matchup.
+
+Priority 2 will price one meaningful Hall upgrade at E and one at M. For each, state the last cleared campaign
+checkpoint and exact IDLE01 output per hour in Ryo, EXP, common essence and enhancement materials.
+Specify the upgrade’s before-and-after level, cap and stat benefit, each resource cost, opening wallet, payment
+date and any distinct eligible MAT01 entitlement. Use the two-, four- and seven-visit calendars from 41.5 and a
+stalled account. Record the day the slowest requirement is met and the resource displaced by that payment.
+
+The handoff is complete when every required resource has a published route and dated balance, or a named
+shortfall with a concrete alternative. Recheck the candidate 1–2 daily-cycle and 2–3 day stalled-account pacing
+questions in 35.7 against actual visit dates. If two visits per week cannot meet a shorter calendar target,
+distinguish time affordable from the next opportunity to collect and spend. Reopen priority 1 if a standard
+item is too weak for the advertised encounter, a shared cap hides a personal fee, or equipping the counter
+consumes another teammate’s gear.
+
+41.8 Sources and scope
+Consulted 31 October 2026. Section 41.2 uses these sources for design comparisons. All project prices and
+calendar outcomes follow from the assumptions above.
+[READY1] Farlight Games. AFK Journey. Developer-authored App Store description of shared levels and equipment. Direct idle RPG
+peer. https://apps.apple.com/us/app/afk-journey/id1628970855
+
+[READY2] IGG. Mythic Heroes Day 1 Guide. Publisher guidance on a new recruit’s runes and artifacts. Direct idle RPG peer.
+https://www.mythicheroes.com/7day-guide-day1/
+
+[READY3] ArenaNet. Legendary Armory. Guild Wars 2 support explains account ownership, character eligibility and copy limits.
+MMO equipment analogy. https://help.guildwars2.com/hc/en-us/articles/4403435663635-Legendary-Armory
+
+
+
+
+                     Living design document • Live master v0.10.42 • Updated in place • Page 19
+<PARSED TEXT FOR PAGE: 20 / 27>
+                     NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+
+
+42. What the next shared Hall upgrade costs
+Priority 2 | 31 October 2026. At a fixed campaign wall, the proposed early upgrade is affordable at the first or
+second collection under all three schedules. The mature promotion needs more EXP. A player visiting twice
+must wait until day 7 even though the full week produces enough currency. We recommend carrying this
+slower path into encounter planning before promising a deadline.
+
+42.1 Two purchases and their prices
+Design proposals for paper comparison. E and M are placeholder IDs for the last cleared campaign stage. Both
+accounts start at day 0 just after an empty claim, with zero balances. Neither clears another stage during the
+week. The Hall upgrade is part of the weekly core commitment in Section 41.4. Counting it again as an extra
+purchase would overstate the bill.
+
+ Input                      Early stage E                                Mature stage M
+
+ Shared purchase            Hall level 20 to 21. Cap 20 to 25.           Hall level 80 to 81. Cap 80 to 85.
+
+                            All eligible shinobi inherit level 21. For   All eligible shinobi inherit level 81.
+ Immediate benefit          this example base HP, ATK and DEF rise       Illustrative base HP, ATK and DEF rise by
+                            by 2% of their level-20 values.              1% of their level-80 values.
+
+                            10 Ryo, 20 EXP, 2 common essence, 1          40 Ryo, 60 EXP, 4 common essence, 2
+ IDLE01 hourly income
+                            enhancement material.                        enhancement materials.
+
+                            300 Ryo, 720 EXP, 48 essence, 0              1,920 Ryo, 3,600 EXP, 192 essence, 0
+ Price of this purchase
+                            enhancement.                                 enhancement.
+
+ Other core bill due on     420 Ryo, 240 EXP, 0 essence, 24              960 Ryo, 720 EXP, 0 essence, 48
+ day 7                      enhancement.                                 enhancement.
+
+Each purchase opens the next cap and pays for the first level above the old cap. Levels after 21 or 81 require
+separate future payments. Role multipliers, Speed, skill access and the gear band stay at their prior values for
+this step. The listed percentage describes the illustrative base-stat benefit before role multipliers. Encounter
+effectiveness remains open.
+
+The two bills sum to the Section 41.4 weekly commitments. In E they total 720 Ryo, 960 EXP, 48 essence and 24
+enhancement. In M they total 2,880 Ryo, 4,320 EXP, 192 essence and 48 enhancement. MAT01 earns zero
+budget credit in the base case. Recruitment seals and fragments stay in their own ledgers.
+
+42.2 When the player can collect and pay
+A day is 24 hours after the empty opening claim. Credit 24 hours at full rate and the next 48 hours at one
+quarter rate, then pause until collection. Pay the Hall bill at the first visit with enough of every input. The
+other core bill has a day-7 due date and has priority over optional spending. The examples assume it can wait
+until that date.
+
+ Visits     Claim days           Cumulative full-rate days at each claim               First Hall payment E / M
+
+ 2          3, 7                 1.50, 3.00                                            Day 3 / day 7
+
+ 4          1, 3, 5, 7           1.00, 2.25, 3.50, 4.75                                Day 3 / day 5
+
+ 7          1 through 7          1, 2, 3, 4, 5, 6, 7                                   Day 2 / day 3
+
+
+                   Living design document • Live master v0.10.42 • Updated in place • Page 20
+<PARSED TEXT FOR PAGE: 21 / 27>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+Divide each price by its own full-rate daily output. E needs 1.25 days of Ryo, 1.50 of EXP and 1.00 of essence. M
+needs 2.00, 2.50 and 2.00 respectively. EXP is the last requirement in both cases. At four visits M has only 3,240
+EXP on day 3, which leaves a deficit of 360. The next visit on day 5 covers it. For daily E the bank already holds
+enough at hour 36 across the first two accrual intervals, but the spend occurs at hour 48 when the player
+returns.
+
+42.3 Dated wallets and competing uses
+Amounts below follow the order Ryo / EXP / essence / enhancement. The purchase-day wallet is after the Hall
+payment and before the separate day-7 bill. The final wallet deducts both bills exactly once.
+
+ Case                 Pay day       After Hall purchase                  After both bills on day 7
+
+ E · 2 visits         3             60 / 0 / 24 / 36                     0 / 480 / 96 / 48
+
+ E · 4 visits         3             240 / 360 / 60 / 54                  420 / 1,320 / 180 / 90
+
+ E · 7 visits         2             180 / 240 / 48 / 48                  960 / 2,400 / 288 / 144
+
+ M · 2 visits         7             960 / 720 / 96 / 144                 0 / 0 / 96 / 96
+
+ M · 4 visits         5             1,440 / 1,440 / 144 / 168            1,680 / 2,520 / 264 / 180
+
+ M · 7 visits         3             960 / 720 / 96 / 144                 3,840 / 5,760 / 480 / 288
+
+The mature two-visit player reaches day 7 with 2,880 Ryo and 4,320 EXP before spending. Paying for the Hall
+leaves 960 Ryo and 720 EXP. Those balances are exactly what the other core bill consumes. An optional
+purchase of 100 Ryo before the bills are settled creates a 100-Ryo deficit. A newly owned cleanser can still use
+the already-earned Hall level under Section 41.3 during that wait.
+
+42.4 What would justify a change
+For a day-3 mature upgrade at two visits, the first claim yields 1,440 Ryo, 2,160 EXP, 144 essence and 72
+enhancement. The smallest timely supplement for this bill is 480 Ryo, 1,440 EXP and 48 essence together.
+Funding only the EXP shortage leaves two blockers. A MAT01 award tied to the second weekly visit arrives on
+day 7 in this calendar and cannot solve the day-3 shortage. The alternate training route would need its own
+proven unlock and claim time.
+
+A storage change has a different effect. With 48 hours full and the following 24 hours at one quarter rate, the
+first 72-hour claim yields 54 full-rate hours, or 3,240 mature EXP. It still misses the price by 360 EXP. With 72
+hours full the first claim yields 4,320 EXP and covers all three inputs on day 3. That rule raises income across
+the idle basket on every qualifying long absence. A lower Hall price or a targeted timely grant has a narrower
+effect.
+
+Pacing decision for the next paper pass. Retain the original bank as the comparison case and use the observed
+payment dates from this ledger. The early daily case meets the 1–2 day planning window. The mature daily
+promotion takes three days, and the mature stalled two-visit case exceeds the 2–3 day window. These
+examples warrant distinct targets for routine levels and cap promotions. A four-day gap between visits can
+itself prevent a three-day payment even with sufficient resources in storage.
+
+42.5 Handoff to essential role access
+Priority 2 now has a priced reference at E and M, six dated wallets and an explicit shortfall against the
+accelerated target. Priority 3 should place the first Wound encounter on the same calendar as its eligible
+cleanser and a second response such as focusing the applier. For each route, write down the first ownership
+
+                  Living design document • Live master v0.10.42 • Updated in place • Page 21
+<PARSED TEXT FOR PAGE: 22 / 27>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+date, inherited Hall level, gear entitlement and first legal opportunity to respond. If a required encounter
+expects level 81 before day 7 on the mature two-visit path, reopen its timing, the price or the supply route. The
+campaign stage IDs, rates, prices and stat increases in this chapter remain illustrative.
+
+Basis. Section 32.6 supplies the storage candidate, Section 35.7 the pacing questions, Section 40 the source
+identities, and Sections 41.4–41.7 the commitments, calendars and handoff. All new quantities are project
+design inputs. The arithmetic establishes payment dates under those assumptions.
+
+
+52. Priority 3J: new-account Hall 1 to 20 affordability and
+tutorial source ledger
+1 November 2026 | v0.10.25 | PRE-DEVELOPMENT RESEARCH ONLY. This packet closes a missing first-
+account currency route at the existing Hall20/Band I reference. It does not approve actual stages, stat growth,
+playtest performance, or a finished onboarding flow. All newly named grants and prices below are [WORKING
+PROPOSAL]; arithmetic derived from those proposals is [CALCULATED]. Existing §§24–27, 32, 40–42 and 43–51
+remain the comparison baseline.
+
+52.1 Problem and design constraints
+[AUDIT] Previous manuscripts priced the step Hall20→21 and fixed-stage income but never stated what
+Hall1→20 costs or which first-account rewards finance it. Therefore the eight at-Hall20 encounter certificates
+could not prove a new free account would reach that baseline. The missing bridge cannot be repaired by
+assuming unspecified first-clear rewards, calendar streaks, random summons, a mandatory Hall21 payment,
+or unpriced returner compensation.
+
+[PROJECT CONSTRAINTS] Keep the four START00 shinobi and one START01 K-09/K-10 choice; Hall20/cap20
+and Band I baseline; two included standard gear slots per owned shinobi; 0 first-copy personal preparation
+costs; Section 32 bank (24h full +48h at 25%, then stop); Section 42 E rate (10 Ryo/20 EXP/2 essence/1
+enhancement per hour) once E0 is cleared; and gate-relative STORY01/02/03 grants. Tutorial Ryo/EXP may not
+count toward seals, fragments, pity, GEAR01, or any other award.
+
+52.2 Four level bands: exact 19 shared Hall purchases
+[WORKING DECISION 3J-01] The Training Hall is created at level 1 with initial cap 20. Levels 2–20 are 19
+shared, permanent account purchases funded only by Ryo and Shinobi EXP. No promotion essence,
+enhancement, copies, skill books, weekly claim, or personal gear fee is charged before Hall20. The 20 →21 step
+remains a distinct 300-Ryo, 720-EXP, 48-essence upgrade, which raises the cap to 25 under §42. This is a
+candidate novice schedule, not a demonstrated long-term curve.
+ Hall step             Training band          Ryo                    EXP                    Cumulative Ryo / EXP
+
+ 1→2                   A / introductory       8                      12                     8 / 12
+ 2→3                   A / introductory       8                      12                     16 / 24
+ 3→4                   A / introductory       8                      12                     24 / 36
+ 4→5                   A / introductory       8                      12                     32 / 48
+ 5→6                   B / formation          12                     18                     44 / 66
+ 6→7                   B / formation          12                     18                     56 / 84
+ 7→8                   B / formation          12                     18                     68 / 102
+ 8→9                   B / formation          12                     18                     80 / 120
+ 9 → 10                B / formation          12                     18                     92 / 138
+ 10 → 11               C / targeting          16                     24                     108 / 162
+ 11 → 12               C / targeting          16                     24                     124 / 186
+ 12 → 13               C / targeting          16                     24                     140 / 210
+
+
+                  Living design document • Live master v0.10.42 • Updated in place • Page 22
+<PARSED TEXT FOR PAGE: 23 / 27>
+                    NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+ Hall step              Training band                  Ryo                EXP                        Cumulative Ryo / EXP
+
+ 13 → 14                C / targeting                  16                 24                         156 / 234
+ 14 → 15                C / targeting                  16                 24                         172 / 258
+ 15 → 16                D / final training             20                 30                         192 / 288
+ 16 → 17                D / final training             20                 30                         212 / 318
+ 17 → 18                D / final training             20                 30                         232 / 348
+ 18 → 19                D / final training             20                 30                         252 / 378
+ 19 → 20                D / final training             20                 30                         272 / 408
+[CALCULATED] Cost bands: Hall1→5 is 4×(8/12)=32 Ryo/48 EXP; 5→10 is 5×(12/18)=60/90; 10 →15 is
+5×(16/24)=80/120; 15→20 is 5×(20/30)=100/150. Grand total = 272 Ryo and 408 EXP, with zero
+essence/enhancement. Any later cap-at-5/10/15 mechanic would contradict this first-account baseline and
+must be explicitly re-priced, not smuggled in.
+
+52.3 Four one-time onboarding grants, no fabricated first-clears
+[WORKING DECISION 3J-02] Choose four durable, once-per-account, noncombat training checkpoints ONB01–
+ONB04. Each checkpoint visibly grants its listed Ryo and EXP, then teaches and enables purchasing its
+matching Hall band. They are available without PvP, guilds, advertisements, gacha, additional equipment or
+timed objectives. They can be resumed after logout. This is a deliberately guided first-session bridge; it does
+NOT imply the live user will enjoy four consecutive upgrades. A later user-study could replace parts with
+verified, affordable combat clears at earlier levels.
+                    Guaranteed                                 Band spend Ryo /
+ Unique ID                                   Grant Ryo / EXP                      Wallet Ryo / EXP       Hall result
+                    checkpoint                                 EXP
+
+ ONB01              Open Training Hall;      40/60             32/48              8/12                   Hall 5
+                    account created /
+                    START00 delivered
+ ONB02              Choose START01           56/84             60/90              4/6                    Hall 10
+                    flex; learn
+                    formation
+ ONB03              Review targeting         80/120            80/120             4/6                    Hall 15
+                    preview; confirm
+                    five-slot roster
+ ONB04              Inspect Wound            104/156           100/150            8/12                   Hall 20
+                    preview; complete
+                    preparation lesson
+[CALCULATED] Total one-time ONB01–04 grant = 280 Ryo +420 EXP. Required Hall1 →20 purchases =272 Ryo
++408 EXP. After a clean first tutorial, player retains 8 Ryo and12 EXP. No idle claim is needed for the baseline.
+These four grant IDs are ADDITIONAL explicit inputs, not evidence that a previous reward table already
+financed early growth; earlier versions correctly marked this income missing.
+
+[TRANSACTION POLICY] Reserve ONB identities once per account, with idempotent grant transactions and
+durable completion. On interruption, reopen the oldest unfinished step, show its resources and legal next
+upgrade, and never re-grant an already credited step. Unlock unrestricted optional currency sinks and the
+shop only once ONB04 is complete, preventing a newcomer from spending the tutorial budget elsewhere
+before Hall20. If the same hero is owned from recruitment, START00/START01/ STORY must reconcile the first
+copy without duplicate free pulls. This is a progression-safety constraint, not a license for misleading or
+hidden currencies.
+
+52.4 E0 reward checkpoint and first Wound gate placement
+[WORKING DECISION 3J-03] At the completion of ONB01, publish tutorial checkpoint E0 as an earned
+noncombat campaign/tutorial clearance and unlock ordinary IDLE01 at the already-defined early E hourly
+vector: (10 Ryo,20 EXP,2 essence,1 enhancement). E0 is the first eligible idle-rate floor. It requires neither
+                  Living design document • Live master v0.10.42 • Updated in place • Page 23
+<PARSED TEXT FOR PAGE: 24 / 27>
+                        NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+winning a below-Hall20 fight nor earning a random shinobi. The account may continue ONB02–04
+immediately without waiting for resource accrual. The first mandatory G1 Wound battle is offered only after
+ONB04 has credited Hall20/cap20, Band I standard issue, START00 and one START01 choice. E0 is NOT an
+approved narrative stage number or a disguised win against G1.
+
+[FAIRNESS / ALTERNATIVE] Giving the E early fixed rate at ONB01 intentionally front-loads training value; it
+can reduce the importance of early idle accumulation and makes tutorial completion more directed. Reject the
+alternative of forcing a one-day/weekly idle claim before G1 merely to demonstrate idle mechanics: that
+creates a clock wall without a tactical purpose. Also reject requiring combat victories at Hall5/10/15 until
+actual sub-20 role stat packets and those fights are authored. Change this policy if onboarding evidence shows
+unengaging upgrades; the smallest safe revision would preserve the guaranteed resource budget while
+changing how its milestones are presented.
+
+52.5 Idle-bank formula and first seven visits: four fully specified calendars
+[BASELINE] Define H(Δ)=min(Δ,24)+0.25×min(max(Δ−24,0),48), with Δ hours since the last claim. For gaps
+>=72h, H=36 equivalent full-rate hours, not 72h. No claim time before E0 receives credit. The following tables
+begin just after ONB04 at tutorial day0, assuming E0 was activated earlier that same uninterrupted session,
+that the account has the stated 8/12 currency remainder, no event/first clear/weekly material rewards are
+credited, no later idle rate is unlocked, and no optional purchases occur. A calendar claim is available ONLY
+when the player returns and presses Collect.
+ Daily visits ·                  Earned        Cumulative
+                  Day                                        Wallet Ryo   EXP           Ess.        Enh.
+ visit                           hours         hours
+
+ 1                1              24.0          24.0          248          492           48          24
+ 2                2              24.0          48.0          488          972           96          48
+ 3                3              24.0          72.0          728          1452          144         72
+ 4                4              24.0          96.0          968          1932          192         96
+ 5                5              24.0          120.0         1208         2412          240         120
+ 6                6              24.0          144.0         1448         2892          288         144
+ 7                7              24.0          168.0         1688         3372          336         168
+ Two
+ visits/week                     Earned        Cumulative
+                  Day                                        Wallet Ryo   EXP           Ess.        Enh.
+ (72h/96h                        hours         hours
+ gaps) · visit
+
+ 1                3              36.0          36.0          368          732           72          36
+ 2                7              36.0          72.0          728          1452          144         72
+ 3                10             36.0          108.0         1088         2172          216         108
+ 4                14             36.0          144.0         1448         2892          288         144
+ 5                17             36.0          180.0         1808         3612          360         180
+ 6                21             36.0          216.0         2168         4332          432         216
+ 7                24             36.0          252.0         2528         5052          504         252
+ Once-weekly                     Earned        Cumulative
+                  Day                                        Wallet Ryo   EXP           Ess.        Enh.
+ visits · visit                  hours         hours
+
+ 1                7              36.0          36.0          368          732           72          36
+ 2                14             36.0          72.0          728          1452          144         72
+ 3                21             36.0          108.0         1088         2172          216         108
+ 4                28             36.0          144.0         1448         2892          288         144
+ 5                35             36.0          180.0         1808         3612          360         180
+ 6                42             36.0          216.0         2168         4332          432         216
+ 7                49             36.0          252.0         2528         5052          504         252
+
+
+
+
+                       Living design document • Live master v0.10.42 • Updated in place • Page 24
+<PARSED TEXT FOR PAGE: 25 / 27>
+                         NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+ Daily visits ·                    Earned           Cumulative
+                   Day                                              Wallet Ryo        EXP              Ess.               Enh.
+ visit                             hours            hours
+
+ Midweek
+ start (48h
+                                   Earned           Cumulative
+ then              Day                                              Wallet Ryo        EXP              Ess.               Enh.
+                                   hours            hours
+ 96h/72h) ·
+ visit
+
+ 1                 2               30.0             30.0            308               612              60                 30
+ 2                 6               36.0             66.0            668               1332             132                66
+ 3                 9               36.0             102.0           1028              2052             204                102
+ 4                 13              36.0             138.0           1388              2772             276                138
+ 5                 16              36.0             174.0           1748              3492             348                174
+ 6                 20              36.0             210.0           2108              4212             420                210
+ 7                 23              36.0             246.0           2468              4932             492                246
+                                                                                             Wallet after 7
+ Account visit                                                      Full-rate-                                    Earliest optional
+                         First claim day      7th claim day                                  visits
+ pattern                                                            equivalent hours                              Hall21
+                                                                                             Ryo/EXP/Ess/Enh
+
+ Daily visits            1                    7                     168.0                    1688/3372/336/168    day 2
+ Two visits/week         3                    24                    252.0                    2528/5052/504/252    day 3
+ (72h/96h gaps)
+ Once-weekly visits      7                    49                    252.0                    2528/5052/504/252    day 7
+ Midweek start (48h      2                    23                    246.0                    2468/4932/492/246    day 6
+ then 96h/72h)
+[CALCULATED DAY-7 SAME-CALENDAR CHECK] Daily (7 claims) earns168 full-rate-equivalent hours by day7:
+wallet1,688 Ryo/3,372 EXP/336 essence/168 enhancement. Twice-weekly (days3 and7) earns72h:
+wallet728/1,452/144/72. Once-weekly (day7 only) earns36h: wallet368/732/72/36. This is a substantial speed
+gap, not equal progression. Seven *visits* of weekly and twice-weekly schedules both collect252 equivalent
+hours but represent very different elapsed calendar time (49 vs24 days); never compare those rows as equal-
+duration outcomes.
+
+[CALCULATED] Under no optional spending, Hall20→21 is first affordable at collected visits day2 (daily), day3
+(twice-weekly), day7 (weekly), and day6 (midweek). The midweek day2 wallet is 308 Ryo/612 EXP/60 essence:
+Ryo and essence pass, but EXP fails. On day6, the next 96-hour-gap claim adds 360 Ryo/720 EXP/72 essence, so
+all three requirements pass. Check the slowest required input, not only the Ryo threshold.
+
+[COMPARABILITY] Section42’s zero-wallet early E cases were designed after an empty claim; this new ledger
+begins with the proven 8-Ryo/12-EXP tutorial remainder. Therefore post-tutorial wallets differ by exactly8/12
+from that historical opening, but the earliest purchased Hall21 visit is unchanged for the three common
+schedules. The illustrative §42 other-core basket (420 Ryo/240 EXP/24 enhancement) remains OPTIONAL, not a
+debt or gate; charging it would require an explicit separate spending-path calculation.
+
+52.6 Returning, interrupted and incomplete-training cases
+                                   Guaranteed owner state
+ Case                                                               Funding result                     Remaining risk
+                                   and claim
+
+ Stops after ONB02 at Hall10       ONB01–02 claimed once.           Resume ONB03/04 and train          No actual combat below Hall20
+                                   ONB03/04 remain persistent; E0   through20 from guaranteed          is assumed; restore resumable
+                                   idle already unlocked at         later grants; idle may add funds   tutorial UI.
+                                   ONB01.                           but is not required.
+ Hall20 account away 14 days       Same four core plus starter      Earn360 Ryo/720 EXP/72             No retroactive 14-day income,
+                                   support; no repeated ONB or      essence/36 enhancement +           return bonus or reset of missed
+                                   START grant. At return, 14-day   tutorial leftover8/12; can buy     rewards.
+                                   bank is capped at36h.            optional Hall21 then.
+
+
+
+                        Living design document • Live master v0.10.42 • Updated in place • Page 25
+<PARSED TEXT FOR PAGE: 26 / 27>
+                        NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+                                  Guaranteed owner state
+ Case                                                                Funding result                    Remaining risk
+                                  and claim
+
+ Hall20 account away 28 days      Persistent owned roster, Hall      Same single bank cap36h,          Returner-specific RET01 still
+                                  level and gear unchanged; ONB      regardless of28 days idle. Upon   unpriced, not silently credited.
+                                  and STORY grants stay unique.      return, claim and resume
+                                                                     progression.
+ Player joins midweek             ONB grants and starter choice      First claims after2/6/9 days      Weekly seal/fragment schedule
+                                  independent of weekly reset. E0    show distinct cash clocks; no     remains separately governed
+                                  unlock at ONB01; tutorials can     CORE02 qualification needed       by §40.
+                                  finish same session.               for G1.
+ G4/G5/G8 unlocked after a long   STORY01/02/03 are issued once      Zero cost for owned first-copy    Do not count duplicate
+ absence                          and before corresponding fight,    deployment; Hall/band at time     summon or fragments if story
+                                  upon eligible return.              of fight must be audited          unit already owned.
+                                                                     separately.
+
+
+52.7 Gate certificate, accounting controls, exclusions and falsifiers
+[CONDITIONAL EARLIEST ACCESS] Given each ONB step is claimable without combat and has no timer, a
+player can reach the Hall20/cap20/Band-I paper baseline and enter the first G1 Wound lesson within the same
+completed introductory visit (day0) under this proposal. G2–G8 still have only relative gate order; nothing
+here assigns their actual chapter numbers, completion dates, enemy stat growth, resource costs, new story
+reward vectors, or player success. START01 K-09 and K-10 remain mutually exclusive one-time choices, but
+BOTH first-encounter response paths have the existing §51 certificates. Switching owned shinobi has 0
+personal preparation cost; included standard-issue gear is not a recurring claim.
+
+[ACCOUNTING INVARIANTS] ONB01/02/03/04 are each first-account Ryo/EXP grants only. START00, START01,
+FIRST01, FIRST02, STORY01/02/03, CORE01/02, IDLE01, GEAR01, MAT01, SELECT01 and RET01 retain distinct
+source/transaction identities. ONB grants do not produce fragments, seals, gems, skill materials or duplicate
+hero copies. One grant receipt + one spend per level step; retry is idempotent; spending cannot produce a
+negative balance. Tutorial E0 tier never retroactively increases pre-unlock time; no superposed duplicate
+IDLE01 accrual. A weekly reset never replays ONB or STORY. This model still needs eventual backend-save
+integrity design.
+
+[STOP CONDITIONS / REOPEN] Reopen if any ONB step requires a Hall level higher than its already-funded
+previous band; the shop opens before ONB04, exposing new-player spending regret; first Wound requires a
+paid personal gear/counter; actual tutorial includes below-Hall20 fights; E0 does not count as a legitimate best-
+cleared checkpoint under later narrative design; ONB grants collide with pre-existing FIRST01/FIRST02
+resources; or an actual user cannot follow four noncombat purchase cycles. Under any of these, author the
+revised price+source ledger and rerun all four calendars BEFORE approving campaign entry stages.
+
+[EXPLICIT LIMIT] The 1→20 currency route is now closed under chosen paper assumptions, not the level1–19
+combat stat curve. Later chapters still need the per-level HP/ATK/DEF/Speed map, tutorial UX and low-level
+opponent models if any such encounters are introduced, the exact story-stage ID/rate graph after E0, optional-
+spend trajectories, real time-to-upgrade usability, long-run F2P catch-up, and empirical onboarding
+satisfaction. This study does not justify saying early progression is fun, tested or optimally paced.
+
+52.8 Decision record and next research level
+ Candidate                                   Disposition and justification                  Cost / sensitivity / reversal
+
+ Wait for idle to fund Hall20                REJECT: calendar wall before first             May lengthen tutorial; no guaranteed
+                                             meaningful battle, with 1.5 full-rate-day      same-session G1.
+                                             weekly collections.
+ Unpriced first-clear windfall               REJECT: no sub20 combat or first-clear         Would conceal a mandatory resource
+                                             ledger exists; circular funding.               prerequisite.
+
+
+                      Living design document • Live master v0.10.42 • Updated in place • Page 26
+<PARSED TEXT FOR PAGE: 27 / 27>
+                           NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+ Candidate                                Disposition and justification                  Cost / sensitivity / reversal
+
+ Lower required first gate below Hall20   RESERVE if four training grants fail UX;       A larger combat rewrite than funding one
+                                          avoids full-band tutorial but requires fresh   shared baseline.
+                                          stats and eight desk ledgers.
+ Four bound noncombat grants and cap20    SELECT working baseline. Exactly priced,       More guided early flow; grants deliberately
+                                          resumable, independent of                      front-load 280/420 and shop lock reduces
+                                          attendance/pulls.                              freedom.
+ E0 tutorial idle unlock                  SELECT early fixed tier at ONB01; unlocks      Pre-combat income exists; must validate
+                                          idle promise before training is finished.      this does not distort long-run supply.
+[NEXT — PRIORITY 4A: CAMPAIGN CONTENT GRAPH AND REWARD-ID LEDGER] With the first-account Hall20
+funding bridge explicitly priced, prepare a *paper* chapter-and-stage skeleton that maps G1–G8 into actual
+campaign checkpoints, story order, unique first-clear and repeatable reward IDs, idle-tier transitions, unlock
+prerequisites and solo-mode boundaries. Before finalizing a low-level fight or any Hall21+ mandatory gate,
+return to §52.7 exclusions and author its new stat/affordability certificate. RECOMMENDED RESEARCH LEVEL:
+EXTRA HIGH because even a narrative stage reward can affect the global economy and roster grant clocks.
+Preserve all unresolved design/validation cases. No executable prototype, simulation, or player testing is
+authorized.
+
+[EVIDENCE] Calculations are internal design arithmetic grounded in §§32, 40–42 and 43–51 (master saved 1
+November 2026). No external game claims validate these authored amounts, and no external data proves
+optimal onboarding. This packet introduces a proposed numeric training cost/grant schedule and explicitly
+supersedes §51.8’s statement that Hall1→20 was unpriced; prior historical paragraphs stay in the archive as
+dated research.
+
+1 November 2026 | v0.10.26 | RESEARCH / WORKING DESIGN. This packet converts the relative G1–G8
+teaching order from §51 into a single traversable campaign candidate without changing combat coefficients,
+earnable Hall20/Band-I access or the previously priced onboarding economy. [PROPOSAL] identifies chosen
+candidate rules; [CALCULATED] identifies arithmetic and ordering deductions; [OPEN] identifies values
+excluded from numeric F2P claims. No playable content, simulation, remote service, or player test exists.
+
+
+
+
+                       Living design document • Live master v0.10.42 • Updated in place • Page 27
+

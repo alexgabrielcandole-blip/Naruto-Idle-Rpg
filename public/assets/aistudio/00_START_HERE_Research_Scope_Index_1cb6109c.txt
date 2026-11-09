@@ -1,0 +1,478 @@
+SOURCE TEXT EXPORT
+Original file: 00_START_HERE_Research_Scope_Index.docx
+Source: https://chatgpt.com/library?file_id=libfile_4a86f2446ed081919d8e6306293ece1d&account_id=personal
+Source file ID: file_000000002618821185afe72430579351
+Source version identifier: 10
+Source last modified: 2026-11-09T10:16:01.605143Z
+Exported: 9 November 2026
+Scope: Complete available extracted text, including parsed tables and page markers. Original Word layout, embedded media, and document metadata are not reproduced by this text export. Use the linked original DOCX for those features. No source text has been intentionally summarized or rewritten below.
+
+BEGIN SOURCE TEXT
+
+<PARSED TEXT FOR PAGE: 1 / 13>
+NARUTO IDLE RPG
+
+
+Research Scope Index & Preservation
+Register
+Scope Masters v1.0 • 08 November 2026
+
+This is the authoritative routing guide for the separately editable topic masters. The original v0.10.42 DOCX is
+retained unchanged as the archival source and emergency recovery copy.
+
+
+
+Preservation verdict
+   Original source: 69 numbered research sections, 7 archival appendices, and the front matter.
+   Exact body partition: 4061 of 4061 non-layout body XML nodes assigned exactly once.
+   Original content: 3,607 paragraphs and 326 tables; all retained in the scoped output documents.
+   Original paragraphs, tables, direct bookmarks, and their full underlying XML are preserved unchanged inside
+    each scope file. Seven historical bookmarks spanning new scope boundaries have supplemental paired
+    boundary elements; originals remain unchanged. All supporting Word parts were retained.
+   The mini-master cover pages are NEW metadata, not part of the original. The original body sections were not
+    rewritten or summarized.
+   Appendices A-G are retained in seven independent, editable archive DOCX files. The legacy document map in
+    Governance is historical, not the new navigation index.
+   The original source file is unchanged and included alongside the scope masters in the deliverable bundle.
+
+
+
+Active topic masters
+
+01 Research Governance and Roadmap
+01_Research_Governance_and_Roadmap.docx | Original sections: 1, 2, 3, 4, 11, 12, 13, 14, 15, 16, 19, 22, 23, 28, 29
+| 290 paragraphs, 16 tables
+
+02 Combat Rules and Balance
+02_Combat_Rules_and_Balance.docx | Original sections: 5, 7, 20, 24, 25, 27 | 330 paragraphs, 41 tables
+
+03 Hero Roster and Team Compositions
+03_Hero_Roster_and_Team_Compositions.docx | Original sections: 6, 10, 26, 69 | 97 paragraphs, 26 tables
+
+04 F2P Fairness and Core Principles
+04_F2P_Fairness_and_Core_Principles.docx | Original sections: 8, 18, 21 | 90 paragraphs, 6 tables
+
+05 Idle Rewards Economy and Sources
+05_Idle_Rewards_Economy_and_Sources.docx | Original sections: 17, 30, 31, 32, 33, 40 | 334 paragraphs, 25
+tables
+<PARSED TEXT FOR PAGE: 2 / 13>
+06 Training Hall Equipment and Growth
+06_Training_Hall_Equipment_and_Growth.docx | Original sections: 34, 35, 41, 42, 52 | 203 paragraphs, 29 tables
+
+07 Recruitment Gacha and Fragments
+07_Recruitment_Gacha_and_Fragments.docx | Original sections: 36, 37, 38, 39 | 211 paragraphs, 20 tables
+
+08 Campaign Bosses and Encounter Research
+08_Campaign_Bosses_and_Encounter_Research.docx | Original sections: 43, 44, 45, 46, 47, 48, 49, 50, 51, 53, 54, 55,
+56 | 394 paragraphs, 87 tables
+
+09 Mobile UI UX and Accessibility
+09_Mobile_UI_UX_and_Accessibility.docx | Original sections: 57, 58, 59, 60 | 133 paragraphs, 23 tables
+
+10 Arena and Competitive PvP
+10_Arena_and_Competitive_PvP.docx | Original sections: 9, 61 | 49 paragraphs, 8 tables
+
+11 Guilds and Cooperative Play
+11_Guilds_and_Cooperative_Play.docx | Original sections: 62, 63 | 74 paragraphs, 11 tables
+
+12 Events Returning Players and Retention
+12_Events_Returning_Players_and_Retention.docx | Original sections: 64, 65 | 63 paragraphs, 12 tables
+
+13 Monetization Commercial and IP
+13_Monetization_Commercial_and_IP.docx | Original sections: 66, 67 | 76 paragraphs, 12 tables
+
+14 Backend Trusted State and Integrity
+14_Backend_Trusted_State_and_Integrity.docx | Original sections: 68 | 40 paragraphs, 5 tables
+
+
+
+Historical archive masters
+A — Historical Report A | A_Historical_Report_A.docx | 138 paragraphs, 0 tables
+
+B — Historical Report B | B_Historical_Report_B.docx | 75 paragraphs, 0 tables
+
+C — Historical Report C | C_Historical_Report_C.docx | 111 paragraphs, 0 tables
+
+D — Historical Report D | D_Historical_Report_D.docx | 32 paragraphs, 0 tables
+
+E — Historical Change Ledger | E_Historical_Change_Ledger.docx | 135 paragraphs, 5 tables
+
+F — Verbatim User Source Archive | F_Verbatim_User_Source_Archive.docx | 727 paragraphs, 0 tables
+
+G — Historical Live Master Protocol | G_Historical_Live_Master_Protocol.docx | 5 paragraphs, 0 tables
+
+
+
+How to continue research safely
+1. Identify the topic master using this index and the Section Ownership CSV. Read its current decision and
+evidence labels before making changes.
+<PARSED TEXT FOR PAGE: 3 / 13>
+2. Modify only that topic master for ordinary research revisions. If a design decision affects another topic, update
+that other topic master in the same revision, documenting the dependency.
+
+3. Preserve original historical material. Add new decisions and dated change records in active scope masters; do
+not silently delete superseded claims.
+
+4. Do not invent missing playtest evidence. Research remains pre-production; no executable simulations,
+prototype or live tests until expressly authorized by the owner.
+
+5. Check the source version, title, scope ID, cross-reference and archive before publishing revised research. Keep
+the topic file at its known Library location.
+
+6. For edits of the initial Naruto roster, start with Scope 03. Combat engine changes go to Scope 02, and campaign
+consequences go to Scope 08.
+
+7. Do not overwrite or delete the original 0.10.42 single-file master. Treat it as a frozen snapshot, not an active
+competing source.
+
+
+
+Original 69-section lookup
+Section                                  Original research heading              Scope
+1                                        1. How to use this master file         01
+2                                        2. Project brief and non-negotiable    01
+                                         design principles
+3                                        3. Research archive status and         01
+                                         evidence rules
+4                                        4. What benchmark games teach us       01
+                                         so far
+5                                        5. Team-composition theory: what       02
+                                         makes a squad coherent
+6                                        6. Proposed roster roles and role      03
+                                         coverage
+7                                        7. Synergy system and stack rules      02
+8                                        8. F2P / pay-to-progress fairness      04
+                                         decisions
+9                                        9. PvP fairness proposal               10
+10                                       10. Sample five-shinobi                03
+                                         compositions
+11                                       11. Validation plan and success        01
+                                         metrics
+12                                       12. Versioned decision log and risk    01
+                                         register
+13                                       13. Remaining research priorities      01
+14                                       14. How the next revision should       01
+                                         proceed
+15                                       15. Sources and evidence notes         01
+16                                       16. Consolidation audit: what was      01
+                                         missing and what is now included
+17                                       17. Integrated game concept: the       05
+                                         systems outside team building
+18                                       18. Resolved questions: fairness       04
+                                         decisions for F2P and pay-to-
+                                         progress
+<PARSED TEXT FOR PAGE: 4 / 13>
+19   19. Version 0.2 change log and         01
+     remaining work
+20   20. Mobile-first combat engine:        02
+     proposed implementation
+     specification
+21   21. Fairness-by-design for mobile      04
+     F2P and pay-to-progress
+22   22. Prototype test plan, fairness      01
+     gates and live balance governance
+23   23. Design continuity card: rules to   01
+     carry into every future research
+     round
+24   24. Core team-combat closure           02
+     specification (Version 0.6)
+25   25. Deep research review of the        02
+     core combat system (Version 0.7
+     foundation; expanded in v0.8-v0.9)
+26   26. Starter roster-to-archetype        03
+     matrix and combat closure gate
+     (Version 0.8 baseline; clarified in
+     0.9)
+27   27. Combat rules closure,              02
+     normalized stat packet and edge-
+     case audit (Version 0.9)
+28   28. Research/concept phase             01
+     boundary and operating rules
+     (Version 0.9.1)
+29   29. Holistic research roadmap and      01
+     system-integration method
+     (Version 0.10.0)
+30   30. Idle RPG identity and core loop:   05
+     first research foundation (Version
+     0.10.0)
+31   31. Idle rewards, campaign             05
+     progression, and team-building: an
+     integrated model (Version 0.10.2)
+32   32. Idle reward storage, claim         05
+     cadence, and catch-up policy
+     (Version 0.10.3)
+33   33. Idle resource basket and           05
+     source-allocation map (Version
+     0.10.4)
+34   34. Resource sinks, upgrade-cost       06
+     structure and progression pacing
+     (Version 0.10.5)
+35   35. Cost-versus-income model and       06
+     roster-progression integration
+     (Version 0.10.6)
+36   36. Summon guarantees, universal       07
+     fragments and F2P roster-
+     acquisition budget (Version 0.10.7)
+37   37. Acquisition source ledger,         07
+     recruitment routing and battle-
+     ready character budget (Version
+     0.10.8)
+<PARSED TEXT FOR PAGE: 5 / 13>
+38   38. Acquisition source reliability      07
+     audit and player-profile budgets
+     (Version 0.10.9)
+39   39. Mode reward architecture,           07
+     recruitment-ticket alternatives and
+     full account journeys (Version
+     0.10.10)
+40   40. Canonical reward ledger and 56      05
+     day readiness review
+41   41. Research priorities and             06
+     baseline counter readiness
+42   42. What the next shared Hall           06
+     upgrade costs
+43   43. Essential-role access I: first      08
+     mandatory Wound encounter
+44   44. Essential-role access II: full      08
+     mandatory-threat coverage
+45   45. Economy and four-encounter          08
+     paper reconciliation
+46   46. Priority 3D: Hall-level combat      08
+     bridge and four missing threat
+     packets
+47   47. Priority 3E: auto-combat            08
+     integrity, Wound timing
+     corrections and full opponent
+     windows
+48   48. Priority 3F: meaningful control,    08
+     five-slot scouting, status survival
+     and enemy envelopes
+49   49. Priority 3G: first-copy             08
+     Ultimates, 100-Chakra integrity and
+     eight-threat readiness audit
+50   50. Priority 3H: complete burst,        08
+     decoy and sustain encounter
+     certificates
+51   51. Priority 3I: eight-threat           08
+     reconciliation, full opening ledgers
+     and pre-gate access
+52   52. Priority 3J: new-account Hall 1     06
+     to 20 affordability and tutorial
+     source ledger
+53   53. Priority 4A: campaign stage         08
+     graph, unique reward identities
+     and idle-tier boundaries
+54   54. Priority 4B: G8 capstone boss       08
+     and zero-inflation optional solo
+     mastery
+55   55. Priority 4C: opening campaign       08
+     pacing and bounded first-clear
+     value
+56   56. Priority 4D: first-session player   08
+     agency, original narrative spine
+     and durable progression
+57   57. Priority 5A: mobile navigation,     09
+     information access and
+<PARSED TEXT FOR PAGE: 6 / 13>
+                                      interrupted-session integrity
+58                                    58. Priority 5B: compact-phone          09
+                                      screen hierarchy, exact microcopy
+                                      and accessible states
+59                                    59. Priority 5C: accessible recovery,   09
+                                      transaction uncertainty and first-
+                                      loss integrity
+60                                    60. Priority 5D: localization, low-     09
+                                      end phone envelope, connectivity
+                                      and mobile-UX paper exit gate
+61                                    61. Priority 6A: normalized Arena,      10
+                                      equal roster access and optional
+                                      competitive participation
+62                                    62. Priority 6B: asynchronous guild     11
+                                      contribution and solo-equivalent
+                                      progression
+63                                    63. Priority 6C: guild governance,      11
+                                      moderation, privacy and social exit
+                                      conditions
+64                                    64. Priority 7A: optional event         12
+                                      cadence, non-compulsory rewards
+                                      and missed-content recovery
+65                                    65. Priority 7B: returning-player       12
+                                      continuity, event production
+                                      budgets and paid-offer separation
+66                                    66. Priority 7C: sustainable            13
+                                      monetization, resource sinks and
+                                      purchase-integrity boundary
+67                                    67. Priority 7D: commercial             13
+                                      viability, storefront disclosure, IP
+                                      licensing and monetization exit
+                                      gate
+68                                    68. Priority 8A: technical              14
+                                      architecture and trusted account-
+                                      state integrity
+69                                    69. Naruto-canon hero theory: five      03
+                                      candidates per active combat role
+
+
+
+Source provenance
+Original file: Naruto_Idle_RPG_Master_Design_Bible.docx (v0.10.42, Library version 47).
+
+SHA-256: 2c951254043451570397ad9de1dfd495c67796bca8eb89508ccff601fe453526
+
+Automated proof files: scope_integrity_manifest.json; block_identity_manifest.json; section_ownership_map.csv.
+These make the division reproducible and detect missing or changed XML blocks.
+
+Note: DOCX page counts change after a split, and references to old section/page numbers are historical. Source
+text and tables are preserved; pagination is not promised identical to the 417-page source.
+<PARSED TEXT FOR PAGE: 7 / 13>
+8 November 2026 — H2 scope update (Master 03 v1.1)
+New independently authored Section 70: Nine first-copy Naruto hero kits and five-slot team coherence. Scope
+ownership: 03_Hero_Roster_and_Team_Compositions.docx. Scope 02 Combat and Scope 08 Campaign served as
+numeric authorities and were NOT modified. This addition does not alter any historical sections 1–69 or
+appendices A–G.
+
+H2 adds nine full first-copy hero passports, eight five-person squad variations, a Hall20 reference math table, an
+eight-gate compatibility review, rejected alternatives, and provenance/canon boundaries. Version: Master 03 v1.1.
+Previous scope 03 v1.0 remains recoverable from the original split ZIP / prior Library version. Priority 8B stays
+paused; next proposed H3 remains research-only.
+
+Section 70 is newly authored after the frozen v0.10.42 source. Therefore the historical preservation manifest
+continues to cover the original 4,061 blocks, not this new material. A distinct H2 preservation audit compares the
+old Scope 03 content to its new v1.1 version.
+<PARSED TEXT FOR PAGE: 8 / 13>
+8 November 2026 — H3A role hierarchy update (Master 03 v1.2)
+Master 03 now adds Section 71, “Three main roles, thirteen preserved specializations and passive-budget control.”
+Player-facing umbrella roles: Tank / Damage Dealer / Support. Historical 13 specializations, all 65 proposed
+Naruto heroes, all 19 K-ID shells, starter entitlements, and all previous numerical combat contracts remain intact.
+The role hierarchy is metadata and does not rewrite Scope 02 or Scope 08.
+
+Research ownership: only /Game Design/Scope Masters/Active/03_Hero_Roster_and_Team_Compositions.docx is
+revised. The central index is updated. Existing 21 research/archive masters remain 21; no new research scope was
+necessary because role taxonomy belongs to Hero Roster and Team Compositions.
+
+H3A balance conclusion: keep nine informational passives; no new numerical active passives approved. Next
+ticket H3B: remaining ten K-ID first-copy kits (K-02, K-05, K-06, K-07, K-11, K-13, K-14, K-15, K-16, K-18) and passive
+stress tests. Paused Priority 8B remains paused. The 0.10.42 single-file source remains the frozen original; later
+changes are in the editable mini-master.
+<PARSED TEXT FOR PAGE: 9 / 13>
+8 November 2026 — H3B roster first-copy completion (Master 03 v1.3)
+Master 03 is current scope authority. §72: 65 hero cards and 19 mapped K-ID first-copy skills (nine frozen from
+§70; ten added). §73: global paper balance constraints and deferred numerical passive candidates. §74: 16 legal
+five-person compositions, counter routes, and honest validation boundary. Original 69 sections and earlier
+H2/H3A sections preserved. Master 02/08/10 require no immediate numerical changes; future advanced passives
+or new starter substitutions would reopen those scopes.
+
+Research decision: Character-building authorship for the initial 65-person concept is complete on paper; no
+playtest, simulator, production approval, license, or complete balance certification is claimed. Scope 14 Priority 8B
+stays paused. Next active role: directed matchup theory/long-term character-balance, if continuing character
+research.
+<PARSED TEXT FOR PAGE: 10 / 13>
+9 November 2026 — H4 character balance and template-diversity audit (Master 03
+v1.4)
+Current working hero master: /Game Design/Scope Masters/Active/03_Hero_Roster_and_Team_Compositions.docx
+(Master 03 v1.4). The 14 active + 7 archive master count is unchanged. Section 75 appended; Sections 6, 10, 26, 69–
+74 remain preserved.
+
+H4 finding: among the 56 newly authored core/future cards in §72.4–72.5, 22 exact Technique+Ultimate effect-pair
+templates; 50/56 cards share a template; among 46 future cards, 43 share a template. These are effect-text
+collisions, not proof of identical full hero kits. See Section 75 and companion machine audit. The 19 core K-ID
+combat contracts stay frozen; 46 planned-release differentiation directions are proposals, not activated skills.
+
+H4 handoff: next H5, differentiate the highest-collision future designs in manageable batches while auditing
+single-target burst, team decoys, control chaining, and Chakra gifts. Relevant dependencies: Combat Scope 02,
+Campaign Scope 08, Recruitment Scope 07, Training Hall Scope 06 and normalized Arena Scope 10. Production
+and empirical tests remain deferred.
+<PARSED TEXT FOR PAGE: 11 / 13>
+Addendum — H5 Future-Hero Differentiation Pilot (9 Nov 2026)
+Scope owner: 03_Hero_Roster_and_Team_Compositions.docx (Master 03 v1.5, Library version increments
+independently). New primary chapter: §76. This addendum is navigation metadata; the original index content is
+preserved.
+
+H5 research: sixteen high-overlap planned-release kits receive explicit candidate Technique/Ultimate, AI, trade-off
+and counter contracts. The other thirty remain on the §75 future differentiation backlog. All nineteen K-ID core
+contracts remain frozen. No active passives or changed global rules were approved.
+
+Cross-scope dependency: Scope 02 must independently approve or reject the proposed maximum two
+simultaneously active team decoys. Scope 08 needs encounter rechecks only if this candidate limit or any H5
+future hero is later adopted in mandatory PvE. Neither file has been modified in this pass.
+
+Companion: Naruto_RPG_H5_16_Proposed_Future_Kit_Cards_v1.5.json (exact V2 text, before/after static-collision
+metrics, and unresolved gates). Research status: candidate differentiation authored, not empirically balanced or
+production-approved. Next: H6 — remaining 30 future candidates and directed matchup certificates (Extra High).
+
+
+
+Research update — Hero Scope 03 v1.6 / H6
+Source scope: /Game Design/Scope Masters/Active/03_Hero_Roster_and_Team_Compositions.docx, new section 77.
+H6 covers thirty future-release hero differentiation packets, preserves nineteen core and sixteen H5 variants,
+adds bounded directed counterplay certificates, and corrects the historical H5 decoy-cap statement (the two-
+active-clone cap already exists in Scope 02). All proposed future character changes remain non-authoritative until
+individual ratification. Research only; no engine or live simulation.
+
+Structured H6 sidecar: /Game Design/Scope Masters/Indexes and
+QA/Naruto_RPG_H6_30_Future_Hero_Candidate_Kits_v1.6.json. Next: H7 complete five-person battle ledgers,
+progression/rarity dependencies, and character-kit approval. Recommended model performance level: Extra
+High.
+<PARSED TEXT FOR PAGE: 12 / 13>
+H7 update — 9 November 2026
+Master 03 updated to v1.7, Section 78. Two complete conditional five-versus-five PvE paper ledgers compare
+Sakura and Shizune under a fixed five-enemy test harness. Both clear in round 5, with different survival and
+Execute windows. This is a bounded paper result, not ranked-match balance validation. All H5/H6 future cards
+remain competing proposals.
+
+Current status: Hero research is active; infrastructure 8B paused. Master 02 (combat rules) and Master 08
+(campaign) unchanged. New research remains in existing Scope 03; active masters 14, historical archives 7. Next
+H7B: equal-investment two-leg PvP mirror and public-intent auto-AI contract.
+
+Research workflow: user authorizes routine direct editing of the applicable active master and index without
+repeated check-ins. Preserve older research and verify each edit; app-level confirmation prompts remain
+mandatory when shown.
+
+
+
+H7B update — 9 November 2026
+Master 03 v1.8, Section 79: ranked public-information rule, complete two-leg structural four-round mirror using
+explicitly ineligible synthetic test units, and the first two real Naruto squad rounds in both side assignments. No
+full real 5v5 ranked match or win-rate is certified; H7C remains open.
+
+Major contradiction: under strict H2 threat-preview wording, Shizune Medical Ward often does not fire in
+untelegraphed PvP and can become a Sakura-equivalent Basic fallback. A public ≤75%-HP Ward trigger was
+evaluated only as a candidate, not adopted. Both opening candidate legs conserve 4,707 effective B-Gaara HP after
+round two but distribute HP versus Shield differently.
+
+Authorities: Master 02 §§24–27 (timers, crit, Chakra, tie-priority, PvP ten-round cap); Master 10 §61 (equal-access
+ranked, two mirrored legs, no match-level HP tiebreak); Master 03 §§70,78 (first-copy heroes and previous
+conditional PvE ledger). No other masters changed. Previous original paragraphs and tables preserved; register
+H7B structured audit under Indexes and QA. Next: H7C complete real-character paired-leg ledger and resolve
+public-intent + round-cap HP% denominator policy.
+
+
+
+H7C update — 9 November 2026
+Master 03 updated to v1.9; Section 80 now contains BOTH complete ten-round mirrored Arena paper ledgers
+using actual Hall20/Band-I Naruto first-copy characters: Gaara, Naruto, Sasuke, Neji, and Sakura (Team A) versus
+Shizune (Team B). The audit is an intentionally adverse Mark-failure and noncritical-only branch; it is not a
+playable combat simulation or empirical balance sample.
+
+Leg 1 (A LEFT/B RIGHT): A remaining HP 14,692 / 30,900, B 15,769 / 30,900. Leg 2 (B LEFT/A RIGHT): A 14,438 /
+30,900, B 16,602 / 30,900. B wins both under this one branch at the ten-round HP%-remaining tiebreak; no win
+rate is asserted. Actor order, cooldown, target legality, Chakra and the damage floor formula are documented per
+queued action in the research master and accompanying JSON ledger.
+
+Findings: round-4 tie priority leaves one Gaara on 51 HP until the next round; round-5 support-Ultimate timing
+differs. R8 Execute eligibility depends on exact action-slot HP. The H7B public-HP Shizune/Gaara Technique
+proposal remains UNAPPROVED. Team-HP% denominator policy for unequal rosters is still open. All earlier
+research remains preserved; next H7D tests successful Mark and critical branches.
+<PARSED TEXT FOR PAGE: 13 / 13>
+H7D sensitivity update — 9 November 2026
+Master 03 v1.10, new §81: controlled first-divergence sensitivity of H7C two-leg actual Naruto starter mirror. Both
+teams successful Neji Marks in R1 and R4 cause BOTH Gaaras to be defeated at R4 Naruto slots, unlike H7C forced-
+failure branch. Separate 1.50× and 2.00× Crit Damage examples also change R4 knockout timing. A Wound-vs-
+cleanse/shield state and Shikamaru/Shino substitution legality checks are documented. No full successful-Mark
+battle winner or win rate is asserted; remaining full branch ledgers assigned to H7E.
+
+Preservation and authority: historical H2–H7C content left intact. Master 02 combat and Master 10 Arena remain
+unchanged; H7B public-HP defensive trigger remains unapproved. Machine-readable companion:
+Naruto_RPG_H7D_Mark_Crit_Wound_Sensitivity_v1.10.json in Indexes and QA. Master list remains 14 active + 7
+historical archives.
+

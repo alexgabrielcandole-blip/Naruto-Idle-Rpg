@@ -1,0 +1,291 @@
+NARUTO IDLE RPG — SQUAD SCREEN
+GOOGLE AI STUDIO IMPLEMENTATION PROMPT · GATE 2A · UI ONLY
+Prepared 9 November 2026 | Attachment edition refreshed against Master 03 v1.10 | Recommended reasoning effort: HIGH
+
+Attach the generated Squad reference image and the approved Home screenshot with this prompt.
+The generated image is an art-direction mockup. It is not an Android screenshot, an implemented screen, or a game-state specification.
+
+1. THE TASK AND THE STOPPING POINT
+
+APPROVED WORDING UPDATE — 9 November 2026
+Use “View Shinobi” as the exact primary-button label. Use “Shinobi” for the individual character screen terminology. The word “dossier” must not appear in player-facing buttons, titles, menus, tooltips or accessibility labels. Historical source excerpts and an existing internal DOSSIER route identifier may retain that term for compatibility; this is a display-copy change, not permission to rename repositories or change mechanics.
+
+Continue my existing native Android game UI. Build ONE polished new screen: the Squad root screen, showing an illustrated five-position formation, a selected-shinobi inspector, and the owned-shinobi roster.
+
+Our approved Home / Village screen is complete for this stage. Preserve its illustration, crop, layout, icons, materials, typography and existing behavior. Extend its visual language into this new screen. Do not regenerate Home or apply a global theme change that alters it.
+
+This is a long-term project. Complete this one visual increment, show the actual rendered result, and STOP for my review. Do not automatically continue into the individual Shinobi screen, shop, Training Hall, campaign, recruitment or combat. Those screens will receive their own prompts and reference images.
+
+All new buttons and gameplay controls are visual only. Do not implement character movement, formation saving, filters, purchases, hero grants, upgrades, battle calculations, recruitment, persistence, account systems or network calls. Use the project's existing preview mechanism to inspect this screen. Existing navigation may remain as it is; do not expand the navigation system as a side task.
+
+The immediate result must feel like a carefully illustrated Naruto mobile RPG, with readable Android UI over beautiful artwork. It must not become a dashboard, a collection of plain Material cards, or a field of geometric substitute characters.
+
+2. SOURCE AUTHORITY AND CORRECTIONS TO EARLIER NOTES
+
+The project now has separate topic masters. The source hierarchy for this increment is:
+
+• 00_START_HERE_Research_Scope_Index.docx — topic ownership and latest research handoffs.
+• 03_Hero_Roster_and_Team_Compositions.docx, current document v1.10 — character identity, first-copy boundaries, ownership sources, primary roles and specializations. Relevant UI sections: 70, 71 and 72. The latest H7D / section 81 remains conditional combat research; its existence does not authorize gameplay implementation or adoption of the unapproved public-HP defensive trigger.
+• 09_Mobile_UI_UX_and_Accessibility.docx — the four root destinations, Squad responsibilities, contextual information, accessibility and compact-phone layout; sections 57–60.
+• 06_Training_Hall_Equipment_and_Growth.docx — shared Hall progression and onboarding state; particularly section 52. No progression changes are authorized here.
+
+The supplied source extracts and exact content rules below are enough for this visual increment. Do not claim to have read a master that is not available in this Studio project. If attached copies conflict, identify the conflict outside the game UI before changing any canonical value.
+
+The earlier roadmap note correctly places Squad and individual Shinobi screens after Home. Its old UI numbers are not authoritative route IDs. Use the existing SQUAD route or its project equivalent. “Gate 2A” is a review-package label, not player-facing text.
+
+That note also mentioned a skill tree, jutsu affinity display and Kakashi / Team 7. These are not permission to invent a progression tree, affinity bonus, equipment socket system, or a free starter character. The current first four starters are Gaara, Sasuke, Neji and Naruto. Kakashi is not part of this four-character START00 fixture.
+
+The latest master groups heroes under exactly THREE visible primary roles: Tank, Damage Dealer and Support. Thirteen specializations remain beneath those roles. Hybrid / Flex is a specialization, not a fourth primary role. A role does not force a formation position or apply an extra stat bonus.
+
+The following classifications are binding for the preview:
+
+• Gaara — K-01 — Tank — Guardian / Protector.
+• Sasuke Uchiha — K-03 — Damage Dealer — Finisher / Duelist.
+• Neji Hyuga — K-12 — Support — Scout / Rear Access.
+• Naruto Uzumaki — K-19 — Damage Dealer — Hybrid / Flex.
+
+Do not promote historical kit-job labels such as Guardian, Scout and Striker into extra top-level classes. Do not make every Support a healer.
+
+3. EXACT VISUAL FIXTURE, SEPARATED FROM REAL ACCOUNT STATE
+
+The reference illustrates an isolated art-review fixture:
+
+• Shared Hall label: Hall 10.
+• Four owned START00 shinobi.
+• Five available positions: two Front, three Rear.
+• Front Left: Gaara.
+• Front Right: Sasuke Uchiha.
+• Rear Left: Neji Hyuga.
+• Rear Center: Naruto Uzumaki, selected.
+• Rear Right: Open.
+• Visible deployment count: 4 of 5 deployed.
+• Owned-roster display order: Gaara, Sasuke, Neji, Naruto.
+• Roster filter shown as selected: All.
+• Selected root navigation destination: Squad.
+
+Keep this fixture in a preview-only data object, separate from any real save or repositories. Do not overwrite a real account to reproduce the image. Do not credit resources, set onboarding receipts, complete ONB02, unlock routes, or grant START01 merely because the preview uses Hall 10.
+
+Four starters plus an open slot is an incomplete squad before the explicit support selection. It does not establish permission to enter a mandatory battle. If the runtime already has a different saved roster, preserve it and render this illustration through the preview mechanism. The reference is not evidence of the user's current account inventory.
+
+Rear Right is a normal usable position. Its empty appearance comes from having no assigned occupant, not from being a paid, unavailable, or permanently reserved slot. Role labels impose no position lock. Later functional work will implement legal assignments and explicit save/confirmation rules from the masters.
+
+Do not reproduce Home's illustrative currency balances or Stage 2-4 label as proof of this fixture's progression. This screen does not need currency capsules, a campaign stage, a power score, or individual hero level numbers.
+
+4. HOW TO USE THE TWO IMAGES
+
+The approved Home screenshot establishes visual continuity: painted Naruto environment, illustrated icons, deep teal panels, thin brass trim, ivory text and a controlled orange primary action.
+
+The new Squad image establishes this screen's composition: header, upper Front row, lower Rear row, selected-character panel, roster drawer and four-tab footer. It shows how detailed the character and environment art should feel.
+
+Treat readable native text, the exact fixture above, the source rules and accessibility requirements as authoritative when small details in generated artwork differ. Do not copy an accidental glyph, incorrect character detail or tiny baked label simply because it appears in an image.
+
+Build separate scene art, separate character art, and native UI overlays. Do not place the entire reference screenshot into an Image and add invisible rectangles on top. Do not bake buttons, text, slot names or navigation into the scene background. The result must remain suitable for later data binding and alternate screen sizes.
+
+5. MATERIALS, COLORS AND VISUAL FINISH
+
+Reuse the approved Home theme tokens and components when they already exist. These colors are reference targets for new Squad components, not an instruction to recolor Home:
+
+• Deep teal panel: #102B35.
+• Lighter panel face: #183B45.
+• Recessed ink: #091C24.
+• Restrained brass border: #AE8C55.
+• Selection accent: #D7B675.
+• Main ivory text: #FFF2D7.
+• Secondary text: #CAD5D3.
+• Primary orange button: #A94B17.
+• Fine orange rim: #DE8B3A.
+
+Panels should have subtle cloth or painted-wood grain, shallow shading, a thin metal edge and modest clipped corners. Surface texture must remain quieter than the text. Keep borders approximately 1–1.5dp, with a slightly stronger selected edge. Do not use thick glowing gold outlines everywhere.
+
+Use sparse Naruto-appropriate details: a tied mission scroll, cloth stitching, a Leaf motif, a restrained flowing-cloud engraving, worn wood or brass corners. Avoid European heraldic shields, angel wings, cathedral ornament, gemstones, floating holograms, cyberpunk symbols, random pseudo-Japanese writing and unrelated fantasy decoration.
+
+The world remains colorful and sunlit. Teal panels provide structure without covering the illustration in a heavy black gradient. Use AFK Arena / Mythic Heroes only as quality benchmarks for illustrated composition and clear hierarchy. Their setting, characters and logos do not belong here.
+
+6. SCREEN STRUCTURE AND PHONE LAYOUT
+
+Design in logical dp and sp. A portrait frame around 390dp wide is a useful review composition, not a hard-coded device size. Respect actual status and gesture insets. The reference image excludes emulator chrome and system bars.
+
+Reading order:
+1) Squad title and deployment count.
+2) The five formation positions and their occupants.
+3) The selected shinobi and one prominent “View Shinobi” action.
+4) The owned roster and its three-role filtering vocabulary.
+5) The persistent four-destination navigation.
+
+Use roughly 12–16dp side margins for text panels. Keep a stable footer above the system navigation inset. Let the central content scroll vertically as required; do not shrink all artwork and lettering to force the whole screen into a short phone.
+
+On a comfortable portrait size, aim for a compact 56–72dp header, a generously illustrated formation stage around 330–390dp tall, a flexible inspector, and a roster drawer below. These are starting ranges. Actual font metrics and the available viewport decide the final heights. On a short phone, the lower roster may require scrolling. Readability takes priority over fitting every section into one screenshot.
+
+The scene may crop decorative sky, wall edges or foliage. It must not crop occupied feet, selection indicators, position labels or the open slot. Do not horizontally stretch the art or use screen-height percentages for all content.
+
+7. HEADER
+
+Use the established dark teal / brass surface across the top, with light decorative detail confined to the perimeter.
+
+Left:
+• Title: “Squad”.
+• Supporting line: “Hall 10 · 4 of 5 deployed”.
+
+Right:
+• A compact outlined “Training Hall” control with a small illustrated mission-scroll or training emblem.
+
+The title is the dominant text. The contextual Hall control must not crowd it. If the device is narrow or text is enlarged, place that control on a second row. There is no Back button on this root page. Do not add the avatar, a notification rail, three currencies and a power rating to this header.
+
+Use the existing type family where possible. Suggested new-screen hierarchy: title 24–28sp bold; body/action labels 14–16sp; secondary labels 12–14sp with sufficient contrast. Important text must not be reduced to miniature lettering to imitate a dense illustration.
+
+8. ILLUSTRATED FORMATION STAGE
+
+Create a Konoha shinobi assembly courtyard connected visually to the approved village: green tiled eaves, red timber, aged plaster, warm paving and packed earth, leafy edges and a distant hint of the village skyline. Keep the center open and calm enough for the shinobi to read immediately.
+
+View it from a slightly elevated front three-quarter angle. Light comes from upper left. Use clean anime linework, warm painted shadows, visible fabric texture, stone wear and believable contact shadows. Environment contrast should decrease behind the fighters. Do not fill the scene with NPCs or another team.
+
+Two Front positions sit in the upper portion, closer to the enemy side. Three Rear positions sit below. The Front row is not “front of the camera.” A small “Enemy approach” label and downward arrow at the upper edge explain the direction. Keep it restrained; it is a direction guide, not an active enemy charge warning.
+
+Approximate FOOT anchors within the scene's usable inner area:
+• Front Left: x 0.32, y 0.46.
+• Front Right: x 0.68, y 0.46.
+• Rear Left: x 0.18, y 0.88.
+• Rear Center: x 0.50, y 0.88.
+• Rear Right: x 0.82, y 0.88.
+
+These are adjustable composition anchors, not fixed full-screen coordinates. Reserve vertical room below each foot for its name plaque. Size figures to avoid overlap, and never mirror the two rows during adaptive layout.
+
+Place quiet FRONT and REAR plaques near the left scene edge, outside the characters' silhouettes. Use shallow perspective ground ovals with a restrained rim. They should feel grounded in the courtyard, not like neon teleportation platforms.
+
+Gaara, Sasuke and Neji have ordinary pads. Naruto alone has the selected gold rim. The Open pad has a dashed neutral outline, a plus symbol and “Open”. It has no padlock, gem price, timer or hidden fifth recruit.
+
+Name plaques use only “Gaara”, “Sasuke”, “Neji”, “Naruto” and “Open”. Full names belong in the inspector and accessibility labels. Keep these plaques small and readable, with the same material treatment as Home's building labels.
+
+9. CHARACTER ART CONTRACT
+
+Use four high-quality full-body illustrated character assets with transparent backgrounds. They share one line weight, lighting direction, rendering style and sensible relative scale. Prefer recognizable anime proportions, approximately six heads tall, with complete limbs and readable faces. Avoid tiny generic silhouettes, chibi placeholders, stick figures, stock human icons and crude shapes constructed on Canvas.
+
+• GAARA: short spiky red hair, dark eye markings, large sand gourd and strap, recognizable early sand-user outfit. Calm defensive stance. No borrowed Guardian shield or knight armor. Defensive identity comes through his stance, gourd and sand motif.
+• SASUKE: early base version with black spiky hair, navy high collar, light shorts, shinobi sandals and a small kunai. A controlled duelist stance. No Susanoo, adult cloak, giant sword or late-era transformation.
+• NEJI: long dark hair, pale eyes, cream tunic, wraps and a readable Gentle Fist open-palm stance. No generic Scout staff, signal banner, spear or sniper weapon. Scout / Rear Access is a gameplay specialization, not an instruction to replace his Naruto identity.
+• NARUTO: early base version, blond spiky hair, whisker marks, forehead protector, orange/navy outfit and practical shinobi sandals. Confident grounded stance. No extra clone occupying a sixth position, giant spell effect, Sage cloak or Six Paths form.
+
+Use close-up portrait variants of these exact designs in the roster. A portrait and its field figure must look like the same version of the character. Naruto's inspector may reuse his portrait with an appropriate crop. Keep key facial features out of masks and text bands.
+
+This pass needs no attack, idle or entrance animation. Static excellent art is sufficient. Do not cover poor anatomy or missing artwork with particles and motion.
+
+10. SELECTED-SHINOBI INSPECTOR
+
+Place one integrated panel beneath the formation, similar in material quality to the approved Home mission strip. Use Naruto's portrait at the left when space permits, text in the main column, and actions at the right or below on narrow phones.
+
+Exact default copy:
+REAR CENTER
+Naruto Uzumaki
+Damage Dealer · Hybrid / Flex
+Reliable frontline damage.
+
+The short summary describes his job; it is not a new skill or numerical guarantee. Do not add bonus damage, an execute threshold, elemental advantage or a team synergy percentage.
+
+Primary visual action: “View Shinobi”. Orange face, fine rim, modest lower edge and clear ivory label. This is the only orange action on this screen.
+
+Secondary visual action: “Move”. Teal outlined treatment, quieter than “View Shinobi”. It remains inert. Do not build a destination sheet or save behavior yet.
+
+Both intended action regions must allow at least 48×48dp. At enlarged text sizes, stack the text and actions rather than clipping the role label. Do not give the panel a fixed height that cuts off content.
+
+Do not add Level Up, Ascend, Equip All, a skill tree, a six-slot equipment ring, rarity stars or a made-up combat-power number. The individual Shinobi and later growth screens will be specified separately.
+
+11. OWNED-SHINOBI DRAWER
+
+Title: “Owned shinobi”. Supporting count: “4 owned”.
+
+Filter presentation: All | Tank | Damage Dealer | Support. All appears selected. These are visual tabs only for this pass; there is no filtering code. Keep “Damage Dealer” written out. Allow the filter row to wrap or use a deliberate two-row arrangement at large text sizes instead of truncating the role name.
+
+Four portrait cards, ordered Gaara, Sasuke, Neji, Naruto. Use shoulder-and-face crops, individual character artwork, a restrained brass frame and a dark name band. Keep portraits large enough to recognize at phone size. Naruto has the selected border; the other frames remain quieter.
+
+Use four columns when they fit comfortably. On a very narrow or large-text layout, use two columns and vertical scrolling. Do not horizontally squeeze four card captions until they become unreadable.
+
+The border treatment expresses selection and the shared material style. It must not imply a rarity grade. Do not add SSR, UR, stars, duplicate counters, individual levels, summon prices or a collection total of 65. Researching 65 candidates does not mean all 65 are released, owned or ready for implementation.
+
+12. ROOT NAVIGATION
+
+Reuse the approved Home footer component and its existing illustrated icons. Keep the order and exact labels:
+Home | Squad | Campaign | Recruit.
+
+Squad alone is selected: the existing warm selection accent plus a short underline or another clear shape cue. Inactive labels remain readable. Preserve the same icon family, spacing and visual weight as Home. Do not introduce a fifth destination, central Battle orb, different navigation names or a new shortcut rail.
+
+Changing the selected-state parameter for this preview must not change how the Home footer looks on Home. Respect system insets and a minimum intended target envelope of 48dp per destination.
+
+13. SEPARATE ART ASSETS AND REUSABLE UI
+
+Reuse existing components first. Suggested responsibilities, adapted to the actual project structure:
+• SquadScreen: layout and preview composition.
+• FormationStage: scene background, five foot anchors and layered fighter images.
+• FormationPosition: pad, occupant artwork, name plaque and selected appearance.
+• SelectedShinobiPanel: portrait, role, specialization, summary and action faces.
+• OwnedShinobiCard: portrait, name and selection styling.
+• Existing root navigation and button components.
+
+Suggested art deliverables, if new art is required:
+• One courtyard BACKGROUND ONLY, without characters, pads, labels or UI.
+• Four separate transparent full-body shinobi figures.
+• Four portrait crops or dedicated portraits matching those figures.
+• Reusable small panel textures or emblems only where existing assets cannot serve.
+
+Filenames may follow the project's conventions. Keep artwork versioned and reusable. Do not silently replace an approved source asset with a lower-quality generated revision.
+
+Use the available image-generation/import workflow for illustrated scenery and characters. Basic drawing primitives are appropriate for rings, separators, simple arrows and clipping. They are not an acceptable replacement for the actual environment or shinobi artwork in this target.
+
+If the tool environment cannot supply a required art layer, identify the exact missing asset and required dimensions outside the app. Do not report a geometric substitute as a finished match. A concept image is not automatically a ready-to-use layered asset pack.
+
+Avoid adding heavyweight rendering dependencies just for static artwork. Use the existing native Android approach; if the project is Kotlin/Jetpack Compose, continue with it. Do not convert this project into a website or embed the full UI in a WebView.
+
+14. ACCESSIBILITY AND LAYOUT INTEGRITY
+
+The masters use 48×48dp as the intended Android target envelope and approximately 8dp separation around adjacent critical actions. Native text must scale. Important information cannot depend on color alone.
+
+Separate decorative art from future semantic controls. An inert mock control must not claim to execute an action to a screen reader. Keep its label readable, but do not attach fake successful-action announcements. When functional selection is implemented later, each slot will announce its row/position, occupant or Open, and selected state.
+
+Ensure a logical reading order: title/count, Front positions, Rear positions, inspector, roster, footer. Decorative trees, pad textures and border flourishes should not create accessibility noise.
+
+Inspect at approximately 390dp portrait width, 360×640dp, and the master's constrained 320×568dp example. Also inspect increased text size up to 200%. These are review cases, not proof of a supported-device policy or an accessibility certification.
+
+At small sizes, scroll. At large text sizes, reflow and allow taller panels. Keep the five formation positions understandable; a text companion list may grow below the illustration when necessary. Do not place buttons beneath the persistent footer.
+
+15. WHAT IS AND IS NOT BEING VERIFIED
+
+This is a visual implementation review. A successful compile is necessary when the environment supports it, but it does not prove the screen matches the reference.
+
+Use the actual project's available build/preview command. Do not invent a tool named compile_applet or claim a command ran without its output. Inspect the rendered screen and compare it with the reference. No gameplay tests, battle simulation or economy validation are requested.
+
+Review checklist:
+• Home still matches the approved screenshot; no unintended background or shared-theme changes.
+• Exactly four starter figures, five pads, two Front and three Rear positions.
+• Empty Rear Right contains no fifth character and no lock/paywall treatment.
+• Naruto selected consistently on the field, inspector and roster.
+• Correct three primary roles; Neji is Support.
+• Strong character identity and coherent art, without old generic spear/shield/flag silhouettes.
+• Native text, separate character layers and an independent background.
+• One orange “View Shinobi” action; secondary controls visually quieter.
+• All four navigation labels visible, Squad selected.
+• No clipped names, overlapped row labels, stretched art or hidden footer content.
+• No debug overlays, gate numbers, internal K-IDs, asset-audit chips or fixture labels in the player UI.
+• No new gameplay handlers, ownership changes, progression writes or account resets.
+
+16. REVIEW HANDOFF
+
+When this one screen is ready, show:
+1) An actual rendered Squad screenshot at ordinary portrait size.
+2) A compact-phone / enlarged-text capture if the environment supports it.
+3) A brief list of the components and artwork created or reused.
+4) Any missing assets or differences from the reference, stated precisely.
+5) The build/preview checks actually completed; clearly distinguish anything not checked.
+
+Stop for my review. Do not continue automatically into Naruto's individual Shinobi screen or any other category. The next increment will reuse this approved art and component language for the individual Shinobi screen.
+
+SOURCE LINKS FOR THE DESIGN OWNER
+
+Scope index:
+https://chatgpt.com/library?file_id=libfile_4a86f2446ed081919d8e6306293ece1d&account_id=personal
+Hero roster, current document v1.10:
+https://chatgpt.com/library?file_id=libfile_f9f3579ce3988191949e3ce397ad12f0&account_id=personal
+Mobile UI, UX and Accessibility:
+https://chatgpt.com/library?file_id=libfile_60cb599cb2e88191bcd6b5e2b18f58ef&account_id=personal
+Training Hall, Equipment and Growth:
+https://chatgpt.com/library?file_id=libfile_b3fe31296ed48191bce548f37f8789e5&account_id=personal
+
+These links identify the source files. The Studio agent should not assume it can access a private ChatGPT file simply because a link is present. The relevant rules for this increment are explicitly included above.

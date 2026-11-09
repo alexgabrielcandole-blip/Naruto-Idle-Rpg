@@ -1,0 +1,630 @@
+NARUTO IDLE RPG — SQUAD MASTER BASIS
+ATTACHMENT FOR GOOGLE AI STUDIO · CURRENT TASK: SQUAD UI ONLY
+Snapshot prepared 9 November 2026. Hero Master 03: document v1.10 (H7D).
+
+PURPOSE
+This file gives Gemini the actual master text relevant to the Squad screen, plus a concise implementation boundary. It is a scoped handoff, not a replacement master. It is intentionally limited to the current UI task. Complete available text exports of the four source documents are in FULL_MASTER_TEXT; links to the original Word files are in START_HERE.
+
+READING PRIORITY
+1. The user's current instruction authorizes an inert Android UI experiment only.
+2. Active topic masters govern game identities, labels, ownership, formation rules and unresolved proposals.
+3. 01_Squad_UI_Prompt.txt governs this one screen's visual implementation.
+4. 03_Squad_Visual_Reference.png is the proposed new screen composition.
+5. 04_Approved_Home_Reference.png is the approved visual continuity baseline.
+Preserve Home. If the visual mockup conflicts with a master rule, keep the rule and adjust the presentation. Generated art never creates ownership or a combat mechanic.
+
+CURRENT SOURCE REGISTER
+
+00_START_HERE_Research_Scope_Index.docx
+  Library ID: libfile_4a86f2446ed081919d8e6306293ece1d
+  Exact source file ID: file_000000002618821185afe72430579351
+  Source version identifier: 10
+  Last modified: 2026-11-09T10:16:01.605143Z
+  Extracted lines included in full export: 466
+  Source: https://chatgpt.com/library?file_id=libfile_4a86f2446ed081919d8e6306293ece1d&account_id=personal
+
+03_Hero_Roster_and_Team_Compositions.docx
+  Library ID: libfile_f9f3579ce3988191949e3ce397ad12f0
+  Exact source file ID: file_00000000f7b0821184350e8f7083e338
+  Source version identifier: 11
+  Last modified: 2026-11-09T10:08:47.485950Z
+  Extracted lines included in full export: 9434
+  Source: https://chatgpt.com/library?file_id=libfile_f9f3579ce3988191949e3ce397ad12f0&account_id=personal
+
+06_Training_Hall_Equipment_and_Growth.docx
+  Library ID: libfile_b3fe31296ed48191bce548f37f8789e5
+  Exact source file ID: file_0000000050a0820ba6b02e9bc0c5c510
+  Source version identifier: not supplied
+  Last modified: 2026-11-08T13:29:37.403067Z
+  Extracted lines included in full export: 1664
+  Source: https://chatgpt.com/library?file_id=libfile_b3fe31296ed48191bce548f37f8789e5&account_id=personal
+
+09_Mobile_UI_UX_and_Accessibility.docx
+  Library ID: libfile_60cb599cb2e88191bcd6b5e2b18f58ef
+  Exact source file ID: file_00000000583c81fab7419b999c44a1b4
+  Source version identifier: not supplied
+  Last modified: 2026-11-08T13:29:55.687366Z
+  Extracted lines included in full export: 1364
+  Source: https://chatgpt.com/library?file_id=libfile_60cb599cb2e88191bcd6b5e2b18f58ef&account_id=personal
+
+CURRENT SCREEN CONTRACT — DERIVED HANDOFF, NOT VERBATIM MASTER TEXT
+
+LATEST OWNER WORDING: The button reads “View Shinobi”. Use “Shinobi” for the individual character screen terminology. This current user instruction overrides older player-facing “dossier” wording. Verbatim master excerpts below and internal route names are preserved for source fidelity; do not display their historical label in the app.
+
+Approved work: an illustrated Squad overview with a five-position field, selected-shinobi inspector and owned-roster drawer. New controls remain inert. No save writes, grants, purchases, filters, combat logic or progression changes.
+
+The four START00 identities:
+Character | K-ID | Primary role | Specialization | Reference position
+Gaara | K-01 | Tank | Guardian / Protector | Front Left
+Sasuke Uchiha | K-03 | Damage Dealer | Finisher / Duelist | Front Right
+Neji Hyuga | K-12 | Support | Scout / Rear Access | Rear Left
+Naruto Uzumaki | K-19 | Damage Dealer | Hybrid / Flex | Rear Center, selected
+
+The reference position assignments and selected Naruto are review-fixture choices. They do not make those roles position-locked. Rear Right is empty and legal for an owned shinobi. There are five available positions, two Front and three Rear, with four currently displayed occupants.
+
+The primary role list is exactly Tank, Damage Dealer, Support. The thirteen specialties are retained. Hybrid / Flex is not a fourth primary role. Clan, affiliation, specialization and role are different dimensions. UI labels do not recalculate combat stats.
+
+“Hall 10 · 4 of 5 deployed” is an isolated art-review fixture. It does not mark ONB02 complete, prove route eligibility, or grant Sakura/Shizune. START01 remains an explicit one-of-two support choice. The incomplete four-unit image is not battle-ready certification. If existing runtime data differs, preserve it and render this fixture only in a preview.
+
+Four root labels: Home, Squad, Campaign, Recruit. Squad is selected in this reference. The original Home remains intact. Training Hall is contextual, not a new fifth root.
+
+Do not infer a personal hero leveling system from the portrait cards: the early baseline is shared Hall investment. Do not invent a skill tree, elemental advantage, equipment sockets, gacha rarity stars, bonus passives or a power rating.
+
+Use the four characters' Naruto identities for art. Gaara uses a gourd/sand identity, Neji uses Gentle Fist, Sasuke uses a base duelist identity, Naruto uses an early base identity. Historical generic Guardian shields, Scout flags and Striker spears from older visual plans are superseded as art direction for these named heroes.
+
+The latest H7C/H7D research explores conditional combat branches. It does not authorize gameplay implementation. In particular, the H7B public-HP defensive trigger remains unapproved. Do not implement candidate abilities or move on to battle balancing in this UI task.
+
+The current prompt is an attachment edition of Gate 2A: its source references were refreshed from v1.8 to v1.10. The screen scope and composition remain the same; the reference button is now labeled “View Shinobi”.
+
+CURRENT AND HISTORICAL STATUS
+The source files deliberately preserve older hypotheses, version headings and “research-only / no implementation” descriptions. Those historical statements do not erase the user's now-authorized UI experiment, and the UI experiment does not prove game balance, a functioning backend, or finished gameplay. Use the latest adopted decision for each subject and retain open/proposed labels.
+
+The relevant verbatim source excerpts follow. Their page markers and earlier version labels are retained as returned by source extraction. Tables retain text/columns, not Word layout. Other historical and later research remains available in the complete text exports.
+
+
+A — Scope index, current roster update
+BEGIN VERBATIM SOURCE EXCERPT
+
+H7D sensitivity update — 9 November 2026
+Master 03 v1.10, new §81: controlled first-divergence sensitivity of H7C two-leg actual Naruto starter mirror. Both
+teams successful Neji Marks in R1 and R4 cause BOTH Gaaras to be defeated at R4 Naruto slots, unlike H7C forced-
+failure branch. Separate 1.50× and 2.00× Crit Damage examples also change R4 knockout timing. A Wound-vs-
+cleanse/shield state and Shikamaru/Shino substitution legality checks are documented. No full successful-Mark
+battle winner or win rate is asserted; remaining full branch ledgers assigned to H7E.
+
+Preservation and authority: historical H2–H7C content left intact. Master 02 combat and Master 10 Arena remain
+unchanged; H7B public-HP defensive trigger remains unapproved. Machine-readable companion:
+Naruto_RPG_H7D_Mark_Crit_Wound_Sensitivity_v1.10.json in Indexes and QA. Master list remains 14 active + 7
+historical archives.
+
+END VERBATIM SOURCE EXCERPT
+
+B — Master 03 §70.1: first-copy identities, ownership and invariants
+BEGIN VERBATIM SOURCE EXCERPT
+
+70.1 Canon/version boundary, source hierarchy and invariants
+The nine first-copy heroes are Gaara (K-01), Sasuke Uchiha (K-03), Neji Hyuga (K-12), Naruto Uzumaki (K-19),
+Sakura Haruno (K-09), Shizune (K-10), Shikamaru Nara (K-08), Temari (K-04) and Shino Aburame (K-17). Early
+recognizable forms are the visual reference. Later powered-up versions are separate candidate kits, not
+hidden upgrades or new skills retroactively added to these base copies.
+
+[AUTHORITY] (1) Scope 02 / original Sections 24–27 establishes universal combat mechanics; (2) Scope 08 /
+Sections 45, 48, 49 and 51 establishes the exact nine opening Techniques, Ultimates and relevant Hall20
+reference stats; (3) this Section 70 defines Naruto terminology, nonnumerical passive presentation,
+unambiguous first-copy UI/AI documentation, and team theory. If numbers conflict, Scope 08 wins until
+explicitly repriced.
+
+ Invariant                                                 Binding H2 interpretation
+                                                           Exactly five deployed, two front and three rear; no sixth actor
+ Team and slots
+                                                           from clone art.
+                                                           One normal action per living unit per round; Technique ready
+ Actions and cooldown                                      initially then unavailable for two subsequent own slots;
+                                                           Ultimate replaces, not adds, action.
+                                                           Start 0; Basic +25, Technique +15, Ultimate costs 100; incoming
+ Personal Chakra                                           direct hit +5 subject to existing cap; no Ultimate before it is
+                                                           actually ready.
+                                                           Eligible Ultimate > eligible Technique > Basic; use the existing
+ Automatic priority                                        Taunt/Intercept, target and tie-breaking rules. No voluntary
+                                                           Basic override.
+                                                           Hall20/Band-I proxy with standard equipment already
+ Damage and stats                                          counted; 0.85× ATK Basic; final hit floor with
+                                                           1000/(1000+effective DEF).
+                                                           K-12 Mark chance 80%, +10% vulnerability after application;
+                                                           K-17 suppression chance 90%; one-source Sakura cleanse;
+ Status and shields
+                                                           Shizune shield 12% of target MaxHP; global caps and clocks
+                                                           unchanged.
+                                                           START00: Gaara, Sasuke, Neji, Naruto; START01: ONE of
+ Entitlements                                              Sakura or Shizune; STORY01 Shikamaru, STORY02 Temari,
+                                                           STORY03 Shino, all granted before relevant mandatory gate.
+                                                           Informational/AI-explanatory first-copy passives only: ZERO
+                                                           new damage, shield, healing, bonus turns, statuses, Chakra,
+ Passives this pass
+                                                           resurrection, or target exceptions. Active numeric passives
+                                                           require repricing of all affected certificates.
+                                                           No assertion that alternate-era characters fought together in
+ Presentation & IP
+                                                           canon; Chronicle/what-if framing remains proposed. No
+
+             Scope research • Hero Roster v1.10 • Historical Sections 6, 10, 26, 69 preserved • Page 24
+<PARSED TEXT FOR PAGE: 25 / 148>
+                           NARUTO IDLE RPG | SCOPE MASTER 03 | HERO ROSTER v1.10
+ Invariant                                                 Binding H2 interpretation
+                                                           Naruto assets included or licensed by this document.
+
+END VERBATIM SOURCE EXCERPT
+
+C — Master 03 §§71.1–71.2: three primary roles and preserved specializations
+BEGIN VERBATIM SOURCE EXCERPT
+
+71.1 Problem, proposed solution and distinction between role and specialty
+The existing 13 role categories accurately describe combat functions but are too many to expose as 13 equally
+prominent hero classes. The new UI presents exactly THREE broad main roles: TANK (absorb or redirect
+damage), DAMAGE DEALER (defeat enemies through burst or attrition), and SUPPORT (enable allies or disrupt
+enemies). The existing 13 labels become SPECIALIZATION TAGS; they continue to define targeting,
+counterplay and kit intent.
+
+[IMPORTANT] Roles classify a hero’s PRIMARY JOB in a specific kit, not the character’s entire canon identity.
+Each hero has exactly one visible primary umbrella role, one principal historical specialization tag, and at
+most two additional functional tags for team-building. Subtags may be shared across main roles. The primary
+role does NOT enforce a particular formation slot, nor does it apply a hidden stat modifier.
+
+Role, specialization, tactical effect and canon affiliation are separate dimensions. For example: Gaara — Tank /
+Guardian / Taunt; Sakura — Support / Healer–Cleanser / removes one Wound; Naruto — Damage Dealer /
+Hybrid–Flex / reliable striker. These terms should not automatically change combat behavior.
+ Primary role                    Player question              Typical functions              What it does NOT imply
+                                                              Guard, Taunt, body-block,      No universal rear-row
+ Tank                            Who protects the squad?      temporary shields, durable     immunity; no compulsory
+                                                              off-tanking                    two-Tank quota
+                                                              Finisher, AoE, sustained
+                                                                                             No automatic highest ATK or
+ Damage Dealer                   Who defeats enemy units?     damage, rear access,
+                                                                                             unconditional one-shot
+                                                              offensive summons
+                                                              Heal, cleanse, Mark, debuff,   Not synonymous with
+                                 Who enables the team or
+ Support                                                      buff, interrupt, control,      healing; a Support can deal
+                                 restricts enemies?
+                                                              Chakra aid                     damage
+
+
+
+71.2 All thirteen specializations retained, with default homes and flexible exceptions
+The table gives default discovery/filter homes—not irreversible class restrictions. Assign the hero-specific
+primary class from §71.3 when a subtype plausibly fits several roles.
+ Historical specialization       Usual main role              Distinct usage                 Exception/limit
+ (unchanged)
+ Guardian / Protector            Tank                         Guard and defense              Guard/supportive tank
+ Bruiser / Off-tank              Tank or Damage Dealer        Durable combatant              Main job can change by kit
+                                                                                             High payoff, identifiable
+ Finisher / Duelist              Damage Dealer                Single-target burst
+                                                                                             counterplay
+ AoE / Wave Attacker             Damage Dealer                Multi-target pressure          Per-target and row restrictions
+ Sustained / Wound DPS           Damage Dealer                Long-fight pressure            Status damage caps retained
+ Controller / Tempo              Support                      Denial and action timing       CC/Speed limits retained
+ Debuffer / Marker               Support                      Make enemies vulnerable        No compulsory named partner
+ Buffer / Chakra Support         Support                      Enhance allies                 Chakra gift caps retained
+                                                              Restoration and condition
+ Healer / Cleanser               Support                                                     No compulsory revive
+                                                              removal
+ Scout / Rear Access             Damage Dealer or Support     Spot, mark, or reach targets   No free bypass of Taunt
+
+                Scope research • Hero Roster v1.10 • Historical Sections 6, 10, 26, 69 preserved • Page 36
+<PARSED TEXT FOR PAGE: 37 / 148>
+                               NARUTO IDLE RPG | SCOPE MASTER 03 | HERO ROSTER v1.10
+ Historical specialization         Usual main role                   Distinct usage              Exception/limit
+ (unchanged)
+ Counterattacker / Trapper         Tank, Damage Dealer, or Support   Reactive punishment         No infinite reactions
+ Summoner / Clone Specialist       Damage Dealer, Tank, or Support   Bounded objects or decoys   No sixth independent unit
+ Hybrid / Flex                     Any of the three                  One selected primary job    Avoid three-role supremacy
+
+
+
+Hybrid / Flex remains the thirteenth specialization and is not promoted into a fourth umbrella class.
+Summoner / Clone and Counterattacker / Trapper also remain full specialties rather than unexplained
+“miscellaneous” classes. Their primary role is resolved per hero by the primary value they provide in five-
+shinobi combat.
+
+END VERBATIM SOURCE EXCERPT
+
+D — Master 03 §71.3.1: Gaara primary role
+BEGIN VERBATIM SOURCE EXCERPT
+
+71.3.1 Guardian / Protector
+ Naruto hero                       Main role                         Original specialization     Existing secondary tag
+ Gaara                             Tank                              Guardian / Protector        Control
+ Yamato                            Tank                              Guardian / Protector        Control
+ Choji Akimichi                    Tank                              Guardian / Protector        Bruiser
+ Hinata Hyuga                      Tank                              Guardian / Protector        Counter-support
+ Fourth Raikage (A)                Tank                              Guardian / Protector        Bruiser
+
+END VERBATIM SOURCE EXCERPT
+
+E — Master 03 §71.3.3: Sasuke primary role
+BEGIN VERBATIM SOURCE EXCERPT
+
+71.3.3 Finisher / Duelist
+ Naruto hero                       Main role                         Original specialization     Existing secondary tag
+ Sasuke Uchiha                     Damage Dealer                     Finisher / Duelist          Burst
+ Minato Namikaze                   Damage Dealer                     Finisher / Duelist          Rear access
+ Haku                              Damage Dealer                     Finisher / Duelist          Control
+ Kimimaro                          Damage Dealer                     Finisher / Duelist          Bruiser
+ Kakashi Hatake                    Damage Dealer                     Finisher / Duelist          Counter-support
+
+END VERBATIM SOURCE EXCERPT
+
+F — Master 03 §71.3.10: Neji primary role
+BEGIN VERBATIM SOURCE EXCERPT
+
+71.3.10 Scout / Rear Access
+ Naruto hero                      Main role                    Original specialization     Existing secondary tag
+ Neji Hyuga                       Support                      Scout / Rear Access         Debuffer
+ Kiba Inuzuka                     Damage Dealer                Scout / Rear Access         Hybrid
+ Tenten                           Damage Dealer                Scout / Rear Access         AoE
+ Ao                               Support                      Scout / Rear Access         Support
+ Suigetsu Hozuki                  Damage Dealer                Scout / Rear Access         Bruiser
+
+END VERBATIM SOURCE EXCERPT
+
+G — Master 03 §71.3.13: Naruto primary role
+BEGIN VERBATIM SOURCE EXCERPT
+
+71.3.13 Hybrid / Flex
+ Naruto hero                         Main role                   Original specialization                   Existing secondary tag
+ Naruto Uzumaki                      Damage Dealer               Hybrid / Flex                             Striker
+ Obito Uchiha                        Damage Dealer               Hybrid / Flex                             Scout
+ Tobirama Senju                      Tank                        Hybrid / Flex                             Guardian
+ Karin                               Support                     Hybrid / Flex                             Healer
+ Asuma Sarutobi                      Damage Dealer               Hybrid / Flex                             Bruiser
+
+
+
+[ROSTER CROSS-CHECK] 65 distinct named heroes; 13 unchanged specialties × 5 heroes each. Proposed
+display-role distribution: 10 Tank, 30 Damage Dealer, and 25 Support. These counts indicate candidate
+labeling, not lineup ratios or guaranteed roster availability.
+
+END VERBATIM SOURCE EXCERPT
+
+H — Master 09 §§57.2–57.3: root navigation and screen ownership
+BEGIN VERBATIM SOURCE EXCERPT
+
+57.2 Top-level architecture: choose four persistent destinations
+ Alternative                                Benefit                                   Cost / provisional decision
+
+                                                                                      SELECTED. Idle is a Home action; Hall
+ A. Four primary destinations: Home,        Fast reach to recurring core loop; each   lives in Squad; Tactical Archive lives
+ Squad, Campaign, Recruit                   label corresponds to a player intention   under Campaign; settings/details are
+                                                                                      contextual or profile routes.
+                                                                                      DEFER. Adds a permanent empty or
+                                            Broader future scalability for multiple
+ B. Five including “Modes” / “More”                                                   weakly defined slot while the only
+                                            optional modes
+                                                                                      designed optional solo mode is TA-01.
+                                                                                      REJECT. Too many unlike actions;
+ C. Everything in one scrollable Home       Potentially fewer top-level route
+                                                                                      unclear hierarchy and no stable
+ dashboard                                  changes
+                                                                                      Squad/Campaign mental model.
+                                                                                      NOT SELECTED. Recruitment odds,
+ D. Three destinations with Recruit under
+                                            Less tab competition                      currency use and guarantee warrant a
+ Home
+                                                                                      distinct predictable destination.
+[WORKING DECISION UX-01] For compact portrait phones, expose exactly four labeled bottom destinations,
+never icon-only: Home, Squad, Campaign, Recruit. The bottom bar persists on these four root pages, but
+focused Battle, Preflight, Recap, modal confirmation and sensitive transaction states replace or cover it. Hide
+only when doing so prevents an invalid route during an unresolved action. A tablet/landscape layout can later
+use a navigation rail without changing route identities. This does not select an engine or Android UI
+framework.
+
+
+                     Living design document • Live master v0.10.42 • Updated in place • Page 3
+<PARSED TEXT FOR PAGE: 4 / 25>
+                       NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+[RETURN MECHANISM] Every non-root screen has a labeled Back/Close and returns to the correct parent.
+Deep links reconstruct a parent route and entitlement guard; no push message or UI shortcut may bypass an
+unlock. Retain a “Resume mission” contextual action in Home, rather than creating a fifth permanent tab.
+
+57.3 Screen inventory and route ownership
+ Route ID and parent                     Primary player question / on-screen        Authoritative information and
+                                         essentials                                 allowed action
+
+                                         What is next? Show one current             Derive from Hall, mission graph,
+                                         objective, claim-ready idle summary,       pending receipt and claim state; route to
+ HOME / root
+                                         limited wallet preview, resume/return      next eligible action, never generate
+                                         status.                                    rewards.
+                                         Who is on the five slots? Formation (2     Roster ownership, equipped Band-I gear,
+ SQUAD / root                            front/3 rear), roles, selected preset,     saved formation; mutations only via
+                                         missing counter warning.                   explicit Save.
+                                                                                    Published Hall cost, owned wallet,
+                                         What upgrade is affordable, what will be
+ HALL / SQUAD or HOME contextual                                                    before/after level; one transaction keyed
+                                         consumed, and what will change?
+                                                                                    by entitlement and selected band.
+                                         Where am I in the 15-node graph?           FC/SCN IDs, grant receipts, graph edges;
+ CAMPAIGN / root                         Threat, prerequisite, reward receipt and   story skip cannot withhold STORY
+                                         next legal node.                           character.
+                                         Who acts, what threat should I answer,     Enemy preview, target legality, current
+ PREFLIGHT / CAMPAIGN                    and which two legal routes are             squad and accessible counters; editing
+                                         available?                                 squad returns here.
+                                         What happened this round? Readable         Resolved combat state; 1x/2x and low-
+ BATTLE / PREFLIGHT                      intent, target, statuses,                  effect settings are presentation only;
+                                         HP/shields/Chakra and current action.      cannot edit damage rolls.
+                                         Why did I win/lose?                        Battle result + transaction receipts; no
+ RECAP / BATTLE or CAMPAIGN              Damage/healing/control, first-death        implied reward until confirmed; retry
+                                         timing, one legal suggestion, receipts.    retains same difficulty.
+                                                                                    Live eligible banner definition, wallet,
+                                         What pool, price, odds, guarantee and
+ RECRUIT / root                                                                     pity/selector ledger; explicit confirm
+                                         spend source apply before purchase?
+                                                                                    before immutable purchase.
+                                                                                    E0 or earned later rate, eligible elapsed
+                                         What accrued, at which rate, since
+ IDLE / HOME                                                                        time and claim receipt; never client-
+                                         when, and what remained uncollected?
+                                                                                    calculated credit.
+                                         Can I practice a known lesson without      TA-01 unlock, cosmetic first-clear receipt
+ ARCHIVE / CAMPAIGN                      stamina, recurring resources or ranked     and replayable result; no recurring
+                                         pressure?                                  payout.
+                                                                                    Authoritative kit/version and status
+                                         What does a status/skill/role/counter
+ DOSSIER / context                                                                  timing; accessible from squad, preflight,
+                                         actually mean?
+                                                                                    battle pause and recap.
+                                                                                    Currency balances and canonical source
+                                         What is each balance for and where is
+ WALLET / contextual                                                                IDs, cooldowns and eligibility—not
+                                         an eligible source?
+                                                                                    invented “earn now” shortcuts.
+                                                                                    Presentation preferences only; never
+                                         Adjust motion, effects, sound, captions,
+ SETTINGS / profile                                                                 creates alternate entitlement or combat
+                                         text preference, notification opt-in.
+                                                                                    calculations.
+[RULE] “Primary CTA” is contextual rather than universally “Battle”: new accounts see Complete Training /
+Choose Support; later accounts see Continue Mission; returning accounts may see Review Result or Claim Idle.
+One dominant action is allowed per surface. A shop promotion cannot displace a blocked essential counter,
+training payment, mission continuation, or pending-result recovery.
+
+
+
+
+                      Living design document • Live master v0.10.42 • Updated in place • Page 4
+<PARSED TEXT FOR PAGE: 5 / 25>
+                         NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+
+END VERBATIM SOURCE EXCERPT
+
+I — Master 09 §57.6: durable action and receipt boundaries
+BEGIN VERBATIM SOURCE EXCERPT
+
+57.6 Action-state contract, purchasing and reward receipts
+ User-visible action                       Before submission / pending                   Authoritative outcome / failure
+                                                                                         recovery
+
+                                                                                         One posted band transaction or no
+                                           Exact grants, Ryo/EXP debit, before/after
+ ONB training band                                                                       mutation; retry checks same ONB
+                                           Hall; prevent shop diversion
+                                                                                         receipt.
+                                                                                         K-09 OR K-10 receipt, not both; if
+                                           Two first-copy kits and trade-off; explicit
+ START01 support choice                                                                  interrupted before commit, show choice
+                                           select and confirm
+                                                                                         again without guess.
+                                           Eligible hours, rate steps, bank cap and      Post unique claim interval; display exact
+ IDLE claim                                estimate; distinguish estimate from           credited vector; if unknown, refresh
+                                           confirmed balance                             state not re-issue award.
+                                           Preview FIRST02/FIRST03 where                 Victory record → receipt; replay shows
+ Campaign first-clear                      eligible, show one-time and replay            already claimed; G8 material+title
+                                           distinction                                   remain separate receipt classes.
+                                                                                         Post STORY01/02/03 once even on Skip;
+                                           Before G4/G5/G8 verify entitlement
+ STORY recruit from scene                                                                reenter preview only when ownership
+                                           independent of dialogue read flag
+                                                                                         confirmed.
+                                           Current wallet, banner eligibility, odds,     Confirm price, unique purchase key,
+ Summon or selector purchase               70-pull guarantee scope, fragment             durable pull/pity/account result;
+                                           selector terms, currency order                network error never means free repeat.
+                                           Slots and targeting preset preview, show      Save explicit new formation; invalid
+ Saved formation                           who leaves team, no destructive gear          five-slot or targeting rule blocks battle
+                                           transfer                                      start.
+                                                                                         Reconcile authoritative battle id and
+                                           If interrupted after submission, display
+ Battle result                                                                           reward receipt; render replay/recap if
+                                           “Checking result” not auto-retry
+                                                                                         committed; pending cannot grant.
+[TRUST BOUNDARY UX-02] Never derive owned currency or first-clear rewards from an animation, local
+countdown or toast. The UI may show provisional estimates, but only an authoritative transaction receipt
+changes the displayed confirmed wallet. Receipts expose source ID, debit/credit, before/after balance when
+available, and whether already claimed. Back, retry and reconnect must not replay the grant.
+
+[INFORMATION SEPARATION] Display user-earned CORE01/02 objectively; FIRST01/02/03 as one-time;
+STORY01/02/03 as noncurrency first copies; TA-01 emblem once; E0 as time-accrual. Do not combine these into
+a misleading “daily prize” total. A locked mode is labeled “Not unlocked” with its actual condition, not
+“Claimable.”
+
+END VERBATIM SOURCE EXCERPT
+
+J — Master 09 §§58.2–58.3: compact layouts and visible information
+BEGIN VERBATIM SOURCE EXCERPT
+
+58.2 Reference small-screen geometry and scaling stress case
+Use 360×640 dp as an ILLUSTRATIVE portrait design canvas, not an assumed minimum supported phone. For
+paper placement only, reserve approximate 24dp status, 56dp app header, 80dp root navigation and 24dp
+gesture/navigation inset, yielding 456dp of flexible content. Actual status/navigation insets and device sizes
+vary; these allocations are not measured. Battle, Preflight and Recap may replace the root bar to return space
+to priority information. Do not hard-code screen-height assumptions.
+ Area                                   Compact working hierarchy                   Large-text / failure behavior
+
+ Header (approx. 56dp)                  Screen title, labeled Back/Close where      Allow title to wrap or truncate with
+                                        needed, one contextual utility; no          accessible full label; do not shrink below
+                                        rotating promotion                          legibility
+ Primary task area                      One next action or danger summary in        The dominant action can move lower in
+                                        the first scroll region; lead with verb     a scroll surface, never underneath an
+                                        and actual prerequisite                     overlay
+ Secondary detail                       Expandable cost breakdown, noncritical      Content can grow vertically; avoid fixed-
+                                        metrics and receipts; disclosure remains    height text boxes and horizontal
+                                        one labeled action away                     scrolling of prose
+ Bottom destination bar (roots only)    Home / Squad / Campaign / Recruit: icon     Each destination retains a 48dp or
+                                        plus text labels, distinct selected state   greater touch envelope; no two-row
+                                                                                    compression
+ Touch / activation envelope            Working Android target at least 48×48dp     Visual icons may be smaller than their
+                                        and about 8dp between neighboring hit       active hit area; do not overlap regions
+                                        regions
+ Stress profiles                        Illustrative 360×640 and constrained        At enlarged scale, show core task and
+                                        320×568; 100% and 200% font-scale           important warnings in the vertical
+                                        paper passes                                scroll, with accessible non-drag
+                                                                                    alternatives
+[EXTERNAL GUIDANCE] Android recommends ≥48dp touch targets and commonly a 3–5 destination compact
+navigation bar. WCAG 2.2 SC 2.5.8 uses a distinct web 24×24 CSS-pixel threshold with exceptions. Treat 48dp as
+our conservative native-phone reference; neither guideline constitutes a tested pass for our unrendered UI.
+
+
+
+
+                     Living design document • Live master v0.10.42 • Updated in place • Page 9
+<PARSED TEXT FOR PAGE: 10 / 25>
+                      NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+58.3 Screen-by-screen minimum visible information: strict content contracts
+ Screen / route                         Always visible before decision                Optional detail / one dominant action
+
+ Home                                   Current objective with verb, next             Show Continue training / Choose
+                                        eligibility, current pending result if any;   support / Review result / Continue
+                                        idle-bank status if actionable                mission or Claim idle as context
+                                                                                      demands; wallet breakdown can expand
+ Squad / Hall                           Five slots and 2-front/3-rear roles;          Inspect abilities/gear; Train only after
+                                        current Hall level and attainable next        presenting Ryo+EXP+essence and
+                                        cost; distinguish owned vs fieldable          before/after states; warn of missing
+                                                                                      input
+ Campaign / mission list                Current node, cleared/locked status and       Continue mission; expand
+                                        nearest next legal fight; campaign            dossier/earlier scenes; a locked node
+                                        chapter context                               states a verifiable condition
+ Preflight                              Enemy intent, timing (e.g., Wound at          Review counters/Adjust squad first;
+                                        next victim action), legal target rules,      Begin Battle only after valid formation
+                                        accessible responses and team                 and pending receipt checks
+                                        formation
+ Battle                                 Active actor; readable ally/enemy HP          Pause/Details; auto-actions remain
+                                        and shield; current personal Chakra;          authoritative; avoid claiming manual
+                                        charged intents; next important status        skill override
+                                        tick
+ Recap                                  Victory/defeat; real causal event; exact      Timeline, damage/healing/control
+                                        reward receipt status; one legal next         breakdown; do not assert a loss cause
+                                        action                                        not supported by the event log
+ Recruit / banner                       Banner type, useable seal quantity, pool      Recruit with explicit cost and
+                                        eligibility, rate disclosure and applicable   acknowledgement; until committed,
+                                        pity family                                   show Pending rather than new
+                                                                                      ownership
+ Wallet / reward claim                  Confirmed balance; distinct                   Show source ID, debits/credits,
+                                        one-time/weekly/idle source labels and        before/after when available; retry reads
+                                        claim state                                   the same receipt, never duplicates grant
+ Tactical Archive                       Lesson goal, no-stamina/free-repeat rule,     Practice or Review Explanation; no
+                                        one-time cosmetic reward state                recurring seals/materials
+[EXCLUSION] Do not push the Store ahead of a legal counter or a pending-reward recovery. Keep cosmetic
+monetization outside the primary task hierarchy. A visible “Claim” control cannot represent an owned
+balance until confirmation.
+
+END VERBATIM SOURCE EXCERPT
+
+K — Master 06 §§52.2–52.4: shared Hall and onboarding boundaries
+BEGIN VERBATIM SOURCE EXCERPT
+
+52.2 Four level bands: exact 19 shared Hall purchases
+[WORKING DECISION 3J-01] The Training Hall is created at level 1 with initial cap 20. Levels 2–20 are 19
+shared, permanent account purchases funded only by Ryo and Shinobi EXP. No promotion essence,
+enhancement, copies, skill books, weekly claim, or personal gear fee is charged before Hall20. The 20 →21 step
+remains a distinct 300-Ryo, 720-EXP, 48-essence upgrade, which raises the cap to 25 under §42. This is a
+candidate novice schedule, not a demonstrated long-term curve.
+ Hall step             Training band          Ryo                    EXP                    Cumulative Ryo / EXP
+
+ 1→2                   A / introductory       8                      12                     8 / 12
+ 2→3                   A / introductory       8                      12                     16 / 24
+ 3→4                   A / introductory       8                      12                     24 / 36
+ 4→5                   A / introductory       8                      12                     32 / 48
+ 5→6                   B / formation          12                     18                     44 / 66
+ 6→7                   B / formation          12                     18                     56 / 84
+ 7→8                   B / formation          12                     18                     68 / 102
+ 8→9                   B / formation          12                     18                     80 / 120
+ 9 → 10                B / formation          12                     18                     92 / 138
+ 10 → 11               C / targeting          16                     24                     108 / 162
+ 11 → 12               C / targeting          16                     24                     124 / 186
+ 12 → 13               C / targeting          16                     24                     140 / 210
+
+
+                  Living design document • Live master v0.10.42 • Updated in place • Page 22
+<PARSED TEXT FOR PAGE: 23 / 27>
+                    NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+ Hall step              Training band                  Ryo                EXP                        Cumulative Ryo / EXP
+
+ 13 → 14                C / targeting                  16                 24                         156 / 234
+ 14 → 15                C / targeting                  16                 24                         172 / 258
+ 15 → 16                D / final training             20                 30                         192 / 288
+ 16 → 17                D / final training             20                 30                         212 / 318
+ 17 → 18                D / final training             20                 30                         232 / 348
+ 18 → 19                D / final training             20                 30                         252 / 378
+ 19 → 20                D / final training             20                 30                         272 / 408
+[CALCULATED] Cost bands: Hall1→5 is 4×(8/12)=32 Ryo/48 EXP; 5→10 is 5×(12/18)=60/90; 10 →15 is
+5×(16/24)=80/120; 15→20 is 5×(20/30)=100/150. Grand total = 272 Ryo and 408 EXP, with zero
+essence/enhancement. Any later cap-at-5/10/15 mechanic would contradict this first-account baseline and
+must be explicitly re-priced, not smuggled in.
+
+52.3 Four one-time onboarding grants, no fabricated first-clears
+[WORKING DECISION 3J-02] Choose four durable, once-per-account, noncombat training checkpoints ONB01–
+ONB04. Each checkpoint visibly grants its listed Ryo and EXP, then teaches and enables purchasing its
+matching Hall band. They are available without PvP, guilds, advertisements, gacha, additional equipment or
+timed objectives. They can be resumed after logout. This is a deliberately guided first-session bridge; it does
+NOT imply the live user will enjoy four consecutive upgrades. A later user-study could replace parts with
+verified, affordable combat clears at earlier levels.
+                    Guaranteed                                 Band spend Ryo /
+ Unique ID                                   Grant Ryo / EXP                      Wallet Ryo / EXP       Hall result
+                    checkpoint                                 EXP
+
+ ONB01              Open Training Hall;      40/60             32/48              8/12                   Hall 5
+                    account created /
+                    START00 delivered
+ ONB02              Choose START01           56/84             60/90              4/6                    Hall 10
+                    flex; learn
+                    formation
+ ONB03              Review targeting         80/120            80/120             4/6                    Hall 15
+                    preview; confirm
+                    five-slot roster
+ ONB04              Inspect Wound            104/156           100/150            8/12                   Hall 20
+                    preview; complete
+                    preparation lesson
+[CALCULATED] Total one-time ONB01–04 grant = 280 Ryo +420 EXP. Required Hall1 →20 purchases =272 Ryo
++408 EXP. After a clean first tutorial, player retains 8 Ryo and12 EXP. No idle claim is needed for the baseline.
+These four grant IDs are ADDITIONAL explicit inputs, not evidence that a previous reward table already
+financed early growth; earlier versions correctly marked this income missing.
+
+[TRANSACTION POLICY] Reserve ONB identities once per account, with idempotent grant transactions and
+durable completion. On interruption, reopen the oldest unfinished step, show its resources and legal next
+upgrade, and never re-grant an already credited step. Unlock unrestricted optional currency sinks and the
+shop only once ONB04 is complete, preventing a newcomer from spending the tutorial budget elsewhere
+before Hall20. If the same hero is owned from recruitment, START00/START01/ STORY must reconcile the first
+copy without duplicate free pulls. This is a progression-safety constraint, not a license for misleading or
+hidden currencies.
+
+52.4 E0 reward checkpoint and first Wound gate placement
+[WORKING DECISION 3J-03] At the completion of ONB01, publish tutorial checkpoint E0 as an earned
+noncombat campaign/tutorial clearance and unlock ordinary IDLE01 at the already-defined early E hourly
+vector: (10 Ryo,20 EXP,2 essence,1 enhancement). E0 is the first eligible idle-rate floor. It requires neither
+                  Living design document • Live master v0.10.42 • Updated in place • Page 23
+<PARSED TEXT FOR PAGE: 24 / 27>
+                        NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+winning a below-Hall20 fight nor earning a random shinobi. The account may continue ONB02–04
+immediately without waiting for resource accrual. The first mandatory G1 Wound battle is offered only after
+ONB04 has credited Hall20/cap20, Band I standard issue, START00 and one START01 choice. E0 is NOT an
+approved narrative stage number or a disguised win against G1.
+
+[FAIRNESS / ALTERNATIVE] Giving the E early fixed rate at ONB01 intentionally front-loads training value; it
+can reduce the importance of early idle accumulation and makes tutorial completion more directed. Reject the
+alternative of forcing a one-day/weekly idle claim before G1 merely to demonstrate idle mechanics: that
+creates a clock wall without a tactical purpose. Also reject requiring combat victories at Hall5/10/15 until
+actual sub-20 role stat packets and those fights are authored. Change this policy if onboarding evidence shows
+unengaging upgrades; the smallest safe revision would preserve the guaranteed resource budget while
+changing how its milestones are presented.
+
+END VERBATIM SOURCE EXCERPT
+

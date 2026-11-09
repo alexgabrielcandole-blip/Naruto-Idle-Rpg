@@ -1,0 +1,6 @@
+{
+  "name": "Naruto Idle RPG",
+  "description": "Tactical anime idle squad RPG with strategic 5v5 team formations, shared Academy Training Hall, and rich Shippuden visual world.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

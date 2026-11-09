@@ -1,0 +1,1157 @@
+NARUTO IDLE RPG — UI VISUAL RESET AND COMPLETE ART DIRECTION
+For the Android presentation project in Google AI Studio
+Owner brief: 7 November 2026 | Design reference: live master v0.10.41
+SCOPE: VISUAL DESIGN ONLY | FIRST DELIVERABLE: ONE FINISHED VILLAGE SCREEN
+
+HOW TO USE THIS DOCUMENT
+Attach this document, the rejected current screenshot, and the new three-screen visual concept board to the same Studio conversation. State: "Follow this full specification. Use my old screenshot as the problem reference and the new board as a proposed art-direction reference. Implement only Gate 1, the Village screen and its shared visual components. Keep all gameplay controls inert. Show the actual rendered screen and stop for my review."
+
+This document is self-contained: it replaces the previous UI prompt for presentation decisions, retains all 95 screen IDs, and specifies the complete eventual UI scope. Do not try to build all 95 screens in one response. Read the full specification, then execute the current gate only. The current gate is Gate 1. There is no authorization to begin game functionality.
+
+The concept board is a visual proposal. Borrow its clear building silhouettes, daylight, paper/cloth material language, strong character art and organized merchandise. The written dimensions, native typography, four-root navigation and category definitions below govern implementation. Do not copy its generated text, prices, jutsu assignment, decorative writing or Hokage-face details as authoritative data. Render all meaningful lettering and numbers natively. Check recognizable Naruto landmarks and anatomy against dependable character/environment references.
+
+The rejected screenshot is evidence of what needs correction. Its emulator controls outside the phone are not part of the game and are not redesign targets. Only the visible game viewport is being assessed. No source-code implementation is inferred from that screenshot.
+
+01 — YOUR ROLE, DELIVERABLE AND BOUNDARY
+
+Act as the game's art director and native Android UI designer. Produce coherent illustrated RPG screens that can later host gameplay. The output must have specific compositions, finished-looking illustrations, custom game controls, readable data and consistent visual states.
+
+Work in the existing Android presentation project. Inspect its actual structure before editing. Use its compatible Kotlin/Jetpack Compose foundations. Do not silently change the platform to a website or wrap a web page in a phone frame. Do not recreate unrelated project infrastructure as part of an art correction. Keep the old presentation available through ordinary project version control while replacing its visual layer.
+
+The entire current phase is UI-only. Draw Home, Squad, Campaign, Recruit, Hall, Shop, battles, results, confirmations and all remaining categories as static specimens. Every game action is inert: no real Train, Buy, Recruit, Equip, Claim, Save formation, Begin battle, Join guild, Send message, Sign in, Restore purchase or account deletion. No economy, combat calculations, server, authentication, payment, persistence, progression or analytics work. A success screen is a separately selected preview, never the result of performing a game transaction.
+
+Allow only presentation conveniences: scrolling, an external review selector, zooming the review surface, and switching among authored static screen/state examples. Do not make every gameplay control look disabled just because it is inert. Its appearance comes from its specimen state. A normal-looking orange button may be inert in this presentation build. Document that in review metadata, outside the player-facing design.
+
+Use one static fixture set for names, portraits, counts, costs and statuses. The normal art-review fixture uses 1,280 Ryo and 12 Recruitment Seals; these are layout examples, not starting balances or approved economics. "Sample data" belongs to the review frame. Prices that have not been designed remain identified as samples or unauthored in that frame and in product specifications.
+
+Read the current master's interface information requirements. The master is authoritative for categories, combat structure, resource identities and established rules. This document supplies proposed artwork and layout. Latest owner instructions govern the UI-only workflow. New visual decisions never silently rewrite the canonical master. Keep the Studio experiment and its temporary data out of that master unless explicitly requested.
+
+02 — WHAT MUST CHANGE IN THE CURRENT SCREEN
+
+Observed issue A: the village has many similarly detailed roofs and windows competing at the same scale.
+Required correction: compose five major destination buildings with distinct silhouettes and broad path separation. Background houses are reduced-detail scenery. Make the navigable buildings the clearest objects at phone scale.
+
+Observed issue B: repeated small circular symbols, narrow labels and a tall shortcut rail dominate the interaction layer.
+Required correction: use building-attached plaques for places, a small account/resource header, one contextual objective strip and four equal bottom destinations. Remove the duplicate destination rail from the Village composition.
+
+Observed issue C: the dark gradient obscures a substantial part of the lower village.
+Required correction: paint a legible lower village. Place text on contained opaque paper or cloth surfaces. Use a local scrim only where actually necessary. Do not lay a black-to-transparent gradient over half the screen.
+
+Observed issue D: black capsules, yellow edging and glowing symbols compete with the anime environment.
+Required correction: choose one equipment-inspired visual language: indigo cloth, warm ivory paper, dark ink, worn steel and limited lacquered orange. Subtle brass is an accent, not a perimeter around every object.
+
+Observed issue E: Train/Training and other secondary destinations appear in competing locations.
+Required correction: each Village destination gets one primary representation. Training Hall is a recognizable Academy building with a plaque. Shop is a visible shop. Additional access from another screen may exist later; no duplicated shortcut stack is needed on the same Home specimen.
+
+Observed issue F: a large circular Battle action sits between root tabs.
+Required correction: restore exactly Home, Squad, Campaign, Recruit in four equal segments. The primary next step sits in a separate contextual objective strip. Do not place a fifth Battle tab or an oversized floating circle in the navigation.
+
+Observed issue G: a Close control appears on the root screenshot without a clear sheet boundary.
+Required correction: use Back or Close only on child screens and actual overlays. A root Home page has no unexplained Close pill.
+
+Observed issue H: small badges and decorative details make the screen busy without clarifying a task.
+Required correction: the default approval specimen has no alert badges. A separate badge specimen shows one meaningful marker. A screenshot must establish its visual hierarchy before any promotion, alert or effect is added.
+
+This is a composition and asset-quality correction. Changing only colors, corner radius, border thickness or background resolution will not complete it.
+
+03 — REFERENCE TRANSLATION AND ART DIRECTION
+
+AFK Arena reference lesson: important buildings occupy substantial, separately readable areas of the town; character and item silhouettes stay strong; illustrated controls belong to the same world as their backgrounds.
+Mythic Heroes reference lesson: a character can own the main stage while stats and actions form a stable lower band; catalog goods repeat within an orderly grid with clear price rows.
+Naruto reference lesson: recognizable people, architecture, costumes, weapons, forehead protectors, training grounds, scrolls and chakra provide the actual setting.
+
+These are composition observations from inspected historical reference screenshots. Do not import the references' five-tab navigation, side-promotion density, medieval castles, currencies, monetization, rarity ladders or game rules.
+
+Chosen direction: a polished Shippuden-era Hidden Leaf RPG with confidently drawn anime characters, painterly but controlled environments, custom illustrated object icons and restrained tactile frames. It should feel like a deliberate game art production: faces are consistent, objects have clean edges, architecture has stable perspective and the UI has a coherent material palette.
+
+World:
+- Hidden Leaf Village is the main home.
+- The Academy training yard is the Training Hall.
+- A timber ninja-tool shop serves goods and appearance studies.
+- The mission office, scroll registry, archive, storehouse and village gate are distinct places.
+- The Broken Supply Route is the opening campaign arc, not a replacement for the Naruto setting.
+- Arena uses a Chunin-exam visual language; guild spaces use an operations hall; practice uses the archive.
+- Familiar Naruto cast may appear as visual specimens. Do not finalize a named character's mechanical K-ID role, jutsu, rarity or faction advantage through an illustration.
+
+Art hierarchy:
+1. Main focal object: the chosen building, character, squad or product. Crisp contour, full material differentiation, strongest local contrast.
+2. Useful supporting environment: medium contrast, grouped shapes, simplified texture.
+3. Distant background: softened value range and edges, lower saturation, no tiny high-contrast details competing with labels.
+4. Interface: stable surfaces, native text, exact alignment and consistent icon scale.
+
+Environmental style:
+Use broad light/shadow groups and selective detail. Roof planes should be clean enough to recognize their shape at 390dp width. Paint shutters, pipes and timber joints where they explain architecture. Do not fill every wall with equal microtexture. Make paths broad, shadows directional and entrances visible. Daylight is warm-neutral; foliage and jade roofs remain distinct. Limit dramatic fog to appropriate mission scenes.
+
+Character style:
+Preserve Naruto anime proportions, recognizable facial structure, costume era and silhouette. Use a consistent model sheet. Keep spiky hair, headbands, hands, straps and weapons anatomically coherent. Avoid waxy faces, generic fantasy armor, random kimono substitutions or mismatched body rendering. Dossier art may show a waist-up crop; field art must show the body and grounded feet. Do not stretch a portrait to make a battle sprite.
+
+Shape vocabulary:
+Rectangular mission paper, slightly clipped lacquered buttons, compact steel brackets, folded cloth tabs, wood plaques and scroll ends used selectively. Circles belong to portrait seals, small item badges and formation pads. Do not make every destination a gold circle.
+
+Richness budget:
+Let illustration carry the richness. Use one principal material treatment on a component and at most one small accent. A panel need not have a scroll roll, gold frame, embossed crest, glowing edge and corner flourish simultaneously. In the normal scene only the principal action uses a full orange filled face.
+
+04 — DESIGN TOKENS AND READABILITY
+
+All dimensions are proposed design constraints, not claimed industry averages. Use dp for layout and sp for text. The visual reference is a 390×844dp outer Android viewport. Actual operating-system insets are measured by the app. The 24dp top and 24dp bottom in the example merely create a convenient 390×796dp safe-content illustration; do not hardcode those OS heights.
+
+Color tokens:
+Paper / base information surface: #F2E5CB
+Paper light / small highlights: #FFF5DF
+Paper edge / neutral rule: #B7A98E
+Ink / primary text: #26323A
+Muted ink / secondary text: #5D655F
+Indigo cloth / navigation and backing: #223447
+Deep cloth / small recesses: #182735
+Leaf green / scenery accent: #647E4F
+Roof jade / scenery accent: #477763
+Terracotta / architectural accent: #B65B43
+Lacquer / primary button face: #A8441C
+Lacquer highlight / upper rim only: #D67836
+Button text: #FFF5DF
+Worn steel: #9CA9AB
+Brass / occasional accent: #B68B4E
+Chakra / effect and meter accent: #62B7C9
+Danger ink: #9D3B35
+Success ink: #3E6A45
+
+Use the darker lacquer under white button labels; the lighter orange can decorate the rim. Check contrast against final surfaces and exported textures. Small body text targets at least 4.5:1 contrast; large display text and meaningful non-text outlines target at least 3:1. A textured background still needs a solid text region. Never use saturation alone to communicate ownership, target, failure or selection.
+
+Typography:
+- One bundled readable serif family for location and hero names, for example Source Serif 4 Semibold if available.
+- One bundled clean sans family for controls, values and body text, for example Noto Sans.
+- Use the same selected pair throughout. Do not switch among fantasy fonts from screen to screen.
+- Location title: 24sp / about 30sp line height.
+- Hero title: 28sp / about 34sp, at most two lines in its intended name region.
+- Panel heading: 18sp / 24sp.
+- Body and button labels: 16sp / 22–24sp.
+- Supporting labels, building plaques, item names: 14sp / 18–20sp.
+- Root navigation labels: 13sp / 18sp.
+- Compact noncritical metadata: 12sp minimum at normal scale.
+- Currency values: 15–16sp with tabular figures where available.
+- Avoid all-caps paragraphs, large letter spacing, glowing type and multiple outlines.
+- If a font asset is missing, keep one deliberate fallback and report the missing font in review notes. Do not claim the typography is final.
+
+Spacing:
+Use 4, 8, 12, 16, 24 and 32dp spacing steps. Normal screen gutter is 16dp; full-bleed art can reach the edge. Related icon/label gap is 6–8dp. Standard panel padding is 16dp. Separate major sections by 20–24dp. Align name baselines and number columns.
+
+Edges:
+Most content panels have 4–8dp corners and a 1dp edge. The button can have a small clipped corner or 6dp radius, a 1dp dark edge and 2dp lower lip. Avoid 20–40dp pill radii for every element. Use shallow shadows in one consistent light direction. Reserve large ornamental frames for rare title/reveal compositions.
+
+Touch-space reservation:
+Reserve at least 48×48dp around intended controls, including tiny visible glyphs. Explicitly reserve that space for inert visual controls; removing a callback must not collapse the intended hit area. Enlarged invisible areas must not overlap adjacent targets. Artwork and its native label share one future destination identity.
+
+05 — SCREEN FAMILIES AND ROUTES
+
+Four root identities in exact order: Home, Squad, Campaign, Recruit.
+Home title: Hidden Leaf Village.
+Root navigation is approximately 80dp high in the reference safe area, with four equal-width segments. It is opaque indigo cloth with a narrow upper seam. Each segment has a custom 26–30dp pictogram and a written label. Selected state uses a paper-toned inset and orange underline; unselected icons are warm ivory. A thin steel bracket may define the selected plate. Do not enlarge the selected tab.
+
+Root symbols:
+Home: simplified Leaf/village emblem.
+Squad: three distinct forehead-protected bust silhouettes.
+Campaign: folded route map with a path pin.
+Recruit: tied invitation scroll.
+Draw these as one consistent icon family. No emoji, mixed icon packs or arbitrary generic symbols.
+
+Screen family 1 — Place: Village, Hall, Shop, Arena, Guild, Archive. A real setting carries 35–70% of the initial composition.
+Screen family 2 — Character: dossier, appearance, recruitment reveal. One character carries 45–60%, with clear lower information and action zones.
+Screen family 3 — Collection/catalog: roster, inventory, store, selectors. A structured grid or list has a compact scene/header cue.
+Screen family 4 — Tactical: formation, preflight, combat. Bodies, spacing, targeting and legible status dominate.
+Screen family 5 — Document: wallet, rules, receipts, settings, help. Quiet paper surfaces use small contextual art.
+Screen family 6 — Narrative/result: dialogue, reward, defeat, story recruit. A focused illustration and short readable message establish the moment.
+
+Do not collapse every family into the same stack of rounded cards. Reuse components while preserving each composition.
+
+Hall remains a Squad child with contextual Home access. Shop remains a contextual Home destination. Archive belongs to Campaign. Profile opens from the account portrait. Child pages use Back at top; bottom root navigation is reserved for the four roots. Battle, preflight, recap and large confirmations are focused compositions. Do not duplicate Back in the header and footer merely because a concept image happened to show both.
+
+06 — COMPONENT LIBRARY: DRAW BEFORE PROPAGATING
+
+C01 — Primary action
+52dp default height, minimum 120dp width, 16dp horizontal padding; dark lacquer face, subtle upper light, narrow dark bottom lip and cream 16sp label. An optional 20dp leading icon must belong to the same set. Full-width variant fills the content gutter. Prepare normal, pressed, unavailable and focused specimens. A pressed specimen lowers the content 1dp. Limit one dominant action per surface.
+
+C02 — Secondary and text actions
+Secondary: paper face, 1dp ink/steel edge, dark 16sp label, same control height. Text action: explicit verb plus restrained chevron and a full intended touch envelope. Cancel must be plainly readable. Destructive action uses danger ink and clear wording, never an unexplained red glyph.
+
+C03 — Account/resource header
+56dp normal height. Portrait 40dp within a 48dp envelope; name alongside. Two compact resource groups occupy the right, each an illustrated 18–20dp icon and 15sp value. Normal header uses paper with a thin indigo seam. The sample name is "Konoha Genin"; no invented level number competes with currencies. Long account names truncate after a useful portion, with the full name designed in Profile. Use a two-row 88dp variant when text size or width requires it. No plus badges in the default UI.
+
+C04 — Child header
+56dp normal height; Back arrow plus readable destination title; at most one contextual utility on the right. Keep the entire left control distinct from Close. A long title wraps in an expanded header instead of becoming unreadably small. Child headers reuse the materials of C03.
+
+C05 — Building and plaque
+Each navigable building is a coherent illustrated object with a visible entrance and quiet clearance around it. A 28–32dp tall paper-on-wood plaque holds a 14sp title. The future touch region includes the building and plaque. Selected specimen adds a restrained edge light or a brighter plaque, not a neon ring around the whole neighborhood. Locked specimen adds a steel padlock and short reason. Show normal, selected and locked appearances.
+
+C06 — Root navigation
+Four equal segments in 80dp. Baselines, icon height and label weight are identical across roots. Selected segment uses paper fill and ink icon/text. At 200% text, increase bar height or use a reviewed accessible navigation layout without dropping labels. No center action, fifth review tab or ornamental orb.
+
+C07 — Character card
+Three columns in the standard 390dp grid. With 16dp gutters and 8dp gaps, each card is about 114dp wide. Use an approximately 114×146dp art/name unit. The face occupies most of the portrait region; hair and eye line are consistent across the roster. Name band is opaque, up to two lines. Add at most one role/affiliation marker and one status marker. Selected is an outline plus check; in-squad is a small explicit "In squad" badge. Do not cover eyes with stars and levels.
+
+C08 — Item/shop tile
+Three columns, about 114×152dp per shop cell at reference size. Art region about 90×84dp, short name below, then currency icon and price on a separate line. A quantity marker belongs to the art corner, not the price. Keep all objects centered to a common optical scale. Sold state retains recognizable art with a paper "Sold" label. Supply a two-column/row alternative at large type.
+
+C09 — Tabs, filters and sorting
+Paper or cloth tabs, 44–48dp visual height with intended touch padding. Selected has dark ink plus an orange underline or paper tab lift. Use at most four readable tabs in a row. Filter control includes its label and a count only in the appropriate variant. Long labels wrap or move to a sheet. Do not scroll a five-tab row invisibly with no affordance.
+
+C10 — Resource icon/value row
+Ryo coin; tied training scroll for EXP; sealed invitation scroll for recruitment; distinct fractured seal/portrait token for fragments; small labeled container for other established materials. Preserve actual resource identities. A coin, seal and fragment must be distinguishable without color. Amounts sit on a consistent baseline.
+
+C11 — Progress and requirement
+A labeled rail with current and target values; do not use a decorative progress fill with no explanation. Requirement rows pair icon, name, required amount and available amount. A deficit includes a written shortage. Pending has its own status, not a full success bar.
+
+C12 — Character stage
+Separate background, transparent character art, ground/contact shadow and native labels. Keep at least one quiet side for name or short details. Design focal anchors for face, body and weapon. Portrait and field crops come from appropriate assets. Character art never has a rectangular background accidentally left around it.
+
+C13 — Formation position
+Five stable position IDs. Oval ground contact, subtle rim, short position/name caption when needed. Empty is a restrained dashed pad with a plus. Selected uses warm rim plus inspector state. Locked and empty are different. Full-body art sits above the pad, with feet attached to the ground plane. No chess-token circles substituted for fighters.
+
+C14 — Jutsu and status art
+Jutsu icons use a square illustrated vignette with one clear subject. Status icons use small, simpler silhouettes. Wound is a cut-mark token; Shield a ward; Silence a crossed voice/seal; Mark a target tag. A tiny status icon never tries to depict a whole battle. Supply a labeled glossary specimen. Do not establish a Naruto character's final skill kit from sample art.
+
+C15 — Data sheet / inspector
+Opaque paper, 16dp padding, small overline if needed, 18sp title, image or portrait anchor, a concise explanation, relevant fields and action at the end. Long content scrolls. Keep the selected object visible in both parent and sheet.
+
+C16 — Modal / confirmation
+Dim background about 35–45%; opaque panel occupies at most the safe width minus 32dp. Name the action/object, show important cost or consequence, then primary action and Cancel. Tall content scrolls above the actions; never clip controls under the gesture inset. No extra Close if Cancel/Back is the chosen consistent dismissal design.
+
+C17 — Reward / reveal
+Small rewards sit on one paper tray, each with an icon and exact amount. First-copy character reveal uses a tall character composition with restrained scroll/chakra framing. Already-collected is quieter. Never decorate an unknown/pending result as confirmed.
+
+C18 — Empty / locked / pending / error
+Use a small local illustration, clear heading, short explanation and one next-action specimen. Empty shop uses an empty display tray; empty archive uses a blank folder; empty bench uses the open formation pad. Reuse the layout, not the same irrelevant generic illustration everywhere.
+
+C19 — Badge and notification
+Normal approval screens have no badges. A later specimen uses one 6–8dp dot or compact count at the upper corner of its object, never on a face or price. Selected, unread and urgent pending are different states. No permanent pulsing glow.
+
+C20 — Tooltip / glossary note
+Short paper callout for one sentence and one icon; larger explanations open a designed full sheet specimen. A tiny question mark has a labeled meaning in the review/accessibility description. Never hide required price or targeting information exclusively in a tooltip.
+
+C21 — List / table / ledger row
+48–64dp minimum comfortable row depending on content; portrait/object at left, title and metadata middle, value/status aligned right. Expanded variants stack secondary values. Alternating heavy boxes are unnecessary; subtle rules and grouping suffice.
+
+C22 — Toggle / slider / input specimen
+Native-looking but themed controls on quiet paper. Labels and displayed values remain visible. Checkbox uses a tick; radio selection uses a filled center; slider has a clear track/thumb. Input specimens have label, content, helper/error text and visible focus. They remain static, with no credential entry or submission.
+
+C23 — Combat HUD
+Compact actor bars, small status row, one active-actor indication, one readable target cue, a short current-event caption and bottom viewing controls. Distinguish HP, shield and Chakra with shapes/labels. Reserve a clean central space for the action. Status numbers do not overlap faces.
+
+C24 — Review atlas
+External review frame with screen ID, category, fixture, asset status and preview variant. Show exactly one clean game screen when capturing screenshots. The atlas can switch specimens; it is never a game destination. Include "art pending" and "render unverified" honestly when applicable.
+
+07 — EXACT VILLAGE COMPOSITION: FIRST APPROVAL GATE
+
+This is the decisive proof. Build UI-006 with C01, C03, C05, C06, C10, C18 and C24. Stop before spreading the design.
+
+Reference geometry within the illustrative 390×796dp safe content:
+- y=0–56: account/resources header.
+- y=56–92: compact "Hidden Leaf Village" title band. Its surface can be mostly open sky with a small native title plaque.
+- y=92–622: 390×530dp village art stage.
+- y=622–716: 94dp contextual objective strip with adequate padding.
+- y=716–796: 80dp root navigation.
+OS insets lie outside these values. Do not draw a fake time, battery indicator, gesture pill or phone frame inside the application.
+
+The scene uses an elevated three-quarter view with broad paths. It is a deliberately arranged destination district. Main entrances, roofs and plaques must remain separable. The overall scene feels like Konoha, while the building placement serves this game.
+
+Scene-local anchor boxes in the 390×530 art stage, written as x/y/width/height:
+- Mission Office: 125 / 100 / 152 / 124.
+- Training Hall: 15 / 225 / 159 / 138.
+- Ninja Tool Shop: 226 / 235 / 148 / 126.
+- Storehouse: 20 / 400 / 132 / 94.
+- Archive: 246 / 397 / 126 / 101.
+These are layout guides for each building including its immediate plaque region, not claims about canonical Konoha geography. Adjust small amounts only to avoid collisions; preserve their relative hierarchy and separation. Keep background Hokage Rock and the upper skyline primarily in the first 100–120dp. Paths connect the entrances and open a central breathing area.
+
+Architecture specifications:
+Mission Office — cream cylindrical body, red-orange curved roof, one clear central emblem area, short stairs, paper notices near the entrance. It is the upper anchor, larger and more formal than ordinary shops.
+Training Hall — green tiled roof, Academy wall, two or three wooden targets and visible practice-yard edge. The practice props distinguish it from a generic house. Plaque: "Training Hall".
+Shop — asymmetric timber storefront, jade roof edge or awning, indigo tool-sign cloth, recognizable rack silhouettes and warm doorway. Plaque: "Shop".
+Storehouse — lower timber shed with supply crates and one rolled delivery scroll. Plaque: "Storehouse". No treasure chest floating in front of unrelated buildings.
+Archive — tall, narrow scroll/library frontage with visible orderly shelves and a small cloth marker. Plaque: "Archive".
+Mission plaque: "Missions". This represents the mission office; the bottom Campaign tab remains the broader campaign root.
+
+Background detail:
+Two or three grouped roof clusters, foliage masses and a few small villagers are enough. The scene should not contain 30 equally sharp buildings. Hokage Rock is a landmark, not a row of generic duplicated faces. Use a verified era-appropriate reference before committing its face silhouettes. Trees frame the composition rather than covering plaques. Do not crop the tops of important roofs at the header.
+
+Objective strip:
+Warm paper, 16dp inset, small 40–48dp scroll/mission illustration at left, short title and one supporting line in the middle, 112×52dp orange action at right when space permits. Default review text: "Continue mission" / "The Broken Supply Route"; button: "Prepare". At 200% text stack the button below. Alternate static states: "Complete training" / "Review result" / "Review idle supplies". Only one state appears at a time.
+
+Footer:
+Home selected. The other three remain equal-sized. No Battle button, Shop tab, sidebar toggle, Gallery tab, Bounties balloon, fake count badge or unexplained Close. Shop, Hall and Archive already have building representations.
+
+Native layering:
+Paint the environment and building art without meaningful text. Render plaques and labels in Compose above it. Derive art anchors and plaque positions from one coordinate system. If using one approved district painting, define its display transform and use that same transform for anchor placement; do not guess unrelated screen offsets. If using separate buildings, use shared perspective, light and contact shadows. Keep the background and buildings bundled and stable, with no per-launch image regeneration.
+
+Responsive behavior:
+At 360 or 320dp width, scale the scene consistently while retaining native readable labels. Do not independently crop buildings with an arbitrary fill mode. When the available height is short, keep the header and navigation stable and allow the body to scroll; do not squeeze the entire scene, labels and controls into a smaller postcard. In the compact variant place the objective strip before the scrollable scene if needed to keep the next task visible. Document that variant explicitly. At large type, building plaques may wrap and grow; reposition within their assigned region rather than overlap adjacent roofs.
+
+First acceptance specimen:
+One clean normal Home screenshot, one 360×640dp rendering, one 200%-text rendering and a component contact sheet. In addition, show a selected/locked building as separate review states. Do not contaminate the clean approval screen with all badges, selection rings, lock overlays and debug labels at once.
+
+Failure conditions:
+Village still reads as a background wallpaper with UI pasted on top; important buildings are indistinguishable; labels require zooming; lower half is blackened; sidebar duplication remains; central Battle orb remains; landmarks drift away from their plaques; game controls perform actions; screenshot shown is only a generated concept rather than the Android render.
+
+08 — VISUAL ASSET PRODUCTION AND QUALITY
+
+A precise prompt can specify the result, but finished illustration is still required. Treat artwork as a separate deliverable. Do not claim to have fixed the art by drawing a few circles, triangles, gradients or stock glyphs.
+
+If image creation is available inside the environment, generate and inspect dedicated assets. If it is unavailable, use suitable supplied assets or provide the exact missing-asset request from this document. Continue layout work with clearly marked review placeholders where useful, but do not present that version as visually approved. Report the missing asset specifically instead of repeatedly regenerating a whole UI with the same poor source art.
+
+Separate art and interface:
+- Scene background plate.
+- Destination buildings, when built as separate layers.
+- Character portrait, dossier pose and field pose.
+- Item art.
+- Decorative frame/trim textures.
+- Native text, values, badges, tabs and button labels.
+A concept image is a guide. Do not slice it into an app screen with invisible hotspots. Do not bake prices, names, progress meters or buttons into the background.
+
+Asset register fields:
+key; intended screens; source file; width/height; transparency; focal anchor; crop-safe area; style reference; review status; known defects. Record "missing", "draft" or "approved" honestly.
+
+Minimum practical export guides:
+Village stage: approximately 1560×2120px for the 390×530 composition, or a comparable sufficiently sharp export.
+Other environment plates: at least 1080×1600px where a tall scene is needed; design for the actual stage ratio.
+Individual buildings: about 768–1024px on the larger dimension, with generous transparent margins.
+Dossier cutouts: approximately 1200×1800px, preserving hair, hands and weapon.
+Field figures: approximately 512×768px or larger, consistent camera and scale.
+Portraits: at least 512×640px with a shared face-crop guide.
+Item art: 384–512px square with transparent or intentionally neutral background.
+Navigation/object icons: vector masters or clean 128–256px raster art; verify the final 24–32dp use.
+These are production targets, not requirements to decode every original at full size on a phone.
+
+Named assets:
+bg_village_district, bg_hokage_rock_sky, building_mission_office, building_academy, building_ninja_shop, building_storehouse, building_archive;
+bg_training_yard, bg_shop_interior, bg_mission_office, bg_recruit_registry, bg_scroll_archive, bg_chunin_court, bg_guild_hall;
+map_supply_route, bg_forest_route, bg_bridge_approach, bg_clinic_perimeter;
+portrait_naruto, portrait_sakura, portrait_sasuke, portrait_kakashi and consistent additional sample portraits;
+dossier_kakashi, field_guardian, field_finisher, field_scout, field_striker, field_support;
+item_kunai_bundle, item_tool_pouch, item_protection_vest, item_training_scroll, item_invitation_seal, item_fragment;
+nav_home, nav_squad, nav_campaign, nav_recruit;
+status_wound, status_shield, status_silence, status_mark, status_taunt, status_stun.
+The field-role asset names do not settle Naruto casting.
+
+Quality inspection:
+Inspect assets at full size for anatomy, cutout halos, melted edges, duplicated windows, broken tools, stray text and inconsistent symbols. Then inspect at actual phone size for silhouette and contrast. A beautiful 4K image that becomes unreadable at 100dp is unsuitable for that component. Reject mismatched painting styles across adjacent tiles. Do not use upscaling as a substitute for correcting bad drawing.
+
+Texture discipline:
+Paper uses low-contrast fiber at the edge; the center stays quiet. Metal has a small edge highlight, not a chrome gradient. Cloth has broad value variation, not noisy repeated weave under small text. A baked heavy shadow around every icon makes a grid look muddy.
+
+09 — FULL SCREEN SPECIFICATIONS
+
+The following catalog retains all 95 UI IDs. Each is an individually inspectable static composition. Every control named below must have a visual design, intended destination/action recorded for later, and no gameplay side effect now. The detailed descriptions are combined with the design tokens and components above; a one-line page title alone is never a completed screen.
+
+Status in review metadata:
+Current-master UI = a screen presenting an established or currently scoped master topic.
+Proposed UI = a presentation choice whose mechanics or content still need decision.
+Earlier concept = preserved visual coverage for an older research idea, without a launch commitment.
+These labels belong to the review frame. Do not fill player screens with internal section numbers or research status badges.
+
+
+A — ENTRY AND FIRST-TIME PRESENTATION
+
+UI-001 · Title
+Paint Konoha’s rooftops at early morning with Hokage Rock in the distance and a foreground orange cloth/scroll motif. Place “Naruto Idle RPG” in the upper central clear area. A composed Naruto/Kakashi character vignette can occupy a side without hiding the village. Draw a large “Enter village” button in the lower safe region and smaller Language, Settings and Support symbols below. Keep the title treatment consistent with future loading screens. Supply clean, pressed-button and darkened modal-background specimens. No tap starts a session.
+
+UI-002 · Loading and resume
+Use a cropped mission illustration with a tiny restrained Leaf seal as the progress motif. Show a short, truthful static caption such as “Preparing the village” and a progress rail specimen. Prepare loading, interrupted and resumed designs as separate variants. Place a brief technique hint on a quiet parchment strip near the bottom. Avoid animated progress reaching completion or fabricated connection claims. A second composition uses the last mission’s map thumbnail so future resume has a recognizable location.
+
+UI-003 · Guided / Compact choice
+Set the scene at an Academy reception desk with two tidy mission folders. A small Iruka illustration may anchor the left side. The title is “How would you like to begin?” Two equal-height choices read “Guided” and “Compact,” each with a short explanation of teaching density. Draw one selected outline and a “Continue” button, plus a Back specimen. Make both choices equally inviting. At large text stack the folders. The choice is displayed in static variants and establishes no actual preference.
+
+UI-004 · Starter squad introduction
+Show four shinobi standing together in an Academy courtyard, each with a distinct silhouette and small name/role plaque. Below them is a four-portrait strip and one short sentence about complementary jobs. Draw “View squad” and “Continue.” A separate inspection panel enlarges one portrait and its sample role. Keep the roster contract’s four introductory slots visible in review. Naruto character art is a presentation casting example until the roster’s exact canonical identities are decided. Show neither surprise rarity nor a recruitment price here.
+
+UI-005 · Support selection
+Paint a medical room and a defensive training alcove as two related choices on one neutral background. Show a cleanser-oriented portrait and a protector-oriented portrait with equal scale and contrast. Each has a name/role, one concise ability explanation and a miniature illustrated example of the support effect. A shared bottom area contains “Choose this support,” “Compare” and Back specimens. Prepare left-selected, right-selected and confirmation screens. The permanent choice’s importance is visible in a short line above confirmation. Both remain static.
+
+B — VILLAGE, DISPATCH AND IDLE
+
+UI-006 · Hidden Leaf Village / Home
+Build the exact composition in Section 07. This screen is Gate 1 and the visual standard for every later place. Five destination buildings, one compact header, one contextual mission strip and four equal root tabs form the entire initial hierarchy. Use the generated concept board only for aesthetic direction and the written anchor geometry for implementation.
+
+Visual states: calm normal scene; one selected building; one locked building with an authored/sample prerequisite; compact-height layout; 200%-text layout; one pending-result objective strip. Review these separately. All game controls, including buildings and navigation tabs, are inert. The external atlas selects the desired screen. A finished Village requires its actual Android render to match the chosen hierarchy and have ready artwork. A rich background with a duplicate vertical icon rail does not pass.
+
+UI-007 · Mission Office / Dispatch board
+Paint the interior of a Hokage-administration mission room with document shelves, a wall map, stamps and stacked reports. A wooden board shows the current order as the largest pinned parchment. Secondary slips represent completed and upcoming orders. The current order includes chapter, short objective, threat motif and “Review mission.” A side tab reads “Weekly objectives.” Give completed slips a subdued check seal and locked slips a condition line. Keep the focal order above the fold. Use an Iruka or administrative shinobi cameo as scenery rather than a giant popup host.
+
+UI-008 · Idle storage
+Use a village storeroom with tied supply boxes, rolled bandages, tool bundles and a small inventory ledger. The central opened crate holds separately illustrated Ryo, EXP scroll, Essence and enhancement-material icons. A segmented time rail beneath shows the master’s full-rate, reduced-rate and capped portions. Draw “Collect,” “Rate details” and Back. Prepare accumulating, full bank, pending, already-collected and no-accrual specimens. In detail view, list elapsed time and rates on parchment. Every timer is a static example; the preview does not accrue or collect.
+
+UI-009 · Reward tray and receipt
+Use a warm paper tray with four enlarged item tokens and their amounts. “Rewards collected” is one display variant, alongside “Checking reward” and “Already collected.” A lower folded tab reveals the source, timestamp and before/after fields in a separate receipt specimen. Draw “Continue” or “View details.” The items have enough separation for counts to read at phone size. Use a modest Leaf stamp as completion decoration. Avoid forcing a chest-opening animation to reveal the text.
+
+UI-010 · Return to village
+The background is the familiar village gate, gently desaturated behind a welcoming dispatch. Show “Welcome back,” last chapter, current Hall and a five-portrait squad strip. A concise idle-bank summary explains the cap in the appropriate sample. Draw “Resume mission,” “Review squad” and a quieter Archive link. A separate fixture shows unresolved-result recovery at the top. Let the same owned-looking portraits communicate continuity. This is a visual summary of a sample account; it creates no welcome gift or retroactive payout.
+
+C — SQUAD AND CHARACTER PRESENTATION
+
+UI-011 · Squad root / overview
+Use the native "Squad" header and four-root navigation with Squad selected. The upper 320–360dp is a Konoha training-field tableau containing the currently displayed squad. Use two-front/three-rear geometry, full bodies, restrained contact shadows and one small formation-name plaque. In the four-recruit specimen one rear position is visibly empty. Keep the characters visually distinct at the initial phone size.
+
+Below the field, place a 72–88dp paper summary: selected squad name, "4 of 5 deployed" or the full-team alternative, and one short composition note. The dominant rectangular action is "Formation". Under it, use three deliberately drawn 80–96dp-wide shortcut tiles: "Collection" with a portrait folio, "Training Hall" with an Academy roof/target, and "Equipment" with a tool pouch. Use two rows at larger text. These are contextual shortcuts, not a second bottom navigation.
+
+Keep raw stats out of the scene unless they explain the displayed state. A missing-support warning uses one compact message below the summary. Distinguish a saved lineup specimen from a draft specimen through a short status label. Include four-recruit, full-team, missing-counter and pending-formation examples. None edits the team. The screen should read as a group of shinobi under the player's command, not a dashboard of numerical cards.
+
+UI-012 · Shinobi collection
+Use a compact Back/header, a 48dp search/filter row and a quiet indigo-cloth collection board. At 390dp use three C07 cards per row with 16dp gutters and 8dp gaps. At large text use two columns or full-width rows. Keep the portrait crop consistent: eyes in the upper third, face and distinctive hair clear, shoulders visible where possible.
+
+First rows use Naruto, Sakura, Sasuke, Kakashi, Shikamaru and Hinata as visual specimens. Lock the same era/model sheet for each. Do not improvise a new face when the character appears in another view. Name bands use ink on ivory. A small role or affiliation icon sits beside its text in the selected inspector. Do not assert mechanical roles through decorative rarity frames.
+
+Show a short total/owned count below the title. Search is drawn as a real labeled field, Filter has a specific funnel glyph, Sort has the displayed criterion. Selected card has a 2dp orange/ink outline plus tick. In-squad has a small text marker at the bottom edge. Unowned retains visible identity with lower saturation and "Not owned"; it is not a completely black silhouette unless that specific reveal design is authored.
+
+Variants: normal roster, selected portrait with bottom inspector, no matches, unowned, in-squad and long names. No actual search or ownership changes. The card artwork and crop quality are approval criteria, not just grid alignment.
+
+UI-013 · Collection filters and sorting
+Draw a paper-backed sheet rising over the dimmed collection. Sections show Role, Village/affiliation, Owned status and In squad. Use compact labeled chips with ticks. Sort is a single-choice list with an obvious current selection. Draw Reset, Apply and Close. Include an empty-results specimen with its selected criteria and “Clear filters.” Controls are visual examples; the review selector loads the prepared resulting grid. Make long labels wrap instead of shrinking. Preserve the underlying collection as context.
+
+UI-014 · Character dossier
+Create a character-led composition, with Kakashi as the first proof. The field behind him is a quiet training clearing with three posts, broad tree masses and a pale sky opening. His recognizable silver hair, masked face, angled protector, green flak vest and dark clothing must remain clean and consistent. Use a purposeful relaxed stance and a separate contact shadow. Keep his face away from buttons and text.
+
+Reference safe-content allocation: 56dp child header; about 360dp character/name stage; 64dp jutsu-icon row; 48dp tab strip; about 180dp information/action panel. The remaining space belongs to flexible margins/scroll content. Preserve the body crop intentionally rather than forcing a stretched full figure into the stage. The name may sit in a quiet upper-left region while the character occupies center-right. A full-art icon is a 24dp pictogram in a 48dp envelope, clear of his head.
+
+Tabs: Overview, Jutsu, Gear, Bonds. Overview shows "Shared Hall level" with the fixed fixture value, an affiliation line and a concise role-description specimen. A separate "Stats" control opens the paper stat sheet. The main button reads "View formation"; Details is secondary. Keep numbers below the character and avoid a giant power total competing with the face.
+
+The jutsu row has four 48–56dp illustrated tiles with sufficient separation. Their motifs are art samples; do not turn four pictures into an unapproved final Kakashi kit. Use authored skill text where available and otherwise mark the kit as a fixture in the atlas.
+
+Variants: Kakashi, Naruto, Sakura and Gaara with the same layout; long name; selected Jutsu tab; owned/unowned; full-art view; 200% text. Change character colors and background motif sparingly. A new character must not require a new interface language.
+
+UI-015 · Jutsu list and skill inspector
+Under a smaller hero portrait, show Basic, Technique, Ultimate and passive/trait entries as individual illustrated seals. Each row has icon, name, brief purpose, target pattern and status cue. The inspector enlarges the selected icon, shows a small target diagram, trigger, cost/cooldown fields and a readable effect description. The display word “Jutsu” belongs to the Naruto skin; mechanical categories remain distinguishable. Draw “View effect” and Close as inert specimens. Use supplied skill text or marked sample text; do not invent finalized Naruto-to-K-kit mappings.
+
+UI-016 · Stats and growth comparison
+Lay a clean shinobi record sheet over a muted portrait background. Group HP, ATK, DEF and Speed, then secondary stats. A paired specimen compares current and proposed values, with upward/downward indicators plus written differences. Separate shared Hall contribution, standard equipment and personal equipment in an expanded sheet. Draw a “Source breakdown” disclosure. The numbers are static fixtures, and the layout must distinguish a current value from a preview. Keep the scroll readable at 200% type, with no horizontally clipped columns.
+
+UI-017 · Bonds, affiliation and synergy
+Use a ninja relationship chart pinned to a dark board. The selected character sits centrally, with a few nearby portrait medallions connected by labeled threads. Below, an affiliation strip explains the relevant team tag and its current illustrative contribution. Draw “Inspect bond,” “View requirement” and a simple list alternative. Show active, inactive and missing-member variants. The artwork may use recognizable relationships as visual motifs, but all gameplay wording stays within authored or marked sample rules. A glowing thread must never imply an unapproved mandatory combination.
+
+UI-018 · Awakening / specialization study
+This earlier-concept screen uses a chakra-paper diagram behind a full character silhouette. Show a small branch of elective enhancements with clear selected, available and locked specimens. The large portrait and visual aura remain recognizably the same person. A bottom panel presents the chosen trait, current/proposed appearance and a placeholder requirement. Draw “Preview specialization,” “Requirements” and Close. Keep this tagged as a concept in review metadata. No duplicate consumption, new stats, skill unlock or rarity progression is implemented or approved by the illustration.
+
+UI-019 · Formation field
+Use a dedicated Academy forest-clearing plate, seen from an elevated three-quarter camera. It includes three distant training posts, a light earth floor and quiet side foliage. The interface has a 56dp child header, a short formation/deployed strip, an approximately 360–400dp field, and a lower paper inspector/bench area. No root navigation is required on this focused child page.
+
+In a 358×360dp field reference, center the two front pads at approximately (119,120) and (239,120); center three rear pads at (63,270), (179,270), (295,270). These are proposed display coordinates. Front faces the upper threat arrow. Each fighter is about 92–120dp tall depending on stance, with visible feet and a modest oval contact shadow. Reserve clear air between head/weapon silhouettes. A future motion effect must not force all five units into the same horizontal line.
+
+Render the four-starter specimen with Guardian, Finisher, Scout and Striker plus an Open rear pad. Their exact Naruto casting remains a separate decision. Guardian has a broad protective silhouette; Finisher a short-blade silhouette; Scout an unmistakable signal pennant; Striker a long staff/spear silhouette. Use fully drawn anime bodies and clothing, not primitive geometric mannequins. The board's Kakashi portrait does not automatically assign him one of these roles.
+
+Selected slot has one warm rim and an inspector reading its exact position, occupant and short role statement. Main action "Move"; secondary "Inspect" and "Remove". The bottom area includes a small bench portrait row and a clear "Save formation" specimen. Draw front/rear labels and a concise Targeting details control. Preserve the same slot identities in every variant.
+
+Variants: each of five slots selected, four deployed/open pad, full five, empty bench, move preview and occupied swap. Show the moved-Scout example as a separate static fixture: Rear Right occupied, Rear Left empty, count four. Do not implement movement, auto-assignment or persistence. Readability depends on bodies, pads and selected-state hierarchy, not tiny icon labels.
+
+UI-020 · Move / swap preview
+Dim the field behind a parchment comparison sheet. Show source slot and destination slot side by side with current occupants. A clear two-way arrow indicates swap; a single arrow indicates move into an open pad. A short consequence line states where each fighter will appear. Draw “Confirm move” or “Confirm swap,” and Cancel. The underlying layout uses the same slot names and perspective as UI-019. Include an illegal/blocked destination specimen and a long-name stress specimen. Pressing the pictured action changes nothing.
+
+UI-021 · Bench and deployment
+The selected empty pad remains visible behind a compact portrait drawer. List undeployed sample shinobi with role and one relevant skill cue. The chosen recruit is enlarged in the inspector above “Deploy.” Prepare a no-bench state reading “All owned shinobi are deployed,” a no-owned-recruit state and a long roster. Do not use a fake locked premium hero to fill the empty pad. The portrait drawer and collection share crop, frame and name styling.
+
+UI-022 · Presets and target policy
+Use labeled folded mission slips for saved-team specimens. Each slip has a five-portrait miniature, name and small tactic badge. A selected preset opens a larger two-front/three-rear diagram and a plain-language targeting policy. Draw “Rename,” “Duplicate,” “Use preset,” “Delete” and a separate confirmation specimen. Include an incomplete-preset state and a referenced item unavailable state. Target policy is described as a pre-battle choice; no manual attack scheduler is implied. Unknown preset limits remain unspecified.
+
+D — TRAINING HALL
+
+UI-023 · Training Hall / Academy yard
+Design a place with a clear training purpose. The same green-roof Academy silhouette from Home leads into an open yard with cream wall, a restrained Leaf banner, three wooden practice posts, one kunai target, an equipment rack and an instructor vignette. Keep one calm central ground area for the sample squad. Do not cover the entire scene with a translucent dashboard.
+
+Reference allocation: 56dp Back/title header; 44dp shared-level plaque; approximately 300dp yard and squad; 44dp Overview/Progress tabs; 190–230dp training-order panel with the primary action. Longer history and explanations belong in child sheets. At short heights the lower content scrolls without shrinking the scene to an icon.
+
+The level plaque reads "Shared Hall level" above or beside a large fixture value. It is distinct from an individual portrait rank. A paper training order below the yard names the selected current→next band and aligns Ryo and EXP requirements in two rows. Each row has icon, required amount and available amount. The action is a full-width 52dp "Train" button, with "Cost details" secondary. The artwork of the current squad remains visible above the form.
+
+If demonstrating the already authored Hall 10→15 band, the example cost is 80 Ryo and 120 EXP; use an explicitly identified review fixture. Do not invent prices for future Hall bands. The general art fixture's balances are not a fresh-account starting state.
+
+Visual states: ready; insufficient Ryo; insufficient EXP; both insufficient; cap reached; confirmation; pending with old confirmed level; confirmed as a separate specimen. Missing amounts use a written shortage, not only red numbers. The cap state brings its requirement forward. A band-complete stamp decorates only the confirmed specimen.
+
+Acceptance: with the title hidden, the viewer can recognize the Academy yard, current shared training level, cost area and next intended control. There is no giant empty circle, generic meditation silhouette or abstract neon training room.
+
+UI-024 · Training cost / confirmation
+Use the signed Academy training form on a light desk. Present current level, target band, exact displayed costs, available resources and resulting sample level in a clear top-to-bottom order. An expanded line-item specimen is available for review. Draw “Confirm training” and Cancel. Include insufficient-funds and no-change variants. Keep Hall and character identity separate so the design communicates shared training. The document stamp is decoration until a static confirmed specimen is selected.
+
+UI-025 · Promotion and cap
+Paint a more formal examination corner with a scroll rack and subdued Leaf crest. Show current cap, next cap and three readable requirement rows. The promoted illustration can add a banner or completed examination seal, without transforming every character’s costume. Draw “Review requirements” and “Promote Hall” in separate visual states. Prepare incomplete, ready, capped and unpriced-later-band variants. The next cap and material price use authored data or explicit preview fields.
+
+UI-026 · Training history / explanation
+A tidy Academy record book contains funded bands, their before/after levels, resource debits and status labels. One entry expands to an illustrated explanation of the shared-level rule. Use dates and amounts as static examples. Draw “View receipt” and Back. This information-heavy child page can be primarily parchment while keeping a narrow yard illustration at its edge. Preserve a readable narrow-phone arrangement without horizontal number collisions.
+
+E — EQUIPMENT, BAG AND ITEMS
+
+UI-027 · Character equipment
+Place a character at a village equipment stand, full torso visible. Two clear equipment positions show Tool and Protection, with native connector lines to the relevant region. A kunai/tool pouch and flak/protective garment establish the Naruto vocabulary. The lower panel distinguishes standard-issued gear from a personal replacement. Show “Inspect,” “Compare” and “Change equipment.” Prepare standard-only, personal-item-equipped and empty-personal-selection variants. Standard issue remains visually present where the master provides it. Avoid inventing six RPG armor slots.
+
+UI-028 · Bag / inventory
+The screen is an opened shinobi field satchel translated into a readable catalog. Use a cropped canvas-leather edge and a small pouch strap at the top/sides, with an indigo or warm-paper inner surface. Do not use deep perspective for the inventory grid; every object cell remains flat and legible.
+
+Header includes Back and "Bag". A 48dp tab strip contains Items, Equipment, Materials and Fragments. Below it show the current sorting label and Filter. Three C08 cells span the standard width. Item images use common light direction and optical size: kunai bundle, protective vest, scrolls, seals, fragments and relevant materials. Quantities occupy a consistent lower-right tag. Do not invent a bag-capacity meter.
+
+Selected cell receives an outline and a lower 88–112dp inspector with larger thumbnail, name, category and "Details". Keep category and amount on their own lines. Tooltips never cover the selected object's name. At 200% text use two columns or list rows with image left and information right.
+
+Variants: populated; one selected; empty category; no filter results; long quantities; owned/locked specimen where appropriate. Currency balances remain in Wallet, while physical-looking inventory objects use the satchel. All tabs and item actions remain static review states.
+
+UI-029 · Item inspector
+Enlarge the selected object over a soft vignette of the bag or shop. A kunai needs recognizable ring, blade, grip wrapping and edge wear. A scroll needs a distinct tie and paper roll silhouette. Below the art show item name, type, description, relevant stats, source and current owner/location. A primary action specimen can read “Equip,” “Use” or “View source,” according to the preview’s purpose. Prepare quantity, owned and unavailable states. All prices and effects are sample fields unless established in the master.
+
+UI-030 · Gear compare and transfer
+Use two vertical equipment cards connected by a small directional arrow. Current item is on the left; candidate on the right. Show shared stat rows, both owners if relevant, and clear changes with plus/minus symbols. A lower formation strip identifies which shinobi would be affected by a transfer. Draw “Confirm transfer,” “Compare details” and Cancel. Include standard-issue fallback and already-equipped variants. The illustration conveys where an item moves, while the data is entirely static.
+
+UI-031 · Enhancement study
+Show a small ninja-tool maintenance bench with sharpening stone, cloth, oil bottle and organized material tray. The selected item stands above a current→preview enhancement plaque. Costs and changed properties occupy a lower panel, followed by “Enhance” and “Materials.” Render ready, insufficient-material, maximum and unauthored-tier examples. Keep tool art prominent. Do not add random success chances, failure penalties or a salvage economy. Those require a separate design decision.
+
+UI-032 · Weekly equipment choice
+Lay three equipment options on an open issue crate, with a small weekly eligibility label and one selected outline. Each option shows artwork, equipment category, description and who could use it. A short line explains the single choice. Draw “Choose equipment,” “Inspect” and Cancel. Show unselected, selected, claimed and unavailable variants. The crate looks like village supply logistics, with wood, linen and paper tags. The preview does not create a GEAR01 receipt or simulate a reset.
+
+F — CAMPAIGN, MISSIONS AND STORY
+
+UI-033 · Campaign / chapter atlas
+Campaign is a root page with Campaign selected in the four-tab footer. The main artwork is a folded hand-painted mission map: forest masses, river bends, a bridge, a damaged road, a clinic and Konoha's departure marker. Give landmarks recognizable forms and keep route space quiet. Do not use an unrelated world map full of invented continents.
+
+The upper 56dp header names "Campaign". A compact arc ribbon reads "The Broken Supply Route". About 420–460dp belongs to the map. Three large chapter markers correspond to the authored opening chapters; the selected chapter carries a native title plaque and a restrained orange route highlight. The lower paper briefing has chapter name, objective, progress and "View route". Use a pin, scroll and boss insignia to distinguish fight, scene and boss without relying on color.
+
+Optional-mode access appears as a small, deliberate "Other activities" row in a separate static Campaign state or on a child hub, not six promotional buttons pasted around the main route. Arena, Guild operation and Archive retain their own designed locations.
+
+The selected map illustration is reused in node detail and the corresponding fight background. Make a compact list alternative for accessible review. Locked chapter specimens include a real/sample prerequisite. The atlas does not establish unresearched future chapters or new rewards.
+
+UI-034 · Opening-route map
+Render all 15 canonical nodes across three chapter views. Chapter 1 has five nodes, Chapter 2 six, Chapter 3 four. The central road and landmarks match mission and battle art. Show cleared, current, scene, boss and locked nodes with unique icon shapes and labels. A portrait pin can mark a story recruit. The selected node opens a small summary plaque anchored near the bottom. Draw “Mission details” and Back. Make the scene look like a ninja dispatch map rather than a generic dotted line on an empty background.
+
+Use this exact node order in the static map data:
+Chapter 1 — C01-01 Wound; C01-02 courier debrief; C01-03 Burst; C01-04 formation briefing; C01-05 Silence and chapter close.
+Chapter 2 — C02-01 K-08 story recruit; C02-02 charged attack; C02-03 K-04 story recruit; C02-04 decoys; C02-05 backline briefing; C02-06 protected rear.
+Chapter 3 — C03-01 attrition warning; C03-02 multiple Wounds; C03-03 K-17 story recruit; C03-04 Medical Supply Commander.
+These internal IDs can appear in review metadata. Player titles should be readable mission names.
+
+UI-035 · Mission dossier
+An unfolded field scroll displays a wide location illustration at the top, then the mission name, chapter, threat and prerequisite. Enemy portraits sit in a concise row with an Inspect glyph. The one-time reward preview is visually distinct from replay status. Draw “Prepare squad,” “Enemy details” and Back. Show first clear, replay, locked and completed specimens. The boss version uses a larger enemy illustration and a visible Ward/recovery cue. Avoid putting a large power score above the actual threat.
+
+UI-036 · Story dialogue
+Use Naruto-style episode scenery matching the current mission. A speaking portrait appears at one side, with the speaker’s name on a small plate and two to four readable lines in the lower paper panel. Draw Next, Skip, Log and Auto as inert controls. Prepare left-speaker, right-speaker, narration-only and dialogue-log variants. Keep the character’s face and the crucial environmental clue clear. The setting can depict a broken cart, injured courier, intercepted dispatch or guarded clinic without creating an unrelated canon episode.
+
+UI-037 · Story ally joins
+The scene opens into a vertical character reveal with the recruited ally’s full art, short name/role panel and one defining ability illustration. Draw “View dossier” and “Continue.” An “Already joined” variant uses a quieter ownership seal. For currently unnamed K-08, K-04 and K-17 contracts, use role names in the sample text until Naruto casting is selected. The visual family should match ordinary character reveals while clearly communicating a story milestone.
+
+UI-038 · Mission preflight
+This is a tactical full-screen child of Campaign. Header shows Back, mission title and a small location marker. An upper enemy strip contains a location vignette and relevant enemy portraits, followed by a paper threat statement: what action is expected, who it can target and when. Keep that statement concise and readable.
+
+The middle 360–400dp presents the player's two-front/three-rear lineup on the same ground plane used by Formation. Enemy positions can appear in a shallow upper slice where useful; never compress both complete teams into tiny icons to fit every panel. Selected response ideas appear as two short equal-weight entries below the squad, such as cleanser and protector routes, when authored.
+
+The lower 52dp main action is "Begin battle". Above it show any actual blocking condition or selected-squad summary. "Adjust squad" and "Enemy details" are secondary. No purchase shortcut competes with missing-support information.
+
+Variants: eligible team, incomplete team, missing counter, target explanation, locked prerequisite and unresolved previous result. Use the canonical five-person ready fixture for the first mission; the earlier four-person Hall fixture must not masquerade as a ready battle party. Every screen is static and the button never resolves combat.
+
+G — BATTLE AND RESULTS
+
+UI-039 · Battle screen and static action frames
+Create a finished Naruto battle presentation even though no engine runs. The field is a forest road, bridge approach or clinic perimeter from the campaign art family. Characters are full-body cel-shaded fighters with coherent anatomy, stance and grounded feet. Light and camera agree with the environment. Avoid detached portraits standing in for combatants.
+
+Reference allocation in a 390×796dp safe area: 56dp mission/round HUD; roughly 520dp battlefield; 80dp short event/status strip; 64dp viewing-control band; remaining height for intentional separation. The field may scroll or use a carefully composed compact variant in review; labels do not become unreadable.
+
+Five allies occupy the lower field, two front toward the enemy and three rear nearer the viewer. Appropriate enemies occupy the upper field. The G1 specimen uses its two authored foes, not a default five-enemy copy. Choose clear relative scale: closest allies approximately 90–112dp high, distant foes about 80–100dp. Do not crop staff tips, heads or rear-row feet. Side foliage frames the field but never hides a body.
+
+HUD layers:
+- Mission name and round in a quiet top strip.
+- One active actor indication.
+- Thin local HP bars with a distinct shield overlay/marker where present.
+- Chakra indicators with a different shape or label from HP.
+- At most a few visible status tokens per actor; overflow becomes a readable summary in the detail specimen.
+- One target cue that visibly ends at the target's pad.
+- One short event caption in the lower band.
+- Pause, Speed, Timeline and Details in a stable lower control row.
+
+Static specimens: anticipation, attack impact, Wound tick, cleanse, shield absorption, Silence, Taunt redirect, KO, victory-ready and reduced effects. The review selector picks a frame; no timers, RNG or damage arithmetic execute. Keep all nonparticipating actors visible enough to follow the field.
+
+The Wound specimen may show the authored "−81" event on the affected rear Striker. Distinguish the red HP event from a blue shield-absorption event. A sword strike, paper-seal effect or chakra arc may dramatize an action, but effects should stay mainly within the attacker-target region. Do not cover the entire scene with clouds, streaks or damage numbers. Reduced-effects retains actor, target, status and caption.
+
+The genre references inform legibility and character staging only. They do not replace the master's formation, turn order or status timing.
+
+UI-040 · Battle pause
+Freeze the same composition behind a darkened overlay. Center an opaque cloth-and-paper panel with Resume, Battle Details, Settings and Leave Battle specimens. A short note explains the displayed paused state. A secondary leave-confirmation variant shows both Resume and Leave with equal text clarity. Keep the active actor visible behind the panel so the player has context. Close and Back use the shared component system. No state changes when pressed.
+
+UI-041 · Timeline and combat glossary
+A vertical field report lists actor portrait, action name, target portrait, effect and timing for a small authored sequence. Use a thin connecting line and clear round dividers. Selecting a status is represented by a separate glossary preview with icon, duration and trigger explanation. Draw filters for All, Damage, Support and Control as display-only tabs. A readable condensed view sits beside the battle-pause context, while a full-screen report supports large text.
+
+UI-042 · Victory recap
+Use a composed squad victory illustration with the cleared location visible. “Mission complete” sits above a concise decisive-event summary. One-time reward objects appear on a small tray, followed by a chapter-progress strip. Draw “Continue mission,” “Battle details” and an optional story entry. Prepare posted, already-claimed and no-new-reward variants. The character art celebrates the team without inventing a high-rarity drop. The scene remains a fixed illustration with a fixed receipt state.
+
+UI-043 · Defeat recap
+Keep the squad standing or recovering in the encounter location. Use restrained dusk lighting and clear “Mission failed” text. A single report names an illustrative recorded problem and a legal next-action idea. Draw “Adjust squad,” “Review timeline” and “Retry” specimens. Avoid sales banners and a huge unexplained power warning. Prepare insufficient-information copy that offers the timeline instead of inventing a cause. The screen communicates the situation without humiliating the player.
+
+UI-044 · Battle contribution breakdown
+Show Damage, Healing, Protection and Control as clear tabs over a neutral report sheet. Portraits anchor labeled horizontal bars with values in a static fixture. First decisive action and first defeat are short event cards. A team comparison specimen can use paired columns if readable, otherwise stack them. Draw Timeline and Back. Do not rank all supports by damage alone. The chart is presentational and derives from prepared display data, with no battle simulation.
+
+UI-045 · Unresolved battle result
+Use the last mission illustration, a small stationary verification seal and “Checking your saved battle result.” The last confirmed squad and mission remain identifiable. Draw “Check status,” “View last confirmed details” and a safe Back specimen. A separately selected resolved variant leads visually to the relevant recap. No fake victory, timeout defeat or active retry loop is produced. This screen is a designed recovery state only.
+
+H — RECRUITMENT
+
+UI-046 · Recruit root / shinobi registry
+Recruit is the fourth root. The space is a Konoha assignment registry: tall scroll shelving at the sides, a warm wooden desk, inkstone, tied papers and a restrained sealing motif. One featured character dominates the upper-middle stage; the surroundings support their silhouette. This is a character invitation composition, visually distinct from a merchant catalog.
+
+Reference allocation: 56dp header with seal amount; 48dp Standard/Featured/Selector tabs; about 370–410dp art stage; approximately 170dp disclosure/action panel; 80dp root navigation. At compact heights allow scrolling and preserve readable cost/disclosure fields. Do not hide terms beneath the character cutout.
+
+The main panel contains banner name, relevant cost, available seals, eligible-pool and guarantee links, one recruitment action and History. Use a closed invitation-scroll icon consistently. The default single-action specimen is "Recruit ×1"; any multi-recruit quantity remains an explicitly authored presentation fixture. Do not assume ×10, discount or bonus from other games.
+
+Featured art uses one distinctive character treatment, such as Naruto orange cloth/blue chakra, Gaara sand curves or Kakashi cool forest/lightning. UI trim remains the shared system. A missing-schedule specimen uses a clear review field instead of a running countdown. One featured character is enough; do not surround the button with multiple fake legendary portraits.
+
+Prepare Standard, Featured, Selector, insufficient seals and pending states. A native guarantee summary sits above the action. The 70-pull featured proposal and 100-fragment selector remain different contracts; neither is a new currency.
+
+UI-047 · Standard recruitment banner
+Use a broad composition of several recognizable Naruto portraits behind an orderly open registration scroll. Give “Standard recruitment” a short explanation and a pool icon. Show “Recruit ×1” and an optional multi-recruit specimen only as a presentation choice awaiting the final quantity design. Cost, available seal count, Details and History occupy stable positions. Prepare enough-seals and insufficient-seals states. Leave outcomes and rates as authored or clearly marked sample values.
+
+UI-048 · Featured recruitment banner
+Give one shinobi a large, sharply drawn portrait and a location/effect tied to that character. Naruto may use orange cloth and a contained blue chakra sphere; Gaara may use warm sand shapes; Kakashi may use dark green and lightning accents. The lower panel contains banner name, eligible pool, sample pity progress, cost and Terms. A real closing date is replaced by a marked schedule specimen when undefined. The visual promise is character identity, with guarantee terms still legible before the inert Recruit button.
+
+UI-049 · Pool, rates and guarantee details
+Use a straightforward paper record with small portraits, pool eligibility, probability fields, counter family, carry-over and duplicate treatment. Separate Standard, Featured and Selector explanations. The master’s candidate 70 eligible featured pulls and 100-fragment standard selector need distinct visual treatment. Draw Back and a pinned short summary above the scroll. Unknown rates must remain visibly unauthored in review. The design should survive long terms and 200% text without tiny typography.
+
+UI-050 · Fragment selector
+Arrange eligible sample portrait cards around a clearly marked selection counter. The chosen shinobi occupies a larger preview above “Select shinobi.” Show current fragments, cost and remainder as static specimen fields, plus “Eligible pool.” A confirmation view includes the selected face and an unmistakable name. Provide no-selection, eligible, insufficient-fragments and already-selected variants. This screen is visually related to Recruitment and does not inherit the Shop’s currency tabs.
+
+UI-051 · Recruitment confirmation
+Use a sealed parchment with selected banner, pull quantity, spend source, displayed cost and the relevant guarantee family. Draw a clear Confirm recruitment and Cancel. A small banner thumbnail prevents confusion between Standard and Featured. Prepare insufficient-balance and pending variants. Avoid a giant character image that pushes price disclosure below the controls. Every value is static; selecting Confirm triggers no animation, payment or new portrait.
+
+UI-052 · First-copy and duplicate reveal
+The first-copy frame uses a large shinobi cutout emerging from an illustrated opened scroll, a short nameplate, role and “View dossier.” The duplicate frame keeps a smaller portrait beside a clearly labeled conversion/ownership panel. If conversion terms are unresolved, use a review placeholder instead of invented fragments. Draw Continue and Skip-animation specimens. Provide an animation-free final frame so readability never depends on motion. Use the same portrait identity as the roster.
+
+UI-053 · Recruitment history
+A concise registry page lists banner, date, sample outcome, spent source and result status. Each row has one portrait or fragment icon. An expanded entry shows guarantee-family context and transaction-status specimen fields. Draw Filters and Back. Include no-history, one-entry, pending-entry and long-history designs. Keep it visually clean with a narrow scroll-shelf background. This is a static journal with no accounting logic.
+
+I — SHOP AND APPEARANCE CATALOG
+
+UI-054 · Ninja Tool Shop / interior
+This is a full shop scene and catalog, not a generic product-list page. Match the storefront seen in Home: timber frontage, jade roof/awning, indigo tool cloth and warm entrance. Inside, paint a real counter, neat kunai/shuriken racks, tied scrolls, protective vests and cloth-lined shelves. A small Tenten cameo may appear at the side as visual casting; do not imply a new canon shop ownership fact.
+
+Reference allocation: 56dp Back/title/resource header; about 210–230dp shop interior; 48dp Supplies/Equipment/Appearance tabs; a scrollable catalog; an optional selected-item tray about 88dp high. There is no root footer on this child page. Use the counter edge to divide the illustrated environment from the regular catalog. The shop scene should occupy enough space to establish identity but never bury the first merchandise row.
+
+The catalog uses three 114dp-wide cells at 390dp with 16dp gutters and 8dp gaps. Each cell contains one 80–90dp illustrated object, a 14sp short name and a separate 15sp currency/price line. First art-review objects: tied training scroll, kunai bundle, tool pouch, protection vest, sealing tags and seal case. Their availability/prices are design samples, not approved sale products. Do not give all six the same placeholder treasure-chest image.
+
+Normal state shows six distinct items over two rows when height permits. Selected state adds a 2dp outline and the lower tray: thumbnail, item name, ownership/stock line and "View item". No purchase occurs directly from a tiny unlabeled coin. Prepare separate product-detail and confirmation screens.
+
+Visual treatments: available; selected; sold; insufficient sample funds; owned appearance; no stock; unavailable catalog. A sold item stays legible and has a "Sold" paper seal. The insufficient state names the missing resource. Avoid red discount ribbons, flashing countdowns, VIP crowns, a five-currency tab bar or a store full of purchase buttons by default.
+
+Appearance goods show the actual cosmetic result in a portrait/card preview. Current research has not approved a live paid catalog. Earlier commerce concepts remain separate atlas studies. The visual design must be complete without implying approved prices or an operating shop.
+
+UI-055 · Supplies and equipment catalog
+Give each tab specific objects. Supplies show scroll bundles, material containers, seals or other master-listed resources. Equipment shows kunai/tool sets, protective garments, pouches and standard/personal-item distinctions. Use consistent scale and generous clear space around each object. A price strip contains currency symbol and amount or an explicit sample price. Selected, sold/unavailable, owned and insufficient-balance tiles are static variants. Draw a category filter and small item-type labels. Avoid adding Arena/Guild currency shops just because the references have them.
+
+UI-056 · Appearance boutique
+Replace the stock-grid emphasis with two or three large outfit mannequins or shinobi portrait panels inside a village tailor’s alcove. The selected outfit uses a 3/4-body illustration with fabric details, while alternatives are smaller vertical thumbnails. Tabs can read Outfits, Frames and Themes. Every product clearly identifies its visual effect and supported character/profile surface. Draw “Preview,” a static price/availability area and Back. Earned appearance variants and hypothetical paid variants must have visibly different source labels.
+
+UI-057 · Outfit comparison
+Show the same character, same pose, same face and same camera in Default and Preview panels. Alternatively use a single full-body stage with two separately rendered preview variants accessible from the review selector. Call attention to clothing, color, accessories and silhouette changes. Display “Appearance only” near the action area. Draw Use appearance, View source and Cancel specimens. Include owned, unowned, supported-character and unavailable variants. No stat increase or new ability is implied by an elaborate outfit.
+
+UI-058 · Shop product detail
+Use enlarged item or outfit art above a concise product description. Show exact contents, visual-use scope, ownership status and a source/price specimen. Put a large “Purchase” or “View source” button below the terms with Cancel/Back nearby. Include a quantity-selector drawing only for a catalog study that needs it. A resource product is marked as an earlier commercial concept in review metadata. For the master’s current cosmetic study, use permanent nonstat appearance terms and unauthored pricing.
+
+UI-059 · Purchase confirmation study
+Design the in-game summary only, on opaque parchment over the shop. Show object thumbnail, full name, quantity, sample total price, account scope and ownership consequence. Draw “Confirm purchase” and Cancel as inert controls. Prepare unresolved-price, insufficient-resource and pending specimens. Do not imitate a completed Google Play transaction or request card details. Nothing invokes billing. This screen exists to establish clear layout for a future decision.
+
+UI-060 · Purchase history and restore status
+Use a merchant ledger with item image, source and status. An expanded record has purchased/pending/rejected/already-owned/restored sample labels and a small explanatory paragraph. Draw “Check status,” “Restore purchases” and “Support” as display-only controls. Provide empty and pending-only views. The style relates to Wallet receipts but uses the shop’s wood and cloth accents. No actual entitlement or restore request occurs.
+
+J — NORMALIZED ARENA
+
+UI-061 · Normalized Arena courtyard
+Use a Chunin-exam-style stone arena with a curved spectator wall, open sky, two balanced entry gates and a clear central ring. Keep the arena recognizable and grounded in the Naruto visual language. A restrained paper-and-steel title plaque reads "Normalized Arena". Use the same Back/header and button system as other child locations.
+
+The scene takes about the upper 45–50% of the screen. A small account portrait and rank-emblem specimen sit below the title, clear of the ring. The lower entry scroll explains the equal competitive-kit premise in a short sentence, shows the selected five-person team and presents "Prepare team". Rules, Results and Ranking are secondary.
+
+Prestige/emblems appear in a narrow honors shelf with actual previews, not currency piles. No gold/premium token cost, paid extra entry, equipment-buying shortcut or personal-power requirement is introduced. Draw the kit-access explanation before the entry control.
+
+Variants: first orientation, unranked, ranked, unavailable, entry review and pending result. Treat the two mirrored legs as one match in subsequent screens. Use fictional review names and fixed outcomes. The court should feel more formal and competitive than the Academy yard while using the same materials and text system.
+
+UI-062 · Competitive roster and draft
+Use a formal squad board with equal access to a common sample portrait library. A top line identifies normalized rules. The five selected portraits and two-front/three-rear diagram share space with the roster grid. Filters and a kit-inspection panel match the collection design. Draw “Review team,” “Tactics” and “Inspect kit.” Show incomplete and complete selections, and mark ineligible kits with a reason. This fixture conveys competitive access separately from personal PvE ownership.
+
+UI-063 · Ranked entry review / waiting
+Lay a completed five-person roster on an entry scroll with the selected target policy and rules-version specimen. Draw “Submit entry” and Cancel. Separate static screens show queued, pairing, locked and result-pending states. Keep opponent details concealed in the waiting design according to the master’s locked-entry proposal. A calm arena background creates continuity. No queue, opponent generation, cancellation, submission or match resolution runs.
+
+UI-064 · Two-leg Arena result
+Show one combined match outcome above two balanced panels, “Leg 1” and “Leg 2.” Each panel has the paired portraits, side indication, outcome and “View recap.” Include win, loss, split/draw and pending-leg specimens. The summary must be understandable without a long paragraph. A small prestige area uses a clear earned/preview state. Keep rating changes as a static example or unauthored field. No rank or account state is updated.
+
+UI-065 · Rankings and honors
+Use a vertical honors board with portrait, rank symbol, display name and concise sample rating/status. The player’s own row is fixed as a separate specimen. Seasonal honors are shown as frames, titles or emblems on an adjacent paper shelf. Include unranked, ranked, no-results and season-closed variants. Draw Rules, Rewards and Back. Populate fictional review names and label the list as sample data in the review frame. Avoid implying that these are online players.
+
+K — GUILD AND SUPPLY LINE OPERATION
+
+UI-066 · Shinobi guild operations hall
+Create a timber meeting house with a broad operations table, one guild banner, scroll shelves, two hanging lanterns and open windows toward Konoha. The map on the table is the focal object. The room must not become a dense wall of badges or a medieval throne room.
+
+Header shows Back and Guild. A compact banner plaque presents the sample guild name and member count. Approximately 320–360dp of the initial composition belongs to the room/table. Below, a paper operation brief names the Supply Line Operation and summarizes the two lanes. The dominant action is "View operation". A small row provides Members, Signals and Guild details; Honors is a quiet contextual entry.
+
+Not-in-guild uses the same meeting-house exterior with "Find a guild" and a directory preview. Member, steward and founder variants change the small management controls, not the entire art direction. The guild emblem is drawn once and reused in directory, profile and roster views.
+
+Progress is represented through two road markers and a group-completion seal. Do not invent a guild wallet, raid damage leaderboard or chat bar. A static authored-signal panel contains short messages only. No invites, memberships, reports or messages are sent.
+
+UI-067 · Guild directory, application and identity
+The directory is a notice board of guild banners with approved-name specimen, language tag, capacity band and a short description. An expanded guild record includes the banner at large size, overview and Apply/Join/Back specimens. A creation study shows name components and banner design options in a parchment form. Pending, full and application-declined are separate states. Personal details beyond the public guild presentation stay absent. The form contains no active submission or messaging.
+
+UI-068 · Supply Line command table
+Use a top-down illustrated operations map with two clearly separated roads: Route Security and Medical Escort. Carved markers, bandage-crate icons and small allied flags show the operation’s purpose. The center displays the master’s collective coverage requirement with separate lane, participant and total-credit cues. Two contribution slots show the sample member’s state. Draw “Review lane,” “Contribution log” and “Signals.” Prepare zero progress, one lane missing, near completion and completed specimens. Counts stay fixed and never imply live cooperation.
+
+UI-069 · Guild lane briefing
+Each lane gets its own illustration. Route Security depicts a convoy facing a prepared strike; Medical Escort depicts supply carriers crossing a threatened route. Show the tactical problem, valid response categories, sample five-person squad and contribution eligibility. Draw “Prepare attempt,” “Inspect threat” and Back. A completed/no-credit-remaining variant explains the state. This is a proposal-based screen, with no battle, attempt consumption or posting.
+
+UI-070 · Contributions and group honors
+The ledger shows contributor portrait/alias, lane, result and posted-state marker. A pinned summary identifies lane coverage, distinct participants and total valid entries. Personal and group cosmetic previews appear as separate objects at the bottom. Draw “View contribution,” “View honor” and Back. Include a contributor-who-left specimen while keeping their historical contribution visible. Use static fictional aliases and timestamps. No rank by personal damage is introduced.
+
+UI-071 · Membership and role management
+A scroll-backed member roster uses avatar, display name and role. A selected member opens a compact profile and the visible permission-dependent action specimens. Prepare invitation, application approval, accepted/resigned stewardship, removal reason, leave guild and founder succession sheets. Each consequential sheet clearly names the affected person/role and offers Cancel. Design a neutral pending state. Do not expose sensitive report text in the ordinary membership panel.
+
+UI-072 · Signals, mute and report
+Use four short authored signal tiles on an operations board, with wording for Route Security need, Medical Escort need, readiness and thanks. Each tile has sender and age in a fixed specimen. Draw Mute signals, Report and Block in an overflow-sheet design. Report reasons form a short list and a static confirmation view. Avoid an unrestricted chat input. The entire preview remains silent and sends no signal, invitation or report.
+
+L — TACTICAL ARCHIVE AND EVENTS
+
+UI-073 · Tactical Archive
+Paint an orderly Konoha scroll archive with tall timber shelves, a low reading desk and soft daylight. The first composition has a 56dp header, about 200–240dp location vignette, a filter/sort row and a catalog of illustrated dossier covers. Each cover relates to a tactical question: Wound, disruption, decoys, protected rear or recovery. Use the same threat icons as combat.
+
+Dossier cards can be two columns at standard text, each about 170dp wide with a 100dp illustration, title, brief theme and completion seal. This larger card format distinguishes lessons from a three-column item shop. At large type use one card per row. The selected lesson opens a paper brief with its encounter illustration.
+
+The main action is "Open lesson". Completion and a one-time cosmetic state are readable and separate. Archived reports remain presented as accessible content in their proper state; do not cover their art with a sale countdown. Empty/no-clears uses a clean unused folder rather than a generic warning triangle.
+
+The Archive should look quiet and purposeful, while keeping the same font, buttons and material edges as the other locations. Readability is part of its appeal. It is a place to understand tactics, not an attendance-task wall.
+
+UI-074 · Lesson detail / practice
+An opened dossier shows a wide encounter illustration, tactical question, accessible response types and a five-slot sample diagram. A small side panel explains free-repeat practice and the reward state. Draw “Practice,” “Review explanation” and “View replay.” The explanation specimen uses two or three ordered illustrations instead of a wall of prose. Include uncleared, cleared and already-earned-cosmetic versions. The practice button remains inert, and no new recurring material payout is drawn.
+
+UI-075 · Field Reports featured event
+Use a special folder on the archive table titled “Supply Route Aftermath: Field Reports.” Four illustrated report cards represent interruption, decoys, multiple Wounds and enemy recovery. Show release/availability states with modest date labels, plus a clear “Permanent Archive” destination in the design. An event cover illustration uses the opening route’s Naruto forest, convoy and clinic elements. Draw “Open report,” “Rewards” and Back. The featured visual treatment must survive after the display interval ends.
+
+UI-076 · Event milestones and archived state
+Lay the two cosmetic milestones on a report table, with two-clear and four-clear progress markers. Use an emblem and dossier-cover preview, each separately named. Draw “Preview reward,” a Claim specimen and a collected variant. An archived version states that the reports and their attainable cosmetics remain accessible. No sales banner, daily attendance gate or resource multiplier appears. All progress is static sample data.
+
+M — EARLIER MODE CONCEPTS FOR FULL VISUAL COVERAGE
+
+These pages are complete visual studies in the review selector. Their metadata says “Earlier concept.” Their existence adds no approved unlock, price, reward, token or launch commitment.
+
+UI-077 · Endurance tower
+Use the Forest of Death’s tower silhouette rising above dense trees as the Naruto visual anchor. The main screen shows a vertical floor trail on a slim mission scroll alongside the tower art. Current, cleared, locked and boss-floor seals are distinct. A lower panel shows the sample team’s carried condition and the floor’s tactical question. Draw “Inspect floor,” “Prepare” and “Recovery details.” A selected-floor briefing uses the shared mission layout with the tower still visible in its art.
+
+UI-078 · Wave-clear trials
+Paint an Academy examination ground with multiple training targets and successive gates. A horizontal wave strip names each prepared encounter group. The selected wave has enemy silhouettes and a short question about area pressure or cooldown use. Draw “Review squad,” “Trial details” and “Begin trial.” Supply current-wave, completed and unavailable variants. The layout emphasizes successive groups, keeping it visually distinct from the vertical tower and ordinary campaign route.
+
+UI-079 · Village / affiliation challenge
+Use a banner court with recognizable village emblems and distinctly colored regional environment thumbnails. An affiliation selection opens its banner, eligible sample portraits and the proposed restriction. Draw “Eligible shinobi,” “Prepare team” and Back. Show a missing-eligible-roster specimen and an unrestricted-alternative link specimen. Keep the mechanics and requirements unauthored unless supplied. Naruto clan/village imagery provides theme without silently deciding a powerful faction bonus.
+
+UI-080 · Boss / raid concept
+Give the encounter an imposing full-width Naruto-world environment, such as a rocky ravine or sealed cavern, with a single enemy silhouette as the focal point. A threat strip lists telegraph, recovery/weakness window and sample phases. The lower area contains squad preview, Rules and a Prepare action. A cooperative concept variant has neutral contribution placeholders and retains the master’s research status. Avoid a purchased-damage race or invented ranked material rewards.
+
+UI-081 · Character trial and friendly practice
+Use an open sparring field with a large featured portrait beside a limited teaching squad. Show the lesson, the borrowed sample kit and a short sequence of demonstration frames. Draw “View demonstration,” “Practice” and “Kit details.” A friendly-match concept uses two clearly labeled sample squads with equal visual weight and a “Review teams” action. No real player selection, invite or online challenge is implemented. Keep the page accessible through the review selector even if future gameplay access is undecided.
+
+UI-082 · Account-power Arena concept
+Use a secondary sparring ground with banners and a straightforward account-team comparison. Make the title explicitly “Account-power Arena” so it is visually distinguishable from normalized competition. Show personal roster/gear representation and a rules panel explaining that this is a separate concept. Draw “Review roster” and “Mode rules.” Use sample opponents only. No live rank, defense schedule, attendance pressure, power-purchase shortcut or new progression reward is adopted.
+
+N — PROFILE, SETTINGS AND PLAYER INFORMATION
+
+UI-083 · Shinobi profile
+A ninja identity card sits on an indigo cloth background with a large avatar, chosen name, village/affiliation display and selected title. A small squad portrait strip and milestone seals summarize the sample account. Secondary entries lead visually to Appearance, Settings, Bag, Wallet, Notices and Help. Draw “Edit profile” and “View honors.” Prepare default, customized and minimal-information variants. Real personal information is absent.
+
+UI-084 · Cosmetic collection and honors
+Display earned frames, titles, banners, emblems and dossier covers in a lacquered cabinet. Tabs separate these visual categories. Selecting one is represented by a large before/after profile-card preview. Show source, ownership and appearance scope. Draw “Use appearance,” “View source” and Close. Provide unowned, owned and currently-equipped states. This collection should visually connect campaign, Arena, guild and event honors while keeping their source labels distinct.
+
+UI-085 · Settings overview
+Use a quiet mission-paper interface framed by a small Leaf crest. Sections are Display, Audio, Accessibility, Notifications, Language, Account and Help. Each row has a specific icon, current static value and chevron. Keep generous spacing and a clear Back control. Show the settings page both from Profile and as an overlay from Battle Pause. The layout is intentionally quieter than the town and character screens so controls are easy to find.
+
+UI-086 · Accessibility and text
+Provide labeled visual specimens for text scale, reduced motion, reduced effects, captions, contrast/status-label preference and non-drag input. A sample paragraph and small status row preview their appearance. Draw Restore defaults and Back. Show large text using a real reflowed layout, with the controls still readable. Describe the current state in text next to each switch. Settings are static specimens and change no system preference.
+
+UI-087 · Audio and presentation
+Show separate Music, Effects and Voice sliders with labeled numeric specimens, plus a Mute switch. Include dialogue Auto/Skip preferences and a restrained effects-quality selector. Use familiar scroll-and-ink controls with visible tracks and thumbs. Provide muted and low-effects variants. If a 30/60 rendering target is pictured, call it a proposed option in review metadata. No audio plays, no device performance is claimed and no system setting changes.
+
+UI-088 · Language and captions
+Use a clean language list with English as the authored current choice. Future language rows can be shown as review concepts with full native names only when verified. A caption specimen demonstrates wrapping and speaker identification. Draw Apply and Back as inert controls. Show long-label, 40%-expanded-text and right-to-left layout stress examples. Preserve battlefield slot identity in any mirrored presentation. A listed concept must not be called a supported release language.
+
+UI-089 · Account / recovery / privacy
+A restrained identity-record page contains sample account identifier, connection-status specimen, privacy preference and a recovery entry. Separate sheets demonstrate signed-out, linked, last-confirmed, recovery pending and account-switch warning. Draw “Review account,” “Recover access,” “Privacy” and Back. Use placeholder text rather than credentials. No provider SDK, sign-in form submission, password storage or connection attempt is included in the UI project.
+
+UI-090 · Help and support
+Use an archive index with Gameplay basics, Formation, Rewards, Account and Report a problem. An article layout has a short heading, readable paragraphs and one relevant screenshot-style illustration. A report-form specimen shows category, description placeholder and attached-image placeholder. Draw Submit and Cancel, then a separate received-state preview. This creates the appearance and spacing of support without sending anything.
+
+UI-091 · Notice board and inbox study
+Place mission notices and system-information slips on a small village notice board. List unread/read states with a short title and date specimen. The expanded notice has sender, full message and optional receipt/source details. Draw Archive, View details and Back. For an item-attachment concept, show the reward tray visually without creating a new mailbox grant source. Explain any unapproved notice or attachment type in review metadata. Notifications are static and never scheduled or delivered.
+
+UI-092 · Wallet and source ledger
+Use an opened mission account book, with a compact balance summary followed by resource rows. Include Ryo, Shinobi EXP, Promotion Essence, enhancement materials, Recruitment Seals and Universal Fragments where the master defines them. Each row expands into purpose, source eligibility, reset/one-time label and a static receipt specimen. Draw Details and Back. Separate earned/confirmed balances from pending examples. Keep money-like icons clearly distinct from character fragments. This completes the contextual Wallet route from Home and Profile.
+
+O — REMAINING RETENTION CONCEPTS AND REVIEW TOOL
+
+UI-093 · Cumulative objective / login-calendar study
+The earlier master explores cumulative events and login calendars. Design a parchment month/week board with readable day cells, completed stamps and an attainable-progress strip. Show empty, partly complete and completed specimens, with a missed-day explanation that avoids guilt or unsupported loss. A weekly-objective variant lists actual core-goal sample rows and their categories. Draw “View objective” and a claim-state specimen. Keep this in earlier-concept review metadata until its exact entitlement is authored. It grants nothing.
+
+UI-094 · Pass / subscription / optional convenience study
+Provide a visually complete research specimen for the older monetization concepts. A pass layout has parallel clearly labeled tracks, readable milestone contents and a large appearance preview. A subscription/convenience sheet shows benefit, duration, renewal terms and a price field marked unauthored. Draw View details, a purchase specimen and Cancel. These remain separate from current gameplay scenes and the main shop’s cosmetic example. No VIP ladder, advertised live plan or actual recurring benefit is invented.
+
+UI-095 · Design review atlas
+Outside the player interface, create a plain review screen listing UI-001 through UI-095 by category. Each row has preview readiness, asset readiness and available variants. Selecting an entry changes only which static screen is displayed. Allow a clean screenshot view and a contact sheet if feasible. Show a separate small metadata panel for source section, current/proposed/earlier-concept status and missing art. This review tool is the sole browse mechanism needed now. It never appears as a fifth game tab.
+
+
+10 — STATE DESIGN ACROSS THE ENTIRE GAME
+
+Use named static variants so the review can inspect the complete design without functionality. A state must look deliberate, not like a blank screen.
+
+Normal: complete artwork, one clear task, readable primary information.
+Selected: object remains visible; outline plus label/check establishes selection.
+Pressed: small button depression/darker face, not a large animated burst.
+Focused: high-contrast focus outline that does not remove the selected state.
+Disabled: reduced emphasis with a nearby readable explanation.
+Locked: padlock and actual or clearly identified sample prerequisite.
+Empty: relevant local object illustration and a specific explanation.
+No filter results: retain the active criteria and draw Clear filters.
+Loading: reserved layout, static placeholder/progress specimen, no fake completed value.
+Offline/last confirmed: identify the saved/known display state in the intended copy; never imply a refreshed balance.
+Pending/unknown result: last confirmed values remain visible, with a calm status message.
+Failed/rejected: show the failed operation and a relevant next-action specimen; no invented reward.
+Confirmed: show the exact object/result with receipt status where relevant.
+Already owned/collected: retain the object and use a quiet ownership/receipt seal.
+Interrupted/return: identify the last task and a safe review/resume control.
+Long content: reflowed layout with the same controls present.
+Large text: actual larger fonts, increased panel heights and appropriate grid/list changes.
+Reduced effects: same information with fewer particles and no dependence on animation.
+RTL/long-language study: layout stress preview only; keep tactical position meaning stable.
+
+Required categories of variants:
+Home: calm, alternate next task, pending result, returner, locked landmark.
+Squad: empty slot, full squad, selected slot, move/swap, unavailable recruit, no bench.
+Hall: affordable, each resource shortfall, capped, pending, confirmed.
+Gear: issued baseline, replacement selected, comparison, equipped elsewhere, no candidate.
+Campaign: current, cleared, locked, story, boss, first-clear and replay state.
+Battle: actor/target/effect frames, KO, reduced-effects and pending result.
+Recruit: enough/insufficient seals, pool detail, guarantee detail, selector, first copy, duplicate, pending.
+Shop: normal, selected, sold, insufficient funds, owned appearance, pending/restore/history study.
+Arena: unranked, equal-kit selection, entry review, waiting, both legs and combined result.
+Guild: outsider/member/manager, both lanes, incomplete coverage, completion, permissions and leave.
+Archive/events: uncleared, complete, already earned, featured and permanently archived.
+Settings/account: default, changed-looking specimen, long text, recovery, unknown/pending.
+Support/inbox: empty, unread/read, article, report form and acknowledgement specimen.
+
+No default screen is allowed to show all these states at once. Prepare a quiet normal specimen first, then targeted variants.
+
+11 — CATEGORY ART DIRECTION AND MATERIAL CONTINUITY
+
+Use these location signatures to keep the game coherent without making every screen identical.
+
+Village:
+Dominant jade roofs, pale sandstone paths and warm daylight. Broad depth and distinct buildings. Paper plaques are integrated at entrances. The home view is optimistic and lived-in.
+
+Training Hall:
+Cream Academy walls, practice earth, timber targets, green banners and controlled foliage. The squad and shared-training order dominate. A training yard is visible even when the lower panel contains costs.
+
+Shop:
+Warm timber, muted indigo cloth, clean steel tools and amber interior light. Product art is detailed and goods align in the catalog. The merchant cameo is supporting, not a full-screen recruitment hero.
+
+Recruit:
+Tall scroll racks, ivory papers, deep indigo and one character accent. Keep the center available for the featured shinobi. Sealing motifs frame the character without producing a neon ritual room unrelated to Naruto.
+
+Squad/collection:
+Indigo field-kit material, portrait folios, light name strips. Faces carry color. Frame decoration remains secondary.
+
+Dossier:
+Character-specific scene and accent, consistent native header/tabs/paper panel. Kakashi uses forest greens and steel; Naruto uses warm cloth and controlled blue chakra; Gaara uses sand shapes; Sakura uses a softer warm-red accent. Do not recolor all global controls per character.
+
+Equipment:
+Maintenance cloth, tools, straps, rolled protective garments and metal fittings. Preserve the master's two Tool/Protection slots. Do not add helmet, boots, necklace and six stat slots for genre familiarity.
+
+Campaign:
+Illustrated field map, creased paper, forest routes, bridge geometry and a clinic landmark. Route nodes are native symbols with meaningful shapes. Internal node IDs belong in review metadata.
+
+Battle:
+Grounded environment in the same route art family, clear fighter silhouettes and quiet HUD bands. Effects support actor-target readability. Keep victory/defeat artwork tied to the encounter setting.
+
+Arena:
+Stone, broad sky, banners, symmetrical entrances and restrained formal trim. A competitive preparation table carries the relevant rules. Avoid royal thrones and medieval tournament motifs.
+
+Guild:
+Timber operations room, cloth banner, shared map and supply markers. Cooperating people and two lanes define the scene. Visual prominence is not determined by a fictional damage score.
+
+Archive:
+Warm wood, pale paper, thin index ribbons and diffused daylight. Dossier covers have tactical illustrations. Do not turn every lesson into a glowing loot chest.
+
+Events:
+A special report folder within the Archive family, with one distinctive cover illustration. The archived state retains useful art and readability. Do not make permanence look like a dead grayed-out seasonal page.
+
+Profile/settings/receipts:
+Quiet paper and indigo backing, minimal decoration, clear group headings. These pages should feel part of the game while making information easier to read than on a battle screen.
+
+Earlier concept modes:
+Each uses its described Naruto location: Forest of Death tower, Academy trial grounds, regional banner court or a specific ravine/cavern. Research status is external metadata. Their art does not authorize new reward tokens or monetization.
+
+12 — COPY-READY ART ASSET BRIEFS
+
+Use these prompts for art creation if available. They request source art only. Native Android text and controls are added later. Use the same approved style reference for every asset. Do not ask an image model to produce one complete screenshot as the source of all screens.
+
+ASSET A — Village district plate
+"Create a portrait game-environment painting for a Naruto Shippuden Hidden Leaf Village destination hub. Elevated three-quarter camera, warm neutral daylight, confident anime linework, controlled cel shadows, broad readable shapes and selected architectural detail. Compose five distinct destination building groups: upper-center cream/red-roof mission office; middle-left green-roof Academy with a small target yard; middle-right timber ninja-tool shop with indigo cloth awning; lower-left supply storehouse with crates; lower-right narrow scroll archive. Separate entrances with broad pale stone paths and breathing room. Hokage Rock is a distant soft landmark across the upper skyline, referenced accurately for the selected era. A few simplified roof clusters and trees support the main buildings. Five important building groups must stay readable at phone size. The lower scene remains bright enough to see doors and paths. Leave quiet empty plaque areas below the five entrances. No letters, numbers, plaques containing words, UI bars, coins, buttons, icons, glows, gradient blackout, phone frame or emulator. Paint the environment only. Use approximately the 390:530 stage ratio and keep all five main entrances inside the crop-safe region."
+
+ASSET B — Academy yard
+"Naruto Shippuden Konoha Academy training courtyard, elevated three-quarter game camera matching the approved Village. Cream plaster wall, green roof edge, a modest Leaf banner, three timber training posts, one kunai target, small equipment rack and grouped trees. Broad clear practice earth in the center for five later character cutouts. Warm daylight from upper left, coherent contact shadows, crisp important props, simplified distant detail. Leave the lower edge calm for a native training-order panel. No people in the central stage, no lettering, no UI, no glowing runes, no generic temple. Produce a clean environment plate with the same painted style as the Village."
+
+ASSET C — Ninja-tool shop interior
+"Naruto-world ninja-tool shop interior matching the approved timber storefront. Warm wood counter across the lower third, orderly racks of kunai and shuriken, tied scrolls, green protective vests, tool pouches and folded cloth. Muted indigo fabric sign with no written words, daylight and soft warm lantern fill. Perspective is stable and every recognizable tool has clean geometry. Leave one small side space for an optional character cutout; merchandise remains the focus. Broad detail groups appropriate to a 390dp mobile header vignette. No catalog tiles, prices, button labels, coins, sale badges or UI. Match the Village's anime line weight and restrained materials."
+
+ASSET D — Kakashi dossier cutout
+"Full-body or deliberately framed three-quarter portrait of Kakashi Hatake in a consistent Naruto Shippuden appearance: silver spiky hair, recognizable masked face, angled forehead protector, green flak vest over dark clothing, correct gloves and footwear for the chosen reference. Relaxed capable stance, coherent anatomy, clean hands, natural fabric folds, controlled cel shading and crisp contour. Character is the focal point; face remains recognizable at mobile scale. Neutral upper-left light consistent with a wooded training ground. Keep complete hair and important hand/weapon shapes inside generous margins. Transparent background, no scene, text, badges, frame, particles or UI. Match the approved character model sheet."
+
+ASSET E — Formation and battle figures
+"Create one full-body Naruto-world shinobi field figure matching the approved character/model sheet and the slightly elevated three-quarter battle camera. Use the specified role pose: [guardian protective stance / finisher short-blade stance / scout signal-pennant stance / striker long-staff stance / support hand-sign stance]. Full anatomy and clothing, clean hands and weapon, coherent proportions and correct feet on a shared ground plane. Strong readable silhouette at about 100dp screen height. Upper-left daylight, controlled cel shadows. Transparent background and no oval pad, text, bars, labels or effects. Preserve the identity rather than inventing a different person. Produce each figure separately with the same camera and optical scale."
+Use this only once casting/model sheets are specified; roles alone do not identify a Naruto character.
+
+ASSET F — Merchandise
+"Create a single Naruto-world item illustration: [tied training scroll / kunai bundle / tool pouch / protective vest / sealing tags / seal case]. Show its recognizable construction and material with confident anime drawing, two or three main value groups, crisp edges and a restrained upper-left highlight. Center it on a transparent square canvas with about 12% clear margin. No price, text, rarity stars, frame, glow, sparkles, badge or interface. Keep the object legible at an 80dp catalog size and consistent in lighting with the other approved items."
+Create separate objects rather than a sheet that requires unreliable automatic slicing.
+
+ASSET G — Campaign route plate
+"Illustrated mission map for a Naruto-world supply route: Konoha departure road, layered forest, a river bridge, damaged cart waypoint, protected rear approach and a clinic near a rocky pass. Top-down or shallow map perspective, clear continuous route space, limited warm paper/green/blue palette. Leave clean spaces for 15 native route nodes divided across three chapter views. Landmarks must match the forest-road, bridge and clinic battle plates. No text, node numbers, reward icons, buttons, coordinates or decorative unreadable calligraphy."
+
+ASSET H — Interface object icons
+"Create a consistent custom illustrated game-icon family for the approved Naruto RPG UI. Small square compositions, clear silhouettes, two or three tonal values, same line weight, muted materials and one warm accent. Subjects: Leaf/village symbol; three forehead-protected busts; folded route map; tied invitation scroll; Ryo coin; training scroll; ninja-tool pouch; archive dossier. Each icon isolated on genuine transparency with generous clear margins. No letters, numbers, glossy black disks, gold circular cages, emoji style or photoreal texture. Prioritize legibility at 24–32dp."
+Check each icon separately at its intended size; use vector masters for simple symbols where available.
+
+For all art assets, a failed face, malformed weapon, accidental writing or off-style rendering triggers asset revision before the screen is called complete. Do not hide the defect with blur, heavy shadow or smaller scaling.
+
+13 — IMPLEMENTATION GUIDANCE FOR THE PRESENTATION LAYER
+
+Separate concerns only as needed for reliable visual work:
+- Theme tokens: colors, spacing, typography, borders and shadows.
+- Shared visual components C01–C24.
+- Named art resources and their anchors/crop rules.
+- Static fixtures.
+- One preview per screen/state.
+- External review atlas.
+This is a presentation structure, not a request to design gameplay architecture.
+
+Keep strings, quantities and costs out of image files. Keep art crop modes intentional: contain an item, preserve the chosen dossier face/body anchor, and use the Village's authored scene transform. If a bitmap must be cropped for another aspect ratio, review its focal area instead of using a universal center-crop setting.
+
+Use real measured layout. Draw native text after selecting actual font metrics. Reserve max-length examples. Do not place a label using its estimated character count. Align controls with layout containers rather than hand-adjusting every unrelated coordinate. The Village's art anchors are an intentional exception tied to one scene coordinate system.
+
+For custom Canvas environments, provide native semantics/labels for intended controls and explicit intended target bounds. Do not expect a painted shape alone to supply readable text, focus or later interaction. During this phase expose "preview only" through review/accessibility metadata rather than writing development notes across the game artwork.
+
+Respect Android safe insets and gesture space. Keep all important information within the actual viewport. A screenshot of a page taller than the device is not evidence that its controls are accessible. Verify a real rendered compact layout.
+
+Use appropriately sized decoded artwork for the display. Do not load a full-resolution portrait independently in every small roster cell. Keep animation disabled in this phase; prepare still-state storyboards. Avoid multiple expensive full-screen blurs to disguise a busy background.
+
+No new third-party UI/animation library is required just to draw paper, cloth, static grids and controls. Use current project capabilities. If the environment cannot compile or render the existing native project, report the exact limitation. Do not present a generated mockup as a compiled screen.
+
+14 — STATIC FIXTURES AND SOURCE INTEGRITY
+
+Use clearly named fixture sets, not an implied live account:
+ART-HOME: visual account header with 1,280 Ryo and 12 Seals; fixed objective text; no dynamic income.
+ART-TRAINING: an explicit Hall-level/band specimen with authored cost where used; EXP is a local fixture field.
+ART-STARTERS: four introductory role contracts and one open position.
+ART-READY: five-person ready squad for formation/battle review, with a separately selected support.
+ART-CATALOG: merchandise and prices visibly identified as examples in review metadata.
+ART-LATER: Arena, Guild, Archive and other later-state specimens.
+STATE-STRESS: long names, large counts, pending, empty and large text.
+
+Do not imply that ART-HOME's balance results from a training action or that selecting ART-READY grants a recruit. A review selector simply displays another prepared composition.
+
+Preserve these information boundaries:
+- Exactly four root destinations.
+- Five squad slots, two front and three rear.
+- Shared Hall training and the two Tool/Protection equipment positions.
+- The existing opening campaign's 15 nodes in their recorded order.
+- Different standard, featured and selector disclosures.
+- Normalized Arena's common competitive-kit access and combined two-leg result.
+- Guild Supply Line Operation's two lanes and authored signals.
+- Archived tactical reports remain available in their appropriate state.
+- Unknown prices, paid catalog, later progression and earlier concepts remain unauthored or explicitly illustrative.
+- Confirmed, pending, owned and unowned are different visual states.
+The latest master architecture section does not authorize backend implementation in this UI phase.
+
+Naruto names and imagery are deliberate visual direction from the owner. Keep the selected era consistent. Exact combat casting, ability contracts and unspecified products remain decisions for their proper phase. Do not add a generic fantasy substitute because a needed Naruto asset has not been produced.
+
+15 — STEP-BY-STEP EXECUTION AND REVIEW
+
+Read the complete document before editing. Implement in the sequence below. A gate groups related work; larger gates are delivered in small category increments, normally one to three screens at a time. No later gate can be used to evade a failed visual correction in an earlier one.
+
+GATE 1 — Village proof
+Build UI-006 and the minimal UI-095 review atlas, plus the needed shared components. Prepare a real normal Home render, compact render, large-text render and component sheet. Review the scene's building hierarchy, labels, art readiness, header and four-root navigation. Stop for owner review. This is the only gate to implement on the first response to this prompt.
+
+GATE 2 — Character and commerce proof
+After the Village direction is accepted, build UI-014 and UI-054. Confirm that the same design language works for a large character and a shop grid. The shop must use real distinct item art; the dossier must use a finished character cutout. Stop for review before spreading these components.
+
+GATE 3 — Entry, Home children and Hall
+Complete UI-001–005, UI-007–010 and UI-023–026. Prioritize the Hall location within this gate, then its state sheets, then entry/return surfaces. Deliver small increments. Check that Home, Hall and Shop are recognizable as different places.
+
+GATE 4 — Squad and equipment
+Complete UI-011–013, UI-015–022 and UI-027–032. Prioritize the collection/formation scene, then inspectors/presets, then gear and inventory. Use the already accepted character and object styles. Review actual phone-scale figures and portrait crops.
+
+GATE 5 — Campaign, tactical staging and results
+Complete UI-033–045. First approve the map and mission dossier, then Formation-related preflight and the static battle field, then action states and recaps. No combat engine, timers or calculations may be added.
+
+GATE 6 — Recruitment and remaining shop surfaces
+Complete UI-046–053 and UI-055–060. Reuse the accepted character stage and catalog cells. Inspect prices/disclosures as static fields, selectors, first-copy/duplicate differences and pending states. All economic actions remain inert.
+
+GATE 7 — Arena, Guild and Archive
+Complete UI-061–076 in those category groups. Each location gets appropriate art and its own composition. Do not reuse one room image for all three. Review state sheets after each category's principal screen is accepted.
+
+GATE 8 — Earlier concept coverage
+Complete UI-077–082 and UI-093–094 as atlas studies. Keep their status explicit outside the player UI. They are not added as promotions to Home and do not establish launch scope.
+
+GATE 9 — Profile, settings, information and full audit
+Complete UI-083–092. Review all 95 screens, overlays, missing art, small-phone layouts and state specimens. Revisit any earlier screen that fails the now-established visual standard.
+
+A "continue" instruction during this process continues the UI sequence only. It does not authorize gameplay. UI approval for one screen does not automatically approve every future screen. Continue correcting a rejected screen until its relevant visual issues are resolved.
+
+The UI phase is complete only when the owner accepts the reviewed visual set. The owner will separately authorize future functionality. Do not finish Gate 9 with a backend scaffold, gameplay plan, purchase integration or automatic transition into combat programming.
+
+16 — WHAT TO SHOW AFTER EACH INCREMENT
+
+Return:
+1. The exact screen IDs changed and the visual choices applied.
+2. An actual rendered clean game screenshot for each changed principal screen, where rendering tools are available.
+3. The compact/large-text or state proof relevant to the changes.
+4. A short list of remaining art or layout defects, with exact assets/regions.
+5. The next UI increment only, then stop at the intended review point.
+
+Keep the implementation report brief. The rendered work is the evidence. Do not replace that evidence with a long summary saying "premium", "polished", "production ready" or "matches the reference".
+
+Keep concept art and implementation screenshots clearly distinguished. If screenshots are unavailable, say "Android render unverified" and provide the specific preview route the owner can inspect. If an asset is absent, say "art pending" and name it. A build success is not a visual pass.
+
+17 — VISUAL ACCEPTANCE CHECKLIST
+
+Apply these as design checks, not claims of validated user research.
+
+Hierarchy:
+- Can the viewer identify the screen's purpose, focal subject and intended next action in the first glance?
+- Is one primary action clearly stronger than secondary controls?
+- Do the buildings, portraits or products retain their silhouettes at phone size?
+- Is there useful quiet space around labels and main subjects?
+
+Art:
+- Is the Naruto era, clothing, architecture and icon vocabulary consistent?
+- Are faces and hands coherent?
+- Are props recognizable and edges clean?
+- Is art quality consistent across neighboring tiles and screens?
+- Is there any missing asset being disguised by a gradient, emoji or generic shape?
+
+Composition:
+- Does Village read as five usable destinations with broad paths?
+- Does Hall read as a training yard?
+- Does Shop show a merchant environment and legible distinct goods?
+- Does dossier give the character enough room?
+- Does formation show all five positions without overlapping bodies?
+- Does battle preserve actor, target and status readability?
+- Do quiet settings/receipt screens remain part of the same visual family?
+
+Interface:
+- Exactly four root tabs?
+- Every control label and price legible at the intended size?
+- No unintended duplicate shortcut rail?
+- No unexplained Close on a root page?
+- No giant central Battle orb?
+- No lower-screen darkness hiding content?
+- One coherent icon set and two-font system?
+- Current/selected/pending/owned states distinguishable without color alone?
+
+Phone fit:
+- Android safe areas honored?
+- No buttons hidden beneath the navigation or gesture region?
+- 360×640 and 320×568 renderings remain usable through proper reflow/scrolling?
+- 200% text uses real reflow rather than a scaled screenshot?
+- Intended touch spaces reserved and not overlapping?
+- Long names and values tested in the layout?
+
+Scope:
+- All game actions inert?
+- No gameplay state or purchase/network effects?
+- Unknown numerical fields identified as specimens?
+- Actual render and concept art distinguished?
+- Missing art and earlier-concept status visible in review metadata?
+- Every screen ID accounted for, with no placeholder passed off as complete?
+
+If a check fails, revise the relevant asset/component/screen before proceeding. Do not cover visual problems with more decoration.
+
+18 — CHANGE CONTROL FOR VISUAL ITERATIONS
+
+Keep a short visual decision log with the selected font pair, palette version, approved art samples and screen captures. Record only decisions that change the visible result. Reuse approved assets instead of regenerating everything after each prompt.
+
+When revising a screen:
+- Identify the specific defect: scale, hierarchy, crop, typography, material, icon, art quality or spacing.
+- Change that layer first.
+- Render the same fixture and viewport again.
+- Compare the actual before/after.
+- Avoid simultaneous unrelated redesigns that make the comparison ambiguous.
+
+Suggested correction messages for later use:
+"The building scene is acceptable. Change only plaque size and positions; keep architecture and palette fixed."
+"The layout is acceptable. Replace the placeholder portraits with the approved character sheet; do not change card spacing."
+"The Shop still reads as a generic catalog. Restore the timber-counter scene and item art from this brief; keep three columns."
+"The battle field is too small. Increase fighter scale and simplify background detail before adding any effect."
+"The controls are too ornamental. Keep the approved paper/cloth surfaces and remove extra rings, glows and duplicate edging."
+"Only correct the current UI gate. Do not add functions or move to another category."
+
+These are iteration tools, not permission to skip the full specification. Preserve the shared visual system as the game grows.
+
+19 — COVERAGE AND MASTER ALIGNMENT
+
+Screen IDs UI-001–095 are retained from the prior full UI brief so existing discussion remains traceable. The visual system, Village geometry, principal-screen compositions, execution gates and asset acceptance are strengthened here.
+
+Master topic → covered presentation:
+Project identity/onboarding → UI-001–007, UI-010, UI-083–091.
+Squad roles/formation/statuses → UI-011–022, UI-038–045.
+Hall/shared training → UI-023–026.
+Equipment and item investment → UI-027–032.
+Idle and returners → UI-008–010, UI-092.
+Opening arc/15-node map → UI-033–045.
+Recruitment, guarantee and selector information → UI-046–053.
+Shop/appearance/purchase-state studies → UI-054–060, UI-084, UI-094.
+Normalized Arena → UI-061–065.
+Guild operation/governance/signals → UI-066–072.
+Tactical Archive/featured reports/permanent archive → UI-073–076.
+Earlier mode concepts → UI-077–082.
+Profile/settings/recovery/help/notices/wallet → UI-083–092.
+Earlier calendar/pass/convenience concepts → UI-093–094.
+Review-only navigation and state inspection → UI-095.
+Shared components and state variants → C01–C24 and Section 10.
+
+The master v0.10.41 §57 establishes the four-root information structure. §§58–60 inform readable state/recovery presentation. §§61–67 inform the later optional categories and product-status boundaries. §68 adds account-state research; this brief represents relevant pending/confirmed states visually without building that architecture. Earlier concepts remain visible as studies and do not displace later scoped decisions.
+
+20 — REFERENCES AND EVIDENCE LIMITS
+
+The rejected screenshot was inspected as supplied. Its visible composition supports the diagnosis; it does not reveal how its code, asset generation or handlers are implemented.
+
+Reference screenshots inspected:
+AFK Arena Ranhorn — large distinct buildings, illustrated object buttons and readable destination names.
+AFK Arena formation — readable bodies, a field/roster separation and a clear action area.
+Mythic Heroes character — a large hero stage with a compact lower skills/stats/action band.
+Mythic Heroes market — repeated merchandise cells with separate price strips and an explicit sold state.
+These are historical composition references. The brief does not claim they represent every current screen or current game rules.
+
+Android documentation was consulted for intended 48dp touch spaces and safe insets. Exact dimensions, palette, proposed layouts and acceptance sequence here are project design choices.
+
+The three-screen board accompanying this document was generated as a visual proposal. It is not an implemented app or a validation result. Its art must be treated as a guide and checked when producing assets. Native typography and written requirements govern the final UI.
+
+Source URLs:
+Canonical master:
+https://chatgpt.com/library?file_id=libfile_4407138d271c8191ac8215107a2d6ded&account_id=personal
+
+Naruto Shippuden official visual reference:
+https://naruto-official.com/en/anime/naruto2
+
+AFK Arena Ranhorn and formation reference page:
+https://www.bluestacks.com/blog/game-guides/afk-arena/protect-esperia-beginners-guide-en.html
+
+AFK Arena Ranhorn reference image:
+https://cdn-www.bluestacks.com/bs-images/AFK-Arena_Beginners-Guide_EN_5.jpg
+
+AFK Arena formation reference image:
+https://cdn-www.bluestacks.com/bs-images/AFK-Arena_Beginners-Guide_EN_4.jpg
+
+Mythic Heroes character reference image:
+https://i0.wp.com/gamingonphone.com/wp-content/uploads/2022/02/Heroes-e1644021029474.jpg
+
+Mythic Heroes market reference page:
+https://gamertagzero.com/mythic-heroes-shop-guide-what-to-buy-f2p-p2w/
+
+Mythic Heroes market reference image:
+https://gamertagzero.com/wp-content/uploads/2021/11/MYTHIC-HEROES-MOST-EFFICIENT-PURCHASE-GUIDE-You.jpg
+
+Android intended touch-target guidance:
+https://developer.android.com/develop/ui/compose/accessibility/api-defaults
+
+Android safe-inset guidance:
+https://developer.android.com/develop/ui/compose/system/insets-ui
+
+FINAL INSTRUCTION TO STUDIO
+Inspect the current Android presentation project, then implement only Gate 1: the finished-looking Village, its required shared components and the minimal external review selector. Replace the rejected screen's hierarchy and art treatment according to the written specification. Keep every gameplay control inert. Show the actual rendered result and remaining visual issues. Stop for the owner's UI review. Do not proceed to functions.
+
+END OF UI VISUAL RESET PROMPT
+

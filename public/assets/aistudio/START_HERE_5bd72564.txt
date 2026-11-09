@@ -1,0 +1,57 @@
+NARUTO IDLE RPG — GOOGLE AI STUDIO SQUAD HANDOFF
+Prepared 9 November 2026 | Hero Master 03 snapshot v1.10 | UI-only Gate 2A
+Recommended effort for the screen implementation: HIGH.
+
+WORDING UPDATE: The primary action is now “View Shinobi”. Both the detailed prompt and reference image in this package include this revision. Master source excerpts remain unchanged.
+
+WHAT TO SEND FIRST
+
+Extract this ZIP. Attach these FOUR files from UPLOAD_TO_GEMINI to the same Google AI Studio conversation:
+
+1. 01_Squad_UI_Prompt.txt
+   The detailed build instructions. This attachment edition refreshes the earlier prompt's v1.8 source references to v1.10. Its scope remains one inert Squad screen.
+
+2. 02_Squad_Master_Basis.txt
+   The focused source basis: current source identities, exact preview boundaries, and relevant master excerpts. It is a scoped handoff, not a replacement for the project masters.
+
+3. 03_Squad_Visual_Reference.png
+   The generated Squad art-direction reference. It is a proposed screen mockup, not a working screenshot or a layered art pack.
+
+4. 04_Approved_Home_Reference.png
+   The approved Home screenshot. Preserve its artwork and UI; use its materials and icon style for continuity. Ignore the emulator frame and toolbar outside the app.
+
+Then paste the message in COPY_PASTE_LAUNCHER.txt.
+
+If a TXT attachment is not accepted by the current Studio interface, paste its contents into the conversation instead. Do not upload only this ZIP and assume Gemini has opened every file inside it. The ZIP is a download container for you; the four individual files are the intended first handoff.
+
+FULL MASTER REFERENCE COPIES
+
+FULL_MASTER_TEXT contains complete available extracted text from these four source documents:
+• 00_START_HERE_Research_Scope_Index.docx — master ownership and newest handoffs.
+• 03_Hero_Roster_and_Team_Compositions.docx — character identity, roles, first-copy rules and subsequent research. Current document v1.10.
+• 06_Training_Hall_Equipment_and_Growth.docx — shared Hall and onboarding entitlements.
+• 09_Mobile_UI_UX_and_Accessibility.docx — navigation, screen duties, accessibility and state honesty.
+
+Attach the appropriate full text export if Gemini needs more context than the focused basis provides. For this single screen, the four initial attachments contain the required implementation brief and relevant source rules. The full roster master contains extensive later combat research that is outside this UI increment.
+
+The full text exports retain the available parsed text, table content and page markers. They do not reproduce Word formatting, embedded media, comments or every document metadata feature. The original Word files remain authoritative for those features and can be opened from ORIGINAL_MASTER_LINKS.txt. They are linked, not embedded as DOCX files in this ZIP.
+
+VERSION AND AUTHORITY NOTES
+
+This is a dated source snapshot, not a new active master. Original masters were not edited for this handoff. SOURCE_MANIFEST.json records exact file identities, version identifiers where available, source modification times, exported line counts and packaged file hashes.
+
+The scope index now records Master 03 v1.10 / H7D. Old section version labels and historical research statements remain intentionally preserved in the master text. Do not choose a rule merely because its old heading appears earlier in the file.
+
+Latest H7D work concerns conditional Mark, critical-hit and Wound sensitivity. It does not authorize this Studio task to implement gameplay. The prior public-HP defensive-trigger proposal remains unapproved.
+
+The user's current authorization covers a UI experiment. It does not make research proposals validated, approve a new production platform decision, or authorize economy, combat, ownership or backend changes.
+
+The generated Squad image uses a Hall 10, four-starter preview. It does not complete ONB02, award a fifth shinobi, or establish a battle-ready account. Preserve real saves and keep this fixture isolated.
+
+WHAT GEMINI SHOULD DELIVER
+
+One actual rendered Squad screen, a short account of the assets/components reused or created, and the checks actually completed. Stop for review before the individual Shinobi screen or another category. The Home screen remains the approved visual baseline.
+
+NEXT AFTER APPROVAL
+
+The individual Shinobi screen will receive a separate prompt and matching reference. Do not generate it automatically from this package.

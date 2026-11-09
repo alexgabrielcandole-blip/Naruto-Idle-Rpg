@@ -1,0 +1,15 @@
+ORIGINAL ACTIVE MASTER FILES
+
+These links open the original files. They are separate from the text snapshots in this ZIP. An original may receive later edits; the exact versions used for this handoff are recorded in SOURCE_MANIFEST.json. Gemini cannot be assumed to access a private ChatGPT link; download or attach the actual file when needed.
+
+00_START_HERE_Research_Scope_Index.docx
+https://chatgpt.com/library?file_id=libfile_4a86f2446ed081919d8e6306293ece1d&account_id=personal
+
+03_Hero_Roster_and_Team_Compositions.docx
+https://chatgpt.com/library?file_id=libfile_f9f3579ce3988191949e3ce397ad12f0&account_id=personal
+
+06_Training_Hall_Equipment_and_Growth.docx
+https://chatgpt.com/library?file_id=libfile_b3fe31296ed48191bce548f37f8789e5&account_id=personal
+
+09_Mobile_UI_UX_and_Accessibility.docx
+https://chatgpt.com/library?file_id=libfile_60cb599cb2e88191bcd6b5e2b18f58ef&account_id=personal

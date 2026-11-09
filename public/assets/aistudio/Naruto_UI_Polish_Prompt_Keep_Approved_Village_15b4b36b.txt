@@ -1,0 +1,316 @@
+NARUTO IDLE RPG — POLISH THE APPROVED VILLAGE UI
+Google AI Studio / native Android presentation
+Current task: improve the visible UI while preserving the accepted scene
+Recommended effort: HIGH
+
+USE THIS WITH THE LATEST APPROVED SCREENSHOT, image(4).png.
+That screenshot shows the detailed Konoha village, five dark destination markers, a compact account/resource header, a mission strip and four bottom tabs.
+
+The owner likes this current design. The recovery is complete. Improve the finish, hierarchy and consistency of the UI built over it.
+
+This instruction supersedes earlier reset/recovery directions for the current polish pass. Do not repeat restoration, regenerate the village, rebuild its architecture or impose the earlier five-building coordinate layout. Keep the wider screen inventory available for later; implement this Home screen polish first.
+
+1 — ACCEPTED BASELINE
+
+Preserve exactly:
+- The current village illustration and its source asset.
+- Hokage Rock, rooftops, street, foliage, people and architecture.
+- The illustration's current crop, proportions, perspective and color treatment.
+- The current scene display bounds and overall composition.
+- The broad placement of the five destination markers.
+- The account/resources at the top.
+- The mission strip above the bottom navigation.
+- Four root destinations: Home, Squad, Campaign, Recruit.
+- The dark indigo/teal HUD direction and warm action accent.
+
+Identify the actual background asset and rendering configuration before editing. Keep an untouched copy/version of the current Home implementation for comparison. Do not reset the whole project.
+
+Adjust UI overlays and their small decorative assets. Leave the environment-rendering component and source illustration unchanged. If a UI component needs more space, adjust that overlay locally rather than resizing the village scene.
+
+The external emulator toolbar and operating-system indicators are outside the redesign scope.
+
+2 — VISUAL RESULT TO AIM FOR
+
+Give the current screen the interface finish of an established illustrated idle RPG:
+- Deliberately drawn icons with consistent light, contour and optical size.
+- Compact game-style plaques with subtle material depth.
+- A clear account identity and readable resource counters.
+- A mission strip that looks integrated with the world.
+- A strong selected navigation state and legible inactive tabs.
+- Shared edge, shadow, spacing and typography treatments.
+
+AFK Arena and Mythic Heroes are references for illustrated control quality, visual hierarchy and repeatable components. Keep this game's Naruto setting and current composition.
+
+Detailed UI means deliberate assets, good spacing, clean type and controlled material treatment. It does not mean more unrelated menus, fake notifications or decoration covering the village.
+
+3 — SHARED FINISH AND MATERIALS
+
+Retain the current dark HUD family. Refine it using these proposed starting tokens; adjust slightly to match the actual existing components:
+- Deep panel: #102B35.
+- Slightly lighter upper surface: #183B45.
+- Recess/lower edge: #091C24.
+- Warm metal edge: #AE8C55.
+- Selected accent: #D7B675.
+- Main light text: #FFF2D7.
+- Secondary text: #CAD5D3.
+- Primary action face: #A94B17.
+- Primary action upper rim: #DE8B3A.
+
+Use restrained shading: a slightly lighter top edge, dark lower edge and small contact shadow. Keep the component face quiet behind text. A thin metal edge should define shape without making every control glow.
+
+Use three coordinated surface types:
+A. Resource capsules: compact dark counters with a thin edge.
+B. Destination plaques: slightly clipped or softly squared dark plates with a distinct small emblem.
+C. Mission/navigation surfaces: broad, quiet dark backing with one shared seam/edge treatment.
+
+Do not turn every component into the same pill. Do not introduce large white/cream panels on Home. Paper and scroll art can appear inside small icons.
+
+Retain the suitable existing readable font family. Improve weights, sizes and baselines before adding fonts. Use approximately:
+- Account name: 15–16sp semibold.
+- Resource values: 14–16sp semibold.
+- Destination labels: 14sp semibold.
+- Mission title: 15–16sp semibold.
+- Supporting mission text: 12–13sp.
+- Root labels: 12–13sp, increasing if the available layout supports it.
+
+These are design targets, not measurements inferred from the screenshot. Check actual rendered metrics. Do not shrink essential labels to force a composition.
+
+4 — ACCOUNT HEADER: REFINED, COMPACT AND READABLE
+
+Keep the header's current position and footprint where possible.
+
+Avatar:
+- Preserve the existing character portrait.
+- Use a crisp circular crop and a narrow warm-metal rim.
+- Add a subtle dark contact shadow to distinguish it from the sky.
+- Avoid a thick glowing frame.
+- Keep the face clear and centered.
+
+Identity:
+- Align "Konoha Genin" beside the portrait.
+- Keep its current secondary village caption quieter and smaller.
+- Give the name priority over decorative details.
+- Do not add invented level, VIP, battle-power or rank numbers.
+
+Resources:
+- Keep the current two resource groups and their displayed fixture values.
+- Align the two capsules by center and baseline.
+- Match their height, padding, edge treatment and icon scale.
+- Let widths follow content rather than forcing identical widths.
+- Use a clear coin for Ryo and a recognizable sealed invitation/scroll for the recruitment resource.
+- Ensure the two resources remain distinguishable at small size.
+- Use tabular numerals if the current font supports them.
+- Do not add plus buttons or another currency row during this pass.
+
+Use only a localized header backing/scrim if needed. Preserve the sky and the upper village. Do not create a new full-width title panel.
+
+5 — FIVE DESTINATION PLAQUES
+
+Keep the current five destinations:
+Missions, Training Hall, Tool Shop, Archive, Storehouse.
+
+Refine their appearance as a family. Preserve their current vicinity and intended association with the scene. Small local movements are allowed to avoid text/art collisions; do not rearrange the world.
+
+Plaque construction:
+- A dark plate, approximately 36–40dp visible height at normal text scale.
+- Slightly clipped or 5–8dp softened corners.
+- A thin muted-metal perimeter.
+- A narrow top highlight and subtle lower shadow.
+- A small 26–30dp illustrated emblem at the leading edge.
+- A 14sp semibold label with comfortable left/right padding.
+- Natural width based on text; Training Hall may be wider than Archive.
+- No giant gold circle around each symbol.
+- No thick white label obscuring the roof.
+
+Reserve at least a 48dp intended touch envelope around each plaque. Inert preview components still need explicit size reservation; do not rely on a callback to provide it.
+
+A small attachment notch or short stem may connect a plaque to its scene anchor when necessary. Keep this subtle. Do not add long leader lines crossing the street.
+
+Icon subjects:
+Missions — an opened mission document with a small red seal. Replace the warning-triangle appearance.
+Training Hall — a wooden practice target or training post with a restrained kunai detail. Distinguish it from Campaign.
+Tool Shop — a recognizable tool pouch and kunai, or a small carefully drawn tool storefront emblem.
+Archive — a tied bundle of scrolls or an indexed dossier. It must differ from the single Recruit invitation.
+Storehouse — a supply crate with a rolled parcel or cloth bundle. Avoid making it look like another coin balance.
+
+Each subject should have one clear silhouette, two or three principal tones and a consistent upper-left light. Fine texture is optional; recognizable shape at phone size is mandatory.
+
+Keep icons optically equal in weight. A large bright Training Hall symbol must not overpower a nearly invisible Archive symbol. Preserve the current label wording.
+
+The Missions plaque currently sits near the upper landmark. Adjust its overlay anchor only as needed to keep important carved faces unobscured. Do not move or repaint Hokage Rock.
+
+Show normal and selected plaque specimens separately. Selection can use a brighter edge and small marker; it should not trigger a full halo around a building.
+
+6 — THE MISSION STRIP
+
+Preserve the current placement immediately above the root navigation and the existing mission fixture text. Do not invent a new chapter, difficulty or reward.
+
+Improve its construction:
+- Dark indigo/teal face coordinated with the header.
+- Thin top edge and a subtle shadow separating it from the scene.
+- Approximately 12dp outer horizontal margins where space permits.
+- About 10–12dp internal padding.
+- A 32–40dp mission thumbnail/emblem at left.
+- Mission title and supporting line aligned beside it.
+- One primary Prepare button at right.
+
+Replace a generic red symbol with the same mission-art family as the Missions plaque: document, route fragment or small authored scene thumbnail. Keep the image uncluttered.
+
+Allow the title to use a deliberate second line when necessary. Increase this strip locally for large text; do not shrink the title or overlap the button.
+
+Prepare button:
+- Approximately 96–112dp wide and 48dp high at the reference phone size, adjusted for actual text.
+- Muted warm-orange lacquer face with a lighter upper rim.
+- Narrow darker lower lip, approximately 2dp.
+- Softly squared or subtly clipped corners.
+- Cream semibold label, with verified contrast against the face.
+- A restrained leading glyph is optional only if it improves recognition.
+- No pulsating glow, oversized circle or spinning effect.
+
+This should be the strongest single action on Home. Destination plaques are quieter.
+
+Do not add resource rewards, countdowns, difficulty selectors or additional buttons to make the strip appear busier.
+
+7 — BOTTOM NAVIGATION
+
+Keep four equal destinations in the established order:
+Home / Squad / Campaign / Recruit.
+
+Retain the current bottom position and dark material. Refine the bar rather than replacing its structure.
+
+Use approximately 64–72dp height at normal text scale, excluding actual system gesture inset, if this fits the existing layout. The background artwork continues behind the overlay; increasing the bar must not recrop the village.
+
+Create one coherent icon set:
+Home — a clear Leaf/village emblem or compact Konoha roof emblem.
+Squad — three shinobi bust silhouettes with readable forehead-protector cues.
+Campaign — a folded route map with a single path/marker.
+Recruit — a closed invitation scroll with a red seal.
+
+Each icon has a comparable 24–28dp optical size and visual weight. Do not mix one solid white cartoon, one hairline map, one barely visible outline and one unrelated orange book.
+
+Selected Home:
+- Brighter warm-metal/ivory icon.
+- Clearly readable selected label.
+- Small warm underline or restrained top accent.
+- Optional very soft local highlight within its segment.
+- Preserve the dark footer; no large white selected tile.
+
+Inactive tabs:
+- Muted ivory/steel icons with enough contrast to recognize them.
+- Readable labels, not near-black text on navy.
+- Same alignment and dimensions as the selected tab.
+
+Align icon centers, icon-to-label gaps and label baselines. Keep all four intended touch areas comfortable. Add no fifth tab or central Battle orb.
+
+8 — ICON AND MICRO-ASSET PRODUCTION
+
+Work from the existing suitable assets first.
+
+When replacement icons are needed:
+- Use carefully designed vector assets or transparent illustrations.
+- Maintain the same edge weight, light direction and detail level.
+- Inspect at actual 24–30dp size.
+- Keep no more than a few major shapes in small icons.
+- Keep lettering out of icon images; native text supplies the label.
+
+Vector drawing is appropriate for interface symbols. It is not permission to rebuild the village with primitive scenery.
+
+If image creation is available, use this shared brief for each new icon:
+"Create one polished Naruto-world idle RPG interface icon of [SUBJECT], isolated on a transparent square canvas. Recognizable silhouette, controlled anime illustration, crisp dark contour, two or three major value groups, small upper-left highlight, restrained steel/wood/cloth/scroll materials with a warm accent. Match the supplied icon style reference. Legible at 28dp. No letters, numbers, emoji styling, background scene, thick gold circular cage, bright halo or unrelated particles."
+
+Produce separate files for separate icons. Keep the image asset and its native control frame separate.
+
+If a new icon cannot be produced to the existing artwork's standard, retain the best suitable current asset and identify that icon as pending in the implementation report. Continue the other UI refinements. Do not damage the scene or swap the whole interface to a different style because one icon is missing.
+
+9 — STATES WITHOUT GAMEPLAY
+
+All game actions remain inert. Do not implement navigation through game buttons, purchases, rewards, recruitment, training, battle, account logic or save changes.
+
+Create static normal, selected, pressed, disabled and locked specimens for the shared controls in the existing developer preview mechanism. That mechanism stays outside the player-facing Home screen.
+
+Pressed: a slight face darkening and roughly 1dp lower position.
+Selected: a brighter edge/indicator plus clear label treatment.
+Disabled: reduced emphasis and a relevant explanation in its dedicated specimen.
+Locked: padlock plus the supplied prerequisite; do not invent an unlock level.
+Notification: one small restrained dot in a separate specimen only when its meaning is defined.
+
+The default Home render should remain calm. Do not add fake unread counts, claim-ready dots, event timers or promotional ribbons.
+
+No new animations are required. This pass is evaluated in a still render. Later motion must not conceal a weak layout.
+
+10 — NATIVE LAYOUT AND PHONE FIT
+
+Remain in the current native Android project and reuse its compatible components.
+
+Keep the background image path, source bytes and display transform unchanged. Keep native text and controls as separate overlays. Do not turn the entire screenshot into a flattened screen image.
+
+Use shared theme values for plaque edges, label weights, shadows and icon dimensions. Avoid independently styling every button.
+
+Measure text with actual font metrics. Do not size labels by guessed character count. Ensure long labels and resource values have a reviewed layout.
+
+Respect system insets. Do not draw fake status-bar icons, device borders or emulator controls.
+
+Check the normal screen and a compact 360×640dp view. Inspect a larger-text specimen using actual text scaling. Reflow or wrap affected UI without squeezing or distorting the village illustration.
+
+Keep developer labels, screen IDs, asset audits and viewport controls out of the player-facing render.
+
+11 — CURRENT IMPLEMENTATION ORDER
+
+Complete one coherent Home polish pass:
+1. Record the current background asset/crop and capture the current screen.
+2. Establish the shared dark surface, border, text and icon treatments.
+3. Refine header and resource capsules.
+4. Refine the five destination plaques and their emblems.
+5. Refine the mission strip and Prepare control.
+6. Unify the four navigation icons and selection states.
+7. Inspect the actual rendered result and compact layout.
+
+This is UI finishing on the existing screen. Do not roll back the recovered scene or revisit its art direction.
+
+Finish these related controls together so the screen looks coherent. Do not expand into unrelated menus, build all categories, or add functions in the same increment.
+
+12 — APPLY THE ACCEPTED UI FAMILY TO LATER CATEGORIES
+
+After this Home polish is reviewed, reuse its fonts, control materials, icon quality, spacing and state language across the already planned screens. Preserve each category's own suitable artwork.
+
+Training Hall: shared dark header, prominent shared-level plaque, orderly resource requirements and a clearly prioritized Train control; retain the Academy environment.
+Shop: coordinated tabs, consistent item cells, illustrated goods, separate price lines and one selected-item inspector; retain its merchant setting.
+Squad: consistent portrait frames, selected indicators and readable formation controls; keep actual character art prominent.
+Character dossier: large character presentation with a stable lower skill/stat/action area; use the same native controls.
+Recruit: character-focused banner, clear cost/guarantee fields and the same invitation-scroll resource art.
+Campaign: legible map markers, shared mission plaques and concise briefing controls; preserve the authored route.
+Battle/recap: compatible status icons, readable bars and restrained viewing controls; keep tactical figures and effects clear.
+Arena/Guild/Archive: distinct location art with the accepted control family; do not reuse Home's village image as every category background.
+Profile/settings/receipts: quieter related surfaces and clear information hierarchy.
+
+These are continuity instructions, not authorization to edit all these categories now. No new mechanic, reward, currency or product is established through UI decoration.
+
+13 — VISUAL COMPLETION CHECK
+
+A successful result must show:
+- The same approved village, crop and recognizable landmarks.
+- Noticeably improved icons, labels, alignment and component finish.
+- Five destination plaques that clearly belong to one family.
+- A meaningful Missions icon instead of a warning-style symbol.
+- Consistent header resource groups.
+- A polished but compact mission strip and Prepare action.
+- Four legible, visually balanced navigation tabs.
+- An unmistakable selected Home state.
+- Readable inactive controls.
+- No large new opaque panels covering the village.
+- No developer review interface or fake notifications.
+- No added gameplay functionality.
+
+Capture before/after at the same viewport and fixture. Compare the background separately from the changed overlays. If the environment has visibly changed, restore that unintended change before presenting the result.
+
+Return a clean actual Android screenshot, a brief list of visible improvements and any genuinely missing UI asset. A build success alone does not establish appearance quality. If rendering cannot be inspected, state that clearly.
+
+Present the polished Home and stop for visual review. Continue with other categories only as the UI sequence advances. Functionality remains a separate later phase.
+
+FINAL INSTRUCTION
+Preserve the approved village and finish the interface around it. Concentrate your changes on illustrated emblems, destination plaques, header resources, mission presentation, button materials and navigation clarity. Deliver the actual refined Home screen.
+
+Visual reference pages used for genre composition; their game rules are not adopted:
+https://www.bluestacks.com/blog/game-guides/afk-arena/protect-esperia-beginners-guide-en.html
+https://gamertagzero.com/mythic-heroes-shop-guide-what-to-buy-f2p-p2w/
+

@@ -1,0 +1,13 @@
+Continue the current Squad screen only. Read 01_Squad_UI_Prompt.txt and 02_Squad_Master_Basis.txt before changing code. Use 03_Squad_Visual_Reference.png for the new screen and 04_Approved_Home_Reference.png for visual continuity.
+
+Use the exact button label “View Shinobi”. Use “Shinobi” for individual character-screen terminology. Do not display “dossier” in player-facing text. Preserve historical source quotations and existing internal route identifiers when necessary; this wording change does not change gameplay.
+
+Preserve the approved Home screen. Build an illustrated Naruto-world Squad screen with the existing dark teal, brass and ivory UI materials, detailed character art and readable native text. Keep backgrounds, characters and UI controls as separate layers.
+
+For the isolated preview: Gaara occupies Front Left; Sasuke occupies Front Right; Neji occupies Rear Left; Naruto occupies Rear Center and is selected; Rear Right is Open. Show “Hall 10 · 4 of 5 deployed”. The owned roster contains these four starters only. This fixture must not overwrite any save, complete onboarding, grant a shinobi or unlock battle.
+
+Use the three primary roles from the masters: Tank, Damage Dealer and Support. Gaara is Tank; Sasuke and Naruto are Damage Dealers; Neji is Support. Keep specializations distinct from primary roles. The footer remains Home, Squad, Campaign, Recruit, with Squad selected.
+
+New buttons, movement and filters remain inert. Do not implement progression, purchases, combat or account systems. Do not build the individual Shinobi screen in this increment.
+
+Confirm which attachments you can access, implement this one visual increment, show the actual rendered result and stop for review. If Squad already exists, apply these instructions to that screen without restarting the project or rebuilding Home.

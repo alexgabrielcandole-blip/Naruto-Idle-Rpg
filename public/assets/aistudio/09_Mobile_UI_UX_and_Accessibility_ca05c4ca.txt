@@ -1,0 +1,1376 @@
+SOURCE TEXT EXPORT
+Original file: 09_Mobile_UI_UX_and_Accessibility.docx
+Source: https://chatgpt.com/library?file_id=libfile_60cb599cb2e88191bcd6b5e2b18f58ef&account_id=personal
+Source file ID: file_00000000583c81fab7419b999c44a1b4
+Source version identifier: not supplied
+Source last modified: 2026-11-08T13:29:55.687366Z
+Exported: 9 November 2026
+Scope: Complete available extracted text, including parsed tables and page markers. Original Word layout, embedded media, and document metadata are not reproduced by this text export. Use the linked original DOCX for those features. No source text has been intentionally summarized or rewritten below.
+
+BEGIN SOURCE TEXT
+
+<PARSED TEXT FOR PAGE: 1 / 25>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+NARUTO IDLE RPG | RESEARCH SCOPE MASTER
+
+
+Mobile UI UX and Accessibility
+Independent editable research file | Scope split 1.0 | 08 November 2026
+Source snapshot: original Master Design Bible v0.10.42 (Library version 47). The original source is preserved
+separately and is not overwritten.
+
+Scope ownership: Section 57, Section 58, Section 59, Section 60
+
+PRESERVATION NOTE: Source paragraphs, tables, bookmarks and original formatting are retained unchanged
+as document-body XML blocks; scope references to other sections remain historical and are resolved in the
+Scope Index.
+
+CURRENT STATUS: Active mini master for future research edits. This source content includes historical
+hypotheses and unvalidated design proposals.
+
+
+
+
+                  Living design document • Live master v0.10.42 • Updated in place • Page 1
+<PARSED TEXT FOR PAGE: 2 / 25>
+         NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+
+
+ORIGINAL RESEARCH CONTENT (preserved below)
+
+
+
+
+         Living design document • Live master v0.10.42 • Updated in place • Page 2
+<PARSED TEXT FOR PAGE: 3 / 25>
+                      NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+
+
+57. Priority 5A: mobile navigation, information access and
+interrupted-session integrity
+2 November 2026 | Version 0.10.30 | RESEARCH/CONCEPT ONLY. This packet is a logical UI and state-
+ownership architecture, NOT a designed screen mockup, clickable prototype, backend, telemetry deployment,
+or observed usability finding. Existing §§24–27 combat and §§40, 52–56 economy/campaign rules remain
+authoritative.
+
+57.1 Problem, design principles and source boundaries
+[QUESTION] On a compact phone, can a first-time or returning player always answer four questions—What
+should I do next? What will it cost? Why did I lose? Did my reward actually post?—without memorizing a
+large menu tree or risking duplicate grants? The answer must preserve the existing tactical and financial
+contracts.
+
+[NON-NEGOTIABLE DEPENDENCIES] Starter entitlements START00 and explicit START01; training grants
+ONB01–04, aggregate band upgrade and Hall20/Band-I state; E0 idle accrual at ONB01; tutorial FIRST01; G1–
+G8/SCN graph; chapter FIRST02; G8 FIRST03 (80 Ryo/120 EXP); STORY01/02/03 grant before their gates;
+optional TA-01; 34 seals/60 fragments per full 28-day core; existing banner/selector disclosure; no new
+currencies or payout events. UI projection cannot edit these source rules.
+
+[EVIDENCE] Official Android UX recommends 3–5 top-level destinations on compact screens, ≥48dp touch
+targets, and adaptive navigation for larger form factors. W3C WCAG 2.2 establishes a distinct web target-size
+minimum (24 CSS pixels subject to exceptions)—not a substitute for Android phone touch guidance. Android
+official state-restoration documentation distinguishes transient UI state from durable application data. All
+exact click paths and screen labels below are our own proposals, not externally validated benchmarks. See
+§57.11.
+
+57.2 Top-level architecture: choose four persistent destinations
+ Alternative                                Benefit                                   Cost / provisional decision
+
+                                                                                      SELECTED. Idle is a Home action; Hall
+ A. Four primary destinations: Home,        Fast reach to recurring core loop; each   lives in Squad; Tactical Archive lives
+ Squad, Campaign, Recruit                   label corresponds to a player intention   under Campaign; settings/details are
+                                                                                      contextual or profile routes.
+                                                                                      DEFER. Adds a permanent empty or
+                                            Broader future scalability for multiple
+ B. Five including “Modes” / “More”                                                   weakly defined slot while the only
+                                            optional modes
+                                                                                      designed optional solo mode is TA-01.
+                                                                                      REJECT. Too many unlike actions;
+ C. Everything in one scrollable Home       Potentially fewer top-level route
+                                                                                      unclear hierarchy and no stable
+ dashboard                                  changes
+                                                                                      Squad/Campaign mental model.
+                                                                                      NOT SELECTED. Recruitment odds,
+ D. Three destinations with Recruit under
+                                            Less tab competition                      currency use and guarantee warrant a
+ Home
+                                                                                      distinct predictable destination.
+[WORKING DECISION UX-01] For compact portrait phones, expose exactly four labeled bottom destinations,
+never icon-only: Home, Squad, Campaign, Recruit. The bottom bar persists on these four root pages, but
+focused Battle, Preflight, Recap, modal confirmation and sensitive transaction states replace or cover it. Hide
+only when doing so prevents an invalid route during an unresolved action. A tablet/landscape layout can later
+use a navigation rail without changing route identities. This does not select an engine or Android UI
+framework.
+
+
+                     Living design document • Live master v0.10.42 • Updated in place • Page 3
+<PARSED TEXT FOR PAGE: 4 / 25>
+                       NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+[RETURN MECHANISM] Every non-root screen has a labeled Back/Close and returns to the correct parent.
+Deep links reconstruct a parent route and entitlement guard; no push message or UI shortcut may bypass an
+unlock. Retain a “Resume mission” contextual action in Home, rather than creating a fifth permanent tab.
+
+57.3 Screen inventory and route ownership
+ Route ID and parent                     Primary player question / on-screen        Authoritative information and
+                                         essentials                                 allowed action
+
+                                         What is next? Show one current             Derive from Hall, mission graph,
+                                         objective, claim-ready idle summary,       pending receipt and claim state; route to
+ HOME / root
+                                         limited wallet preview, resume/return      next eligible action, never generate
+                                         status.                                    rewards.
+                                         Who is on the five slots? Formation (2     Roster ownership, equipped Band-I gear,
+ SQUAD / root                            front/3 rear), roles, selected preset,     saved formation; mutations only via
+                                         missing counter warning.                   explicit Save.
+                                                                                    Published Hall cost, owned wallet,
+                                         What upgrade is affordable, what will be
+ HALL / SQUAD or HOME contextual                                                    before/after level; one transaction keyed
+                                         consumed, and what will change?
+                                                                                    by entitlement and selected band.
+                                         Where am I in the 15-node graph?           FC/SCN IDs, grant receipts, graph edges;
+ CAMPAIGN / root                         Threat, prerequisite, reward receipt and   story skip cannot withhold STORY
+                                         next legal node.                           character.
+                                         Who acts, what threat should I answer,     Enemy preview, target legality, current
+ PREFLIGHT / CAMPAIGN                    and which two legal routes are             squad and accessible counters; editing
+                                         available?                                 squad returns here.
+                                         What happened this round? Readable         Resolved combat state; 1x/2x and low-
+ BATTLE / PREFLIGHT                      intent, target, statuses,                  effect settings are presentation only;
+                                         HP/shields/Chakra and current action.      cannot edit damage rolls.
+                                         Why did I win/lose?                        Battle result + transaction receipts; no
+ RECAP / BATTLE or CAMPAIGN              Damage/healing/control, first-death        implied reward until confirmed; retry
+                                         timing, one legal suggestion, receipts.    retains same difficulty.
+                                                                                    Live eligible banner definition, wallet,
+                                         What pool, price, odds, guarantee and
+ RECRUIT / root                                                                     pity/selector ledger; explicit confirm
+                                         spend source apply before purchase?
+                                                                                    before immutable purchase.
+                                                                                    E0 or earned later rate, eligible elapsed
+                                         What accrued, at which rate, since
+ IDLE / HOME                                                                        time and claim receipt; never client-
+                                         when, and what remained uncollected?
+                                                                                    calculated credit.
+                                         Can I practice a known lesson without      TA-01 unlock, cosmetic first-clear receipt
+ ARCHIVE / CAMPAIGN                      stamina, recurring resources or ranked     and replayable result; no recurring
+                                         pressure?                                  payout.
+                                                                                    Authoritative kit/version and status
+                                         What does a status/skill/role/counter
+ DOSSIER / context                                                                  timing; accessible from squad, preflight,
+                                         actually mean?
+                                                                                    battle pause and recap.
+                                                                                    Currency balances and canonical source
+                                         What is each balance for and where is
+ WALLET / contextual                                                                IDs, cooldowns and eligibility—not
+                                         an eligible source?
+                                                                                    invented “earn now” shortcuts.
+                                                                                    Presentation preferences only; never
+                                         Adjust motion, effects, sound, captions,
+ SETTINGS / profile                                                                 creates alternate entitlement or combat
+                                         text preference, notification opt-in.
+                                                                                    calculations.
+[RULE] “Primary CTA” is contextual rather than universally “Battle”: new accounts see Complete Training /
+Choose Support; later accounts see Continue Mission; returning accounts may see Review Result or Claim Idle.
+One dominant action is allowed per surface. A shop promotion cannot displace a blocked essential counter,
+training payment, mission continuation, or pending-result recovery.
+
+
+
+
+                      Living design document • Live master v0.10.42 • Updated in place • Page 4
+<PARSED TEXT FOR PAGE: 5 / 25>
+                         NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+57.4 Logical journeys: new accounts, returners and starter-choice parity
+ Profile and trigger                       Minimal legal route (routes, not              Invariant / stop condition
+                                           fabricated measured taps)
+
+                                           HOME/ONBOARD → START00 → ONB01–
+                                                                                         Hall20, Band-I, FIRST01 exactly once;
+                                           04 via HALL → START01 K-09 or K-10 →
+ Guided first session                                                                    same total Ryo/EXP as compact. Start
+                                           SQUAD/PREFLIGHT → G1 BATTLE →
+                                                                                         choice explicit.
+                                           RECAP
+                                           HOME/ONBOARD → START00 → four
+                                                                                         Only explanations and repeated clicks
+                                           validated batch-band receipts →
+ Compact first session                                                                   compress, not grant IDs, battle count or
+                                           START01 explicit choice → PREFLIGHT →
+                                                                                         cost.
+                                           G1 → RECAP
+                                           HOME with rate-aware accumulated
+                                                                                         No unbounded backfill, no double claim,
+                                           claim and “bank capped” notice → IDLE
+ Returning after >72h                                                                    no requirement to watch idle animation
+                                           → Claim receipt → Resume
+                                                                                         or purchase.
+                                           Campaign/Archive
+                                           HOME pending resolution → fetch               If victory committed, show same reward
+ Interrupted after G8 victory              authoritative G8 result and FIRST03 +         exactly once. If unresolved, do not infer
+                                           cosmetic receipt → RECAP                      either win or loss.
+                                                                                         Keep free/paid balance types, pull
+                                           HOME/WALLET → RECRUIT →
+                                                                                         eligibility and pity visible; no claim that
+ Recruiting after weekly reward            banner/selector detail → visible terms
+                                                                                         all seals guarantee banner within 56
+                                           and confirmation → receipt → SQUAD
+                                                                                         days.
+                                           CAMPAIGN → SCN Skip/Read → check              K-08 before G4, K-04 before G5, K-17
+ G4/G5/G8 story skip
+                                           STORY01/02/03 posted → PREFLIGHT              before G8; do not require scene viewing.
+[PATH LIMIT] These are designed route transitions, not observed interaction times. Bottom-tab roots should
+normally be reachable in one top-level selection; the optional Hall and Idle pages are one contextual route
+from Home when relevant. We do not certify “two taps” without a rendered prototype or motor-accessibility
+review.
+
+57.5 Notification and information priority: reveal only what matters
+ Priority                                  Example and placement                         User action / suppression
+
+                                           G8 result still reconciling, ONB or recruit
+                                                                                         Check status; do not offer a second
+ P0 — unresolved integrity                 transaction pending; persistent
+                                                                                         submission or falsely claim success.
+                                           nonblocking status card
+                                           START01 Choose K-09/K-10; first legal         Requires explicit choice/Save; never
+ P1 — one time critical decision
+                                           formation adjustment before G1                auto-select due to timer or skip.
+                                           Preflight enemy threat, Wound next-
+                                                                                         Inline preview and optional details;
+ P2 — actionable gameplay                  action tick, K-08 charge window, K-17
+                                                                                         match actual automatic AI timing.
+                                           status chance
+                                           Idle ready/capped, available Hall             Home card; no full-screen auto-popup
+ P3 — routine value
+                                           purchase, CORE objective completed            on every return.
+                                           Tactical Archive, lore, cosmetic title,       Section label and opt-in; never obscure
+ P4 — optional discovery
+                                           feature announcement                          tactical warning or receipt.
+                                                                                         Separate from required navigation; no
+ P5 — commercial content                   Shop / pass / cosmetic offer
+                                                                                         deceptive “Fix defeat” purchase prompt.
+[LANGUAGE RULE] A loss statement must identify a grounded cause (“Silence denied K-03’s ready Technique”)
+and a legal response (“Move the predicted target / focus the controller”) only when the battle log supports it.
+Avoid “Power too low” as an unverified general diagnosis or redirecting a free player straight to Recruit.
+Distinguish “available,” “owned,” “equipped,” and “fieldable.”
+
+
+
+
+                        Living design document • Live master v0.10.42 • Updated in place • Page 5
+<PARSED TEXT FOR PAGE: 6 / 25>
+                        NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+57.6 Action-state contract, purchasing and reward receipts
+ User-visible action                       Before submission / pending                   Authoritative outcome / failure
+                                                                                         recovery
+
+                                                                                         One posted band transaction or no
+                                           Exact grants, Ryo/EXP debit, before/after
+ ONB training band                                                                       mutation; retry checks same ONB
+                                           Hall; prevent shop diversion
+                                                                                         receipt.
+                                                                                         K-09 OR K-10 receipt, not both; if
+                                           Two first-copy kits and trade-off; explicit
+ START01 support choice                                                                  interrupted before commit, show choice
+                                           select and confirm
+                                                                                         again without guess.
+                                           Eligible hours, rate steps, bank cap and      Post unique claim interval; display exact
+ IDLE claim                                estimate; distinguish estimate from           credited vector; if unknown, refresh
+                                           confirmed balance                             state not re-issue award.
+                                           Preview FIRST02/FIRST03 where                 Victory record → receipt; replay shows
+ Campaign first-clear                      eligible, show one-time and replay            already claimed; G8 material+title
+                                           distinction                                   remain separate receipt classes.
+                                                                                         Post STORY01/02/03 once even on Skip;
+                                           Before G4/G5/G8 verify entitlement
+ STORY recruit from scene                                                                reenter preview only when ownership
+                                           independent of dialogue read flag
+                                                                                         confirmed.
+                                           Current wallet, banner eligibility, odds,     Confirm price, unique purchase key,
+ Summon or selector purchase               70-pull guarantee scope, fragment             durable pull/pity/account result;
+                                           selector terms, currency order                network error never means free repeat.
+                                           Slots and targeting preset preview, show      Save explicit new formation; invalid
+ Saved formation                           who leaves team, no destructive gear          five-slot or targeting rule blocks battle
+                                           transfer                                      start.
+                                                                                         Reconcile authoritative battle id and
+                                           If interrupted after submission, display
+ Battle result                                                                           reward receipt; render replay/recap if
+                                           “Checking result” not auto-retry
+                                                                                         committed; pending cannot grant.
+[TRUST BOUNDARY UX-02] Never derive owned currency or first-clear rewards from an animation, local
+countdown or toast. The UI may show provisional estimates, but only an authoritative transaction receipt
+changes the displayed confirmed wallet. Receipts expose source ID, debit/credit, before/after balance when
+available, and whether already claimed. Back, retry and reconnect must not replay the grant.
+
+[INFORMATION SEPARATION] Display user-earned CORE01/02 objectively; FIRST01/02/03 as one-time;
+STORY01/02/03 as noncurrency first copies; TA-01 emblem once; E0 as time-accrual. Do not combine these into
+a misleading “daily prize” total. A locked mode is labeled “Not unlocked” with its actual condition, not
+“Claimable.”
+
+57.7 Compact combat information and accessibility envelope
+ Element                                   Default concise display                       On-demand explanation / restriction
+
+                                           Five ally portraits, five enemy               Show Speed explanation and resolved
+ Top status / action order                 silhouettes, clear active unit and            order; never conceal a charge or Silence
+                                           readable next threat                          target behind particle effects.
+                                           Separate HP, shield and personal Chakra       Color + icon + text, never hue alone;
+ HP, shield and Chakra
+                                           meters with numeric inspect                   Ultimate 100 cost and legality visible.
+ Wound / Silence / Stun / Heal             Distinct icon + duration/next trigger         Explain same-round next-slot tick, status
+ suppression                               glyph, stack count and affected target        chance and current cleansability.
+                                                                                         Inspect legality and who is protected;
+                                           2 front / 3 rear representation, selected
+ Formation and target eligibility                                                        warn if an auto-Technique target is
+                                           preset and predicted enemy target
+                                                                                         illegal.
+                                           Cause of win/loss, first decisive enemy       Detailed event log and one accessible
+ Battle recap                              action, damage/heal/control                   counter hint when supported by
+                                           contributions                                 recorded state.
+
+
+                        Living design document • Live master v0.10.42 • Updated in place • Page 6
+<PARSED TEXT FOR PAGE: 7 / 25>
+                         NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+ Element                                    Default concise display                     On-demand explanation / restriction
+
+                                                                                        W3C web 24 CSS-pixel minimum is a
+                                            Proposed ≥48dp targets with ≥8dp
+                                                                                        different criterion. Values here are
+ Touch / text / motion                      separation for critical phone actions;
+                                                                                        proposed Android-inspired screen
+                                            text-safe scaling and reduced motion
+                                                                                        acceptance constraints.
+                                            Text/visual warnings independent of         Device interruption restores from
+ Audio / interruptions                      sound, optional captions and no forced      durable snapshot. Reduced effects does
+                                            animation to claim                          not remove actionable telegraph.
+[RESPONSIVE SCOPE] Portrait-compact is the design reference; tablet and landscape may use a rail and wider
+recap. The state and route IDs must not change. Exact pixel font sizes, safe areas, thumb-reach compliance,
+color contrast, 30fps low-effects performance and screen-reader focus order need prototype/device validation;
+no compliance is claimed here.
+
+57.8 Conflict and edge-case paper audit
+ Case                                       Proposed UI behavior                        Unresolved proof obligation
+
+                                            Reopen Hall with posted receipt and net
+ Player leaves mid ONB03                                                                Atomic transactions and exact crash
+                                            balance, or safely resubmit same
+ grant/purchase                                                                         recovery require technical design.
+                                            idempotent key
+                                            Confirm owned K-08 before G4 preflight,     Scene UI and ownership storage cannot
+ Story dialog skipped at K-08 grant
+                                            regardless of read flag                     race.
+                                            Home pending status resolves same
+                                                                                        Server authority, battle persistence and
+ G8 victory posts while app closes          battle ID, shows FIRST03 once and title
+                                                                                        offline policy unchosen.
+                                            once
+                                            Explain 24h full +48h quarter + stop,       Exact UI display for time zones/clock
+ Idle bank cap reached
+                                            show elapsed/uncredited time honestly       drift still unspecified.
+                                            Battle shows Basic fallback and denied      Critical for 3E/3F control teaching; no
+ No legal Technique due to Silence
+                                            Technique reason in action/recap            hidden manual override.
+ Recruitment intent with insufficient       Show source eligibility and actual pity     Banner-specific free/paid order and live
+ eligible seal                              route before a purchase choice              terms need later product/review audit.
+                                            Allow scrolling/details; keep action
+                                                                                        Physical-device text scaling and
+ Player with small screen or larger text    buttons and preflight threats visible; no
+                                                                                        TalkBack not tested.
+                                            clipping
+                                            Display highest priority actionable item    Funnel/user research must determine
+ Returning player sees 5 alerts
+                                            plus collapsed others; no serial modals     which notice is salient.
+
+
+57.9 Decision register, trade-offs, falsifiers and exclusions
+[SELECTED PROPOSALS] UX-01 four persistent roots; contextual Hall/Idle/Archive/Dossier; battle-focused
+overlays; one dominant actionable next step; priority P0–P5; explicit transactional receipts;
+preflight→battle→recap with causally grounded explanations; two presentation paths with identical
+progression. These are design decisions for future testing, not coded features.
+
+[REJECTED] A fifth empty Modes tab; forced separate UI modal per SCN node; automatic START01 timeout
+choice; Home as a monetization billboard; treating a wallet animation as credit authority; claiming every
+defeat means insufficient power; assigning imaginary eligible sources; adding a new currency to make a
+menu feel busy.
+
+[COSTS / TRADE-OFFS] Four roots push future social/endgame modes into a later navigation review; Home
+contextual shortcuts increase conditional UI complexity; exposing receipts requires a deliberate data schema;
+preflight explanations consume limited screen space; safely hiding commercial prompts may reduce early
+monetization impressions. These costs are accepted provisionally to preserve player agency, fairness and
+trust.
+
+
+                         Living design document • Live master v0.10.42 • Updated in place • Page 7
+<PARSED TEXT FOR PAGE: 8 / 25>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+[FALSIFIERS / REOPEN IF] An authorized small-device study shows a substantial share of players cannot find
+Recruitment/Hall/Archive; first-session players misinterpret the support choice; returners mistake capped
+accrual for lost rewards; effect icons remain unreadable at enlarged text; preflight cannot show legal counters
+without deep nested navigation; critical actions exceed touch target bounds; root nav changes break
+uninterrupted battles. No observed data exists yet.
+
+57.10 Next research handoff and performance-level choice
+[NEXT RESEARCH — PRIORITY 5B] Specify screen-by-screen minimum content and hierarchy on a small
+portrait phone: Home, Squad/Hall, Campaign/Preflight, Battle/Recap, Recruit/Wallet and claim flows. Write the
+exact short player-facing copy for FIRST01/02/03, START01 and idle overflow without changing transaction
+amounts. Test static paper layouts against 48dp target envelopes and large text, with explicit missing-space
+notes. Then trace a first session and returning session, comparing whether players can reach the next
+meaningful action and understand why. Performance recommendation: HIGH for bounded visual
+hierarchy/copy once §57 route architecture is stable; use EXTRA HIGH if downstream state, purchase or
+combat semantics must be reconciled. No production, prototype, simulator or live user test until owner
+authorizes.
+
+57.11 External references and limits
+[UXA1 — ANDROID OFFICIAL, accessed 2 November 2026] Layouts and navigation patterns: compact
+navigation bar commonly 3–5 destinations, adaptive rail for larger layouts; descriptive guidance, not a Naruto
+game requirement. https://developer.android.com/design/ui/mobile/guides/layout-and-content/layout-and-nav-
+patterns
+
+[UXA2 — ANDROID OFFICIAL, accessed 2 November 2026] Mobile app accessibility: recommend ≥48dp touch
+targets. https://developer.android.com/guide/topics/ui/accessibility/views/apps-views ;
+https://support.google.com/accessibility/android/answer/7101858?hl=en
+
+[UXA3 — W3C OFFICIAL, accessed 2 November 2026] WCAG 2.2 criterion 2.5.8 has web 24×24 CSS-pixel
+minimum with exceptions; do not confuse this with native Android 48dp guidance.
+https://www.w3.org/TR/wcag/
+
+[UXA4 — ANDROID OFFICIAL, accessed 2 November 2026] Save UI states: transient screen state is not
+persistent game ownership/wallet data. This is an architecture analogy only; no technology is selected.
+https://developer.android.com/topic/libraries/architecture/saving-states
+
+[UXA5 — APPLE OFFICIAL, accessed 2 November 2026] Design for games encourages teaching through play
+and effective defaults; transfer principle only. https://developer.apple.com/design/human-interface-
+guidelines/designing-for-games
+
+
+58. Priority 5B: compact-phone screen hierarchy, exact
+microcopy and accessible states
+2 November 2026 | Version 0.10.31 | RESEARCH/CONCEPT ONLY. This packet is a paper UI/content
+specification. No visual mockup, running UI, physical device measurement, screen-reader inspection, usability
+session or backend implementation was performed. Canonical §57 routes and §§24–27, 40, 49–56 authority
+remain unchanged.
+
+
+
+
+                  Living design document • Live master v0.10.42 • Updated in place • Page 8
+<PARSED TEXT FOR PAGE: 9 / 25>
+                      NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+58.1 Decision scope and invariant checklist
+[DESIGN QUESTION] What is the smallest amount of truthful information each critical phone screen can show
+before the player acts, while still exposing a tactical response, real source/cost, and confirmed reward state?
+The current objective is legibility and state honesty, not maximizing the number of metrics on screen.
+
+[UNCHANGED CONTRACT] Four roots: Home, Squad, Campaign and Recruit. Child pages: Hall, Idle, Preflight,
+Battle, Recap, Wallet, Details and Tactical Archive. START00 four recruits; ONB01–04 to Hall20/Band I;
+START01 explicit K-09 or K-10; FIRST01 five seals; FIRST02 five seals; FIRST03 80 Ryo and 120 EXP;
+STORY01/02/03 K-08/K-04/K-17; G1–G8; TA-01 cosmetic emblem. Current CORE01/02 and E0 are unchanged.
+Pity and acquisition visibility remains controlled by §§36–40.
+
+[INFORMATION PRIORITY] First: an unresolved integrity state or irreversible choice; second: next legal action
+with cost/eligibility; third: immediate tactical reason; fourth: secondary details. Never use hidden tooltips as
+the sole carrier of a dangerous enemy intent, source shortfall or irreversible selection.
+
+58.2 Reference small-screen geometry and scaling stress case
+Use 360×640 dp as an ILLUSTRATIVE portrait design canvas, not an assumed minimum supported phone. For
+paper placement only, reserve approximate 24dp status, 56dp app header, 80dp root navigation and 24dp
+gesture/navigation inset, yielding 456dp of flexible content. Actual status/navigation insets and device sizes
+vary; these allocations are not measured. Battle, Preflight and Recap may replace the root bar to return space
+to priority information. Do not hard-code screen-height assumptions.
+ Area                                   Compact working hierarchy                   Large-text / failure behavior
+
+ Header (approx. 56dp)                  Screen title, labeled Back/Close where      Allow title to wrap or truncate with
+                                        needed, one contextual utility; no          accessible full label; do not shrink below
+                                        rotating promotion                          legibility
+ Primary task area                      One next action or danger summary in        The dominant action can move lower in
+                                        the first scroll region; lead with verb     a scroll surface, never underneath an
+                                        and actual prerequisite                     overlay
+ Secondary detail                       Expandable cost breakdown, noncritical      Content can grow vertically; avoid fixed-
+                                        metrics and receipts; disclosure remains    height text boxes and horizontal
+                                        one labeled action away                     scrolling of prose
+ Bottom destination bar (roots only)    Home / Squad / Campaign / Recruit: icon     Each destination retains a 48dp or
+                                        plus text labels, distinct selected state   greater touch envelope; no two-row
+                                                                                    compression
+ Touch / activation envelope            Working Android target at least 48×48dp     Visual icons may be smaller than their
+                                        and about 8dp between neighboring hit       active hit area; do not overlap regions
+                                        regions
+ Stress profiles                        Illustrative 360×640 and constrained        At enlarged scale, show core task and
+                                        320×568; 100% and 200% font-scale           important warnings in the vertical
+                                        paper passes                                scroll, with accessible non-drag
+                                                                                    alternatives
+[EXTERNAL GUIDANCE] Android recommends ≥48dp touch targets and commonly a 3–5 destination compact
+navigation bar. WCAG 2.2 SC 2.5.8 uses a distinct web 24×24 CSS-pixel threshold with exceptions. Treat 48dp as
+our conservative native-phone reference; neither guideline constitutes a tested pass for our unrendered UI.
+
+
+
+
+                     Living design document • Live master v0.10.42 • Updated in place • Page 9
+<PARSED TEXT FOR PAGE: 10 / 25>
+                      NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+58.3 Screen-by-screen minimum visible information: strict content contracts
+ Screen / route                         Always visible before decision                Optional detail / one dominant action
+
+ Home                                   Current objective with verb, next             Show Continue training / Choose
+                                        eligibility, current pending result if any;   support / Review result / Continue
+                                        idle-bank status if actionable                mission or Claim idle as context
+                                                                                      demands; wallet breakdown can expand
+ Squad / Hall                           Five slots and 2-front/3-rear roles;          Inspect abilities/gear; Train only after
+                                        current Hall level and attainable next        presenting Ryo+EXP+essence and
+                                        cost; distinguish owned vs fieldable          before/after states; warn of missing
+                                                                                      input
+ Campaign / mission list                Current node, cleared/locked status and       Continue mission; expand
+                                        nearest next legal fight; campaign            dossier/earlier scenes; a locked node
+                                        chapter context                               states a verifiable condition
+ Preflight                              Enemy intent, timing (e.g., Wound at          Review counters/Adjust squad first;
+                                        next victim action), legal target rules,      Begin Battle only after valid formation
+                                        accessible responses and team                 and pending receipt checks
+                                        formation
+ Battle                                 Active actor; readable ally/enemy HP          Pause/Details; auto-actions remain
+                                        and shield; current personal Chakra;          authoritative; avoid claiming manual
+                                        charged intents; next important status        skill override
+                                        tick
+ Recap                                  Victory/defeat; real causal event; exact      Timeline, damage/healing/control
+                                        reward receipt status; one legal next         breakdown; do not assert a loss cause
+                                        action                                        not supported by the event log
+ Recruit / banner                       Banner type, useable seal quantity, pool      Recruit with explicit cost and
+                                        eligibility, rate disclosure and applicable   acknowledgement; until committed,
+                                        pity family                                   show Pending rather than new
+                                                                                      ownership
+ Wallet / reward claim                  Confirmed balance; distinct                   Show source ID, debits/credits,
+                                        one-time/weekly/idle source labels and        before/after when available; retry reads
+                                        claim state                                   the same receipt, never duplicates grant
+ Tactical Archive                       Lesson goal, no-stamina/free-repeat rule,     Practice or Review Explanation; no
+                                        one-time cosmetic reward state                recurring seals/materials
+[EXCLUSION] Do not push the Store ahead of a legal counter or a pending-reward recovery. Keep cosmetic
+monetization outside the primary task hierarchy. A visible “Claim” control cannot represent an owned
+balance until confirmation.
+
+58.4 Exact player-facing copy and transaction states
+Copy below is the DEFAULT ENGLISH WORKING SCRIPT. Braced labels such as {X} are runtime substitutions
+from authoritative state and must never be replaced with made-up numbers. Confirmed statements appear
+ONLY after a posted source-ID receipt.
+ Source / state                         Exact short copy                              When allowed / safe action
+
+ START01 unchosen                       Choose your starter support. K-09             Two selectable cards, explicit Confirm
+                                        removes one active Wound on its               choice, no timeout, no automatic default
+                                        eligible turn. K-10 protects allies but
+                                        does not remove Wound.
+ START01 pending                        Saving your choice… Please do not             Lock second submit, offer Check status;
+                                        choose again.                                 reconstruct result on return
+ START01 confirmed                      {K-09 or K-10} joined your squad. Your        Only after confirmed ownership/choice
+                                        choice is saved.                              receipt
+
+
+
+                     Living design document • Live master v0.10.42 • Updated in place • Page 10
+<PARSED TEXT FOR PAGE: 11 / 25>
+                        NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+Source / state                         Exact short copy                           When allowed / safe action
+
+FIRST01 confirmed                      Training complete. 5 Recruitment Seals     Only after FIRST01 receipt, exactly once
+                                       added.
+FIRST02 confirmed                      Chapter 1 complete. 5 Recruitment Seals    Only after FIRST02 receipt, exactly once
+                                       added.
+FIRST03 confirmed                      Chapter 3 complete. 80 Ryo and 120         Only after FIRST03 receipt; cosmetic title
+                                       Shinobi EXP added.                         shown separately
+Idle active                            Idle rewards saved: {elapsed}. Full rate   Elapsed and collectible estimate must be
+                                       for the first 24h; quarter rate for the    computed from actual saved accrual
+                                       next 48h.
+Idle bank full                         Idle bank full. Rewards stopped            Show only when full; never promise
+                                       accumulating after 72h. Claim to restart   retroactive gains beyond the cap
+                                       accrual.
+Idle pending                           Checking your idle reward claim…           No repeat grant; reconcile identical
+                                                                                  receipt ID
+Idle posted                            Idle rewards collected: {confirmed         Post-confirmation; record collection
+                                       resource breakdown}.                       interval/source
+Missing Hall resource                  Cannot train yet. Need {missing amount}    Only name a source this account can
+                                       {resource}. Available source: {eligible    currently reach; otherwise say “No
+                                       source}.                                   eligible source is available yet”
+Battle loss diagnosed                  K-03’s ready Technique was blocked by      Only when log establishes readiness,
+                                       Silence. You can change the predicted      denied action and valid answers
+                                       target or focus the controller.
+Unknown battle loss                    Battle lost. Review the action timeline    No speculative “power too low” or paid
+                                       before changing your team.                 purchase recommendation
+Pending battle receipt                 Checking your saved battle result… Your    Reopen pending receipt and preserve
+                                       rewards are not yet confirmed.             battle outcome without resubmitting the
+                                                                                  grant
+Already claimed                        Already collected. Your balance includes   After duplicate-safe verified receipt
+                                       this reward.                               lookup
+
+
+58.5 Preflight, battle and recap: causal explanation without overload
+Moment                                 Initial concise information                More detail if requested / failure case
+
+Before G1 Wound                        “Enemy plans Wound. Wound damages          Explain K-09 action timing and source-
+                                       its target at the target’s next action—    focus route; preview must not imply
+                                       even in the same round.”                   cleanse prevents an earlier tick
+Before G3 Silence                      “Enemy targets this formation slot with    Show predicted target and that Silence
+                                       Silence before K-03 acts.”                 can deny a ready Technique; show
+                                                                                  formation adjustment when legal
+Before G4 Charge                       “Enemy is charging an attack. K-08 can     Show action window and visible
+                                       interrupt; K-01 can absorb a redirected    target/Guard legality; do not promise
+                                       hit.”                                      universal survival
+Before G5 Decoys                       “Decoys intercept eligible single-target   No claim that K-04 always wins in fewer
+                                       hits. A row attack can bypass them.”       rounds
+Before G8 Healing                      “Boss heals after acting and may raise a   K-17 suppression is probabilistic; keep
+                                       one-time Ward. Focus or reduce             damage-focused route accessible
+                                       healing.”
+During battle                          Show action actor, predicted target        Tap effects for source, duration, cap and
+                                       where applicable, current status effect    actual timing; never rely on red/green
+                                       and next tick/charge                       alone
+After battle                           One supported causal sentence plus 1–2     If a cause is not proven by log, show
+                                       permitted actions; reward status with      neutral recap; show numerical
+                                       source ID                                  breakdown only on expansion
+
+                    Living design document • Live master v0.10.42 • Updated in place • Page 11
+<PARSED TEXT FOR PAGE: 12 / 25>
+                       NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+[HONESTY LIMIT] “Next turn” is prohibited as Wound shorthand when the victim’s next action is still in the
+current round. Use “next action” or exact timing. The client must not infer K-03 readiness merely from a
+status icon; it needs the resolved combat event log.
+
+58.6 Two paper journeys and 200% text stress test
+ Persona / moment                         Next action discoverability                 Stop / recovery invariant
+
+ Guided new account                       Home → training (ONB01–04) → explicit       No First01 seals before confirmation;
+                                          START01 support → Squad/Preflight G1.       one support kit, Hall20/Band I; do not
+                                          Expandable coaching explains each step.     suppress required choice
+ Compact new account                      Same required receipts and START01,         Shorter copy ≠ different rewards, free
+                                          shortened explanations and grouped          levels or fewer meaningful choices
+                                          presentation; G1 remains first tactical
+                                          check.
+ Daily return                             Home distinguishes ready idle claim,        Never reset current stage or generate a
+                                          confirmed last receipt and current          new first-clear reward
+                                          mission; player chooses next meaningful
+                                          action.
+ Once-weekly return                       Home notes bank cap of 72h and shows        Progress and inventory persist; returner
+                                          actually collected capped resources; no     sees the same eligible source and
+                                          guilt or fake “lost all rewards” alert.     truthful capped accrual
+ Connection lost mid-claim                Home/Recap shows “Checking…” and            No second grant ID, no phantom
+                                          one Check status option; the original       balance, no infinite loading as a claimed
+                                          receipt is recovered.                       success
+ Large-text / 320×568 stress              Primary task and risk copy wrap in a        At 200% text scale, no clipping/overlap,
+                                          scrollable column; utility cards become     no overlapping touch regions, readable
+                                          vertical; no two-column dense data.         buttons; actual pass requires device
+                                                                                      render
+
+
+58.7 Negative-state contracts, trade-offs and acceptance criteria
+ State / candidate                        Selected response and cost                  What would falsify it
+
+ Small screen vs all battle metrics       Show only active actor, critical intent,    A player cannot anticipate
+                                          HP/shield, Chakra and actionable status     damage/status with basic view, or
+                                          first; deeper metrics on demand. Costs      misses the most urgent intent
+                                          extra inspection taps.
+ One CTA vs multiple claims               One dominant CTA, secondary claim still     Users cannot locate Claim Idle, START01
+                                          reachable if permitted. Costs conditional   or Review Result at a sensible point
+                                          prioritization logic.
+ Exact receipt copy vs polished           Show receipt-confirmed amounts first;       Players treat unposted rewards as
+ celebration                              animations/cosmetics may follow. Costs      owned or lose trust after reconnection
+                                          spectacle-first sequencing.
+ Large text vs dense squad card           Switch cards to vertical stacking and       Content clips, CTA becomes
+                                          natural-height content; prefer scroll       unreachable, icons lack text alternatives,
+                                          over tiny text. Costs visible-at-once       touch regions overlap
+                                          density.
+ Paper compliance vs real accessibility   Record these as design constraints, not     Any real device/screen-reader audit fails
+                                          WCAG/Android compliance claims. Costs       a target or source/intent explanation
+                                          additional future QA and physical
+                                          testing.
+PAPER ACCEPTANCE GATES (not observed outcomes): each root has one meaningful primary task and a
+correct parent route; all first-clear rewards have exact source IDs and explicit pending/posted states; every
+first-gate Preflight describes a legal accessible answer without relying on a premium hero; user never must
+infer a Wound tick from “next turn”; every mandatory touch control has planned ≥48dp hit area; no
+
+                      Living design document • Live master v0.10.42 • Updated in place • Page 12
+<PARSED TEXT FOR PAGE: 13 / 25>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+important information depends on color alone; 320×568 at 200% text admits scrolling rather than clipped or
+hidden controls; both Guided and Compact remain receipt-equivalent.
+
+58.8 Decisions, rejected alternatives and next research handoff
+[WORKING DECISION 5B-01] Use one-CTA-per-surface hierarchy, cause-first preflight/recap, truthful
+transaction microcopy, source-specific collection states and a vertical large-text fallback. Keep four roots and
+all combat/economy numbers unchanged. A complete visual design has NOT been produced.
+
+[REJECTED] Fixed-height cards that truncate warnings at enlarged text; icon-only status indicators; “One tap to
+win” or “Power too low” diagnoses; a full-screen reward celebration before confirmation; conflating once-
+weekly bank saturation with loss of existing inventory; automatically choosing K-09/K-10; giving out
+unopened first-clear rewards to make a UI animation look consistent.
+
+[UNRESOLVED] Exact visual hierarchy after localisation, 320dp phones with display cutouts, screen-reader
+focus/announcements, right-to-left support if needed, device-specific font scale, keyboard and gesture
+accessibility, error focus restoration, reduced-motion interactions and actual click/touch burden. No empirical
+claim can be made until an authorized prototype and device checks.
+
+[NEXT RESEARCH — PRIORITY 5C] Before progressing to social/PvP interface designs, audit failure/recovery
+and accessibility across the critical journeys: pending claim, app restart mid-recruitment, first-time combat
+loss, 72-hour bank, enlarged text and screen-reader narration. Produce a risk-ranked scenario matrix and
+minimal error-state copy, reconcile any contradictions with §57/58. PERFORMANCE LEVEL: HIGH, because
+this is a focused accessibility and state-communication audit; raise to EXTRA HIGH only if an account-state or
+combat semantics contradiction forces a system redesign. Remain in theory/research; do not implement or
+run usability tests.
+
+58.9 Official sources, consulted 2 November 2026
+[5B1] Google, Android Accessibility: touch target size ≥48dp; recommends target spacing and large accessible
+regions. https://support.google.com/accessibility/android/answer/7101858?hl=en
+
+[5B2] Google, Android Developers: navigation bars are appropriate for three to five primary destinations on
+compact devices. https://developer.android.com/design/ui/mobile/guides/layout-and-content/layout-and-nav-
+patterns
+
+[5B3] W3C, WCAG 2.2 SC 2.5.8: 24×24 CSS px minimum for web pointer targets subject to exceptions. This is
+NOT a native Android 48dp equivalence claim. https://www.w3.org/TR/WCAG22/
+
+[5B4] Google, Android Developers: make views accessible through text descriptions and touch target sizing.
+https://developer.android.com/guide/topics/ui/accessibility/views/apps-views
+
+[PROJECT CONTEXT] §§23, 26–27, 40, 49–57 of this master; sources here support UI accessibility concepts only,
+not the proposed game percentages, currencies, copy or engagement outcomes.
+
+
+
+
+                  Living design document • Live master v0.10.42 • Updated in place • Page 13
+<PARSED TEXT FOR PAGE: 14 / 25>
+                       NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+
+
+59. Priority 5C: accessible recovery, transaction uncertainty
+and first-loss integrity
+2 November 2026 | Version 0.10.32 | CONCEPT RESEARCH ONLY. This chapter defines proposed accessibility
+and recovery behavior. No code, simulated backend, physical-device inspection, screen-reader testing,
+purchase, user research or security verification was performed. Existing §§23–27, 40, 49–58 are authoritative
+unless a change is explicitly proposed below.
+
+59.1 Research question, sources and strict non-regression boundary
+[DESIGN QUESTION] Can every critical action be understood and safely resumed after a network failure, app
+closure, large-text reflow or assistive-technology interruption—without inventing combat causes, spending a
+resource twice or announcing an unconfirmed reward?
+
+[UNCHANGED PROJECT CONTRACT] Four navigation roots (Home, Squad, Campaign, Recruit); Hall 20/Band I
+onboarding through ONB01–04; START00 roster and START01 deliberate K-09/K-10 choice; FIRST01/FIRST02
+five seals each; FIRST03 80 Ryo plus 120 EXP once; STORY01/02/03 K-08/K-04/K-17; G1–G8 and TA-01; IDLE01
+24h full rate + 48h quarter rate, then accrual pauses; CORE and banner/fragment rules unchanged. No new
+currencies, attempt fees, shop shortcuts, combat mechanics or numerical rewards in this pass.
+
+[SOURCE FINDING] W3C WCAG 2.2 guidance distinguishes status messages that should be announced without
+stealing focus from meaning-changing navigation; its focus-order guidance requires a logical sequence.
+Android advises meaningful unique labels for interactive controls, with decorative elements excluded, and
+offers accessibility announcements through native semantics. Google Play Billing requires verified
+PURCHASED status before paid entitlement and a separate acknowledgement/consumption path. These are
+comparisons and future engineering requirements, NOT proof that this proposed game conforms to WCAG,
+Android accessibility, or billing policy.
+
+59.2 Risk-ranked paper scenarios: player outcome and invariant
+Priority / interruption                    Visible state and next safe                Required invariant / failure gate
+                                           action
+P0 · Claim response lost (FIRST01–03 or    Show “Checking saved claim...” and one     Same account/source grants once;
+weekly)                                    “Check status” action; after confirmed     unknown response is not a failure.
+                                           receipt show exact source and new          Never display an unposted resource as
+                                           balance.                                   owned.
+P0 · Recruit app closes after submission   On reopen show “Checking recruitment       Repeated device request does not
+                                           result...” and same request; show          consume another seal, grant a second
+                                           shinobi and pity change only from          shinobi or advance pity twice.
+                                           completed receipt.
+P0 · Support choice closes during          Restore selected K-09/K-10 preview and     Exactly one START01 hero; no automatic
+confirmation                               committed START01 result; if unknown,      selection; same entitlement on
+                                           block conflicting new selection pending    Guided/Compact and scene skip.
+                                           reconciliation.
+P0 · Paid purchase pending or uncertain    Separate platform pending from account     Verify purchase with store/backend
+                                           grant: “Payment pending. No items          before granting; no duplicate delivery
+                                           delivered yet.” Link to status, not “Buy   on callbacks or relaunch.
+                                           again”.
+P0 · Hall purchase response lost           Show prior confirmed Hall and current      No double Ryo/EXP charge; no level
+                                           pending attempt; resolve transaction       jump on UI optimistic guess.
+                                           receipt before allowing another
+                                           promotion.
+
+                     Living design document • Live master v0.10.42 • Updated in place • Page 14
+<PARSED TEXT FOR PAGE: 15 / 25>
+                       NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+Priority / interruption                    Visible state and next safe                   Required invariant / failure gate
+                                           action
+P1 · First combat loss and recap reload    Restore confirmed loss and event-log-         Never invent which character acted, was
+                                           based diagnosis, or “Battle details           stunned or targeted if record absent;
+                                           unavailable” plus basic formation             replay cannot duplicate first-clear.
+                                           guidance.
+P1 · Idle claim at or after 72h bank cap   Display accrued payable amount, 24h +         Time windows never double claimed. Do
+                                           48h at 25%, and stopped accrual beyond        not imply stored currency disappears
+                                           72h; offer Claim or status check.             after 72h.
+P1 · Return mid-story or before recruit    Resume at the authoritative                   Skipping/read-state cannot suppress
+                                           stage/choice; offer Review Story and          STORY grants or re-run FIRST receipts.
+                                           Continue; confirm grants independently
+                                           of scene playback.
+P1 · TalkBack/Switch Access loses focus    Restore focus to meaningful pane              No focus trap or jump behind a modal;
+                                           title/status then triggering control, or      irreversible choice retains
+                                           safe nearest parent if removed.               confirm/cancel.
+P2 · 320dp / 200% text / landscape         Reflow details as vertical scroll; preserve   No clipped status, overlap, essential
+interruption                               confirmation controls and readable            control off-screen with no scroll, or
+                                           warning text.                                 color-only meaning.
+
+
+59.3 Transaction state machine and receipt identity
+[PROPOSAL 5C-01] Formalize source-specific state phases: NOT_SUBMITTED → SUBMITTED_UNKNOWN →
+CONFIRMED_POSTED or CONFIRMED_REJECTED, with ALREADY_POSTED as a resolved replay of an existing
+result. A local animation or HTTP timeout cannot move the account to CONFIRMED_POSTED or
+CONFIRMED_REJECTED. The system of record and receipt type must be selected in future architecture; do not
+pretend a backend now exists.
+
+[IDEMPOTENCY DESIGN] One-time source entitlements should have an account-specific source uniqueness
+constraint (e.g., account + FIRST03). A recruitment/spend request needs a stable client-generated request
+identity reconciled with a server-recorded result and atomic costs/rewards/pity changes. Do not use the
+recruitment animation, screen transition or current balance alone as the receipt. Retried status checks re-use
+the original identity; a deliberate new summon is a distinct confirmed action.
+
+[BOUNDARY] For optional paid purchases, the provider purchase token and PURCHASED/PENDING state are
+separate from internal source IDs. Verification and acknowledgement/consumption belong to a future
+platform integration. Do not instruct the user to repurchase while status is unknown. No vendor or backend is
+selected by this research.
+
+Action / receipt key                       Uncertain state (allowed)                     Settled response / prohibited
+                                                                                         behavior
+FIRST01 tutorial; FIRST02 chapter;         Re-check by account + unique source;          Confirmed exact amount; otherwise
+FIRST03 G8                                 show “Checking saved reward...”               nonfinal pending. Prohibit animation-
+                                                                                         based grants and duplicate source
+                                                                                         awards.
+START01 support choice; STORY01/02/03      Choice pending or saved; identify             Grant precisely one selected starter;
+recruits                                   claimed source before presenting choice       persistent story shinobi ownership
+                                           again                                         despite skip or replay.
+IDLE01 collection period                   Pending claim ID and server-stamped           Post only eligible elapsed seconds;
+                                           interval; keep collect action guarded         preserve last claimed timestamp; no
+                                           until known                                   double-count overlapping intervals.
+
+
+
+
+                      Living design document • Live master v0.10.42 • Updated in place • Page 15
+<PARSED TEXT FOR PAGE: 16 / 25>
+                          NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+Action / receipt key                      Uncertain state (allowed)                   Settled response / prohibited
+                                                                                      behavior
+Hall upgrade                              Pending atomic debit/level change; show     Both debits and advancement commit
+                                          confirmed prior level until resolution      together or neither; no duplicate
+                                                                                      promotion.
+Recruitment Seal / featured or standard   Original request submitted, result          One seal cost and one pity/result
+pity                                      unknown; only status retry                  outcome per request; no new pull
+                                                                                      without fresh player intent.
+Google Play optional purchase             Provider                                    No goods on PENDING; verify
+                                          pending/verification/acknowledgement        PURCHASED, then grant once and
+                                          distinct from in-game result                acknowledge/consume as appropriate.
+
+
+59.4 Accessibility semantics, focus and announcements
+[PROPOSAL 5C-02] Every actionable element exposes accessible name, role, value/state and next consequence;
+a decorative portrait/artifact has no redundant accessibility focus. Screen-reader reading order should mirror
+causal order: screen identity → important warning → current value/source → available action → secondary
+detail. Never use a status icon, color change, vibration or animation as the only message.
+
+[ANNOUNCEMENT POLICY] Announce pending → confirmed/rejected changes politely once per semantic
+change, not on every spinner tick or Chakra frame. Do not move focus for a transient confirmation toast. For
+explicit dialogs/irreversible starter selection, give the dialog a title and move focus into it; after dismissal
+return focus to the initiating element or its nearest surviving parent. Only urgent actionable blocking errors
+warrant intrusive announcement. Avoid auto-expiring critical status messages.
+
+Surface                                   Speech/reading priority                     Focus and input fallback
+Home / return state                       “Home. Resume Chapter {n}, stage {id}.”     Restore root/last meaningful task, not
+                                          Then pending claims, next legal             Store; status announcements do not
+                                          objective and idle summary.                 steal focus.
+K-09/K-10 selection                       “Choose one permanent starter support:      Two labeled options and separate
+                                          K-09 Cleanser / K-10 Protector.” Describe   Confirm; no timed choice, swipe-only
+                                          distinct roles and confirmation.            control or default silent acceptance.
+Squad and formation                       Read unit ID, role, row/slot, HP and what   Provide non-drag action such as Choose
+                                          changing slot affects, including            position/Move to slot; support Switch
+                                          Taunt/targets.                              Access sequence.
+Preflight G1–G8                           Name specific telegraph and one             Text alternatives for highlighted
+                                          accessible counter, including Wound         enemies and actionable Review
+                                          “next action” rather than “next turn”.      Formation; detailed rules on demand.
+Battle live                               Periodic digest of whose action, critical   Pause/reduced motion and accessible
+                                          status/telegraph and result, not every      battle event log; avoid constantly
+                                          damage animation.                           resetting focus.
+Recap / first loss                        Outcome → observed causal event →           One clear Try Again/Return control;
+                                          actionable legal counter → relevant         allow replay of text explanation without
+                                          resource/source.                            relaunching battle.
+Claim or Recruit receipt                  State as Pending / Confirmed / Rejected,    “Check status” operable with assistive
+                                          exact source ID or plain-language label,    tech; no hidden success behind
+                                          and associated resources.                   animation.
+Wallet / idle full bank                   Accrued balance, capped collection          Currency amounts readable in full;
+                                          behavior, elapsed eligible period, named    labels and values available without
+                                          resource sources.                           horizontal scrolling.
+
+
+
+
+                      Living design document • Live master v0.10.42 • Updated in place • Page 16
+<PARSED TEXT FOR PAGE: 17 / 25>
+                        NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+59.5 Exact recovery microcopy: separate uncertainty from failure
+All braces below indicate authoritative runtime substitutions, not invented values. Example English only;
+localization and voice output require later work. Never use these phrases to fake a server result.
+
+Trigger                                  Working visible / spoken copy            Safe action / restriction
+Claim submitted, response unknown        “Checking your saved reward. Do not      Check status; may leave screen; do not
+                                         claim again yet.”                        show grant as confirmed.
+Existing grant found                     “Already claimed: {source label}. Your   View receipt; do not credit again.
+                                         current balance is {balance}.”
+Confirmed reward posted                  “{source label} confirmed: +{amount}     Continue; speech announcement once,
+                                         {resource}.”                             no focus theft.
+Confirmed nonexecution                   “This action was not completed. Your     Retry only if system has confirmed
+                                         balance is unchanged.”                   nonexecution and unchanged debit.
+Recruit status unknown                   “Recruitment result not confirmed. We    Check status; disable second paid/seal
+                                         are checking the original request.”      spend until resolution.
+Store payment pending                    “Payment is pending. No purchased        Review status via platform; no duplicate
+                                         items have been added.”                  purchase prompt.
+First defeat                             “Battle lost. {Observed event}. Try      Use event log for both placeholders;
+                                         {accessible response}.”                  otherwise show neutral “Review
+                                                                                  formation”.
+Idle storage full                        “Your idle bank stopped adding rewards   Claim saved amounts; no suggestion
+                                         after 72 hours. Previously earned        accrued balance was erased.
+                                         rewards are still available to claim.”
+Disconnected while inspecting            “Connection interrupted. Your last       Only if confirmation exists; otherwise
+                                         confirmed progress is saved as shown.”   “Progress is being checked.”
+Screen reader state                      “Reward pending.” → “Reward              Announce changes once, independent of
+                                         confirmed.”                              button label.
+
+
+59.6 Edge-case walkthroughs and recoverability proofs still owed
+PAPER WALKTHROUGH A — Unknown FIRST03: boss defeat posts a unique combat result; the FIRST03
+reward request is sent; connection ends before the answer arrives. On resume, an account/source lookup
+either finds the receipt (show 80 Ryo and 120 EXP as confirmed) or returns an explicit nonposted status. A
+timeout alone gives neither answer. Retrying the same claim must never create a second FIRST03 payment. If
+system cannot reach authority, retain pending and show last confirmed wallet, not a speculative new balance.
+
+PAPER WALKTHROUGH B — Recruit interrupted: a player confirms exactly one draw using a seal; animation
+stops before shinobi reveal. The app resumes with the original request identifier. If the draw committed,
+reveal that single existing shinobi and updated pity, without charging another seal. If it did not commit,
+expose only a confirmed nonexecution retry. An indeterminate response must not unlock an unguarded
+“Summon again” action.
+
+PAPER WALKTHROUGH C — G1 first loss with TalkBack: Preflight announces Wound’s next-action timing;
+after defeat, Recap gives the result, exact causal line if present, and an accessible focus/formation answer.
+Returning to Preflight preserves selected formation and predictable focus. If the event record is unavailable, a
+factual generic tip is allowed; fabricated source-target or damage explanations are forbidden.
+
+PAPER WALKTHROUGH D — 72-hour return: the player visits after more than 72 hours. The collection screen
+distinguishes 24 hours at full rate, 48 hours at quarter rate, and zero beyond 72; it displays the *actual server-
+derived resource amount*, not a blanket promise based on this example. Claim must use one unique
+collection interval; dismissing the screen, relaunching or using large text never burns a collection or grants it
+twice.
+
+                       Living design document • Live master v0.10.42 • Updated in place • Page 17
+<PARSED TEXT FOR PAGE: 18 / 25>
+                       NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+PAPER WALKTHROUGH E — 320dp/200% text: a pending-reward pane expands vertically; the title, status,
+resource figures, and Check status action remain reachable in reading order. An interrupted modal returns
+focus to a meaningful control. If the user has reduced motion enabled, essential outcome text remains
+unchanged. This is a design exercise, not a visual or TalkBack pass.
+
+59.7 Decisions, rejected alternatives, cross-system effects
+Decision and reason                        Trade-off / dependent section              Reopen trigger
+5C-D1: Source-ID receipts and              Needs future authoritative receipt         Any reward source cannot be uniquely
+ambiguous-outcome state; prevent           store/transactions, §§40, 52–58. Adds      identified or atomic internal debit/post
+duplicate or lost rewards.                 status UI and reconciliation complexity.   cannot be specified.
+5C-D2: Separate paid purchase provider     Backend/payment integration later;         Store policy changes or proposed
+verification from in-game earned grants.   purchase tokens and acknowledgements       architecture cannot reconcile refunds
+                                           are not ordinary reward IDs.               and pending purchases.
+5C-D3: Accessible names, logical order     Adds semantic design, native input         Essential information hidden in art,
+and polite state announcements; avoid      testing, translation and screen-reader     focus trap, duplicate speech or 200%
+focus theft.                               review; §§57–58.                           text clipping.
+5C-D4: First-loss recap only diagnoses     Requires full trusted combat log or        Replay missing, event log not
+recorded causes; prevent false training.   noncausal fallback; §§24–27, 47–51.        authoritative, or accessible answer not
+                                                                                      actually owned.
+5C-D5: No new daily/weekly material        Retains FIRST/CORE/IDLE source budget      Recovery system requires a newly
+payments or compulsory logins.             and economy integrity; §§40, 52–55.        minted source or consumes resources to
+                                                                                      check existing state.
+
+[REJECTED] Optimistic “success” reward toast before receipt; interpreting a transport timeout as confirmed
+failure; disabling all navigation until online for a noncritical pending claim; unguarded retries; automatic
+second summon after restart; color-only status changes; live-announcing every combat frame; using
+placeholder combat logs as a cause-of-loss diagnosis; assuming a guest account can be recovered without
+verified credentials or saved state.
+
+[UNRESOLVED] Exact backend/account identity and offline persistence; what server time source defines idle
+interval, eventual consistency and receipt retrieval SLA; cross-device conflicts; Play purchase
+refund/revocation; guest-account transfer; loss of device; consent and data minimization for event logs;
+translations, TalkBack/Switch Access/keyboard/voice navigation, 320dp layouts, text at 200%, localization
+truncation, high-contrast and motion settings; observed accessibility/usability measures. These require future
+implementation and tests authorized by the owner.
+
+59.8 Paper acceptance gates and next research
+[PAPER GATE] Every named critical action has an immutable entitlement/source identity, an explicit
+unknown state, a confirmed terminal outcome and an accessible resolution path; negative state never silently
+invents a second cost or first-clear; each primary surface has one meaningful announced role/name, logical
+navigation order, non-color status and non-drag fallback where relevant. These are acceptance
+*requirements*, not measured passes.
+
+[FUTURE VALIDATION — NOT PERFORMED] On a real build: reproduce network loss immediately before and
+after commit, duplicate callbacks and reboots; assert invariant rewards/pity/upgrade/wallet; use TalkBack and
+Switch Access through START01, G1 loss, FIRST03 claim and 72h return; use 320dp and 200% text without
+clipped warnings; test reduced motion, offline return and locale expansion; ensure announcements and focus
+persist. Record observed failure counts rather than claiming zero now.
+
+[NEXT RESEARCH — PRIORITY 5D] Investigate localization, low-end device constraints, and a consolidated
+mobile UX exit gate before social/ranked UI. Distinguish text expansion and right-to-left support from verified
+layout; set minimum performance/asset budgets only as proposals, compare offline/online transitions with the
+
+                     Living design document • Live master v0.10.42 • Updated in place • Page 18
+<PARSED TEXT FOR PAGE: 19 / 25>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+recovery contract, and enumerate required future device tests. RECOMMENDED LEVEL: HIGH, because this is
+a bounded presentation/performance scope anchored by §§57–59. Escalate to EXTRA HIGH if network/service
+selection or combat semantics require an architectural redesign. Remain in concept research.
+
+59.9 External sources and provenance
+[5C1] W3C WAI, Understanding WCAG 2.2 SC 4.1.3 Status Messages (accessed 2 Nov 2026). Guidance for
+accessible status announcements without shifting focus. Web criterion used as comparative practice, not a
+native game compliance certificate. https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html
+
+[5C2] W3C WAI, Understanding WCAG 2.2 SC 2.4.3 Focus Order (accessed 2 Nov 2026). Logical focus sequence
+preserving meaning. https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html
+
+[5C3] Google Android Developers, Make apps more accessible (Views), accessed 2 Nov 2026: accessible names,
+unique descriptions, and suppressing decorative focus.
+https://developer.android.com/guide/topics/ui/accessibility/views/apps-views
+
+[5C4] Google Android Developers, Jetpack Compose accessibility semantics, accessed 2 Nov 2026: polite live-
+region usage, limited assertive urgency, pane titles. Not a selection of Compose as engine/UI toolkit.
+https://developer.android.com/develop/ui/compose/accessibility/semantics
+
+[5C5] Google Android Developers, Play Billing security, accessed 2 Nov 2026: verify purchase tokens and
+PURCHASED state; pending payments have no entitlement, server-side acknowledgement recommended. This
+does not select a payment implementation. https://developer.android.com/google/play/billing/security
+
+[5C6] Google Android Developers, Integrate Play Billing Library, accessed 2 Nov 2026: distinguish payment
+pending, verification, grant and acknowledgement/consumption.
+https://developer.android.com/google/play/billing/integrate
+
+[INTERNAL BASE] Master §§23, 24–27, 40, 47–58, Appendix E. All game-specific IDs, amounts and proposals
+originate from this master and current analysis; the external sources do not verify them.
+
+
+
+
+                 Living design document • Live master v0.10.42 • Updated in place • Page 19
+<PARSED TEXT FOR PAGE: 20 / 25>
+                    NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+
+
+60. Priority 5D: localization, low-end phone envelope,
+connectivity and mobile-UX paper exit gate
+2 November 2026 | Version 0.10.33 | RESEARCH-ONLY WORKING DESIGN. This packet reconciles Sections 23,
+24–27 and 52–59. It creates no interface, code, device measurements, new costs, reward sources, combat
+coefficients or playable features. Proposed targets are falsifiable future requirements, not compliance claims.
+
+60.1 Decision boundary, evidence and non-regression rules
+[PROJECT CONSTRAINTS] Preserve the four-root navigation (Home/Squad/Campaign/Recruit), Hall20/Band-I
+introductory reference, START00/START01 and ONB01–04 guaranteed access, existing 24h+48h idle bank, the
+15-node opening campaign and its first-clear IDs, and Section 59 authoritative receipt and unknown-outcome
+behavior. Screen translation, graphics quality or network state cannot grant or consume currency, change
+battle randomness, or secretly select K-09 versus K-10.
+
+[EVIDENCE LIMIT] Android documentation supports locale resource separation, per-app language choices,
+low-level performance diagnostics, and separation of cached reads from network-backed writes. W3C reflow
+guidance is a useful comparative target for information screens. These sources do not prove our custom game
+engine, art, performance or accessibility compliance. No physical phone, assistive technology, prototype or
+translation has been tested. [5D1–5D6]
+
+60.2 Localization policy: one source language, expandable content architecture
+[WORKING DECISION 5D-01] Author initial text in English. Treat Filipino, Japanese, Burmese, and right-to-left
+languages as research candidates, NOT committed launch languages. The first actual supported-language list
+must follow audience, translation-cost, font/shaping and QA research; no locale is “supported” until its
+complete gameplay, economy, legal and recovery strings have been reviewed. Store all UI text, status names,
+dialog, tooltips and narrative copy as stable localization keys, not text burned into art. Select a documented
+fallback locale and log missing keys.
+
+[DESIGN RULE] Do not concatenate translated fragments to construct text such as “You got” + quantity + noun.
+Use locale-aware placeholders and plural variants, localized number/decimal and currency display when
+applicable, explicit language metadata, and line wraps that tolerate expansion. Preserve stable mechanical IDs
+(G1, K-09, FIRST03) internally; localize readable names and descriptions. Distinguish virtual Ryo from actual
+paid currency. The game world uses Ryo as a resource name, not as a promise of real-world yen conversion.
+
+[RTL POLICY] Future right-to-left support requires direction-aware navigation, focus and bidirectional text
+handling. Never mechanically mirror battle formation slot identities, directional attack indicators or target
+logic merely because the interface is mirrored; preserve underlying combat coordinates and make visual
+reading order explicit. Use logical start/end alignment in presentation concepts. This is a planned
+compatibility gate, not a launch feature commitment.
+
+ Text/locale stress case              Failure risk                           Proposed contract / future falsifier
+                                                                             Terminology glossary binds status
+                                                                             timing to victim’s next action slot;
+ Wound: “At next action”              Translation implies next round
+                                                                             semantic review by knowledgeable
+                                                                             translator.
+                                                                             Display both choices with full skill
+                                      Translated descriptions wrap or hide
+ START01 choice K-09 / K-10                                                  summaries, stable confirm/back
+                                      trade-off
+                                                                             actions; no automatic selection.
+
+
+
+                   Living design document • Live master v0.10.42 • Updated in place • Page 20
+<PARSED TEXT FOR PAGE: 21 / 25>
+                        NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+ Text/locale stress case                  Failure risk                            Proposed contract / future falsifier
+                                                                                  Receipt values use keyed placeholders
+                                          Amounts get reversed, duplicated or
+ FIRST03: +80 Ryo / +120 EXP                                                      with localized number formatting;
+                                          malformed
+                                                                                  grant unchanged by locale.
+                                                                                  Keep numbers,
+                                          Rate or guarantee becomes vague in      “guaranteed/eligible/pending”
+ Recruitment pity / probabilities
+                                          translation                             wording and pool restrictions visible
+                                                                                  before spend.
+                                                                                  Reflow copy, stack controls, scroll
+ 320dp width; 200% text; +40% sample
+                                          Cropped CTA or missing warning          within screen; confirm button and
+ expansion
+                                                                                  legal terms stay accessible.
+                                                                                  Run logical-order and target-arrow
+ RTL sample with mixed K-09 / 100% /      Visual direction changes the battle
+                                                                                  tests; display order does not change
+ Latin ID                                 target
+                                                                                  deterministic target rules.
+                                                                                  Display pending in new locale;
+                                          Unconfirmed balance shown as
+ Locale switch during pending FIRST03                                             confirmation still follows server
+                                          credited
+                                                                                  receipt, not UI reload.
+
+
+60.3 Low-end device policy: measure frame pacing, memory and energy separately
+[WORKING DECISION 5D-02] Preserve the earlier candidate 30 FPS low-effects mode and 60 FPS optional
+rendering mode, but do not assert either is achieved. Approximate frame times are 33.3 ms and 16.7 ms
+respectively; these are arithmetic budgets, not measured hardware capabilities. Keep combat action order,
+status timing, damage logs and rewards identical regardless of effects, graphics setting or display refresh rate.
+“Skip effects” may shorten visual presentation, never skip a server-required transaction or an unresolved
+battle decision.
+
+[DESIGN BUDGET] Measure cold/warm startup, battle p50/p95/p99 frame time, animation stutter, memory
+high-water/low-memory recovery, battery/thermal after repeated fights, network data per returning session,
+and local cache footprint. Do not adopt hard MB limits or minimum CPU/RAM requirements without choosing
+representative devices and asset fidelity. Test textures, particle pooling, animated effects and resource loading
+under low-end mode, including a worst-case 5v5 status/decoy screen.
+
+ Profile / situation                      Proposed behavior                       Future exit evidence
+                                          Legible target and threat indicators;   Observed frame distributions on
+ Low-end 5v5 battle, effects on           degrade visual particles before         actual selected entry-level Android
+                                          information                             devices.
+                                          Keep cooldown, duration and damage
+                                                                                  Same action log, balance and final
+ Low-end mode / reduced motion            feedback through text/icons; shorter
+                                                                                  state under all visual modes.
+                                          transitions
+                                                                                  Thermal, battery and memory run
+                                          No forced animation accumulation or
+ Repeated fights / warm device                                                    with explicit device/ambient
+                                          memory leak
+                                                                                  conditions.
+                                                                                  Reopen after termination without
+                                          Restore last confirmed account state
+ Low memory / OS process kill                                                     duplicate grant, stale payment or lost
+                                          and unresolved receipt lookup
+                                                                                  starter choice.
+                                          Critical counter text and buttons       Inspect 320dp and 360dp variants,
+ Small screen / enlarged text             reflow; noncritical art yields space    portrait with 200% text and
+                                          first                                   accessibility controls.
+
+
+
+
+                       Living design document • Live master v0.10.42 • Updated in place • Page 21
+<PARSED TEXT FOR PAGE: 22 / 25>
+                        NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+ Profile / situation                      Proposed behavior                         Future exit evidence
+                                          Disclose progress, size and network       Actual download-footprint and
+ Large asset or patch download            requirements; support safe                interrupted-update test once asset
+                                          cancel/resume policy                      pipeline exists.
+
+
+60.4 Connectivity contract: readable cached state is not offline progression
+[WORKING DECISION 5D-03] Allow cached read-only access to the latest *confirmed* Home/Squad/Campaign
+information, previously saved story and past recaps when offline. Display a visible “Last confirmed”
+timestamp and label locally cached balances as possibly stale. Do not promise full offline battles or guaranteed
+offline reward claims. Recruitment, currency spends, premium purchases, Hall upgrades, battle reward
+settlement and other authoritative writes require confirmation by the chosen future service, or must remain
+visibly pending with immutable request identity.
+
+[REJECTED ALTERNATIVE] Optimistically animate a grant and reconcile later: this creates reward trust
+problems and risks spendable phantom currency. Also reject locking the whole app whenever disconnected:
+players should still be able to review their owned roster and last saved battle explanations. Future backend
+teams may explore locally executable practice battles only if they are explicitly nonrewarded, clearly labeled
+and cannot advance campaign state.
+
+ Connectivity event                       Player sees / may do                      Must never happen
+                                          Cached confirmed squad and story;         Stale cached Ryo presented as freshly
+ Airplane mode before opening Home
+                                          connection-needed chip for claims         confirmed.
+                                          Original request ID; “Checking            Second FIRST03 entitlement or false
+ Drop during FIRST03 confirmation
+                                          reward”; resume lookup                    “not earned”.
+ Drop after recruitment payment           Pending outcome and roster/wallet         Re-roll, repeat cost, or issue duplicate
+ started                                  lookup; no second spend                   character.
+                                          Accrual rule explanation and              Client clock secretly grants extra
+ Reconnect after 72h idle cap
+                                          authoritative claim result                stored hours.
+ Locale change or app restart while       Pending message retranslated; same        Client reset creates a new claim or
+ pending                                  request identity                          erases receipt.
+                                          Cached prior recap remains labelled       Summary invents missing
+ Content update during battle recap
+                                          until log verified                        damage/status events.
+
+
+60.5 Cross-screen quality gate and launch-language readiness
+[PAPER EXIT GATE — SPECIFICATION READY, NOT USABILITY PASSED] Existing written rules provide a
+coherent mobile-navigation and recovery baseline. Every screen must have one primary action, explicit legal
+prerequisites, visible authoritative/pending distinction, accessible operation without drag-only controls,
+localization keys, and reduced-effects alternatives. Every critical action must preserve receipt identity through
+scene skips, app restart, and language changes. These requirements are now documented; the actual
+empirical gate remains unpassed until the owner authorizes a build and real-device/accessibility tests.
+
+                                          Paper requirement to carry
+ Review dimension                                                                   Future field validation
+                                          forward
+                                          Translation keys, pluralization,
+                                                                                    Translation quality review and
+ Language and dynamic text                glossary, fallback, pseudo-expansion,
+                                                                                    320dp/200% layout under real fonts.
+                                          RTL readiness
+                                          All five allies, active target, threat,   Physical-phone reading
+ Combat clarity                           Wound timing and recap cause              comprehension on both support
+                                          distinguishable                           choices.
+
+
+                       Living design document • Live master v0.10.42 • Updated in place • Page 22
+<PARSED TEXT FOR PAGE: 23 / 25>
+                         NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+                                         Paper requirement to carry
+ Review dimension                                                                Future field validation
+                                         forward
+                                         30fps low-mode budget, optional         Representative-device traces,
+ Mobile performance                      60fps, effect equivalence, frame-time   memory, thermal/battery and
+                                         logging                                 ANR/crash monitoring.
+                                         No optimistic rewards; recover by       Interrupt before/after commit, multi-
+ Network and account truth               request/source/receipt; cached reads    device conflict, reconnect and power-
+                                         clearly timestamped                     loss tests.
+                                         Logical focus, labels, live status,
+                                                                                 TalkBack/Switch Access, larger text,
+ Assistive access                        noncolor cues, no drag-only required
+                                                                                 hearing/reduced-motion needs.
+                                         action
+                                         English original placeholder story      Later licensing/brand decision and
+ IP and narrative
+                                         remains transferable                    translated fiction editorial review.
+
+
+60.6 Holistic research completion audit: a calibrated owner-facing estimate
+[ESTIMATE, NOT FACT] Overall pre-production research is about 36% mature under the weighted judgment
+below, with a plausible uncertainty band of about 25–45%. These percentages are neither page counts nor
+measured milestones. They approximate how much *decision-quality conceptual research* exists relative to
+the whole stated ambition. “Specified on paper” is not “validated.” The game remains 0% implemented and
+0% playtested. Do not use this 36% as a commercial launch-readiness percentage.
+
+ Research system                Weight                       Maturity estimate             Weighted points
+ Core identity & idle promise   7%                           70%                           4.90
+ Combat and balance system      13%                          65%                           8.45
+ Roster, acquisition and
+                                9%                           60%                           5.40
+ counters
+ Progression and economy        12%                          55%                           6.60
+ Campaign and story
+                                9%                           35%                           3.15
+ integration
+ Mobile UX, accessibility and
+                                9%                           50%                           4.50
+ recovery
+ Competitive PvP, ranked
+                                10%                          10%                           1.00
+ fairness
+ Guilds and cooperative
+                                7%                           5%                            0.35
+ features
+ Events, retention and
+                                7%                           5%                            0.35
+ endgame
+ Monetization and paid
+                                7%                           10%                           0.70
+ fairness
+ Backend, security and
+                                6%                           10%                           0.60
+ operation design
+ IP, art, audio and visual
+                                2%                           10%                           0.20
+ identity
+ Integrated whole-game
+                                2%                           0%                            0.00
+ contradiction audit
+ TOTAL                          100%                         Judgment, not measured        36.20% ≈ 36%
+
+[WHY THE NUMBER IS LOW] Combat and early-economy models have substantial internal analysis but no
+playable proof. The opening campaign has paper encounters but lacks a complete difficulty curve and
+measured pacing. PvP, guild systems, seasonal live operations, sustainable monetization, production backend,
+
+                      Living design document • Live master v0.10.42 • Updated in place • Page 23
+<PARSED TEXT FOR PAGE: 24 / 25>
+                   NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+commercial/IP path and whole-system audit are predominantly proposals. Even the mobile section closed
+here is an exit *specification*, not a completed interface. The remaining effort is also nonlinear: late
+integration may invalidate earlier assumptions.
+
+[THREE DIFFERENT DENOMINATORS] Design research completion ≈36%; actual built code/usable game =0%;
+empirical balance, usability and retention validation =0%. Overall release readiness cannot be responsibly
+expressed as the same 36%, and is effectively near zero absent engine, build, content assets, infrastructure,
+rights decisions and user testing. Re-estimate research progress after each major domain using the same
+weights and explicit evidence; avoid incrementing the number merely because another document version
+exists.
+
+60.7 Decisions, trade-offs, remaining blockers and next handoff
+[SELECTED] English-authoring with localization-ready IDs, optional future locales; 30fps effects-reduced
+candidate (not measured), cache-confirmed read-only offline shell, authoritative writes, reduced-motion
+equivalence; mobile UX requirements are paper-defined only. [REJECTED] simultaneous unreviewed
+multilingual launch, cosmetic settings changing combat mechanics, client-computed spendable rewards,
+mandatory fully-online access to previously confirmed information. [DEPENDENCIES] Section 59 receipt
+integrity, Section 57 navigation, Sections 24–27 combat event logs, Section 40 source IDs, Section 52 tutorial
+and Section 56 story records.
+
+[OPEN] Supported languages and typography by market; exact device tier, minimum RAM/storage,
+download/data budgets and connection assumptions; keyboard/screen-reader integration in the eventual
+engine; how guest/cross-device identity works; production backend and security model; measured
+accessibility, thermal, memory and rendering criteria; actual legal/licensing plan. None of these is claimed
+solved.
+
+[NEXT RESEARCH — PRIORITY 6A: COMPETITIVE/SOLO ACCESS AND NORMALIZED ARENA ARCHITECTURE]
+Map whether social/PvP participation is optional, how matchmaking and normalized roster investments avoid
+paying for mandatory counters, how progression-account and competitive reward sources separate, and what
+a solo player retains. Recommend EXTRA HIGH because this joins PvP combat, acquisition, entitlement and
+reward economy; avoid writing actual matchmaking code or reporting win rates. A later 6B pass will address
+guild/co-op and solo-equivalent pathways.
+
+60.8 External evidence and provenance (consulted 2 November 2026)
+[5D1] Google Android Developers, Localize your app: resource separation, regional formatting and interface
+adaptation. https://developer.android.com/guide/topics/resources/localization
+
+[5D2] Google Android Developers, Per-app language preferences: Android 13 language selection and APIs,
+implementation-dependent. https://developer.android.com/guide/topics/resources/app-languages
+
+[5D3] W3C WAI, Understanding WCAG 2.2 SC 1.4.10 Reflow: 320 CSS px comparative target for text/layout, not
+a game-wide conformance claim. https://www.w3.org/WAI/WCAG22/Understanding/reflow.html
+
+[5D4] Google Android Developers, Game optimization and tracing: VSync, frame pacing, memory and thermal
+power concerns. https://developer.android.com/games/optimize
+
+[5D5] Google Android Developers, Android vitals: user-perceived crashes/ANRs, energy, memory and slow
+rendering as product signals. https://developer.android.com/games/optimize/vitals
+
+[5D6] Google Android Developers, Build an offline-first app: cached reads, network writes and reconciliation
+patterns. Architectural analogy; no engine/backend selected.
+https://developer.android.com/topic/architecture/data-layer/offline-first
+
+
+                  Living design document • Live master v0.10.42 • Updated in place • Page 24
+<PARSED TEXT FOR PAGE: 25 / 25>
+                  NARUTO IDLE RPG | MASTER DESIGN BIBLE | LIVE MASTER v0.10.42
+[INTERNAL EVIDENCE] Saved v0.10.32 master §§23–27, 29, 32, 40–42, 52–59; no third-party source validates
+the authored research maturity score or proposed game performance numbers.
+
+
+
+
+                 Living design document • Live master v0.10.42 • Updated in place • Page 25
+

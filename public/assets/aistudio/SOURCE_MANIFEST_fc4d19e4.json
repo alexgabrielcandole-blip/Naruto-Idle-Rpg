@@ -1,0 +1,125 @@
+{
+  "prepared_date": "2026-11-09",
+  "scope": "Squad UI Gate 2A only",
+  "source_format": "Complete available Library-extracted text; original DOCX files linked separately",
+  "masters": [
+    {
+      "key": "index",
+      "filename": "00_START_HERE_Research_Scope_Index.docx",
+      "text_export": "FULL_MASTER_TEXT/00_START_HERE_Research_Scope_Index.txt",
+      "library_file_id": "libfile_4a86f2446ed081919d8e6306293ece1d",
+      "file_id": "file_000000002618821185afe72430579351",
+      "version_id": "10",
+      "last_modified": "2026-11-09T10:16:01.605143Z",
+      "source_url": "https://chatgpt.com/library?file_id=libfile_4a86f2446ed081919d8e6306293ece1d&account_id=personal",
+      "extracted_lines": 466
+    },
+    {
+      "key": "roster",
+      "filename": "03_Hero_Roster_and_Team_Compositions.docx",
+      "text_export": "FULL_MASTER_TEXT/03_Hero_Roster_and_Team_Compositions.txt",
+      "library_file_id": "libfile_f9f3579ce3988191949e3ce397ad12f0",
+      "file_id": "file_00000000f7b0821184350e8f7083e338",
+      "version_id": "11",
+      "last_modified": "2026-11-09T10:08:47.485950Z",
+      "source_url": "https://chatgpt.com/library?file_id=libfile_f9f3579ce3988191949e3ce397ad12f0&account_id=personal",
+      "extracted_lines": 9434
+    },
+    {
+      "key": "hall",
+      "filename": "06_Training_Hall_Equipment_and_Growth.docx",
+      "text_export": "FULL_MASTER_TEXT/06_Training_Hall_Equipment_and_Growth.txt",
+      "library_file_id": "libfile_b3fe31296ed48191bce548f37f8789e5",
+      "file_id": "file_0000000050a0820ba6b02e9bc0c5c510",
+      "version_id": null,
+      "last_modified": "2026-11-08T13:29:37.403067Z",
+      "source_url": "https://chatgpt.com/library?file_id=libfile_b3fe31296ed48191bce548f37f8789e5&account_id=personal",
+      "extracted_lines": 1664
+    },
+    {
+      "key": "ui",
+      "filename": "09_Mobile_UI_UX_and_Accessibility.docx",
+      "text_export": "FULL_MASTER_TEXT/09_Mobile_UI_UX_and_Accessibility.txt",
+      "library_file_id": "libfile_60cb599cb2e88191bcd6b5e2b18f58ef",
+      "file_id": "file_00000000583c81fab7419b999c44a1b4",
+      "version_id": null,
+      "last_modified": "2026-11-08T13:29:55.687366Z",
+      "source_url": "https://chatgpt.com/library?file_id=libfile_60cb599cb2e88191bcd6b5e2b18f58ef&account_id=personal",
+      "extracted_lines": 1364
+    }
+  ],
+  "hero_document_version": "v1.10",
+  "source_docs_embedded": false,
+  "original_docs": "Original DOCX files are linked in ORIGINAL_MASTER_LINKS.txt. Complete available extracted text is included.",
+  "prompt_update": "Attachment copy uses Master 03 v1.10 and the owner-approved View Shinobi terminology. Source masters and verbatim excerpts are unchanged.",
+  "image_files": [
+    {
+      "name": "03_Squad_Visual_Reference.png",
+      "sha256": "41f0d892c77e356e1f7a2b81f43f8afc61848b69260cd55ae9df078f443bbc8f",
+      "role": "Updated generated Squad reference"
+    },
+    {
+      "name": "04_Approved_Home_Reference.png",
+      "sha256": "c616b4e6a7fd77514cf78eb229d4d0fb1531d37f8b3b9ef4423147d216db82c5",
+      "role": "Approved Home screenshot, unchanged"
+    }
+  ],
+  "packaged_files": [
+    {
+      "path": "COPY_PASTE_LAUNCHER.txt",
+      "size_bytes": 1851,
+      "sha256": "3e8501d8b2c1cff0ab38d240a07864758bd746dfbf5c4ed1552f9f186de911df"
+    },
+    {
+      "path": "FULL_MASTER_TEXT/00_START_HERE_Research_Scope_Index.txt",
+      "size_bytes": 26365,
+      "sha256": "1cb6109c42699b9a365f8aff6dce8d3e8d266272fbb286afa859dc9c69b563ad"
+    },
+    {
+      "path": "FULL_MASTER_TEXT/03_Hero_Roster_and_Team_Compositions.txt",
+      "size_bytes": 813434,
+      "sha256": "35c0bb0b7d00a848843161f3c2c2f182e16f60994d6399b188bb91294e4a06ba"
+    },
+    {
+      "path": "FULL_MASTER_TEXT/06_Training_Hall_Equipment_and_Growth.txt",
+      "size_bytes": 129364,
+      "sha256": "140b1002d72b0b4f29efbe14fa890b33d445042e70a8232f18e230c131f5c072"
+    },
+    {
+      "path": "FULL_MASTER_TEXT/09_Mobile_UI_UX_and_Accessibility.txt",
+      "size_bytes": 111489,
+      "sha256": "ca05c4cac28d4aca5309d2cea766fde8aa76decefc332a5ef99adb57ea3f2755"
+    },
+    {
+      "path": "ORIGINAL_MASTER_LINKS.txt",
+      "size_bytes": 901,
+      "sha256": "cb2b94e08210c2aa834a110777695ea36533da48771f1561584c53bca956fd21"
+    },
+    {
+      "path": "START_HERE.txt",
+      "size_bytes": 4466,
+      "sha256": "5bd725649998ad62ccd25d8abf0bc278a9b4c06ca790a4ac1ae9761e0e723cb7"
+    },
+    {
+      "path": "UPLOAD_TO_GEMINI/01_Squad_UI_Prompt.txt",
+      "size_bytes": 24885,
+      "sha256": "fe64ca09ccf0014ae892b09226ba41ad12acb756ff67bc8d784932dcaaca5045"
+    },
+    {
+      "path": "UPLOAD_TO_GEMINI/02_Squad_Master_Basis.txt",
+      "size_bytes": 51004,
+      "sha256": "e124b0c828e2ef7f7e7cb67de8c6a4384848e6429f0221dd6c1b4d195561806c"
+    },
+    {
+      "path": "UPLOAD_TO_GEMINI/03_Squad_Visual_Reference.png",
+      "size_bytes": 2735773,
+      "sha256": "41f0d892c77e356e1f7a2b81f43f8afc61848b69260cd55ae9df078f443bbc8f"
+    },
+    {
+      "path": "UPLOAD_TO_GEMINI/04_Approved_Home_Reference.png",
+      "size_bytes": 393717,
+      "sha256": "c616b4e6a7fd77514cf78eb229d4d0fb1531d37f8b3b9ef4423147d216db82c5"
+    }
+  ],
+  "handoff_revision": "Player-facing terminology update: View Shinobi; 9 November 2026"
+}
