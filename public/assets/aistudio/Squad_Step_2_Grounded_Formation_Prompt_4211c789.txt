@@ -1,0 +1,61 @@
+STEP 2 — CORRECT THE SQUAD FORMATION SCENE
+
+Continue the current native Android / Jetpack Compose project.
+
+The attached image is the complete visual target for Squad. In this run, implement ONLY its formation scene: courtyard composition, character placement, ground indicators and name plaques. Header, inspector and roster styling will be a separate pass.
+
+Keep the approved Home screen and the newer working footer in this Studio project. Do not restore older GitHub footer code.
+
+DESIGN AUTHORITY
+Match Home's detailed painted Naruto scenery, clean anime linework, warm daylight, deep teal plaques, thin aged-brass borders and ivory text. Keep the scene readable at phone size. Do not substitute geometric scenery, generic characters or flat brown platforms.
+
+FIX THE UNDERLYING LAYOUT
+Inspect SquadScreen.kt. The reviewed repository placed bg_konoha_courtyard in a box with height(screenHeight * 0.54f), while placing the formation in a separate weight(1f) region. Verify the current Studio implementation and remove this mismatch if it remains.
+
+Create one bounded FormationStage containing BOTH the courtyard image and all five slot positions. Background and characters must share its coordinate system.
+
+Use an approximately square stage based on the available content width. At short heights or large text sizes, allow the content above the footer to scroll rather than squeezing the scene or overlapping its rows. Preserve the footer's appearance and handle system insets once.
+
+COURTYARD COMPOSITION
+Use a slightly elevated three-quarter view over a broad stone courtyard. Keep the distant gate, rooftops, trees and Hokage Rock toward the upper background. The foreground must be open paving.
+
+The paving must extend behind both rows and their labels, all the way to the inspector boundary. No black gap, opaque dark band or fade hiding the rear row's ground.
+
+Use a background-only illustration. Do not use the entire attached mockup as the background: it already contains characters and UI. Preserve artwork proportions; choose the crop deliberately instead of stretching it.
+
+TEAM DISPLAY
+Keep the current four-starter visual fixture:
+- Front Left: Gaara.
+- Front Right: Sasuke.
+- Rear Left: Neji.
+- Rear Center: Naruto, selected.
+- Rear Right: Open.
+
+Exactly four field characters and five positions. The fifth position is empty and legal, not locked. This is a visual fixture, not a rule restricting characters to those slots or authorizing changes to ownership or saves.
+
+Suggested foot anchors, normalized within the stage:
+- Front: (0.35, 0.53), (0.69, 0.53).
+- Rear: (0.20, 0.91), (0.51, 0.91), (0.81, 0.91).
+
+Treat these as starting layout coordinates and match the reference visually. Anchor each character by its visible feet, accounting for transparent padding in the source image. Do not anchor the image's top-left corner and assume its feet will align.
+
+Use roughly 34% of stage height for front figures and 37% for rear figures, adjusting for poses and spacing. Keep every figure complete, with feet visible and labels separated.
+
+ART AND GROUNDING
+Use coherent early-era character art: Gaara with his gourd, navy-shirt Sasuke, cream-outfit Neji, and orange/navy Naruto. Sasuke must stand on the courtyard rather than perch on a floating disc. Replace a mismatched character asset if necessary; do not redraw shinobi from Canvas primitives.
+
+All figures need compatible linework, proportions, lighting and clean transparent edges. Add small contact shadows beneath their feet.
+
+Replace solid brown discs with thin perspective ellipses on the ground. Naruto alone receives an amber selection ring. Open receives a dashed ellipse, small plus and Open label.
+
+Place FRONT and REAR markers beside their respective rows. Retain a small Enemy approach marker above the formation. Use compact teal/brass name plaques consistently.
+
+BOUNDARIES AND PROOF
+Keep existing header, inspector, View Shinobi wording, roster and footer styling. Add no gameplay, recruits, progression, rewards or save mutations. Retain working navigation.
+
+Compile and inspect actual renders at 360 x 800 dp and 360 x 640 dp. Confirm all five positions share continuous paving; nobody floats on architecture; no feet, labels or figures overlap; and the footer remains usable.
+
+Show the actual result if available, name changed files and state unperformed checks. If suitable art cannot be produced, identify the specific missing asset rather than claiming the reference has been matched.
+
+STOP for my review before polishing other panels.
+

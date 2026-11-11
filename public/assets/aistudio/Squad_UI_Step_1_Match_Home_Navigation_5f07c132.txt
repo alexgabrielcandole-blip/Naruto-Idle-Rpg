@@ -1,0 +1,42 @@
+SQUAD UI CORRECTION — STEP 1: MATCH HOME'S BOTTOM NAVIGATION
+
+Work on one component only: the bottom navigation shown on Squad.
+This is a native Android / Jetpack Compose UI pass.
+
+VISUAL AUTHORITY
+The approved Home screen defines the visual style. Use the attached wide footer reference for the Squad-selected state. Ignore the reference image's white outer margins. It is a visual guide, not a finished bitmap navigation component.
+
+RELEVANT SOURCE
+- app/src/main/java/com/example/ui/screens/squad/SquadScreen.kt
+- app/src/main/java/com/example/ui/screens/village/VillageScreen.kt
+- app/src/main/res/drawable/
+
+The reviewed code currently displays Home as img_konoha_village_full_ui with tap overlays. Do not assume Home already has a reusable native footer. Preserve its appearance and implementation in this pass.
+
+Squad's private NavDockTab applies ColorFilter.tint to the selected icon. Its ic_nav_squad_raw.png is an opaque RGB crop, so tinting it produces a yellow square. bg_bottom_dock.png already includes icons, labels, a Home underline, and a strip of the scene above. Do not use that whole image as a background beneath another set of controls.
+
+MAKE THIS ONE CHANGE
+1. Build a reusable native IllustratedBottomDock component and use it on Squad only. Keep the existing navigation callbacks and current reserved footer height/insets. Avoid changing the formation area's size.
+
+2. Match Home's deep teal surface, subtle texture, fine brass top edge, and illustrated icons. Four equal-width tabs, in this exact order:
+   Home — Konoha Leaf emblem.
+   Squad — three shinobi busts with Kakashi in the center.
+   Campaign — folded parchment map.
+   Recruit — rolled scroll with red seal.
+
+3. Use clean icon-only images with transparent surroundings. Reuse the existing artwork where possible, but inspect it first: the *_raw and tab_* crops contain baked backgrounds or other interface content. Extract the icon subjects cleanly; do not display rectangular screenshot scraps. If a clean extraction is unavailable, report the exact missing asset instead of inventing a geometric substitute.
+
+4. Render colored illustration assets with Image and no ColorFilter tint. Preserve their painted details and natural colors. Aim for roughly 32–36 dp icon bounds, balancing visible subject size rather than just matching file dimensions.
+
+5. Render Home, Squad, Campaign and Recruit as native Text, approximately 12 sp at normal font scale. Squad alone gets a warm gold label and restrained short underline. Other labels are ivory. Keep the naturally gold Home emblem, but remove any Home selection underline. Use no solid yellow tile or heavy glow.
+
+6. Give each tab an equal-width touch area of at least 48 dp, a readable label, and correct selected semantics. Retain current system-bar handling without adding duplicate bottom padding.
+
+SCOPE LOCK
+Keep Home, the courtyard, characters, slot layout, inspector, View Shinobi wording, roster, filters, gameplay and saved data unchanged. Preserve currently working navigation; introduce no new gameplay or routes. Do not display the entire reference image as the footer with invisible tap zones. Labels and selection state must remain native and independently renderable.
+
+VERIFY AND STOP
+Compile the existing Android project. Inspect the actual rendered Squad footer at 360 dp and 320 dp widths. Confirm: recognizable colored Squad icon; four aligned labels; only Squad selected; no crop rectangles, duplicate text, scene fragments, clipped labels or gesture-area overlap. Compare with Home side by side, and check Home still looks unchanged.
+
+Return the changed files, build result and an actual preview screenshot if available. Clearly state any visual check you could not perform. Stop for my review before changing the courtyard or other UI.
+

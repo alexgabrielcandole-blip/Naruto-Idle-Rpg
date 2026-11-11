@@ -1,0 +1,63 @@
+SQUAD VISUAL CONTINUITY — ONE SCREEN, UI ONLY
+
+Correct the current Squad screen so it visibly belongs to the same game as the approved Home screen. Work in the latest Studio project, preserving its working changes. Do not restore an older GitHub snapshot.
+
+This instruction supersedes the previous requirements to keep Squad's panels unchanged and force a square formation stage. This pass includes Squad's header, scene composition, inspector and roster styling. Preserve Home.
+
+ATTACHMENTS
+1. Empty illustrated Konoha terrace: an actual BACKGROUND ASSET. Import it locally as bg_squad_home_matched.
+2. Completed Squad mockup: a DESIGN REFERENCE for composition and visual treatment. It is not a layered asset pack. Do not render the entire mockup as a screen or put invisible tap regions over it.
+
+Use these images and the existing project's Home assets. Do not load the research ZIP or unrelated master documents for this visual pass.
+
+FIX THE SCREEN COMPOSITION
+Use a continuous background from the top of Squad to the bottom dock. It must remain visible behind the formation and between the lower panels.
+
+Give the formation the remaining available height after measuring the header, inspector, roster and footer. Remove any leftover expanding spacer below the roster. The roster should finish about 8–12 dp above the footer at normal text scale. There must be no large empty black rectangle.
+
+Do not constrain the formation to a square or to a percentage of screen height unrelated to the rest of the layout. At compact heights or large text sizes, allow the content above the pinned footer to scroll instead of shrinking characters/text or overlapping rows.
+
+Scale the background proportionally and preserve its ground perspective. Coordinate its crop with the character foot positions so every character stands on the terrace, not on its railing or distant roofs.
+
+MATCH HOME'S UI MATERIALS
+Use Home's compact bold sans-serif typography, ivory text, deep teal lacquer, restrained warm brass borders, gentle bevels and illustrated icons. Match the shape and depth of Home's mission strip and Prepare button.
+
+Restyle the inspector and roster; do not keep the existing flat thin-outline boxes. Use subtle edge highlights and shadows, not thick ornament, giant serif titles or neon glows. Keep native text readable, roughly 12–14 sp for secondary labels and 16–20 sp for key labels at normal scale; use the reference's hierarchy rather than shrinking a screenshot.
+
+HEADER
+Carry Home's compact account presentation into Squad: profile portrait, account name and resource capsules, with a shallow teal scrim over the artwork. Beneath it, place the small Squad title, deployment count and Training Hall control as shown.
+
+Reuse existing display data. Reference values such as 1,280 and 12 are visual examples; never overwrite wallet data. If Home currently uses static preview values, keep these as presentation-only preview data.
+
+TEAM
+Preserve the current visual fixture:
+Front Left Gaara; Front Right Sasuke.
+Rear Left Neji; Rear Center Naruto selected; Rear Right Open.
+Exactly four field characters and five positions. These are preview assignments, not restrictions on future legal formation moves.
+
+Make the team large and legible. Anchor each figure by its visible feet, accounting for transparent margins. Give front figures consistent scale and rear figures a slight perspective increase. Fit both rows naturally into the available scene without crowding labels.
+
+Retain recognizable early-era Naruto character identities. Use compatible illustrated cutouts and lighting, with small ground contact shadows. Thin perspective slot rings must sit on the paving. Naruto alone has the selected ring. Open is dashed and unlocked. No floating brown discs or geometric substitute characters.
+
+INSPECTOR AND ROSTER
+Match the inspector to Home's polished mission-strip treatment. Keep the selected portrait, shinobi name, role, orange View Shinobi button and secondary Move control. Preserve the exact View Shinobi wording.
+
+Use four equally framed roster portraits with consistent crops, warm illustrated backgrounds and small teal nameplates. Replace or edit opaque white portrait backgrounds; placing teal behind an opaque white image does not fix them. Keep the existing All / Tank / Damage Dealer / Support filters.
+
+Retain the working illustrated footer and its four destinations. Squad alone is selected. Preserve natural icon colors.
+
+IMPLEMENTATION AND CHECK
+Keep backgrounds, character art, panels, labels and controls separately renderable. Implement UI materials with reusable native components and suitable art assets. If a required asset is unavailable, name it explicitly rather than substituting a flat placeholder or claiming completion.
+
+Add no combat, economy, recruitment, progression, ownership changes or save mutations. Preserve working navigation.
+
+Compile, then inspect actual renders at 360 x 800 dp and 360 x 640 dp. Compare Home and Squad side by side:
+- coherent typography, materials, icons and button treatment;
+- no blank black block;
+- readable full-body characters grounded on the terrace;
+- consistent portrait backgrounds;
+- no clipping, overlaps or duplicate system insets;
+- Home remains visually unchanged.
+
+Show the rendered result if available, list the changed files and report unperformed checks. Compilation alone is not visual acceptance. Stop after this Squad-only correction.
+
